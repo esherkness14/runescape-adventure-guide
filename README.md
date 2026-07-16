@@ -51,3 +51,8 @@ To change it, update `companionPin` in:
 - Two-part gameplay and guide feedback form
 - PIN-gated Chapter 1 companion notes
 - GitHub Pages deployment workflow
+
+
+## GitHub Pages routing
+
+The project uses trailing-slash routes so nested pages work reliably on GitHub Pages.

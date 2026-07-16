@@ -15,12 +15,12 @@ const base = import.meta.env.BASE_URL;
       <div class="section-label">Feedback sent</div>
       <h2>Thank you.</h2>
       <p>Your notes were submitted successfully. They will help shape the next chapter and improve this one.</p>
-      <div class="button-row"><a class="button" href={`${base}chapters/chapter-1`}>Return to Chapter 1</a></div>
+      <div class="button-row"><a class="button" href={`${base}chapters/chapter-1/`}>Return to Chapter 1</a></div>
     </div>
 
     <form class="feedback-form" action={formEndpoint} method="POST" data-feedback-form>
       <input type="hidden" name="chapter" value="Chapter 1: Strange Things Around Lumbridge" />
-      <input type="hidden" name="guide_version" value="0.3.2" />
+      <input type="hidden" name="guide_version" value="0.3.3" />
       <input type="hidden" name="_subject" value="RuneScape Adventure Guide — Chapter 1 Feedback" />
 
       <section class="form-section">
