@@ -1,0 +1,168 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+const formEndpoint = 'https://formspree.io/f/mpqvqjrr';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Chapter Feedback | RuneScape Adventure Guide" current="feedback">
+  <div class="form-page">
+    <header class="chapter-header form-header">
+      <div class="chapter-kicker">Chapter 1 playtest</div>
+      <h1 class="chapter-title">Tell us how the adventure felt.</h1>
+      <p class="chapter-summary">This form separates your experience playing RuneScape from your experience using the guide. There are no right answers—we want to know what was delightful, confusing, tedious, or unexpectedly fun.</p>
+    </header>
+
+    <div class="form-success" data-form-success hidden tabindex="-1">
+      <div class="section-label">Feedback sent</div>
+      <h2>Thank you.</h2>
+      <p>Your notes were submitted successfully. They will help shape the next chapter and improve this one.</p>
+      <div class="button-row"><a class="button" href={`${base}chapters/chapter-1`}>Return to Chapter 1</a></div>
+    </div>
+
+    <form class="feedback-form" action={formEndpoint} method="POST" data-feedback-form>
+      <input type="hidden" name="chapter" value="Chapter 1: Strange Things Around Lumbridge" />
+      <input type="hidden" name="guide_version" value="0.3.2" />
+      <input type="hidden" name="_subject" value="RuneScape Adventure Guide — Chapter 1 Feedback" />
+
+      <section class="form-section">
+        <div class="section-label">About this session</div>
+        <h2>Session details</h2>
+        <div class="form-grid two-column">
+          <label>
+            Your name <span class="optional-label">optional</span>
+            <input type="text" name="player_name" autocomplete="name" />
+          </label>
+          <label>
+            Date played
+            <input type="date" name="session_date" />
+          </label>
+        </div>
+        <label>
+          How far did you get?
+          <select name="chapter_progress" required>
+            <option value="">Choose one</option>
+            <option>Just getting started</option>
+            <option>Partway through the chapter</option>
+            <option>Most of the chapter</option>
+            <option>Finished the chapter</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="form-section">
+        <div class="section-label">Gameplay feedback</div>
+        <h2>How did RuneScape itself feel?</h2>
+        <p class="form-intro">Focus on the game: quests, places, characters, skills, combat, puzzles, exploration, and anything you chose to do off the guide’s path.</p>
+
+        <label>
+          What did you enjoy most?
+          <textarea name="gameplay_enjoyed" rows="5" required placeholder="A quest, character, place, skill, moment, surprise, or something else…"></textarea>
+        </label>
+
+        <label>
+          What felt confusing, frustrating, or tedious?
+          <textarea name="gameplay_friction" rows="5" placeholder="Include anything that made you feel stuck or made the game feel like work."></textarea>
+        </label>
+
+        <fieldset>
+          <legend>Which parts were fun? <span class="optional-label">choose any</span></legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="checkbox" name="fun_activities" value="Questing and dialogue" /> Questing and dialogue</label>
+            <label class="choice"><input type="checkbox" name="fun_activities" value="Exploring the world" /> Exploring the world</label>
+            <label class="choice"><input type="checkbox" name="fun_activities" value="Puzzles and mysteries" /> Puzzles and mysteries</label>
+            <label class="choice"><input type="checkbox" name="fun_activities" value="Combat and upgrades" /> Combat and upgrades</label>
+            <label class="choice"><input type="checkbox" name="fun_activities" value="Gathering and crafting" /> Gathering and crafting</label>
+            <label class="choice"><input type="checkbox" name="fun_activities" value="Saving for the house" /> Saving for the house</label>
+          </div>
+        </fieldset>
+
+        <label>
+          What are you most curious or excited to do next?
+          <textarea name="gameplay_next" rows="4"></textarea>
+        </label>
+      </section>
+
+      <section class="form-section">
+        <div class="section-label">Guide feedback</div>
+        <h2>How did the guide itself feel?</h2>
+        <p class="form-intro">Focus on the writing, structure, hints, directions, pacing, checkboxes, and whether the guide helped without taking over.</p>
+
+        <fieldset>
+          <legend>The amount of direction was…</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="direction_level" value="Too vague" required /> Too vague</label>
+            <label class="choice"><input type="radio" name="direction_level" value="About right" /> About right</label>
+            <label class="choice"><input type="radio" name="direction_level" value="Too hand-holdy" /> Too hand-holdy</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>The amount of reading was…</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="reading_amount" value="Too little" required /> Too little</label>
+            <label class="choice"><input type="radio" name="reading_amount" value="About right" /> About right</label>
+            <label class="choice"><input type="radio" name="reading_amount" value="Too much" /> Too much</label>
+          </div>
+        </fieldset>
+
+        <label>
+          How did the hints work for you?
+          <textarea name="hint_feedback" rows="5" placeholder="Were they easy to find? Did they escalate at the right pace? Were any too vague or too revealing?"></textarea>
+        </label>
+
+        <label>
+          Did the chapter feel like an adventure or a checklist? Why?
+          <textarea name="guide_feel" rows="5"></textarea>
+        </label>
+
+        <label>
+          What should we change before the next chapter?
+          <textarea name="guide_changes" rows="5"></textarea>
+        </label>
+      </section>
+
+      <div class="form-submit-panel">
+        <p class="form-error" data-form-error aria-live="polite"></p>
+        <button class="button" type="submit" data-submit-button>Send feedback</button>
+        <p class="form-privacy">Your responses are sent through Formspree to the guide creator. No RuneScape login or account information is collected.</p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.querySelector('[data-feedback-form]');
+    const submitButton = document.querySelector('[data-submit-button]');
+    const errorBox = document.querySelector('[data-form-error]');
+    const successBox = document.querySelector('[data-form-success]');
+
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      errorBox.textContent = '';
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (!response.ok) {
+          const result = await response.json().catch(() => null);
+          const message = result?.errors?.map((item) => item.message).join(' ') || 'The form could not be sent. Please try again.';
+          throw new Error(message);
+        }
+
+        form.hidden = true;
+        successBox.hidden = false;
+        successBox.focus();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (error) {
+        errorBox.textContent = error instanceof Error ? error.message : 'The form could not be sent. Please try again.';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send feedback';
+      }
+    });
+  </script>
+</GuideLayout>

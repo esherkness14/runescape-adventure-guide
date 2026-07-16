@@ -1,0 +1,23 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  type?: 'required' | 'optional';
+  meta?: string;
+}
+const { id, title, type = 'required', meta } = Astro.props;
+---
+<article class="quest-card">
+  <header>
+    <div>
+      <span class={`tag ${type}`}>{type === 'required' ? 'Main adventure' : 'Optional story'}</span>
+      <h3>{title}</h3>
+      {meta && <div class="quest-meta">{meta}</div>}
+    </div>
+  </header>
+  <slot />
+  <div class="check-row">
+    <input class="progress-check" type="checkbox" id={id} data-progress-id={id} />
+    <label for={id}>Mark complete</label>
+  </div>
+</article>

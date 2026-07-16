@@ -1,17 +1,28 @@
 ---
-
+import GuideLayout from '../layouts/GuideLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<GuideLayout title="RuneScape Adventure Guide" current="home">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">A fun-first Ironman journey</div>
+      <h1>Discover RuneScape without turning it into a job.</h1>
+      <p class="lede">A guided adventure for a brand-new player: memorable quests, regional exploration, meaningful upgrades, and a home that grows alongside the account. The efficient planning happens quietly in the background.</p>
+      <div class="button-row">
+        <a class="button" href={`${base}chapters/chapter-1`}>Begin Chapter 1</a>
+        <a class="button secondary" href={`${base}feedback`}>Share playtest feedback</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h2>The central loop</h2>
+      <ul>
+        <li>Go on an adventure.</li>
+        <li>Unlock a new region, skill, or way to travel.</li>
+        <li>Bring something useful or meaningful home.</li>
+        <li>Improve the house.</li>
+        <li>Choose the next adventure.</li>
+      </ul>
+      <p class="quest-meta">No 99 Firemaking start. No blackjacking sentence. No rushing past the reason people love the game.</p>
+    </aside>
+  </section>
+</GuideLayout>

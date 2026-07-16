@@ -1,0 +1,41 @@
+<div class="progress-box">
+  <h2>Chapter progress</h2>
+  <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+  <p class="progress-text" id="progress-text">0 of 0 activities complete</p>
+  <button class="button secondary" id="reset-progress" type="button">Reset progress</button>
+</div>
+<script>
+  const STORAGE_KEY = 'rsag-chapter-1-progress';
+  const checks = Array.from(document.querySelectorAll('.progress-check'));
+  const fill = document.querySelector('#progress-fill');
+  const text = document.querySelector('#progress-text');
+  const reset = document.querySelector('#reset-progress');
+
+  function loadState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function render() {
+    const done = checks.filter((check) => check.checked).length;
+    const total = checks.length;
+    if (fill instanceof HTMLElement) fill.style.width = total ? `${(done / total) * 100}%` : '0%';
+    if (text) text.textContent = `${done} of ${total} activities complete`;
+  }
+  const state = loadState();
+  checks.forEach((check) => {
+    if (!(check instanceof HTMLInputElement)) return;
+    check.checked = Boolean(state[check.dataset.progressId || '']);
+    check.addEventListener('change', () => {
+      const latest = loadState();
+      latest[check.dataset.progressId || ''] = check.checked;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(latest));
+      render();
+    });
+  });
+  reset?.addEventListener('click', () => {
+    localStorage.removeItem(STORAGE_KEY);
+    checks.forEach((check) => { if (check instanceof HTMLInputElement) check.checked = false; });
+    render();
+  });
+  render();
+</script>

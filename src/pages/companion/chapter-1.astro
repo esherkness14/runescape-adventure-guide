@@ -1,0 +1,119 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Companion Notes: Chapter 1" current="companion">
+  <div class="companion-gate" data-companion-gate hidden>
+    <div class="pin-card companion-gate-card">
+      <div class="section-label">Locked notes</div>
+      <h1>Companion access required</h1>
+      <p>Enter the guide PIN to view spoilers, hidden routing, and playtest notes.</p>
+      <form data-inline-pin-form>
+        <label for="inline-companion-pin">PIN</label>
+        <input id="inline-companion-pin" type="password" inputmode="numeric" autocomplete="off" required />
+        <p class="form-error" data-inline-pin-error aria-live="polite"></p>
+        <button class="button" type="submit">Unlock notes</button>
+      </form>
+      <div class="button-row"><a class="button secondary" href={base}>Return home</a></div>
+    </div>
+  </div>
+  <div data-companion-content>
+  <div class="page-grid">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h2>Companion notes</h2>
+        <a href="#approach">General approach</a>
+        <a href="#routing">Hidden routing</a>
+        <a href="#intervene">When to intervene</a>
+        <a href="#observe">What to observe</a>
+      </div>
+    </aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Companion edition</div>
+        <h1 class="chapter-title">Chapter 1 Notes</h1>
+        <p class="chapter-summary">Spoilers, hidden optimization, and guidance for preserving the adventure without letting 2004 interface design ruin the evening.</p>
+      </header>
+
+      <section id="approach">
+        <h2>General approach</h2>
+        <div class="companion-note">
+          <h3>Do not become a live optimal-quest guide.</h3>
+          <p>Let her read dialogue, choose imperfect equipment, and wander. Offer help when the game is unclear, not merely when she is inefficient.</p>
+        </div>
+        <p>Keep Quest Helper off by default. The site’s hints are the first escalation layer; Wiki or Quest Helper is the final layer when friction replaces curiosity.</p>
+      </section>
+
+      <section id="routing">
+        <h2>What the chapter quietly accomplishes</h2>
+        <ul>
+          <li>Prayer levels arrive through The Restless Ghost instead of bone grinding.</li>
+          <li>Vampyre Slayer provides the first dramatic Attack jump only after she has experienced low-level combat.</li>
+          <li>The Ghostspeak amulet is retained for future quest dependencies.</li>
+          <li>Rune Mysteries creates a narrative bridge to Varrock and later Runecraft content.</li>
+          <li>The house fund begins without turning Stronghold of Security into an ATM visit.</li>
+        </ul>
+        <div class="companion-note">
+          <h3>Do not send her to Waterfall Quest yet.</h3>
+          <p>She should first understand weapons, armour, food, Attack, Strength, Defence, and Hitpoints. A short period of ordinary combat makes later quest XP feel transformative.</p>
+        </div>
+      </section>
+
+      <section id="intervene">
+        <h2>When to intervene</h2>
+        <div class="companion-note"><h3>The Restless Ghost</h3><p>The skeleton near the skull can surprise her. Make sure she is not carrying anything emotionally valuable, but do not spoil the encounter.</p></div>
+        <div class="companion-note"><h3>Ernest the Chicken</h3><p>Let her understand the lever puzzle, then offer the full solution quickly once execution becomes tedious. We are testing whether she enjoys the puzzle, not whether she can tolerate state tracking.</p></div>
+        <div class="companion-note"><h3>Vampyre Slayer</h3><p>Confirm food, weapon, stake, hammer, and garlic. Let the first attempt remain uncertain. The large Attack reward should land as part of the victory.</p></div>
+      </section>
+
+      <section id="observe">
+        <h2>What to observe during the playtest</h2>
+        <ul>
+          <li>Does she read dialogue naturally, skim it, or ask for summaries?</li>
+          <li>Does she enjoy finding items, or view gathering as interruption?</li>
+          <li>How long does a puzzle remain entertaining before it becomes friction?</li>
+          <li>Does she use hints progressively or jump directly to answers?</li>
+          <li>Does saving for the house create excitement this early?</li>
+          <li>Which activity makes her voluntarily wander off the route?</li>
+        </ul>
+        <p>Those answers should shape Chapter 2 more than our assumptions do.</p>
+      </section>
+    </article>
+    <aside class="sidebar right-rail">
+      <div class="sidebar-card"><h2>Player version</h2><small>Keep this page separate while she plays. It contains encounter and reward spoilers.</small><div class="button-row"><a class="button secondary" href={`${base}chapters/chapter-1`}>Open Chapter 1</a></div></div>
+    </aside>
+  </div>
+  </div>
+  <script>
+    const storageKey = 'rsag-companion-unlocked';
+    const companionPin = '2007';
+    const gate = document.querySelector('[data-companion-gate]');
+    const content = document.querySelector('[data-companion-content]');
+    const form = document.querySelector('[data-inline-pin-form]');
+    const input = document.querySelector('#inline-companion-pin');
+    const error = document.querySelector('[data-inline-pin-error]');
+
+    const unlock = () => {
+      gate.hidden = true;
+      content.hidden = false;
+    };
+
+    if (localStorage.getItem(storageKey) === 'true') {
+      unlock();
+    } else {
+      content.hidden = true;
+      gate.hidden = false;
+    }
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (input.value === companionPin) {
+        localStorage.setItem(storageKey, 'true');
+        unlock();
+        return;
+      }
+      error.textContent = 'That PIN did not match.';
+      input.select();
+    });
+  </script>
+</GuideLayout>

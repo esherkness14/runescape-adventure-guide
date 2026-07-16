@@ -1,43 +1,53 @@
-# Astro Starter Kit: Minimal
+# RuneScape Adventure Guide
 
-```sh
-npm create astro@latest -- --template minimal
+A fun-first Old School RuneScape Ironman guide built with Astro.
+
+## Local development
+
+Open PowerShell in the project folder and run:
+
+```powershell
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Keep that terminal open while previewing the site at `http://localhost:4321/runescape-adventure-guide/`.
 
-## 🚀 Project Structure
+Use a second PowerShell window for Git commands.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Build check
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```powershell
+npm run build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Deploy to GitHub Pages
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Push the repository to GitHub.
+2. In the repository, open **Settings → Pages**.
+3. Set **Source** to **GitHub Actions**.
+4. Push to `main`. The included workflow will build and deploy the site.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Formspree feedback
 
-## 🧞 Commands
+The feedback page submits to Formspree form ID `mpqvqjrr` using a lightweight native JavaScript request. No database or server is required.
 
-All commands are run from the root of the project, from a terminal:
+## Companion access
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+The companion link is hidden in the footer and protected by a lightweight client-side PIN intended only to prevent accidental spoilers. The current prototype PIN is `2007`.
 
-## 👀 Want to learn more?
+To change it, update `companionPin` in:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `src/layouts/GuideLayout.astro`
+- `src/pages/companion/chapter-1.astro`
+
+## Current prototype — v0.3
+
+- Landing page
+- Chapter 1 player guide
+- Layered collapsible hints
+- Local progress saving
+- Two-part gameplay and guide feedback form
+- PIN-gated Chapter 1 companion notes
+- GitHub Pages deployment workflow

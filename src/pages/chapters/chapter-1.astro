@@ -1,0 +1,152 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import Hint from '../../components/Hint.astro';
+import QuestCard from '../../components/QuestCard.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Chapter 1: Strange Things Around Lumbridge" current="chapter">
+  <div class="page-grid">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h2>Chapter 1</h2>
+        <a href="#arrival">Arrival</a>
+        <a href="#cook">The Duke’s Birthday</a>
+        <a href="#ghost">The Restless Ghost</a>
+        <a href="#draynor">Road to Draynor</a>
+        <a href="#ernest">Ernest the Chicken</a>
+        <a href="#vampire">Chapter Finale</a>
+        <a href="#north">The Road North</a>
+        <a href="#complete">Chapter Complete</a>
+      </div>
+    </aside>
+
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Chapter 1</div>
+        <h1 class="chapter-title">Strange Things Around Lumbridge</h1>
+        <p class="chapter-summary">Lumbridge is modest, rural, and apparently incapable of going a full afternoon without a ghost, vampire, missing ingredient, or deeply questionable scientific experiment.</p>
+      </header>
+
+      <section id="arrival">
+        <div class="section-label">Your journey begins</div>
+        <h2>For now, this is home.</h2>
+        <p>Lumbridge is a quiet southern settlement built around the River Lum. Its castle guards the crossing between Misthalin’s farms and the roads leading toward the desert and Draynor. The region has survived wars, goblin incursions, and stranger disturbances, but daily life still revolves around fields, mills, churches, and neighbors who need unusually specific favors.</p>
+        <p>Your goal is not to become powerful. It is to meet the people who live here, learn how the world works, and investigate the strange things happening beyond the castle walls.</p>
+        <div class="callout"><strong>Choose regular Ironman.</strong> Death should be an inconvenience and occasionally a funny story—not a reason to research every unfamiliar doorway before entering it.</div>
+        <p>After Tutorial Island, take a moment to look around. Find the castle and its upstairs bank, the nearby store, the church, the river, and the bridge east. Try right-clicking people and objects. Open the map. Experiment with run energy and the Lumbridge Home Teleport.</p>
+      </section>
+
+      <section id="cook">
+        <div class="section-label">Main Adventure I</div>
+        <QuestCard id="cooks-assistant" title="The Duke’s Birthday" meta="Cook’s Assistant · Lumbridge Castle">
+          <p>The cook in Lumbridge Castle has a problem. Duke Horacio’s birthday feast is approaching, and several important ingredients are missing.</p>
+          <p>Try this one without a walkthrough. Everything you need can be found in the countryside around Lumbridge.</p>
+          <div class="hint-group">
+            <Hint title="Hint 1 — Use the map"><p>Open the world map and look north and east of Lumbridge Castle. Find the cow field, chicken farm, wheat field, and the windmill icon beside the wheat.</p></Hint>
+            <Hint title="Hint 2 — More direction"><p>Leave the castle grounds and follow the road north past the general store and farms. The chicken farm is northeast of Lumbridge, while the wheat field and tall windmill are farther north, west of the road.</p></Hint>
+            <Hint title="Full answer"><p>Collect an egg at the chicken farm northeast of Lumbridge. Use a bucket on a dairy cow in the nearby cow field. Pick wheat from the field directly south of the windmill, climb to the windmill’s top floor, place the wheat in the hopper, operate the controls, then return downstairs and collect the flour in a pot.</p></Hint>
+          </div>
+        </QuestCard>
+
+        <QuestCard id="sheep-shearer" title="Fred’s Suspicious Sheep" type="optional" meta="Sheep Shearer · North of Lumbridge">
+          <p>Fred needs help shearing his sheep. This teaches gathering and processing clearly, but twenty pieces of wool may be charming or mildly criminal depending on your mood.</p>
+          <Hint title="Where can wool be spun?"><p>Open the map and return to Lumbridge Castle. The spinning wheel is on the middle floor, in the room on the castle’s southwest side.</p></Hint>
+        </QuestCard>
+      </section>
+
+      <section id="ghost">
+        <div class="section-label">Main Adventure II</div>
+        <QuestCard id="restless-ghost" title="The Restless Ghost" meta="Lumbridge Church and Swamp">
+          <p>Speak to Father Aereck in the church. Something is haunting the graveyard, and the local priest is not especially equipped to solve it.</p>
+          <div class="hint-group">
+            <Hint title="I cannot find Father Urhney"><p>Open the map and look south of Lumbridge for the swamp. Leave the castle by the southern road, enter the swamp, and find the small house along its western edge.</p></Hint>
+            <Hint title="I cannot understand the ghost"><p>Equip the Ghostspeak amulet before speaking to it.</p></Hint>
+            <Hint title="I cannot find the skull"><p>Open the map and locate the Wizards’ Tower southwest of Lumbridge. Cross the long bridge to the tower, climb down into the basement, and search the altar.</p></Hint>
+            <Hint title="Something attacked me near the skull"><p>Not every enemy needs to be defeated. Take the skull and leave.</p></Hint>
+          </div>
+          <p><strong>Keep the Ghostspeak amulet.</strong> It will matter again in later stories.</p>
+        </QuestCard>
+
+        <QuestCard id="x-marks" title="A Small Treasure Hunt" type="optional" meta="X Marks the Spot · Lumbridge crossroads">
+          <p>Speak to Veos near the crossroads and try to solve the clues using the map and nearby landmarks.</p>
+          <Hint title="I am having trouble following a clue"><p>Open the world map first and compare the clue with nearby roads, buildings, and rivers. Each location is close to Lumbridge, so use the castle as your reference point.</p></Hint>
+          <Hint title="I found the place but cannot dig"><p>Use a spade on the correct tile. If you need one, check the general store or search nearby buildings and gardens.</p></Hint>
+          <p>Bank the antique lamp for now. We will decide where it helps most after a few more adventures.</p>
+        </QuestCard>
+      </section>
+
+      <section id="draynor">
+        <div class="section-label">Follow the road west</div>
+        <h2>Draynor Village</h2>
+        <p>Draynor Village lies in the shadow of an old manor and has never quite escaped its unsettling reputation. The village once belonged to a more prosperous estate, but today it is a place of fishermen, market stalls, suspicious residents, and stories people prefer not to discuss after dark.</p>
+        <p>Open the world map and find Draynor directly west of Lumbridge. Follow the road west from the castle, cross the bridge, and continue past the farms until the road bends into the village. Bring a weapon, a little food, several empty inventory spaces, and nothing you would be heartbroken to lose. Find the bank, the market, the waterfront, and the enormous manor north of town.</p>
+        <div class="callout">You do not need a matching armour set. Looking slightly improvised is traditional.</div>
+      </section>
+
+      <section id="ernest">
+        <div class="section-label">Main Adventure III</div>
+        <QuestCard id="ernest" title="Ernest the Chicken" meta="Draynor Manor">
+          <p>A worried woman named Veronica is waiting outside the manor. Ernest entered some time ago and has not returned.</p>
+          <p>Explore before opening hints. Search rooms, inspect strange objects, and remember that the manor has more vertical space than it first appears.</p>
+          <div class="hint-group">
+            <Hint title="I cannot enter the manor"><p>Walk around the exterior. From Veronica, follow the manor wall toward the northern side and look for another entrance.</p></Hint>
+            <Hint title="I cannot find all the machine parts"><p>One is connected to the compost heap, one is upstairs, and one is beyond a lever puzzle in the basement.</p></Hint>
+            <Hint title="The lever puzzle has stopped being fun"><p>At that point, use Quest Helper or the Wiki solution without guilt. Understanding the puzzle is enough; manually tracking its state is not a moral achievement.</p></Hint>
+          </div>
+        </QuestCard>
+
+        <QuestCard id="misthalin" title="A Murder Near the Manor" type="optional" meta="Misthalin Mystery · Near the Wizards’ Tower">
+          <p>A self-contained murder mystery with no skill requirements. Open the map and look southeast of Draynor, near the road leading toward the Wizards’ Tower. Try it now if the puzzle-focused tone sounds fun, or save it if the manor has already filled your quota for suspicious houses.</p>
+        </QuestCard>
+      </section>
+
+      <section id="vampire">
+        <div class="section-label">Chapter finale</div>
+        <QuestCard id="vampyre-slayer" title="Vampyre Slayer" meta="Draynor Village and Manor">
+          <p>Speak to Morgan in Draynor Village. He will tell you about Count Draynor and point you toward someone with experience fighting vampires.</p>
+          <p>Before returning to the manor, make sure you understand how food restores Hitpoints and have a weapon better than the bronze sword from Tutorial Island.</p>
+          <div class="hint-group">
+            <Hint title="Where can I find garlic?"><p>Morgan’s house is in northern Draynor Village, just south of the manor grounds. Go upstairs and search the cupboard.</p></Hint>
+            <Hint title="What should I bring?"><p>The stake, a hammer, garlic, a weapon, and food.</p></Hint>
+            <Hint title="Full fight answer"><p>Carry the required items, open the coffin in the basement, and fight Count Draynor. The finishing action occurs automatically when you have what you need.</p></Hint>
+          </div>
+          <p>If you die, recover what you can, improve your food or equipment, and try again. The vampire does not know you are the protagonist.</p>
+        </QuestCard>
+      </section>
+
+      <section id="north">
+        <div class="section-label">The next thread</div>
+        <h2>The Road North</h2>
+        <p>After defeating Count Draynor, open the map and trace the road back east to Lumbridge. Return to the castle and speak to Duke Horacio upstairs about the strange talisman he received. This begins <strong>Rune Mysteries</strong> and opens the narrative road toward Varrock.</p>
+        <div class="house-project">
+          <div class="section-label">Future home project</div>
+          <h3>Begin the house fund</h3>
+          <p>Place some of the coins you naturally earn into the bank. Your first home costs 1,000 coins, but there is no need to grind all of it now. Chapter 2 will finish the job through exploration and quests.</p>
+          <div class="check-row">
+            <input class="progress-check" type="checkbox" id="house-fund" data-progress-id="house-fund" />
+            <label for="house-fund">I started saving for the house</label>
+          </div>
+        </div>
+      </section>
+
+      <section id="complete">
+        <div class="completion-panel">
+          <div class="section-label">Chapter complete</div>
+          <h3>You are ready for Varrock when…</h3>
+          <ul>
+            <li>The cook’s feast is saved.</li>
+            <li>The restless ghost has found peace.</li>
+            <li>Ernest is no longer a chicken.</li>
+            <li>Count Draynor is defeated.</li>
+            <li>You have started Rune Mysteries.</li>
+          </ul>
+          <p>Optional stories are truly optional. Continue when the road north sounds more exciting than another task around Lumbridge.</p>
+          <a class="button secondary" href={base}>Return home</a>
+        </div>
+      </section>
+    </article>
+
+    <aside class="sidebar right-rail"><ProgressTracker /></aside>
+  </div>
+</GuideLayout>
