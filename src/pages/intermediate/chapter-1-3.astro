@@ -1,0 +1,235 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+import ChapterGoals from '../../components/ChapterGoals.astro';
+import TrainingOptions from '../../components/TrainingOptions.astro';
+import RouteStep from '../../components/RouteStep.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate 1.3 · Bird Runs & Infrastructure" current="intermediate">
+  <div class="page-grid">
+    <aside class="sidebar"><IntermediateNav current="1-3" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate · Chapter 1.3</div>
+        <h1 class="chapter-title">Turn the cash pile into permanent account infrastructure.</h1>
+        <p class="chapter-summary">This is the densest subsection in Chapter 1. The route finishes Mage Training Arena in one sitting, builds the Crafting/teleport network, unlocks Fossil Island and birdhouse runs, finishes the important quest foundation needed by the rest of Chapter 1, unlocks fairy rings, and closes with the Zeah quest block before the long Woodcutting break in 1.4.</p>
+      </header>
+
+      <ChapterGoals
+        summary="By the end of 1.3 the account should have Bones to Peaches permanently unlocked, 1,600 buckets of sand converted into 1,600 molten glass, the 7-piece quest-glass reserve protected, and the 1,590-unpowered-orb grind either finished or underway; completing that orb stack is what carries Crafting to roughly 56. It should also have 2,000 stardust banked for Chapter 2, roughly 44 Mining / 56 Crafting / 46+ Fletching (with later quest XP naturally pushing higher), Fossil Island and birdhouses running, fairy-ring access, The Fremennik Trials complete, 100% Tai Bwo Wannai favour prepared before My Arm spends 60%, with a regular gout tuber banked for the Karamja Medium route, and enough quest-awarded Farming XP to start Garden of Tranquillity immediately in 1.4 with room to spare."
+        stats={["44 Mining + 2,000 banked stardust", "About 56 Crafting after blowing the 1,590 unpowered orbs — not from smelting the glass alone", "46+ Fletching deliberately; roughly 47–48 by Chapter 1 end depending on Wintertodt/incidental XP", "At least 33 Farming before 1.4", "31 Herblore before Eadgar's Ruse in 1.4", "Hunter progressing passively through birdhouses"]}
+        unlocks={["Bones to Peaches", "1,590 unpowered orbs + the reserved quest glass for the Chapter 1 Earth-orb route", "Fossil Island / mushtrees / birdhouse runs", "Fairy rings", "Rune sword + green d'hide starter gear", "The Fremennik Trials", "Death Plateau + Troll Stronghold", "100% Tai Bwo Wannai favour and 1 banked regular gout tuber", "Zeah quest foundation"]}
+      />
+
+      <RouteStep id="i13-runes" number="1" title="Buy the Mage Training Arena rune stock to explicit bank totals">
+        <p>Take the 1.2 cash stack to the <strong>Mage Arena rune shop in the Wilderness</strong> and bring your bank to at least:</p>
+        <ul>
+          <li><strong>1,650 nature runes</strong></li>
+          <li><strong>700 law runes</strong></li>
+          <li><strong>500 chaos runes</strong></li>
+          <li><strong>400 cosmic runes</strong></li>
+          <li><strong>500 water runes</strong></li>
+        </ul>
+        <p>Also have an <strong>air staff, earth staff, fire staff</strong> and <strong>10 Wizard's Mind Bombs</strong>. These totals include a practical buffer over the normal Bones to Peaches unlock cost; leftover runes remain useful immediately afterward.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-mta" number="2" title="Finish Mage Training Arena now and unlock Bones to Peaches">
+        <p><strong>The entire reason for MTA here is Bones to Peaches.</strong> The spell costs <strong>200 Telekinetic, 300 Alchemist, 2,000 Enchantment and 200 Graveyard pizazz points</strong>. Finish the unlock in this visit so MTA does not remain an open chore for the next ten hours.</p>
+        <div class="callout">
+          <strong>Use these buffered point targets and room loops:</strong>
+          <ul>
+            <li><strong>Graveyard — 211 points:</strong> take bones from a pile, cast <strong>Bones to Bananas</strong>, deposit the bananas in the chute, and eat bananas when you need healing. Repeat until the point target is reached.</li>
+            <li><strong>Telekinetic — 211 points:</strong> position yourself on the side of the maze that pulls the guardian toward the next opening, then cast <strong>Telekinetic Grab</strong>. Complete each maze rather than abandoning it halfway through.</li>
+            <li><strong>Alchemist — 311 points:</strong> the cabinet values rotate. Alch the item currently worth <strong>30 coins</strong>; ignore poor-value items. Low Alchemy works. If a Wizard's Mind Bomb gives you High Alchemy, use it for faster casts.</li>
+            <li><strong>Enchantment — 2,165 points:</strong> use the highest enchantment spell you can cast reliably. With the route's level range, <strong>Lvl-4 Enchant</strong> with a Wizard's Mind Bomb is the intended option. Prioritize the current bonus shape/corner, enchant shapes, then drop them after they score.</li>
+          </ul>
+        </div>
+        <p>At the rewards shop, buy <strong>1 mud rune</strong> and <strong>10 mist runes</strong>, then buy <strong>Bones to Peaches</strong>. Boost to 60 Magic with a Wizard's Mind Bomb if necessary. When the spell is unlocked, MTA is finished for Chapter 1.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-quest-foundation" number="3" title="Finish the missing early quest foundation before the infrastructure grind">
+        <p>Complete these as standalone quests, in this order:</p>
+        <ol>
+          <li><strong>Demon Slayer</strong></li>
+          <li><strong>A Porcine of Interest</strong> — the 1,000 Slayer XP combines with the Varrock Museum Natural History Quiz to comfortably clear Desert Treasure's 10 Slayer requirement.</li>
+          <li><strong>Vampyre Slayer</strong></li>
+          <li><strong>Below Ice Mountain</strong></li>
+          <li><strong>The Golem</strong></li>
+          <li><strong>Shadow of the Storm</strong> — put the selectable <strong>10,000 combat XP into Ranged</strong></li>
+          <li><strong>The Lost Tribe</strong></li>
+          <li><strong>Enter the Abyss</strong> miniquest — finish it completely so Abyss access is unlocked</li>
+          <li><strong>Merlin's Crystal</strong></li>
+          <li><strong>The Dig Site</strong></li>
+          <li><strong>Elemental Workshop I</strong></li>
+          <li><strong>Elemental Workshop II</strong> — if you are still below 30 Smithing, use Giant Foundry or ordinary bars to reach 30 first</li>
+        </ol>
+        <p>This block restores several quests that the high-efficiency route touches in fragments. Here they are simply finished. <strong>The Dig Site</strong> is especially important because it feeds both Fossil Island and Desert Treasure; <strong>Enter the Abyss</strong> is kept because it is a permanent Runecraft/travel unlock rather than diary-only routing.</p>
+        <p>By this point you are comfortably over <strong>32 Quest Points</strong>. Go upstairs in the <strong>Champions' Guild</strong> and buy from <strong>Scavvo</strong>:</p>
+        <ul>
+          <li><strong>1 rune sword</strong> — specifically the rune <em>sword</em>, not the rune longsword</li>
+          <li><strong>1 green d'hide chaps</strong></li>
+          <li><strong>1 green d'hide vambraces</strong></li>
+        </ul>
+        <p>Keep all three. The rune sword is the simple melee weapon used through the rest of Chapter 1 and early Chapter 2, and the green d'hide is useful early Ranged/quest gear.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-sand" number="4" title="Mine the 1,600 buckets of sand first; then finish Mining at Shooting Stars">
+        <p><strong>This is a resource step first and a Mining-XP step second.</strong> Withdraw a pickaxe, desert clothing, waterskins/food, about <strong>80,000 gp</strong>, and the <strong>1,600 noted empty buckets</strong> banked in 1.2. Go to the <strong>Desert Quarry / Sandstorm grinder</strong> and give the noted buckets to <strong>Drew</strong>.</p>
+        <ol>
+          <li>Mine sandstone and deposit every piece into <strong>Sandstorm</strong>.</li>
+          <li>Continue until the grinder is holding enough processed sand for <strong>1,600 buckets</strong>. Sand yield depends on sandstone size, so the target is the grinder total—not 1,600 individual rocks.</li>
+          <li>Pay Drew <strong>50 gp per bucket</strong> and withdraw exactly <strong>1,600 buckets of sand</strong>. That costs <strong>80,000 gp</strong>.</li>
+        </ol>
+        <p><strong>Mining-level choice:</strong> staying at sandstone until roughly <strong>43 Mining</strong> matches the source route and gets most of the level quickly. If the 1,600-sand resource target is already finished and you are tired of the desert, leave immediately and finish the level at Shooting Stars instead.</p>
+        <p>After the sand is banked, use <strong>tier 4 or lower Shooting Stars</strong> with your <strong>best available pickaxe</strong> for the relaxed route; use a rune pickaxe if you already have one. Continue until you have both <strong>44 Mining</strong> and <strong>2,000 total stardust</strong>. If 44 Mining comes first, keep mining stars until 2,000 stardust. <strong>Do not spend the stardust:</strong> early Chapter 2 buys the Celestial ring with all 2,000.</p>
+      </RouteStep>
+
+      <TrainingOptions skill="Crafting" target="about 56 + 1,590 unpowered orbs" why="The molten-glass step alone does not get you to 56 Crafting. Blowing 1,590 unpowered orbs gives 83,475 Crafting XP by itself, and that second half of the grind is what carries the route to roughly 56 while also creating the Earth-orb cash stack." recommended="At a furnace, turn exactly 1,600 soda ash + 1,600 buckets of sand into 1,600 molten glass. Immediately protect the future quest glass: leave 6 molten glass for Desert Treasure and 1 molten glass for the lantern lens used in The Hand in the Sand. Then use a glassblowing pipe to turn exactly 1,590 molten glass into 1,590 unpowered orbs. That glassblowing is what should carry the route to roughly 56 Crafting." relaxed="You do not have to blow all 1,590 orbs in one sitting. Smelt the full batch here, reserve the 7 quest glass immediately, then bankstand a few hundred orbs at a time between quests, birdhouse runs, or other low-attention breaks. Just finish all 1,590 before the Earth-orb charging block in 1.4." resource="The accounting is intentional: 1,600 molten glass = 1,590 unpowered orbs + 6 reserved for Desert Treasure + 1 reserved for The Hand in the Sand + 3 spare molten glass. Do not casually spend from this batch." fast="Multiskilling glassblowing during movement saves time, but is optional; plain bankstanding is the intended Intermediate route." />
+
+      <TrainingOptions skill="Fletching" target="46 deliberately; do not grind 48 just to match the end-of-chapter number" why="This corrects an ambiguity in the source route: BRUHsailer deliberately establishes 46 Fletching from the early arrow supply. Its roughly 48 Fletching at the end of Chapter 1 is an expected result after additional incidental and quest XP, not a special unlock. There is no Chapter 1 quest or item that suddenly requires 48. The useful future breakpoints are 50 Fletching for Devious Minds/Kandarin Medium, 52 for broad arrows (after the Slayer unlock) and The Final Dawn, and 60 for Sins of the Father; getting the cheap early arrow XP now simply reduces those later grinds." recommended="First check your level. If you are already 46+ from Wintertodt, do nothing. Otherwise use the banked oak logs set aside for Fletching: cut each oak log into 30 arrow shafts, add 30 feathers to make headless arrows, then add 30 steel arrowtips to make steel arrows. One oak log taken all the way through this chain is about 190 Fletching XP, so only process as many logs/arrows as your current XP requires to reach 46. Buy extra feathers from Gerrant's Fishy Business in Port Sarim and steel arrowtips from Hickton's Archery Emporium in Catherby; buying about 250 arrowtips per world keeps the shop price reasonable." relaxed="Bankstand the entire arrow chain in ordinary Make-X batches. There is no need to fletch while walking. Once you hit 46, stop and let later quests/passive Fletching do the rest. The Fremennik Trials awards 2,812 Fletching XP and Temple of Ikov later awards another 8,000, so your displayed level will continue rising without a dedicated 48 grind." resource="Do not cut logs reserved for birdhouses, diaries, Sleeping Giants, Enakhra's Lament, Icthlarin's Little Helper or other named quest uses. Oak logs are preferred here because BRUHsailer's Wintertodt bank plan explicitly budgets spare oaks for this steel-arrow route." fast="If you enjoy multiskilling, making the headless/steel arrows while travelling is faster overall, but this Intermediate route never assumes it." />
+
+      <RouteStep id="i13-jewelry" number="5" title="Make the Chapter 1 teleport-jewelry network">
+        <p>Once your Crafting level allows it, make at least the following working stack:</p>
+        <ul>
+          <li><strong>20 rings of dueling</strong></li>
+          <li><strong>10 digsite pendants</strong></li>
+          <li><strong>10 games necklaces</strong></li>
+          <li><strong>5 necklaces of passage</strong></li>
+        </ul>
+        <p>The full Chapter 1 target is <strong>40 rings of dueling, 45 digsite pendants and 10 games necklaces</strong>, plus <strong>8 bracelets of clay, 2 sapphire amulets, 1 ruby amulet and 1 binding necklace</strong>. If Wintertodt/Tempoross already gave you enough gems and gold bars, make the full batch now. Otherwise 1.4 explicitly tells you to top up only the missing amount.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-fossil" number="6" title="Reach 100 Varrock Museum Kudos, complete Bone Voyage, and unlock Fossil Island">
+        <p>Complete <strong>Priest in Peril</strong> first. Then go to the <strong>Varrock Museum</strong> and make the 100-Kudos requirement explicit rather than assuming it happened in the background:</p>
+        <ol>
+          <li>Complete the <strong>Natural History Quiz</strong> in the museum basement if you have not already. Take the Hunter and Slayer XP.</li>
+          <li>Talk to <strong>Historian Minas</strong> and tell him about every completed quest he will accept for Kudos.</li>
+          <li>Check your total. If you are below <strong>100 Kudos</strong>, use the museum cleaning area and complete unidentified-cleaned-find displays until the total reaches at least 100.</li>
+        </ol>
+        <p>Once the museum shows <strong>100+ Kudos</strong>, complete <strong>Bone Voyage</strong>. On Fossil Island, build the camp facilities you can build and unlock the <strong>Mushroom Meadow, Verdant Valley and House on the Hill mushtrees</strong>.</p>
+        <p>Use a <strong>digsite pendant</strong> on the strange machine in the House on the Hill so future pendants can teleport there directly. While you are already on the island, mine and bank at least <strong>1,000 volcanic ash</strong>; this becomes ultracompost later.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-birdhouses" number="7" title="Start birdhouse runs with one repeatable recipe">
+        <p><strong>Bring each run:</strong> a hammer, chisel, <strong>4 clockworks</strong>, <strong>4 logs for the highest birdhouse tier you can currently make</strong>, <strong>40 cheap hop/flower seeds</strong>, and a digsite pendant.</p>
+        <ol>
+          <li>Use each clockwork on a log to make <strong>4 bird houses</strong>.</li>
+          <li>Teleport to the <strong>House on the Hill</strong>.</li>
+          <li>Mushtree to <strong>Verdant Valley</strong> and place the two bird houses there.</li>
+          <li>Mushtree to <strong>Mushroom Meadow</strong>, place the bird house there, then run south to the <strong>Tar Swamp entrance</strong> and place the fourth.</li>
+          <li>Use <strong>10 cheap seeds on each bird house</strong>.</li>
+          <li>After roughly <strong>50 minutes</strong>, harvest all four. You get the clockworks back; bring four replacement logs and another 40 seeds next run.</li>
+        </ol>
+        <div class="callout"><strong>Scheduling rule:</strong> do birdhouses when you log in, finish a quest, or want a two-minute break. The route wants passive Hunter XP; it does not require alarm-clock efficiency.</div>
+        <div class="later-note"><strong>Chapter 2 teak preparation:</strong> save the <strong>first 2 teak seeds</strong> you receive from bird nests/contracts. Do not spend them elsewhere. You cannot plant them until <strong>35 Farming</strong>; 1.4 will tell you exactly when to turn them into saplings and start the roughly three-day growth timer.</div>
+      </RouteStep>
+
+      <RouteStep id="i13-rfd" number="8" title="Finish the early Recipe for Disaster block in one sitting">
+        <p>If <strong>Cook's Assistant</strong> is not complete, finish it first. Start <strong>Recipe for Disaster</strong>, finish the opening cook section, then complete these three subquests one at a time:</p>
+        <ol>
+          <li><strong>Freeing the Goblin generals</strong></li>
+          <li><strong>Freeing the Mountain Dwarf</strong></li>
+          <li><strong>Freeing Pirate Pete</strong></li>
+        </ol>
+        <p>Your 1.2 quest work and 60 Cooking make this a clean time to close all three rather than starting them and carrying their ingredients through half the chapter.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-fremennik" number="9" title="Complete The Fremennik Trials and Mountain Daughter">
+        <p>Complete <strong>The Fremennik Trials</strong> from start to finish. Then complete <strong>Mountain Daughter</strong>. These quests establish the Fremennik foundation used heavily in later chapters.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-mory" number="10" title="Finish the Morytania prerequisites needed for the Farming quest chain">
+        <p>Complete these as standalone quests:</p>
+        <ol>
+          <li><strong>Nature Spirit</strong></li>
+          <li><strong>Shades of Mort'ton</strong></li>
+          <li><strong>Creature of Fenkenstrain</strong></li>
+          <li><strong>Plague City</strong></li>
+        </ol>
+        <p>Keep the <strong>ring of charos</strong> from Creature of Fenkenstrain; Garden of Tranquillity uses it in 1.4. From <strong>Plague City</strong>, also keep the <strong>gas mask</strong> in your bank. Desert Treasure's Smoke Dungeon requires a facemask, Slayer helmet or gas mask, so the quest reward already solves that requirement without another shopping trip. Plague City also leaves <strong>Biohazard</strong> ready to be completed cleanly later.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-fairy1" number="11" title="Complete Lost City, then Fairytale I">
+        <p>Complete <strong>Lost City</strong>, then complete <strong>Fairytale I – Growing Pains</strong>. Bring the <strong>ghostspeak amulet</strong> banked in 1.1 when Quest Helper asks for it.</p>
+        <div class="later-note"><strong>Why Fairytale I is here:</strong> it awards <strong>3,500 Farming XP</strong>. That is enough to clear the <strong>17 Farming</strong> requirement for Forgettable Tale even if you started with essentially no Farming XP.</div>
+      </RouteStep>
+
+      <RouteStep id="i13-fairy2" number="12" title="Start Fairytale II only until fairy rings are unlocked">
+        <p>Start <strong>Fairytale II – Cure a Queen</strong> and continue only until the <strong>Fairy Godfather gives you permission to use fairy rings</strong>. Stop there.</p>
+        <p>This is one of the few intentional partial quests in the guide. Fairy rings are a major transport unlock, while finishing Fairytale II has much higher skill requirements. Keep a <strong>dramen staff</strong> available whenever a route step uses fairy rings.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-forgettable" number="13" title="Complete The Giant Dwarf, then complete Forgettable Tale">
+        <p>Complete <strong>The Giant Dwarf</strong>. Then start <strong>Forgettable Tale...</strong> and begin the kelda brewing/fermentation step. Fermentation is a real timer, so this is the one place where leaving a quest waiting is intentional.</p>
+        <p>Use the wait for a birdhouse run, a Crafting/Fletching session, or another finished activity. Return when the brew is ready and <strong>finish Forgettable Tale completely</strong>.</p>
+        <div class="callout"><strong>Farming dependency solved:</strong> The Goblin generals subquest gave <strong>1,000 Farming XP</strong>, Fairytale I gives <strong>3,500</strong>, and Forgettable Tale gives <strong>5,000</strong>. That is <strong>9,500 Farming XP</strong> before the Zeah block, already enough for <strong>26 Farming</strong>. The Garden of Death later in this subsection adds another <strong>10,000 Farming XP</strong>, so 1.4 begins with at least <strong>19,500 XP (level 33)</strong>. Garden of Tranquillity therefore has no hidden Farming grind.</div>
+      </RouteStep>
+
+      <RouteStep id="i13-troll" number="14" title="Complete Death Plateau and Troll Stronghold">
+        <p>Complete <strong>Death Plateau</strong>, then complete <strong>Troll Stronghold</strong>. Buy and bank <strong>5 extra pairs of climbing boots</strong> while the shop access is convenient. During Troll Stronghold, make sure you <strong>free Eadgar</strong> and unlock the southern shortcut/entrance.</p>
+        <p>These quests are direct prerequisites for <strong>Eadgar's Ruse</strong> and <strong>Desert Treasure</strong>.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-herblore" number="15" title="Reach 31 Herblore before leaving the Troll quest block">
+        <p>If Herblore is below <strong>31</strong>, use banked Wintertodt herbs and simple potions to reach 31 now. <strong>Serum 207, compost potions, energy potions and restore potions</strong> are all reasonable fillers depending on your secondaries.</p>
+        <p>Training the level outright keeps the next subsection self-contained: <strong>Eadgar's Ruse requires 31 Herblore to start and to make the troll truth potion</strong>, so no temporary boost or separately sourced botanical pie is needed.</p>
+        <div class="later-note"><strong>Do not use the last harralander.</strong> Put <strong>1 harralander</strong> aside in the bank specifically for <strong>Heroes' Quest</strong> in early Chapter 2; it is mixed with blamish snail slime and water to make the oil for the lava-eel fishing rod.</div>
+      </RouteStep>
+
+      <RouteStep id="i13-karamja" number="16" title="Complete Jungle Potion, prepare My Arm favour, and use the same grind to bank a gout tuber">
+        <p>Complete <strong>Jungle Potion</strong>. Then bring a <strong>machete, spade, antipoison, food and normal combat gear</strong> to <strong>Tai Bwo Wannai Cleanup</strong>.</p>
+        <p><strong>Target: reach 100% Tai Bwo Wannai favour.</strong> My Arm's Big Adventure only requires 60%, but the quest spends 60 percentage points. Reaching 100% now completes the favour requirement for the <strong>Karamja Medium Diary</strong> while you are already doing Cleanup and leaves this activity behind for good.</p>
+        <p>While building the favour, cut dense jungle and watch for <strong>1 regular gout tuber</strong>. Dig it up with your spade and <strong>bank it</strong>. This is the rare tuber used later to obtain a gem machete for the Karamja Medium Diary. It is <em>not</em> the hardy gout tuber that Murcaily gives you during My Arm.</p>
+        <div class="later-note"><strong>Do not leave without the regular gout tuber.</strong> Reaching 100% favour and finding the tuber are two separate goals. If favour reaches 100% first, keep cutting jungle until the tuber appears, dig it up with the spade, and bank it. Early Chapter 2 uses it to exchange gems for a machete for the <strong>Karamja Medium Diary</strong>; leaving it to RNG later would recreate exactly the kind of hidden BruhSailer dependency this guide is meant to eliminate.</div>
+      </RouteStep>
+
+      <RouteStep id="i13-grail" number="17" title="Complete Holy Grail">
+        <p>Complete <strong>Holy Grail</strong> as a standalone quest. Merlin's Crystal is already finished, so there is no quest-chain bookkeeping left to do here.</p>
+      </RouteStep>
+
+      <TrainingOptions skill="Construction" target="26 before Getting Ahead" why="Getting Ahead has a hard 26 Construction requirement. Wintertodt brazier repairs give variable Construction XP, so this checkpoint prevents the Zeah block from unexpectedly stopping." recommended="If you are below 26, use Mahogany Homes with the normal/oak planks already banked from earlier activities. Contracts are straightforward, useful XP per plank, and less repetitive than house spam." relaxed="Do a few Mahogany Homes contracts at a time between birdhouse runs or quests until 26." resource="Use banked normal/oak planks first; there is no reason to buy an oversized plank stack for this short checkpoint." fast="Oak furniture in your POH is faster if you prefer a short active grind." />
+
+      <RouteStep id="i13-zeah" number="18" title="Do the Zeah quest block — but finish each quest before starting the next">
+        <p>Zeah is the one area where several quests are worth grouping because they share the same travel network. Keep the geographic cluster, but finish each quest before beginning the next. Complete these <strong>one at a time</strong>, rebanking whenever useful:</p>
+        <ol>
+          <li><strong>The Queen of Thieves</strong></li>
+          <li><strong>The Depths of Despair</strong></li>
+          <li><strong>The Forsaken Tower</strong></li>
+          <li><strong>The Tale of the Righteous</strong></li>
+          <li><strong>The Garden of Death</strong></li>
+          <li><strong>The Ascent of Arceuus</strong></li>
+          <li><strong>Getting Ahead</strong></li>
+        </ol>
+        <p>Unlock the <strong>Mount Quidamortem mountain-guide shortcut</strong> when The Tale of the Righteous takes you there. That is a worthwhile permanent travel unlock rather than an incidental diary click.</p>
+      </RouteStep>
+
+      <RouteStep id="i13-finish" number="19" title="Verify the 1.3 handoff before taking the Woodcutting break">
+        <p>Before moving to 1.4, confirm:</p>
+        <ul>
+          <li><strong>Bones to Peaches</strong> unlocked</li>
+          <li><strong>44 Mining / about 56 Crafting / 46+ Fletching</strong> — 46 is the deliberate Fletching checkpoint; do not grind 48 just to match BRUHsailer's projected end-of-chapter stat. The Crafting target assumes you have blown the orb stack, not merely smelted the glass.</li>
+          <li><strong>1,590 unpowered orbs</strong> completed, or actively being chipped away at with the explicit deadline to finish them before Earth-orb charging in 1.4</li>
+          <li><strong>7 molten glass</strong> protected from the orb stack: 6 for Desert Treasure and 1 for The Hand in the Sand; the matched 1,600-glass batch also leaves 3 spare</li>
+          <li><strong>2,000 stardust</strong> banked and unspent for the Celestial ring</li>
+          <li><strong>Rune sword + green d'hide chaps/vambraces</strong> banked/equipped</li>
+          <li><strong>Birdhouse runs</strong> available; first <strong>2 teak seeds</strong> reserved when obtained</li>
+          <li><strong>Fairy rings</strong> available</li>
+          <li><strong>Forgettable Tale</strong> and <strong>The Garden of Death</strong> complete, leaving at least <strong>33 Farming</strong></li>
+          <li><strong>The Fremennik Trials</strong> complete</li>
+          <li><strong>Death Plateau + Troll Stronghold</strong> complete</li>
+          <li><strong>Creature of Fenkenstrain</strong> complete with the ring of charos banked</li>
+          <li><strong>100% Tai Bwo Wannai favour</strong> and <strong>1 regular gout tuber</strong> banked</li>
+          <li><strong>100+ Varrock Museum Kudos</strong> and <strong>Bone Voyage</strong> complete</li>
+          <li><strong>26+ Construction</strong> and <strong>Getting Ahead</strong> complete</li>
+          <li><strong>1 harralander</strong> reserved for Heroes' Quest</li>
+        </ul>
+        <div class="callout"><strong>1.3 complete:</strong> the next subsection deliberately opens with a long, simple Woodcutting break before returning to quests.</div>
+      </RouteStep>
+
+      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-2/`}>← 1.2</a><a class="button" href={`${base}intermediate/chapter-1-4/`}>Continue to 1.4 →</a></div>
+    </article>
+    <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-1-3" title="1.3 progress" /></aside>
+  </div>
+</GuideLayout>

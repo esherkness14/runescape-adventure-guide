@@ -1,0 +1,49 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate Efficiency · RuneScape Adventure Guide" current="intermediate">
+  <div class="page-grid intermediate-overview-grid">
+    <aside class="sidebar"><IntermediateNav current="overview" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate Efficiency</div>
+        <h1 class="chapter-title">An efficient Ironman route that explains what it is doing.</h1>
+        <p class="chapter-summary">This is a standalone adaptation of BRUHsailer for players who already understand RuneScape but do not want to memorize every shop, NPC, patch, quest item and teleport chain. It keeps the same macro-progression principles while reducing multi-questing, diary micromanagement and high-input skilling.</p>
+      </header>
+
+      <section>
+        <div class="section-label">How this guide works</div>
+        <h2>Use this guide by itself.</h2>
+        <div class="principle-grid">
+          <div class="principle"><strong>Complete route.</strong><span>You do not need BRUHsailer open in another tab. Required quests, items, quantities, training targets and important future pickups are written into this route.</span></div>
+          <div class="principle"><strong>Keep the progression.</strong><span>Quest prerequisites, transport unlocks, Farming Contracts, Ancient Magicks, cash engines and genuinely painful future pickups still happen in a sensible order.</span></div>
+          <div class="principle"><strong>Untangle the quests.</strong><span>Quests are normally completed one at a time. A quest is only left unfinished when a real timer or a major unlock—such as fairy rings—makes the partial step worthwhile.</span></div>
+          <div class="principle"><strong>Default to chill skilling.</strong><span>AFK and low-attention methods are recommended first. Faster methods remain visible, but blackjacking, 2-tick methods and other high-input techniques are never assumed.</span></div>
+          <div class="principle"><strong>Skip diary confetti.</strong><span>One-off diary tasks are omitted unless they happen naturally with no meaningful rebanking or detour. Full diary completion can be handled when its rewards actually matter.</span></div>
+          <div class="principle"><strong>Explain future prep.</strong><span>If the route asks you to bank an odd item, it names the item, gives a quantity and tells you what it is for. No unexplained “grab useful supplies while you are here” steps.</span></div>
+        </div>
+        <div class="callout"><strong>Quest-detail assumption:</strong> this is an intermediate guide, so it does not reproduce every dialogue option or puzzle solution. Quest Helper can handle those details. The route itself supplies the preparation, order, quantities, stopping points and reason each activity is being done.</div>
+      </section>
+
+      <section>
+        <div class="section-label">Chapter 1</div>
+        <h2>Get to da chopper earth staves — intermediate edition.</h2>
+        <p>Chapter 1 takes the account from Tutorial Island to a durable early-midgame foundation: Wintertodt resources, Fishing/Agility/Thieving progression, Fossil Island and birdhouse runs, fairy rings, protection prayers, Farming Contracts, Desert Treasure, and finally the Earth-orb stock that becomes the Chapter 2 cash engine.</p>
+        <div class="callout"><strong>Expected Chapter 1 finish line:</strong> roughly 46 Attack · 50 Strength · 34 Defence · 39 Hitpoints · 45 Ranged · 43 Prayer · 63 Magic · 24 Runecraft · 39 Construction · 51 Agility · 40 Herblore · 77 Thieving · 56 Crafting · roughly 47–48 Fletching (46 is the deliberate checkpoint) · 16 Slayer · 46 Hunter · 44 Mining · 42 Smithing · 74 Fishing · 60 Cooking · 89 Firemaking · 70 Woodcutting · 63 Farming. These are route targets, not a failure check: passive training, extra quests and different skilling methods can leave individual skills higher.</div>
+        <div class="chapter-card-grid">
+          <a class="subchapter-card" href={`${base}intermediate/chapter-1-1/`}><span>1.1</span><strong>Wintertodt foundation</strong><small>Tutorial Island → early quests → exact warm-clothing setup → 50 Firemaking → Wintertodt.</small></a>
+          <a class="subchapter-card" href={`${base}intermediate/chapter-1-2/`}><span>1.2</span><strong>Fishing & Thieving</strong><small>Desert quests, Angler, Waterfall, Barbarian Fishing, movement stats and the cash reserve.</small></a>
+          <a class="subchapter-card" href={`${base}intermediate/chapter-1-3/`}><span>1.3</span><strong>Bird runs & infrastructure</strong><small>Bones to Peaches, Fossil Island, birdhouses, teleport jewelry, fairy rings and the Farming quest chain.</small></a>
+          <a class="subchapter-card" href={`${base}intermediate/chapter-1-4/`}><span>1.4</span><strong>Farming, Desert Treasure & earth orbs</strong><small>70 Woodcutting, 43 Prayer, Farming Contracts, Desert Treasure and the Chapter 2 money engine.</small></a>
+        </div>
+      </section>
+
+      <section class="source-note">
+        <div class="section-label">Source & attribution</div>
+        <p>This route adapts the account progression developed by So Iron BRUH and ParasailerOSRS in <a href="https://umkyzn.github.io/BRUHsailer/" rel="noreferrer">BRUHsailer</a>. The original guide remains useful if you specifically want to inspect its high-efficiency routing or compare the source plan, but it is <strong>not required alongside this guide</strong>. Where game mechanics have changed—such as the modern Wintertodt Warmth system—this version uses current mechanics rather than preserving outdated instructions.</p>
+      </section>
+    </article>
+  </div>
+</GuideLayout>

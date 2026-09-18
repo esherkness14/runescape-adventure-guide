@@ -1,0 +1,127 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+import ChapterGoals from '../../components/ChapterGoals.astro';
+import TrainingOptions from '../../components/TrainingOptions.astro';
+import RouteStep from '../../components/RouteStep.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate 1.1 · Wintertodt Foundation" current="intermediate">
+  <div class="page-grid">
+    <aside class="sidebar"><IntermediateNav current="1-1" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate · Chapter 1.1</div>
+        <h1 class="chapter-title">Build the early account, then use Wintertodt as a resource engine.</h1>
+        <p class="chapter-summary">This section establishes the first quest, cash, travel and Construction foundation before the long Firemaking block. Finish each quest, bank when useful, and keep only future pickups that save a meaningful return trip; nothing in this subsection requires another guide open beside it.</p>
+      </header>
+
+      <ChapterGoals
+        summary="By the end of 1.1 you should have the important early quest foundation, a player-owned house, four guaranteed warm items, 35+ Woodcutting and roughly 89 Firemaking. The Intermediate route stops around 89, but taking Wintertodt all the way to 99 Firemaking is a valid optional choice if you want to front-load the skill and rewards."
+        stats={["35+ Woodcutting before Wintertodt", "50 Firemaking before entering Wintertodt", "About 89 Firemaking on the recommended route", "99 Firemaking optional if you want to finish the skill now", "Early Thieving/Fletching/Construction gained naturally"]}
+        unlocks={["Ghostspeak amulet banked for later quests", "Ardougne and Gnome-area starter quest foundation", "Player-owned house before Wintertodt repairs", "Four easy warm items", "Wintertodt Reward Cart stocked for later Chapter 1 supplies"]}
+      />
+
+      <RouteStep id="i11-start" number="1" title="Build the Lumbridge/Draynor starter bank and finish the first quests">
+        <p>Keep a <strong>knife, hammer, chisel, axe, tinderbox, spade and at least 2 buckets</strong>. Burn normal logs to <strong>15 Firemaking</strong> and bank <strong>5 ashes</strong>. You do <strong>not</strong> need to build a large stack of normal logs here; the default route will use the logs you cut for Firemaking. If you prefer to bank some logs and burn them later, that is perfectly fine.</p>
+        <p>Complete these quests one at a time:</p>
+        <ol>
+          <li><strong>X Marks the Spot</strong></li>
+          <li><strong>The Restless Ghost</strong></li>
+          <li><strong>Misthalin Mystery</strong></li>
+          <li><strong>Rune Mysteries</strong></li>
+          <li><strong>Sheep Shearer</strong></li>
+        </ol>
+        <p>After The Restless Ghost, keep the <strong>ghostspeak amulet</strong> in your bank. Do not discard it; Nature Spirit, Fairytale I and other later quests reuse it.</p>
+        <div class="later-note"><strong>Lamps:</strong> put generic early XP lamps on <strong>Herblore</strong> unless a later step explicitly says otherwise. This route uses quest rewards and lamps to avoid an unnecessary early Herblore grind.</div>
+      </RouteStep>
+
+      <RouteStep id="i11-ardy-quests" number="2" title="Clear the first Ardougne quest block, then combine the Woodcutting and Firemaking grind">
+        <p>Complete <strong>Clock Tower</strong>, <strong>Monk's Friend</strong> and <strong>Hazeel Cult</strong> as three separate quests. After each quest, bank if the next inventory would be cleaner.</p>
+        <TrainingOptions skill="Woodcutting + Firemaking" target="35 Woodcutting / 50 Firemaking before Wintertodt" why="35 Woodcutting is the useful early Woodcutting breakpoint, while 50 Firemaking is the hard requirement to enter Wintertodt. There is no benefit to treating these as two unrelated grinds: the logs you cut for Woodcutting are also your Firemaking XP." recommended="Cut normal trees until 15 Woodcutting, then move to oaks. Burn the logs you cut as you go. Reach 35 Woodcutting, then continue cutting/burning as needed until 50 Firemaking. If you would rather return to questing once you hit 35 Woodcutting, that is fine too—just finish 50 Firemaking before Step 7 when you actually enter Wintertodt." relaxed="Use a Forestry world and cut in a comfortable populated spot. You can bank inventories and burn them later instead of alternating constantly; banking is an option for convenience, not a route requirement." resource="If it is convenient, keep some spare oak logs banked for later Fletching/quest use, but do not force a large log stockpile here. Wintertodt and later Woodcutting will provide more logs." fast="2-tick methods can save time, but they are never required or assumed by this guide." />
+      </RouteStep>
+
+      <RouteStep id="i11-ardy-supplies" number="3" title="Do the Ardougne supply run once, then finish the local quests">
+        <p>At <strong>Aemad's Adventuring Supplies in East Ardougne</strong>, buy and bank:</p>
+        <ul>
+          <li><strong>3 ropes</strong></li>
+          <li><strong>1 water-filled vial pack</strong></li>
+          <li><strong>30 balls of wool</strong></li>
+          <li><strong>7 papyrus</strong></li>
+        </ul>
+        <p>At the <strong>Silver Merchant</strong>, buy <strong>2 silver bars</strong>. Then steal and bank at least <strong>100 cakes</strong>, <strong>14 bread</strong> and <strong>84 silk</strong>. Keep the cakes for Wintertodt; sell most of the silk back after the shop timer if you need early cash, but keep roughly <strong>10–11 silk</strong> banked for later quest use.</p>
+        <p>Now complete <strong>Sheep Herder</strong>, <strong>Sea Slug</strong> and <strong>Tribal Totem</strong> one at a time. During Sheep Herder, bring a <strong>spade</strong> and dig up the <strong>clue hunter gloves</strong> and <strong>clue hunter boots</strong> north of Ardougne near the Fishing Guild. These are two of the four Wintertodt warm items.</p>
+        <div class="later-note"><strong>Brimhaven pickup:</strong> while doing Tribal Totem, buy and bank <strong>1 swamp paste, 7 soda ash, 7 buckets of sand, 1 cake tin and 1 glassblowing pipe</strong> from the charter shop. These are specific early Crafting/quest supplies, not a generic shopping detour.</div>
+      </RouteStep>
+
+      <RouteStep id="i11-starter-cleanup" number="4" title="Finish the remaining early quest foundation before Wintertodt">
+        <p>Complete the following as standalone quests. Quest Helper can handle dialogue and puzzle details; the important part is that none are left half-finished:</p>
+        <ol>
+          <li><strong>Cook's Assistant</strong></li>
+          <li><strong>Pirate's Treasure</strong></li>
+          <li><strong>Gertrude's Cat</strong></li>
+          <li><strong>Romeo & Juliet</strong></li>
+          <li><strong>Daddy's Home</strong></li>
+          <li><strong>Witch's Potion</strong></li>
+          <li><strong>The Knight's Sword</strong></li>
+          <li><strong>Tower of Life</strong></li>
+        </ol>
+        <p>Buy your <strong>player-owned house</strong> before the Wintertodt grind. Owning a house matters because repairing broken braziers at Wintertodt can award Construction XP.</p>
+        <div class="optional-efficiency"><strong>Deferred on purpose:</strong> quests that would otherwise be started here only to save a future walk—such as The Corsair Curse, A Porcine of Interest, Black Knights' Fortress and Demon Slayer—are deliberately left untouched for now. They will be completed later when the route can finish them cleanly.</div>
+      </RouteStep>
+
+      <RouteStep id="i11-kourend" number="5" title="Complete Client of Kourend before the long skilling break">
+        <p>Travel to Great Kourend and complete <strong>Client of Kourend</strong> in one go. This establishes the Kourend travel/context used later in Chapter 1 without carrying an unfinished quest through Wintertodt.</p>
+      </RouteStep>
+
+      <RouteStep id="i11-warm" number="6" title="Finish the four-piece Wintertodt clothing set">
+        <p>You already have the clue hunter gloves and boots. Travel to <strong>Gilbert, southeast of Barbarian Village</strong>, and claim the free <strong>rainbow jumper</strong> and <strong>rainbow scarf</strong>. Equip these four items at Wintertodt:</p>
+        <ul>
+          <li><strong>Clue hunter gloves</strong></li>
+          <li><strong>Clue hunter boots</strong></li>
+          <li><strong>Rainbow jumper</strong></li>
+          <li><strong>Rainbow scarf</strong></li>
+        </ul>
+        <div class="callout"><strong>Why exactly four?</strong> The current Wintertodt system gives its maximum warm-clothing benefit at four warm items. A fifth warm item does not add another tier of benefit.</div>
+      </RouteStep>
+
+      <RouteStep id="i11-wt-prep" number="7" title="Enter Wintertodt with one repeatable inventory">
+        <div class="callout"><strong>Hard check before entering:</strong> Wintertodt requires <strong>50 Firemaking</strong>. If you stopped the combined Woodcutting/Firemaking block at 35 Woodcutting without reaching 50 Firemaking, finish burning logs now.</div>
+        <p>Equip the <strong>four warm items</strong> from Step 6. Bring:</p>
+        <ul>
+          <li>Your best axe</li>
+          <li><strong>Tinderbox</strong> or bruma torch</li>
+          <li><strong>Knife</strong> if you want to fletch bruma roots</li>
+          <li><strong>Hammer</strong> for brazier repairs and Construction XP</li>
+          <li>About <strong>6 cakes</strong> for a normal mass-world trip; adjust after a few games if you consistently use fewer or more</li>
+        </ul>
+        <p>Modern Wintertodt uses a <strong>Warmth meter</strong>, not the old direct Hitpoints-damage model. Low Hitpoints is no longer the account-building advantage older guides describe. Four warm items improve Warmth management, and food restores Warmth as well as Hitpoints.</p>
+      </RouteStep>
+
+      <RouteStep id="i11-wt-loop" number="8" title="Use this simple Wintertodt loop">
+        <ol>
+          <li>At the start of a round, light a brazier if it is unlit.</li>
+          <li>Chop <strong>bruma roots</strong>.</li>
+          <li>Optional: fletch roots into <strong>bruma kindling</strong> for more points and Fletching XP.</li>
+          <li>Feed roots/kindling into a lit brazier.</li>
+          <li>If the brazier breaks, repair it with your hammer; if it goes out, relight it.</li>
+          <li>Eat when your Warmth gets uncomfortable; do not let Warmth reach 0%.</li>
+          <li>Earn at least <strong>500 points</strong> before the round ends so you receive rewards.</li>
+        </ol>
+        <p>Rewards accumulate in the <strong>Reward Cart</strong> outside the camp bank. There is no need to open a supply crate after every game.</p>
+      </RouteStep>
+
+      <TrainingOptions skill="Firemaking" target="about 89 recommended; 99 optional" why="Around 89 Firemaking preserves the Chapter 1 supply/cash foundation without requiring you to finish a skill that has few important unlocks for this route. However, if you like Wintertodt or simply want Firemaking permanently finished, continuing all the way to 99 here is completely valid and gives you more rolls at the Reward Cart. The rest of this guide does not require 99." recommended="Use standard Wintertodt mass worlds and stop around 89 Firemaking. Fletch when you want extra points/Fletching XP; otherwise keep the loop simple." relaxed="Stay on one Wintertodt world and repeat normal games. You can stop around 89, or keep going toward 99 in as many sessions as you like if you prefer to finish the skill now." resource="Going to 99 means substantially more Wintertodt rewards and can leave you with a stronger early bank, but do it because you want the extra levels/rewards—not because Chapter 2 expects it." fast="Hopping into partially completed games can improve XP and rewards per hour, but it is optional and not assumed." />
+
+      <RouteStep id="i11-finish" number="9" title="Leave Wintertodt with the resources the next sections will use">
+        <p>On the recommended route, stop around <strong>89 Firemaking</strong>. If you deliberately chose the optional <strong>99 Firemaking</strong> route, stay until 99 instead. Search enough of the Reward Cart to give yourself working cash and supplies, then leave the rest banked in the cart if you prefer. Keep your <strong>gems, ores, herbs, seeds, raw fish and useful logs</strong>.</p>
+        <p>Watch your <strong>magic logs</strong>: Chapter 1 eventually wants at least <strong>16</strong>. If Wintertodt does not give you enough, that is fine; 1.4 explicitly handles the shortage.</p>
+        <div class="callout"><strong>1.1 complete:</strong> the account now has the early quest/travel foundation, a house, a useful bank and enough Firemaking that the skill can mostly disappear from the rest of Chapter 1.</div>
+      </RouteStep>
+
+      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/`}>← Overview</a><a class="button" href={`${base}intermediate/chapter-1-2/`}>Continue to 1.2 →</a></div>
+    </article>
+    <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-1-1" title="1.1 progress" /></aside>
+  </div>
+</GuideLayout>

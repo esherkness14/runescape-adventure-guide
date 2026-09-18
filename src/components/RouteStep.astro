@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+  number?: string;
+  title: string;
+  note?: string;
+  optional?: boolean;
+}
+const { id, number, title, note, optional = false } = Astro.props;
+---
+<article class={`route-step${optional ? ' optional-route-step' : ''}`} id={id}>
+  <div class="route-step-head">
+    <div class="route-number">{number || '•'}</div>
+    <div>
+      <h3>{title}</h3>
+      {note && <div class="quest-meta">{note}</div>}
+    </div>
+  </div>
+  <div class="route-step-body"><slot /></div>
+  <div class="check-row">
+    <input class="progress-check" type="checkbox" id={`${id}-check`} data-progress-id={id} data-progress-required={optional ? 'false' : 'true'} />
+    <label for={`${id}-check`}>{optional ? 'Mark this optional block complete' : 'Mark this block complete'}</label>
+  </div>
+</article>

@@ -3,7 +3,7 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
-  current?: 'home' | 'chapter' | 'feedback' | 'companion';
+  current?: 'home' | 'beginner' | 'intermediate' | 'feedback' | 'companion';
 }
 const { title, description = 'A fun-first Old School RuneScape Ironman adventure guide.', current } = Astro.props;
 const base = import.meta.env.BASE_URL;
@@ -26,7 +26,8 @@ const base = import.meta.env.BASE_URL;
           <a class="brand" href={base}><span>RuneScape</span> Adventure Guide</a>
           <nav class="main-nav" aria-label="Main navigation">
             <a href={base} aria-current={current === 'home' ? 'page' : undefined}>Home</a>
-            <a href={`${base}chapters/chapter-1/`} aria-current={current === 'chapter' ? 'page' : undefined}>Chapter 1</a>
+            <a href={`${base}chapters/chapter-1/`} aria-current={current === 'beginner' ? 'page' : undefined}>Beginner</a>
+            <a href={`${base}intermediate/`} aria-current={current === 'intermediate' ? 'page' : undefined}>Intermediate</a>
             <a href={`${base}feedback/`} aria-current={current === 'feedback' ? 'page' : undefined}>Feedback</a>
           </nav>
         </div>

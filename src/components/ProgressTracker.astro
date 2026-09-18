@@ -1,41 +1,68 @@
-<div class="progress-box">
-  <h2>Chapter progress</h2>
-  <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
-  <p class="progress-text" id="progress-text">0 of 0 activities complete</p>
-  <button class="button secondary" id="reset-progress" type="button">Reset progress</button>
+---
+interface Props {
+  storageKey?: string;
+  title?: string;
+}
+const {
+  storageKey = 'rsag-chapter-1-progress',
+  title = 'Chapter progress',
+} = Astro.props;
+---
+<div class="progress-box" data-progress-tracker data-storage-key={storageKey}>
+  <h2>{title}</h2>
+  <div class="progress-track" aria-hidden="true"><div class="progress-fill" data-progress-fill></div></div>
+  <p class="progress-text" data-progress-text>0 of 0 activities complete</p>
+  <button class="button secondary" data-reset-progress type="button">Reset progress</button>
 </div>
 <script>
-  const STORAGE_KEY = 'rsag-chapter-1-progress';
-  const checks = Array.from(document.querySelectorAll('.progress-check'));
-  const fill = document.querySelector('#progress-fill');
-  const text = document.querySelector('#progress-text');
-  const reset = document.querySelector('#reset-progress');
+  document.querySelectorAll('[data-progress-tracker]').forEach((tracker) => {
+    if (!(tracker instanceof HTMLElement)) return;
+    const STORAGE_KEY = tracker.dataset.storageKey || 'rsag-progress';
+    const scope = tracker.closest('.page-grid') || document;
+    const checks = Array.from(scope.querySelectorAll('.progress-check'));
+    const requiredChecks = checks.filter((check) => !(check instanceof HTMLInputElement) || check.dataset.progressRequired !== 'false');
+    const fill = tracker.querySelector('[data-progress-fill]');
+    const text = tracker.querySelector('[data-progress-text]');
+    const reset = tracker.querySelector('[data-reset-progress]');
 
-  function loadState() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
-    catch { return {}; }
-  }
-  function render() {
-    const done = checks.filter((check) => check.checked).length;
-    const total = checks.length;
-    if (fill instanceof HTMLElement) fill.style.width = total ? `${(done / total) * 100}%` : '0%';
-    if (text) text.textContent = `${done} of ${total} activities complete`;
-  }
-  const state = loadState();
-  checks.forEach((check) => {
-    if (!(check instanceof HTMLInputElement)) return;
-    check.checked = Boolean(state[check.dataset.progressId || '']);
-    check.addEventListener('change', () => {
-      const latest = loadState();
-      latest[check.dataset.progressId || ''] = check.checked;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(latest));
+    function loadState() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+      catch { return {}; }
+    }
+    function syncStep(check) {
+      if (!(check instanceof HTMLInputElement)) return;
+      const step = check.closest('.route-step');
+      if (step instanceof HTMLElement) step.classList.toggle('is-complete', check.checked);
+    }
+    function render() {
+      const done = requiredChecks.filter((check) => check instanceof HTMLInputElement && check.checked).length;
+      const total = requiredChecks.length;
+      checks.forEach(syncStep);
+      if (fill instanceof HTMLElement) fill.style.width = total ? `${(done / total) * 100}%` : '0%';
+      if (text) text.textContent = `${done} of ${total} activities complete`;
+    }
+    const state = loadState();
+    checks.forEach((check) => {
+      if (!(check instanceof HTMLInputElement)) return;
+      check.checked = Boolean(state[check.dataset.progressId || '']);
+      check.addEventListener('change', () => {
+        const latest = loadState();
+        latest[check.dataset.progressId || ''] = check.checked;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(latest));
+        syncStep(check);
+        render();
+      });
+    });
+    reset?.addEventListener('click', () => {
+      localStorage.removeItem(STORAGE_KEY);
+      checks.forEach((check) => {
+        if (check instanceof HTMLInputElement) {
+          check.checked = false;
+          syncStep(check);
+        }
+      });
       render();
     });
-  });
-  reset?.addEventListener('click', () => {
-    localStorage.removeItem(STORAGE_KEY);
-    checks.forEach((check) => { if (check instanceof HTMLInputElement) check.checked = false; });
     render();
   });
-  render();
 </script>

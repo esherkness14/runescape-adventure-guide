@@ -1,0 +1,117 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+import ChapterGoals from '../../components/ChapterGoals.astro';
+import TrainingOptions from '../../components/TrainingOptions.astro';
+import RouteStep from '../../components/RouteStep.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate 1.2 · Fishing & Thieving" current="intermediate">
+  <div class="page-grid">
+    <aside class="sidebar"><IntermediateNav current="1-2" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate · Chapter 1.2</div>
+        <h1 class="chapter-title">Build movement stats, food, cash and the basic quest skill foundation.</h1>
+        <p class="chapter-summary">This section converts the Wintertodt bank into useful account stats. Quest XP replaces manual melee training, Fishing supplies food, Barbarian Fishing supplies passive Agility/Strength, and Thieving supplies the cash reserve needed for the rune and Crafting purchases in 1.3.</p>
+      </header>
+
+      <ChapterGoals
+        summary="The important endpoints are about 50 Agility, roughly 74 Fishing, 60 Cooking, 77 Thieving and at least 1.35m GP. The route also completes the low-level quests that unlock Herblore, Giant Foundry, later quest chains and the combat XP used throughout Chapter 1."
+        stats={["About 50 Agility", "About 74 Fishing", "60 Cooking", "77 Thieving", "At least 1.35m GP before leaving the section"]}
+        unlocks={["Druidic Ritual / Herblore", "Sleeping Giants / Giant Foundry", "Angler outfit", "Waterfall Quest and Fight Arena combat XP", "Tree Gnome Village / spirit-tree access", "Rogue outfit", "Stored My Arm quest items"]}
+      />
+
+      <RouteStep id="i12-foundation" number="1" title="Clear the low-level quest foundation before the long Fishing grind">
+        <p>Complete these quests one at a time:</p>
+        <ol>
+          <li><strong>Doric's Quest</strong></li>
+          <li><strong>Goblin Diplomacy</strong></li>
+          <li><strong>Witch's House</strong></li>
+          <li><strong>Druidic Ritual</strong></li>
+          <li><strong>Shield of Arrav</strong></li>
+          <li><strong>Children of the Sun</strong> — this unlocks Varlamore and is required for several later Varlamore quests/activities.</li>
+          <li><strong>Ethically Acquired Antiquities</strong></li>
+          <li><strong>Sleeping Giants</strong></li>
+        </ol>
+        <p><strong>Druidic Ritual</strong> is the important permanent unlock here because it opens Herblore. <strong>Sleeping Giants</strong> opens Giant Foundry for later Smithing. If Shield of Arrav requires another player/group, use the in-game grouping/partner resources and finish it before moving on rather than leaving one half of the certificate in the bank.</p>
+      </RouteStep>
+
+      <RouteStep id="i12-runes" number="2" title="Buy the first exact rune stack in Port Sarim">
+        <p>At <strong>Betty's Magic Emporium</strong>, bring your bank up to at least:</p>
+        <ul>
+          <li><strong>1,500 mind runes</strong></li>
+          <li><strong>500 air runes</strong></li>
+          <li><strong>1,500 water runes</strong></li>
+          <li><strong>500 earth runes</strong></li>
+          <li><strong>500 fire runes</strong></li>
+          <li><strong>200 body runes</strong></li>
+          <li><strong>100 chaos runes</strong></li>
+          <li><strong>150 death runes</strong></li>
+        </ul>
+        <p>This is the cheap early combat/quest stock. The large nature/law/cosmic purchase for Mage Training Arena happens in 1.3.</p>
+      </RouteStep>
+
+      <RouteStep id="i12-desert" number="3" title="Complete The Tourist Trap, then The Feud — and leave with the future dung already banked">
+        <p>Complete <strong>The Tourist Trap</strong> from start to finish and put <strong>both XP rewards into Agility</strong>. Then complete <strong>The Feud</strong>.</p>
+        <p>For The Feud, bring <strong>5 empty buckets</strong> to the Ugthanki-dung section. You will use one bucket of dung during the quest; finish the section with <strong>4 buckets of Ugthanki dung banked</strong>.</p>
+        <ul>
+          <li><strong>3 buckets</strong> are reserved for <strong>My Arm's Big Adventure</strong>.</li>
+          <li><strong>1 bucket</strong> is a spare for the random-item portion of <strong>Forgettable Tale...</strong> if it asks for dung.</li>
+        </ul>
+        <p>Also bank <strong>3 beers</strong> and <strong>3 vodkas</strong> while buying quest alcohol in Pollnivneach. These are explicit later-quest supplies.</p>
+        <p>Before leaving the desert supply loop, stop at the <strong>Shantay Pass general store</strong> and buy/open <strong>16 Empty bucket packs</strong> for exactly <strong>1,600 empty buckets</strong>. The shop stocks 15 packs at a time, so buy 15, hop once, and buy the 16th. Bank the buckets noted. <strong>Do not use this stack for ordinary chores:</strong> 1.3 feeds all 1,600 to Drew at the Sandstorm grinder so the account can bank 1,600 buckets of sand for molten glass.</p>
+        <div class="optional-efficiency"><strong>No blackjacking here.</strong> Once The Feud is complete, leave Pollnivneach. The dedicated Thieving block later in this subsection gives several methods.</div>
+      </RouteStep>
+
+      <RouteStep id="i12-tempoross" number="4" title="Use Tempoross to build the Fishing bank, then get Angler">
+        <p>Train Fishing at <strong>Tempoross to about 56 Fishing</strong>. Standard mass worlds are fine. Prioritize a useful bank of fish, planks, gems and other supplies over squeezing every possible permit per hour.</p>
+        <p>Then use <strong>Fishing Trawler</strong> until you have the <strong>full Angler outfit</strong>. Once you reach the activity threshold for a round, you can play the remainder more passively.</p>
+        <div class="later-note"><strong>Catherby charter-shop purchase:</strong> buy and bank <strong>1,600 soda ash</strong> and <strong>10 buckets of slime</strong>. The soda ash is the predictable Crafting/glass supply for 1.3; the slime is kept for later Prayer/quest utility.</div>
+      </RouteStep>
+
+      <RouteStep id="i12-quest-xp" number="5" title="Take the large combat-XP quests before manual combat training">
+        <p>Complete these as separate quests:</p>
+        <ol>
+          <li><strong>Fight Arena</strong></li>
+          <li><strong>Tree Gnome Village</strong></li>
+          <li><strong>Waterfall Quest</strong></li>
+        </ol>
+        <p>These quests supply a large amount of early Attack/Strength XP. <strong>Do not start The Grand Tree yet</strong>; this guide saves it for 1.4 and completes it in one sitting.</p>
+      </RouteStep>
+
+      <RouteStep id="i12-sidequests" number="6" title="Finish the self-contained travel/skill quests in this section">
+        <p>Complete <strong>Fishing Contest</strong>, <strong>Observatory Quest</strong>, <strong>Dwarf Cannon</strong> and <strong>Death on the Isle</strong> as full quests, one at a time. Keep the <strong>heavy fishing rod</strong> from Barbarian Training when you unlock Barbarian Fishing.</p>
+      </RouteStep>
+
+      <TrainingOptions skill="Fishing / Agility" target="50 Agility and about 74 Fishing" why="Barbarian Fishing gives Fishing, Strength and Agility together. Barbarian Fishing lets the Fishing grind supply much of the Agility breakpoint without requiring a separate rooftop grind." recommended="Normal Barbarian Fishing. Fish normally and drop when your inventory fills; no cut-eating and no tick manipulation are required." relaxed="Use normal Barbarian Fishing in long AFK-ish sessions and accept the slower actions per hour. Stop to bank/quest whenever you are bored." resource="Keep at least 10 trout and 15 salmon banked before leaving this section. They are used by later quests." fast="Cut-eating or tick-manipulated Barbarian Fishing is faster, but entirely optional." />
+
+      <TrainingOptions skill="Cooking" target="60" why="High-intensity Barbarian Fishing can generate substantial Cooking XP at the same time. Because this guide does not assume cut-eating, Cooking gets its own explicit checkpoint instead." recommended="Cook the fish banked from Tempoross and early Fishing on a nearby range until 60. This is low attention and turns existing resources into the level." relaxed="Do the Cooking in several bankstanding/range sessions between quests. Keep the 10 trout and 15 salmon reserved before cooking the rest." resource="If your fish bank runs short, obtain more with your preferred Fishing method rather than forcing a high-input Cooking method." fast="Hosidius Mess Hall or other active methods can fill a short gap, but they are not required." />
+
+      <RouteStep id="i12-rogues" number="7" title="Get the full Rogue outfit before the main Thieving grind">
+        <p>Once your Agility and Thieving allow it, complete Rogue's Den until you have the <strong>full Rogue outfit</strong>. The double-pickpocket loot is a permanent account upgrade and makes later Ardougne Knights/Master Farmers more useful.</p>
+      </RouteStep>
+
+      <TrainingOptions skill="Thieving" target="77 and at least 1.35m GP" why="The cash pays for the MTA rune stock, Crafting materials and travel infrastructure in 1.3. The extra buffer prevents one unlucky shopping trip from stalling the route." recommended="Wealthy Citizens in Varlamore. Relaxed, strong XP and much less repetitive clicking than blackjacking." relaxed="Ardougne Knights once your success rate is comfortable. Pair with the Rogue outfit for double loot." resource="Master Farmers if you want seed income for Farming/Herblore at the cost of lower raw cash and usually lower XP." fast="Blackjacking remains the high-XP option. It is included for completeness, not assumed by the route." />
+
+      <RouteStep id="i12-finish" number="8" title="Leave 1.2 only after the cash, food and movement targets are actually met">
+        <p>Before moving on, confirm:</p>
+        <ul>
+          <li><strong>77 Thieving</strong></li>
+          <li><strong>At least 1.35m GP</strong></li>
+          <li><strong>About 50 Agility</strong></li>
+          <li><strong>About 74 Fishing</strong></li>
+          <li><strong>60 Cooking</strong></li>
+          <li><strong>10 trout + 15 salmon</strong> still banked</li>
+          <li><strong>1,600 empty buckets</strong> reserved for the Sandstorm grinder</li>
+          <li><strong>1,600 soda ash</strong> reserved for molten glass</li>
+        </ul>
+        <p>Keep your <strong>Angler outfit, Rogue outfit, 4 Ugthanki dung, beers/vodkas, 1,600 buckets, 1,600 soda ash and rune stack</strong> banked. 1.3 deliberately spends this preparation on permanent infrastructure.</p>
+      </RouteStep>
+
+      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-1/`}>← 1.1</a><a class="button" href={`${base}intermediate/chapter-1-3/`}>Continue to 1.3 →</a></div>
+    </article>
+    <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-1-2" title="1.2 progress" /></aside>
+  </div>
+</GuideLayout>

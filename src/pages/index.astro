@@ -3,26 +3,44 @@ import GuideLayout from '../layouts/GuideLayout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <GuideLayout title="RuneScape Adventure Guide" current="home">
-  <section class="hero">
+  <section class="hero home-hero">
     <div>
-      <div class="eyebrow">A fun-first Ironman journey</div>
-      <h1>Discover RuneScape without turning it into a job.</h1>
-      <p class="lede">A guided adventure for a brand-new player: memorable quests, regional exploration, meaningful upgrades, and a home that grows alongside the account. The efficient planning happens quietly in the background.</p>
-      <div class="button-row">
-        <a class="button" href={`${base}chapters/chapter-1/`}>Begin Chapter 1</a>
-        <a class="button secondary" href={`${base}feedback/`}>Share playtest feedback</a>
-      </div>
+      <div class="eyebrow">Two ways to play the same Ironman</div>
+      <h1>Pick the amount of guidance you actually want.</h1>
+      <p class="lede">The Beginner track is a discovery-first adventure. Intermediate Efficiency assumes you already know RuneScape and want the strong progression logic of BRUHsailer without constant multi-questing, diary micro-routing, or mandatory high-intensity skilling.</p>
     </div>
     <aside class="hero-card">
-      <h2>The central loop</h2>
-      <ul>
-        <li>Go on an adventure.</li>
-        <li>Unlock a new region, skill, or way to travel.</li>
-        <li>Bring something useful or meaningful home.</li>
-        <li>Improve the house.</li>
-        <li>Choose the next adventure.</li>
-      </ul>
-      <p class="quest-meta">No 99 Firemaking start. No blackjacking sentence. No rushing past the reason people love the game.</p>
+      <h2>Same account. Different lens.</h2>
+      <p class="quest-meta">Both tracks value meaningful unlocks and long-term account progression. The difference is how much the guide explains, how aggressively it routes, and how much attention it expects from you.</p>
     </aside>
+  </section>
+
+  <section class="track-grid" aria-label="Guide tracks">
+    <article class="track-card">
+      <div class="section-label">Beginner</div>
+      <h2>Adventure first</h2>
+      <p>For a new player. Quests are introduced as stories and places, hints are layered, and efficient planning stays mostly invisible.</p>
+      <ul>
+        <li>Regional exploration and lore context</li>
+        <li>House upgrades as visible milestones</li>
+        <li>Minimal spoilers and layered hints</li>
+        <li>No expectation that you know the wiki by heart</li>
+      </ul>
+      <a class="button" href={`${base}chapters/chapter-1/`}>Open Beginner Chapter 1</a>
+    </article>
+
+    <article class="track-card intermediate-card">
+      <div class="section-label">Intermediate Efficiency</div>
+      <h2>BRUHsailer, translated into normal-person RuneScape</h2>
+      <p>For players who know the game but do not want to mentally juggle six quests, four diary tasks, three inventories and a compost bin at the same time.</p>
+      <ul>
+        <li>Preserves BRUHsailer’s macro progression</li>
+        <li>Quest-by-quest routing instead of required multi-questing</li>
+        <li>AFK and low-attention skilling preferred when reasonable</li>
+        <li>Diary micro-steps removed unless essentially free</li>
+        <li>Goals and future dependencies explained before the route</li>
+      </ul>
+      <a class="button" href={`${base}intermediate/`}>Open Intermediate</a>
+    </article>
   </section>
 </GuideLayout>

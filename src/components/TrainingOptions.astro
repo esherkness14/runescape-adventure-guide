@@ -1,0 +1,27 @@
+---
+interface Props {
+  skill: string;
+  target: string;
+  why?: string;
+  recommended?: string;
+  relaxed?: string;
+  resource?: string;
+  fast?: string;
+}
+const { skill, target, why, recommended, relaxed, resource, fast } = Astro.props;
+---
+<div class="training-options">
+  <div class="training-heading">
+    <div>
+      <span class="tag required">Skilling break</span>
+      <h3>{skill} → {target}</h3>
+    </div>
+  </div>
+  {why && <p class="training-why"><strong>Why now:</strong> {why}</p>}
+  <div class="training-grid">
+    {recommended && <div class="training-choice recommended"><strong>Recommended / chill</strong><span>{recommended}</span></div>}
+    {relaxed && <div class="training-choice"><strong>Low-attention alternative</strong><span>{relaxed}</span></div>}
+    {resource && <div class="training-choice"><strong>Resource-focused</strong><span>{resource}</span></div>}
+    {fast && <div class="training-choice fast"><strong>Fast / high-input</strong><span>{fast}</span></div>}
+  </div>
+</div>
