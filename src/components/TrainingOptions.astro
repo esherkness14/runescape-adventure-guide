@@ -1,5 +1,6 @@
 ---
 interface Props {
+  id: string;
   skill: string;
   target: string;
   why?: string;
@@ -7,13 +8,14 @@ interface Props {
   relaxed?: string;
   resource?: string;
   fast?: string;
+  optional?: boolean;
 }
-const { skill, target, why, recommended, relaxed, resource, fast } = Astro.props;
+const { id, skill, target, why, recommended, relaxed, resource, fast, optional = false } = Astro.props;
 ---
-<div class="training-options">
+<div class={`training-options${optional ? ' optional-training-options' : ''}`} id={id}>
   <div class="training-heading">
     <div>
-      <span class="tag required">Skilling break</span>
+      <span class={`tag ${optional ? 'optional' : 'required'}`}>{optional ? 'Optional skilling break' : 'Skilling break'}</span>
       <h3>{skill} → {target}</h3>
     </div>
   </div>
@@ -23,5 +25,9 @@ const { skill, target, why, recommended, relaxed, resource, fast } = Astro.props
     {relaxed && <div class="training-choice"><strong>Low-attention alternative</strong><span>{relaxed}</span></div>}
     {resource && <div class="training-choice"><strong>Resource-focused</strong><span>{resource}</span></div>}
     {fast && <div class="training-choice fast"><strong>Fast / high-input</strong><span>{fast}</span></div>}
+  </div>
+  <div class="check-row">
+    <input class="progress-check" type="checkbox" id={`${id}-check`} data-progress-id={id} data-progress-required={optional ? 'false' : 'true'} />
+    <label for={`${id}-check`}>{optional ? 'Mark this optional skilling break complete' : 'Mark this skilling break complete'}</label>
   </div>
 </div>

@@ -31,8 +31,8 @@ const {
     }
     function syncStep(check) {
       if (!(check instanceof HTMLInputElement)) return;
-      const step = check.closest('.route-step');
-      if (step instanceof HTMLElement) step.classList.toggle('is-complete', check.checked);
+      const block = check.closest('.route-step, .training-options');
+      if (block instanceof HTMLElement) block.classList.toggle('is-complete', check.checked);
     }
     function render() {
       const done = requiredChecks.filter((check) => check instanceof HTMLInputElement && check.checked).length;
