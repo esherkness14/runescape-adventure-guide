@@ -536,3 +536,50 @@ details.hint[open] summary::before { content: '−'; }
   .track-grid, .goal-columns, .training-grid, .principle-grid, .chapter-card-grid { grid-template-columns: 1fr; }
   .intermediate-overview-grid { display: block; }
 }
+
+/* Reusable closed-by-default disclosure for useful side explanations that should not interrupt the main route. */
+details.expandable-note {
+  border: 1px solid #5b4b2e;
+  border-radius: 10px;
+  background: rgba(119,91,59,.08);
+  margin: 16px 0;
+  overflow: hidden;
+}
+details.expandable-note summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e6dbc7;
+  font-weight: 700;
+}
+details.expandable-note summary::-webkit-details-marker { display: none; }
+details.expandable-note summary::after {
+  content: '＋';
+  color: #efd07f;
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-size: 1.1rem;
+}
+details.expandable-note[open] summary::after { content: '−'; }
+.expandable-note-label {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  border: 1px solid #7b6845;
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: #efd07f;
+  font-size: .74rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.expandable-note-title { min-width: 0; }
+.expandable-note-body {
+  padding: 0 16px 16px;
+  border-top: 1px solid rgba(91,75,46,.55);
+}
+.expandable-note-body > :last-child { margin-bottom: 0; }

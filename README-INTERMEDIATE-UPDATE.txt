@@ -20,7 +20,7 @@ This revision includes:
 - Optional route blocks can still be checked/dimmed but no longer inflate required progress.
 - Restored the full 1,600-bucket sandstone target, with Shooting Stars as the relaxed finish and 2,000 stardust banked.
 - Added Gemstone Crab as the recommended AFK Ranged option and an optional 60/60/60 melee break.
-- Expanded the 43 Prayer step into an explicit green-dragon + Wilderness Chaos Altar loop: Water Bolt, preserve the final 100 chaos runes, bank both bones and hides, target ~80 bones, and cash them one inventory at a time.
+- Expanded the 43 Prayer step into an explicit hybrid: use fast green dragons while the Wilderness is quiet, then finish roughly 75–80 total bones on safespotted Isle of Souls blue dragons if PK traffic becomes annoying. The walkthrough now explains the Soul Wars teleport, dungeon route, safespot, Water Strike fallback, 100-chaos-rune reserve, banking, and one-inventory-at-a-time Chaos Altar cash-in.
 - Added Chapter 2 carryover checks (mushroom pies, teak trees, stardust, gout tuber, harralander, bucket sap, slime, salmon, heavy fishing rod, spare molten glass, etc.).
 - Explicit Desert Treasure supply list and retained Plague City gas mask.
 
@@ -34,3 +34,10 @@ Then open:
 - Clarified the Chapter 1.3 Crafting route: smelting 1,600 molten glass is not the 56 Crafting target; reserve 7 quest glass, then blow 1,590 unpowered orbs (83,475 Crafting XP), either immediately or in chunks, with a hard completion checkpoint in 1.4.
 
 - Chapter 1.1 now combines the early 35 Woodcutting and 50 Firemaking progression: burn the logs you cut by default, with banking as an optional convenience. Wintertodt now also explicitly presents 99 Firemaking as an optional stopping point while keeping ~89 as the recommended Intermediate target.
+- The 65→70 Woodcutting break now deliberately overlaps the five-cap Sulliuscep grind instead of finishing 70 first. The guide includes a returning-player/first-timer swamp walkthrough, the Sticky Swamp mushtree unlock, required rake/antipoison/food, the six-location loop, a ~45–75 minute planning estimate for five caps, and a clearly labeled 58-Crafting-via-extra-glass alternative with its extra material/world-hop cost.
+- Added the Woodcutting Guild axe stop during the Zeah arc: buy the rune axe for the long 1.4 Woodcutting block once 60 Woodcutting is available (skip if you got a dragon axe), and bank a mithril axe at the same stop for Animal Magnetism later in 1.4.
+
+- Clarified the Prayer cash-in destination: use the level-38 Chaos Temple (hut) northwest of the Forgotten Cemetery / west of the Lava Maze, not the low-level Chaos Temple with Zombie Pirates and aggressive Elder Chaos Druids.
+- Added a reusable closed-by-default optional-info accordion component. The Prayer step uses it for gravestone / Death's Office recovery mechanics, including the confusing repeated-death transfer behavior and when not to death-run a dangerous grave.
+
+- Reworked the Chapter 1 Ranged block around the ammunition the route already created: the guaranteed Slayer XP is now explained (Museum quiz + A Porcine of Interest + RFD Mountain Dwarf = 3,000 XP / level 16), one Vannaka assignment closes the 523-XP gap to 18 Slayer while steel arrows push Ranged toward 30, then Ernest the Chicken + Animal Magnetism are completed before the long Ranged grind. Ava's attractor is now a Chapter 1 unlock, steel arrows are the default AFK ammunition, and 75 arrows are reserved for the accumulator upgrade at 50 Ranged.

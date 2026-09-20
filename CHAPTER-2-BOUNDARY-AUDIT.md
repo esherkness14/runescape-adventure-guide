@@ -18,7 +18,10 @@ Audit basis: BRUHsailer current guide (updated 2026-08-30) plus current OSRS Wik
 - Crystal saw retained.
 - Gas mask retained.
 - Rune sword retained (the source route uses the rune sword, not a rune longsword).
+- Rune axe obtained from Perry's Chop-chop Shop once 60 Woodcutting allows Woodcutting Guild access, unless a dragon axe was obtained from Wintertodt.
+- Animal Magnetism is now completed in Chapter 1. The mithril axe bought at the Woodcutting Guild is consumed during that quest rather than carried into Chapter 2.
 - Green d'hide chaps/vambraces retained.
+- Ava's attractor obtained from Animal Magnetism in Chapter 1; reserve at least 75 steel arrows for the accumulator upgrade at 50 Ranged.
 - Teleport jewellery stock retained.
 - 2 spare goutweed retained for later quests.
 - At least 100 chaos runes retained after the Chapter 1 green-dragon grind.
@@ -38,7 +41,10 @@ Audit basis: BRUHsailer current guide (updated 2026-08-30) plus current OSRS Wik
 
 ## Skill-boundary checks
 
-BRUHsailer's current Chapter 1 finish line is approximately: 46 Attack, 50 Strength, 34 Defence, 39 Hitpoints, 45 Ranged, 43 Prayer, 63 Magic, 24 Runecraft, 39 Construction, 51 Agility, 40 Herblore, 77 Thieving, 56 Crafting, 48 Fletching, 16 Slayer, 46 Hunter, 44 Mining, 42 Smithing, 74 Fishing, 60 Cooking, 89 Firemaking, 70 Woodcutting, 63 Farming.
+BRUHsailer's current Chapter 1 finish line is approximately: 46 Attack, 50 Strength, 34 Defence, 39 Hitpoints, 45 Ranged, 43 Prayer, 63 Magic, 24 Runecraft, 39 Construction, 51 Agility, 40 Herblore, 77 Thieving, 56 Crafting, 48 Fletching, 16 Slayer, 46 Hunter, 44 Mining, 42 Smithing, 74 Fishing, 60 Cooking, 89 Firemaking, 70 Woodcutting, 63 Farming. The Intermediate route now intentionally diverges here by reaching 18 Slayer and completing Animal Magnetism in Chapter 1, leaving at least 20 Slayer afterward.
+
+
+**Ranged / Animal Magnetism correction:** the Intermediate route no longer buys a separate 1,200-knife stack and postpones Ava to Chapter 2. The early steel-arrow stock is used to reach 30 Ranged; one Vannaka assignment closes the guaranteed 3,000 Slayer XP baseline from level 16 to 18; Ernest the Chicken + Animal Magnetism are then completed immediately. Ava's attractor is therefore a Chapter 1 handoff unlock, and at least 75 steel arrows should remain available for the accumulator upgrade at 50 Ranged. Training exactly to 18 Slayer before Animal Magnetism plus the quest's 1,000 Slayer XP leaves the account at level 20.
 
 **Fletching clarification:** the 48 shown above is BRUHsailer's projected Chapter 1 finish stat, not a hard dependency. The source route explicitly targets 46 Fletching from the early steel-arrow supply; later incidental/quest XP pushes the displayed level upward. The Intermediate route therefore treats 46 as the deliberate checkpoint and does not require a standalone grind to 48.
 
@@ -51,20 +57,20 @@ Important derived assumptions for the Intermediate rewrite:
 - 60 Cooking at the handoff is valid for Chapter 1. Chapter 2 must explicitly reach 70 Cooking before Recipe for Disaster/Awowogei if we do not use BruhSailer's cut-eat Barbarian Fishing assumption.
 - The optional 60/60/60 melee detour is comfort only; no Chapter 2 requirement may assume it was taken.
 
-## Green dragon / 43 Prayer correction
+## Dragon bone / 43 Prayer correction
 
-Chapter 1 now contains the full loop instead of a one-line training option:
+Chapter 1 now uses a hybrid route rather than forcing the entire gathering grind in the Wilderness:
 
-1. Teleport to Corporeal Beast with a games necklace.
-2. Exit into the Wilderness and run west to the nearby green dragons (current Wiki routing).
-3. Use Water Bolt, taking advantage of the current 50% Water elemental weakness.
-4. Preserve the final 100 chaos runes; swap to Water Strike when the reserve is reached.
-5. Bank every dragon bone and green dragonhide, using a looting bag for the hides.
-6. Target 70 bones minimum / about 80 for a comfortable Chaos Altar RNG buffer.
+1. Start with the fast Corporeal Beast green-dragon route while the area is quiet.
+2. Use Water Bolt, taking advantage of the 50% Water weakness, but preserve the final 100 chaos runes and swap to Water Strike when needed.
+3. Bank every green-dragon bone and hide; roughly 30–40 bones is a sensible first batch, not a hard requirement.
+4. If PK traffic becomes annoying, use the Soul Wars minigame teleport and finish the stack safely on Isle of Souls blue dragons.
+5. Isle of Souls blue dragons are safespottable in the cove beside the two adamantite rocks and share the same 50% Water weakness. Water Strike is acceptable here if preserving chaos runes.
+6. Target roughly 75–80 dragon bones total across both dragon types for a comfortable Chaos Altar RNG buffer, adjusting downward if earlier Prayer XP makes fewer sufficient.
 7. Take bones to the deep-Wilderness Chaos Altar one disposable inventory at a time from Ferox Enclave.
-8. Stop at 43 Prayer and leave any unused bones banked; keep at least one spare dragon bone.
+8. Stop at 43 Prayer and leave unused bones banked; keep at least one spare dragon bone.
 
-The Chaos Altar gives the same 350% XP as a gilded altar with both burners lit and has a 50% chance not to consume an offered bone, explaining why the exact bone count varies.
+The Chaos Altar gives the same 350% XP as a gilded altar with both burners lit and has a 50% chance not to consume an offered bone. The hybrid route keeps that Prayer efficiency while moving most optional gathering time out of PvP risk.
 
 ## Chapter 2 rewrite implications found during the full source review
 
@@ -82,9 +88,12 @@ BRUHsailer Chapter 2 is much more EHP-heavy than the intended Intermediate guide
 
 ## Boundary status after this pass
 
-No additional Chapter 1 quest needs to be added before Chapter 2. The two substantive Chapter 1 corrections found in this audit were:
+After pulling Ernest the Chicken and Animal Magnetism forward, no further Chapter 1 quest needs to be added before Chapter 2. The substantive Chapter 1 corrections found across the audit/re-read were:
 
-1. Expand the green-dragon step into the complete bone/hide/Chaos-Altar Prayer loop and preserve 100 chaos runes.
+1. Expand the Prayer step into a green-dragon → Isle of Souls blue-dragon hybrid, preserve 100 chaos runes, and use the Chaos Altar one disposable inventory at a time.
 2. Make the regular gout tuber a required Chapter 1 carryover rather than an optional RNG success.
+3. Make the five Sulliuscep caps an explicit Tar Swamp chopping grind rather than implying birdhouse runs provide them.
+4. Buy the rune axe at the Woodcutting Guild when 60 Woodcutting is available, and bank a mithril axe at the same stop for Animal Magnetism later in Chapter 1.
+5. Pull Ernest the Chicken + Animal Magnetism into Chapter 1: use the existing steel arrows to reach 30 Ranged, get the small 16→18 Slayer gap from a Vannaka assignment, then unlock Ava's attractor before the long Ranged grind.
 
 The remaining differences are Chapter 2 authoring concerns rather than Chapter 1 blockers.

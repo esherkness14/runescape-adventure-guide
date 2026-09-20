@@ -5,6 +5,7 @@ import ChapterGoals from '../../components/ChapterGoals.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
 import RouteStep from '../../components/RouteStep.astro';
 import ProgressTracker from '../../components/ProgressTracker.astro';
+import ExpandableNote from '../../components/ExpandableNote.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <GuideLayout title="Intermediate 1.4 · Farming, Desert Treasure & Earth Orbs" current="intermediate">
@@ -18,16 +19,31 @@ const base = import.meta.env.BASE_URL;
       </header>
 
       <ChapterGoals
-        summary="You are finishing the quest/stat web prepared in 1.3 and deliberately preparing the first several Chapter 2 blocks. The major breakpoints are 43 Prayer, 62 Farming, 46 Hunter, Desert Treasure, 108 Paddewwa tablets and 1,590 charged Earth orbs. This subsection also banks the small but easy-to-miss carryovers Chapter 2 expects: mushroom pies, a spare bucket of sap, a harralander, 2,000 stardust and—if birdhouse RNG cooperates—two growing teak trees."
-        stats={["70 Woodcutting — 75 only if you still lack 16 magic logs", "43 Prayer · 45 Ranged · 46 Hunter", "40 Herblore · 42 Smithing · 56 Crafting", "62 Farming before boosted medium contracts; about 63 by chapter end", "63 Magic · 77 Thieving", "39 Construction target for the Chapter 2 handoff", "Optional AFK detour: 60 Attack / 60 Strength / 60 Defence"]}
-        unlocks={["4 mushroom pies for the Earth-battlestaff bootstrap", "The Grand Tree + Eyes of Glouphrie", "Garden of Tranquillity + Eadgar’s Ruse", "Farming Contracts", "My Arm’s Big Adventure", "Ancient Magicks via Desert Treasure", "108 Paddewwa tablets", "1,590 charged Earth orbs"]}
+        summary="You are finishing the quest/stat web prepared in 1.3 and deliberately preparing the first several Chapter 2 blocks. The major breakpoints are 43 Prayer, 18 Slayer into Animal Magnetism, 45 Ranged, 62 Farming, 46 Hunter, Desert Treasure, 108 Paddewwa tablets and 1,590 charged Earth orbs. This subsection also banks the small but easy-to-miss carryovers Chapter 2 expects: mushroom pies, a spare bucket of sap, a harralander, 2,000 stardust and—if birdhouse RNG cooperates—two growing teak trees."
+        stats={["70 Woodcutting — 75 only if you still lack 16 magic logs", "43 Prayer · 45 Ranged · 20+ Slayer · 46 Hunter", "40 Herblore · 42 Smithing · 56 Crafting", "62 Farming before boosted medium contracts; about 63 by chapter end", "63 Magic · 77 Thieving", "39 Construction target for the Chapter 2 handoff", "Optional AFK detour: 60 Attack / 60 Strength / 60 Defence"]}
+        unlocks={["5 deliberately farmed Sulliuscep caps → 4 mushroom pies for the Earth-battlestaff bootstrap", "The Grand Tree + Eyes of Glouphrie", "Garden of Tranquillity + Eadgar’s Ruse", "Farming Contracts", "My Arm’s Big Adventure", "Ava’s attractor via Animal Magnetism", "Ancient Magicks via Desert Treasure", "108 Paddewwa tablets", "1,590 charged Earth orbs"]}
       />
 
-      <div class="callout"><strong>Full Chapter 1 finish line:</strong> roughly 46 Attack · 50 Strength · 34 Defence · 39 Hitpoints · 45 Ranged · 43 Prayer · 63 Magic · 24 Runecraft · 39 Construction · 51 Agility · 40 Herblore · 77 Thieving · 56 Crafting · roughly 47–48 Fletching (46 is the deliberate checkpoint) · 16 Slayer · 46 Hunter · 44 Mining · 42 Smithing · 74 Fishing · 60 Cooking · 89 Firemaking · 70 Woodcutting · 63 Farming.</div>
+      <div class="callout"><strong>Full Chapter 1 finish line:</strong> roughly 46 Attack · 50 Strength · 34 Defence · 39 Hitpoints · 45 Ranged · 43 Prayer · 63 Magic · 24 Runecraft · 39 Construction · 51 Agility · 40 Herblore · 77 Thieving · 56 Crafting · roughly 47–48 Fletching (46 is the deliberate checkpoint) · 20+ Slayer · 46 Hunter · 44 Mining · 42 Smithing · 74 Fishing · 60 Cooking · 89 Firemaking · 70 Woodcutting · 63 Farming.</div>
 
-      <TrainingOptions id="i14-woodcutting-training" skill="Woodcutting" target="70" why="This is the deliberate skilling break after the dense 1.3 questing. Chapter 1 also needs 16 magic logs; Wintertodt may already have supplied them. At 65 Woodcutting, the route also takes one short Fossil Island detour for a Chapter 2 Crafting boost." recommended="Forestry or normal teak cutting for the bulk of the grind. Once you reach 65 Woodcutting, pause and do Sulliusceps until you have 5 sulliuscep caps, then return to your preferred method to 70." relaxed="AFK the best trees you find comfortable and accept the slower XP rate; the only mandatory detour is obtaining the 5 sulliuscep caps." resource="If you reach 70 and still have fewer than 16 magic logs banked, continue to 75 Woodcutting and cut the missing magic logs yourself." fast="2-tick teaks are faster, but are never required by this guide." />
+      <TrainingOptions id="i14-woodcutting-training" skill="Woodcutting" target="70 + 5 Sulliuscep caps" why="This is the deliberate skilling break after the dense 1.3 questing. The route needs 70 Woodcutting and, separately, five Sulliuscep caps for the mushroom-pie Crafting boost used at the start of Chapter 2. Rather than finishing 70 first and then doing a separate cap grind, combine them: train normally to 65, switch to Sulliusceps, and stay until both goals are satisfied. If the five caps arrive before 70, finish the remaining Woodcutting however you like; if you reach 70 first, stay at Sulliusceps until cap #5." recommended="Train with Forestry, teaks or another normal method until 65. At 65, read the first-timer Sulliuscep walkthrough in Step 1 below, unlock the Sticky Swamp mushtree, then use Sulliusceps for the rest of this break. Budget roughly an hour for five caps as a planning estimate, but RNG can be noticeably faster or slower. Because you still need Woodcutting XP, the baseline player is progressing toward 70 during that hour instead of doing a pure side grind." relaxed="If you strongly dislike the Tar Swamp or temporary boosts, you can skip the cap requirement and permanently train Crafting to 58 instead. From an account sitting near the bottom of 56, that is roughly another 500–600 glass worth of XP: extra sandstone/buckets, roughly 50–60 additional charter-shop worlds if you buy soda ash 10 at a time, then more smelting and glassblowing. Plan on roughly another hour or more of material handling depending on your supplies and hopping speed. The guide recommends Sulliusceps because it keeps the existing GP/material plan intact and overlaps with 65→70 Woodcutting." resource="Chapter 1 also needs 16 magic logs; Wintertodt may already have supplied them. If you reach 70 and still have fewer than 16 banked, continue to 75 and cut the missing magic logs yourself. If you did not have 60 Woodcutting during the Zeah block in 1.3, stop at 60 long enough to enter the Woodcutting Guild and buy the rune axe plus the mithril axe reserved for the Animal Magnetism block later on this page." fast="2-tick teaks are faster raw Woodcutting XP, but they do not solve the cap requirement and are never assumed by this guide." />
 
-      <RouteStep id="i14-pies" number="1" title="Turn the Sulliuscep caps into four mushroom pies for Chapter 2">
+      <RouteStep id="i14-sulliuscep-caps" number="1" title="First-timer Sulliuscep walkthrough — unlock the swamp, learn the loop, bank 5 caps">
+        <p><strong>If you have never done Fossil Island or Sulliusceps before, do not treat this as “just go chop mushrooms.”</strong> Sulliusceps are giant mushrooms inside the <strong>Tar Swamp on Fossil Island</strong>. Only one of six locations is active for your character at a time; after you chop the active mushroom down, the next one becomes active and you continue around the route. The first trip is the confusing one. Once the southern teleport is unlocked and you have seen the loop once, repeated clears are much simpler.</p>
+        <p><strong>Bring:</strong> your <strong>rune axe</strong> (or dragon axe if Wintertodt gave you one), a <strong>rake</strong>, <strong>antipoison</strong>, plenty of <strong>food</strong>, Fossil Island access such as a <strong>digsite pendant</strong>, and a teleport out. Keep several free inventory spaces for caps, fossils and other drops. The swamp has dangerous tar monsters and poisonous spine mushrooms; chopping is fairly low-attention, but moving between spots is not walk-away AFK.</p>
+        <ol>
+          <li><strong>Get into the swamp:</strong> use the Fossil Island mushtree network to reach <strong>Mushroom Meadow</strong>, then head south into the Tar Swamp. Cut blocking vines/roots with your axe and <strong>rake the ground vines</strong> when the route requires it.</li>
+          <li><strong>Unlock Sticky Swamp immediately:</strong> on the first lap, activate the <strong>Sticky Swamp Magic Mushtree</strong> near the southern/bottom part of the route. From then on you can teleport straight back to the useful end of the swamp instead of repeating the ugly entrance every trip.</li>
+          <li><strong>Avoid the hazards instead of fighting them:</strong> do not intentionally fight tar monsters. Keep moving, eat when needed, and use terrain to get away. Antipoison is for the spine-mushroom poison.</li>
+          <li><strong>Follow the rotation:</strong> find the active Sulliuscep, chop it until it depletes, then move to the next active location. After your first complete lap, this becomes a repeatable circuit rather than a scavenger hunt.</li>
+          <li><strong>Stay until the bank total is 5 caps.</strong> Birdhouse runs do not award Sulliuscep caps; BRUHsailer only mentions birdhouses because the cap grind can last long enough to fit one or more birdhouse timers.</li>
+        </ol>
+        <p><strong>Time expectation:</strong> for route planning, budget about <strong>45–75 minutes</strong> for five caps once you know the loop, with RNG capable of moving that substantially in either direction. A player starting this block at 65 Woodcutting should earn a meaningful amount of the 65→70 grind at the same time. The cap is a rare drop, so do not leave because you have reached 70 if you are still below five.</p>
+        <p><strong>Why the guide accepts this boost:</strong> Earth battlestaves require <strong>58 Crafting</strong>, while the Chapter 1 glass/orb plan lands around 56. Four mushroom pies give enough +4 Crafting boosts to start the battlestaff stack, and those battlestaves then supply the Crafting XP that makes further boosting unnecessary. Permanently training 58 is cleaner conceptually, but from the baseline route it usually means roughly <strong>500–600 additional glass</strong> plus the associated sand, buckets, soda ash/world hopping, smelting and blowing. That alternative is valid; the cap route is recommended because it is one contained activity that also advances Woodcutting.</p>
+        <p><a href="https://oldschool.runescape.wiki/w/Sulliuscep/Strategies" target="_blank" rel="noreferrer">Open the OSRS Wiki Sulliuscep strategy</a> before the first run and keep its swamp-route image handy. Keep useful unidentified fossils you receive; they can be identified for Varrock Museum displays/Kudos later.</p>
+      </RouteStep>
+
+      <RouteStep id="i14-pies" number="2" title="Turn the Sulliuscep caps into four mushroom pies for Chapter 2">
         <p>Once you have <strong>5 sulliuscep caps</strong>, make <strong>4 mushroom pies</strong> now and leave the fifth cap as a spare. For four pies, bring <strong>4 pie dishes, 4 pots of flour, a jug/bucket of water and 4 sulliuscep caps</strong>.</p>
         <ol>
           <li>Use flour with water to make <strong>4 pastry dough</strong>.</li>
@@ -38,13 +54,13 @@ const base = import.meta.env.BASE_URL;
         <p><strong>Why four?</strong> Earth battlestaves require <strong>58 Crafting</strong>, while this chapter ends around 56. Mushroom pie gives a temporary <strong>+4 Crafting boost</strong>, allowing Chapter 2 to start attaching the first Earth orbs immediately; the Crafting XP from those staves then removes the need to keep boosting.</p>
       </RouteStep>
 
-      <RouteStep id="i14-gnomes" number="2" title="Complete The Grand Tree, then The Eyes of Glouphrie">
+      <RouteStep id="i14-gnomes" number="3" title="Complete The Grand Tree, then The Eyes of Glouphrie">
         <p>Complete <strong>The Grand Tree</strong> from start to finish. Then complete <strong>The Eyes of Glouphrie</strong>. These are now one clean Gnome Stronghold quest block rather than quests you started hours ago and periodically revisited.</p>
         <p>After Eyes of Glouphrie, enchant the <strong>crystal saw seed</strong>. Keep the crystal saw; it becomes a useful Construction booster later.</p>
         <p>Before leaving this block, bring a <strong>knife + 1 empty bucket</strong> to an <strong>evergreen tree</strong> (the trees between Barbarian Village and Falador are convenient). Use the knife on the tree with the bucket in your inventory and bank <strong>1 bucket of sap</strong>. Early Chapter 2 needs it for <strong>Icthlarin's Little Helper</strong>; collecting it now prevents an otherwise pointless return trip.</p>
       </RouteStep>
 
-      <RouteStep id="i14-garden" number="3" title="Complete Garden of Tranquillity and bank the compost with a purpose">
+      <RouteStep id="i14-garden" number="4" title="Complete Garden of Tranquillity and bank the compost with a purpose">
         <p>You already have at least <strong>33 Farming</strong> from the Chapter 1.3 quest rewards and Creature of Fenkenstrain is complete, so do <strong>Garden of Tranquillity</strong> from start to finish now. Bring the <strong>ring of charos</strong> from 1.3.</p>
         <div class="later-note"><strong>Farming math:</strong> By this point the route has awarded at least <strong>19,500 Farming XP</strong>: 1,000 from the Goblin generals subquest, 3,500 from Fairytale I, 5,000 from Forgettable Tale, and 10,000 from The Garden of Death. That is at least <strong>level 33</strong>. Garden of Tranquillity adds another <strong>5,000 XP</strong>, so both <strong>Enlightened Journey (30 Farming)</strong> and <strong>My Arm's Big Adventure (29 Farming)</strong> are already covered with no hidden farm run.</div>
         <p>During the Farming work, bank <strong>15 supercompost</strong>. Label the reason mentally:</p>
@@ -56,12 +72,12 @@ const base = import.meta.env.BASE_URL;
         <div class="later-note"><strong>Start the Chapter 2 teak timer now:</strong> Garden of Tranquillity pushes the guaranteed quest XP past <strong>35 Farming</strong>. If you have the <strong>2 teak seeds</strong> reserved from birdhouses, put each seed in a <strong>filled plant pot</strong> with a gardening trowel, water it, wait for the sapling, then plant the two saplings in the <strong>two western Fossil Island hardwood patches</strong> with a spade. Use <strong>supercompost/ultracompost</strong> on the patches. Teaks take roughly three days to grow, and early Chapter 2 wants two mature player-grown trees for the plank grind. If birdhouse RNG has only given you one or zero seeds, plant what you have and continue birdhouse/Farming Contract runs; Chapter 2 can wait for the remaining tree rather than blocking Chapter 1.</div>
       </RouteStep>
 
-      <RouteStep id="i14-eadgar" number="4" title="Complete Eadgar’s Ruse and take the two future goutweed now">
+      <RouteStep id="i14-eadgar" number="5" title="Complete Eadgar’s Ruse and take the two future goutweed now">
         <p>You reached <strong>31 Herblore</strong> in 1.3, so complete <strong>Eadgar’s Ruse</strong> in one pass with no boost required. The quest awards <strong>11,000 Herblore XP</strong>.</p>
         <p>When you reach the goutweed storeroom, collect <strong>3 goutweed total</strong> before leaving. One is used to finish Eadgar’s Ruse; bank the <strong>2 extras</strong> for <strong>Dream Mentor</strong> and <strong>Dragon Slayer II</strong>. This is a worthwhile future pickup because returning to the storeroom is genuinely annoying.</p>
       </RouteStep>
 
-      <RouteStep id="i14-kourend-easy" number="5" title="Finish Kourend & Kebos Easy and put the 2,500 XP lamp on Herblore">
+      <RouteStep id="i14-kourend-easy" number="6" title="Finish Kourend & Kebos Easy and put the 2,500 XP lamp on Herblore">
         <p><strong>Do not grind Herblore to 40.</strong> BruhSailer reaches 40 through guaranteed quest/diary XP plus incidental potion XP. Because this guide only guarantees the exact <strong>31 Herblore</strong> needed for Eadgar’s Ruse, we make the diary lamp explicit so the breakpoint is deterministic.</p>
         <div class="callout"><strong>Guaranteed Herblore math from the minimum route:</strong> level 31 begins at 14,833 XP. <strong>Jungle Potion</strong> in 1.3 adds 775, <strong>Eadgar’s Ruse</strong> adds 11,000, this diary lamp adds 2,500, and <strong>My Arm’s Big Adventure</strong> in the next step adds 10,000. That totals <strong>39,108 Herblore XP</strong>, safely above the <strong>37,224 XP</strong> needed for level 40. Any Wintertodt herbs, lamps or extra potions are simply bonus progress.</div>
         <p>Complete any Easy tasks you have not already done. Bring a <strong>pickaxe, weapon, spade, 8,750 gp, tarromin potion (unf), 1 limpwurt root, fly fishing rod and feathers</strong>. If you do not already have a limpwurt root, kill <strong>Hill Giants</strong> until one drops.</p>
@@ -83,7 +99,7 @@ const base = import.meta.env.BASE_URL;
         <div class="later-note"><strong>Current-game note:</strong> Kourend Favour was removed in 2024. If an old guide tells you to gain Hosidius/Shayzien favour for these tasks, ignore it; the current Easy diary uses the tasks listed above.</div>
       </RouteStep>
 
-      <RouteStep id="i14-myarm" number="6" title="Complete My Arm’s Big Adventure and let the quest finish 40 Herblore">
+      <RouteStep id="i14-myarm" number="7" title="Complete My Arm’s Big Adventure and let the quest finish 40 Herblore">
         <p>This is the payoff for the setup already completed: <strong>Eadgar’s Ruse</strong> is done, <strong>The Feud</strong> and <strong>Jungle Potion</strong> are complete, 1.3 banked <strong>100% Tai Bwo Wannai favour</strong>, and the Farming quest rewards already cover the <strong>29 Farming</strong> requirement.</p>
         <p>Bring <strong>3 buckets of Ugthanki dung</strong>, <strong>7 supercompost</strong>, climbing boots or Trollheim teleport access, some coins, and normal combat gear/food. A bucket can be obtained during the quest. The Trollheim tool leprechaun can supply a rake, seed dibber, spade and plant cure when needed.</p>
         <p>Complete <strong>My Arm’s Big Adventure</strong> from start to finish. During the Tai Bwo Wannai section, Murcaily gives you the separate <strong>hardy gout tuber</strong>; this is not the regular gout tuber banked during Cleanup in 1.3.</p>
@@ -91,7 +107,7 @@ const base = import.meta.env.BASE_URL;
         <div class="later-note"><strong>Keep the regular gout tuber banked.</strong> My Arm does not consume it. Early Chapter 2 uses it for the <strong>Karamja Medium Diary gem-machete exchange</strong>. Starting My Arm at 100% Tai Bwo Wannai favour leaves you at 40% after the quest spends 60 percentage points.</div>
       </RouteStep>
 
-      <RouteStep id="i14-smith" number="7" title="Reach 42 Smithing and finish the Chapter 1 jewelry stock">
+      <RouteStep id="i14-smith" number="8" title="Reach 42 Smithing and finish the Chapter 1 jewelry stock">
         <p>Use Blast Furnace or a normal Smithing method to reach <strong>42 Smithing</strong>. Then bring your teleport jewelry up to the full Chapter 1 target:</p>
         <ul>
           <li><strong>40 rings of dueling</strong></li>
@@ -105,31 +121,99 @@ const base = import.meta.env.BASE_URL;
         <p>Count what you made in 1.3 and only craft the difference. These quantities are intentionally explicit because the rest of Chapter 1 consumes teleport jewelry heavily.</p>
       </RouteStep>
 
-      <RouteStep id="i14-family" number="8" title="Complete Family Crest">
+      <RouteStep id="i14-family" number="9" title="Complete Family Crest">
         <p>Complete <strong>Family Crest</strong> as a standalone quest. Keep the resulting gauntlet access; the quest is also an important prerequisite for later account progression.</p>
       </RouteStep>
 
-      <RouteStep id="i14-prayer" number="9" title="Kill 70–80 green dragons, bank every bone, then cash them in for 43 Prayer">
-        <p><strong>Yes, the dragon bones are the Prayer method.</strong> This step has two separate halves: first bank the bones and hides from green dragons; then take the bones to the <strong>Wilderness Chaos Altar</strong> in small, disposable inventories until you reach <strong>43 Prayer</strong>.</p>
-        <p><strong>Dragon-killing setup:</strong> take a <strong>games necklace</strong>, <strong>water staff</strong>, <strong>air runes</strong>, <strong>chaos runes</strong>, <strong>mind runes</strong>, <strong>anti-dragon shield</strong>, <strong>amulet of magic</strong>, a <strong>looting bag</strong>, and cheap food such as the banked salmon. Wear only gear you are comfortable losing; do <strong>not</strong> bring your cash stack.</p>
+      <RouteStep id="i14-prayer" number="10" title="Bank about 75–80 dragon bones with a green → blue dragon hybrid, then reach 43 Prayer at the Chaos Altar">
+        <p><strong>The dragon bones are the Prayer method, but you do not need to spend the entire grind standing in the Wilderness.</strong> Green dragons are much faster and easier to kill, so start there while the area is quiet. If PK traffic becomes annoying—or if you simply do not want to risk another trip—finish the bone stack safely on <strong>Isle of Souls blue dragons</strong>. The bones are identical for Prayer purposes, so the two methods mix perfectly.</p>
+
+        <p><strong>Target:</strong> aim for roughly <strong>75–80 dragon bones total</strong> before using the Chaos Altar. The exact number varies because earlier Prayer XP differs and the altar's 50% bone-save effect is random. If you already have Prayer XP above the route baseline, you may finish with fewer; stop immediately once you reach <strong>43 Prayer</strong>.</p>
+
+        <h3>Part A — fast first batch: green dragons near Corporeal Beast</h3>
+        <p><strong>Bring:</strong> a <strong>games necklace</strong>, <strong>water staff</strong>, <strong>air runes</strong>, <strong>chaos runes</strong>, <strong>mind runes</strong>, <strong>anti-dragon shield</strong>, <strong>amulet of magic</strong>, a <strong>looting bag</strong>, and cheap food such as the banked salmon. Wear only gear you are comfortable losing and leave your cash stack in the bank.</p>
         <ol>
           <li>Use the games necklace to teleport to <strong>Corporeal Beast</strong>.</li>
-          <li>Leave the cave into the Wilderness and run <strong>west</strong> to the nearby green dragons. The current green dragons have a <strong>50% weakness to Water spells</strong>, which is why this route uses Water Bolt.</li>
-          <li>Cast <strong>Water Bolt</strong> while you have a comfortable chaos-rune buffer. <strong>Do not spend your final 100 chaos runes.</strong> When you reach roughly 100 remaining, swap to <strong>Water Strike</strong> and finish the grind with mind runes instead.</li>
-          <li>Pick up <strong>every dragon bone and every green dragonhide</strong>. Put the hides into the looting bag first and keep the bones in your inventory; bank before you are carrying a pile you would hate to lose.</li>
-          <li>Kill <strong>70 dragons minimum</strong>. The source route recommends continuing to about <strong>80 total</strong> because the Chaos Altar's bone-saving effect is random. This guide uses <strong>80 banked dragon bones</strong> as the clean target unless earlier Prayer XP means you obviously need fewer.</li>
+          <li>Leave the cave into the Wilderness and run <strong>west</strong> to the nearby green dragons. Green dragons have a <strong>50% weakness to Water spells</strong>, which is why Water Bolt works so well here.</li>
+          <li>Use <strong>Water Bolt</strong> while you have spare chaos runes. <strong>Preserve your final 100 chaos runes</strong> for later Chapter 2 needs; once you approach that reserve, switch to <strong>Water Strike</strong>.</li>
+          <li>Pick up <strong>every dragon bone and every green dragonhide</strong>. Put hides in the looting bag first and keep bones in the inventory. Bank early rather than carrying a stack you would hate to lose.</li>
+          <li><strong>Do not force the entire 75–80-bone grind here.</strong> Roughly <strong>30–40 green-dragon bones</strong> is a good fast first batch, but the real rule is simple: stay while it feels quiet and efficient; leave as soon as PK activity turns the method into a nuisance.</li>
         </ol>
+
+        <h3>Part B — safe finish: Isle of Souls blue dragons</h3>
+        <p><strong>If Isle of Souls is new to you:</strong> this is a normal non-Wilderness island containing Soul Wars and a small dungeon. You do <strong>not</strong> need to play Soul Wars or complete its tutorial just to use the island. The easiest route is the <strong>Soul Wars minigame teleport</strong>, which lands you at Nomad's camp on the Isle of Souls. There is a bank in the Soul Wars lobby, making it a convenient place to resupply between dragon trips. <a href="https://oldschool.runescape.wiki/w/Isle_of_Souls_Dungeon" target="_blank" rel="noreferrer">Open the OSRS Wiki Isle of Souls Dungeon page</a> if you want the map beside you on the first run.</p>
+        <ol>
+          <li><strong>Getting there:</strong> open the <strong>Grouping / Minigames</strong> interface and use the <strong>Soul Wars</strong> minigame teleport. If that is unavailable or on cooldown, fairy ring <strong>BJP</strong> lands on the northern coast of the Isle of Souls; the <strong>Soul Wars portal in Edgeville</strong> is another fallback. You do not need to enter a Soul Wars match.</li>
+          <li>From the Soul Wars lobby, run <strong>north-east across the island</strong> to the dungeon entrance on the <strong>eastern side</strong> of the Isle of Souls and climb down.</li>
+          <li><strong>Dungeon route:</strong> follow the dungeon around past the demon room and the fire-giant room. The <strong>third main room</strong> contains <strong>four adult blue dragons and three baby blue dragons</strong>.</li>
+          <li><strong>Safespot:</strong> the easiest landmark is the small <strong>cove containing two adamantite rocks</strong> on the eastern side of the blue-dragon room. Walk inside the stalagmites and cast from there; the adult dragons cannot reach you. Keep the <strong>anti-dragon shield equipped</strong> while moving through the dungeon.</li>
+          <li><strong>Magic:</strong> blue dragons also have a <strong>50% Water weakness</strong>. Water Bolt is faster if you have spare chaos runes, but <strong>Water Strike is completely acceptable</strong> here and lets you preserve the 100-chaos-rune Chapter 2 reserve. With the safespot established, this is much lower-stress than the Wilderness method.</li>
+          <li>Bank <strong>every dragon bone</strong> and, if you have inventory space, the <strong>blue dragonhides</strong> as well. A looting bag does not help outside the Wilderness, so simply bank at the Soul Wars lobby and run back. Continue until your combined green + blue dragon bones reach roughly <strong>75–80 total</strong>.</li>
+        </ol>
+
         <div class="later-note"><strong>Keep one spare dragon bone banked after reaching 43 Prayer.</strong> Do not blindly empty the bank just because bones remain.</div>
-        <p><strong>Turning the bones into Prayer XP:</strong> bank all combat gear. From <strong>Ferox Enclave</strong>, take only <strong>one inventory of dragon bones</strong> at a time and run to the <strong>Chaos Temple in level 38 Wilderness</strong>. Use the bones on the Chaos Altar until the inventory is gone, then return/suicide and repeat. The altar gives the same <strong>350% XP</strong> as a gilded altar with both burners lit and each offered bone has a <strong>50% chance not to be consumed</strong>, so a bone can be offered more than once. Stop immediately when you reach <strong>43 Prayer</strong>; any unused bones stay banked for later.</p>
-        <div class="optional-efficiency"><strong>Risk rule:</strong> never carry the whole bone stack into the Wilderness and never bring gear you care about. Losing one disposable inventory is annoying; losing the entire Prayer bank is avoidable.</div>
+
+        <h3>Part C — cash the bones in at the correct Wilderness Chaos Altar</h3>
+        <div class="callout"><strong>There are two different Wilderness locations called the Chaos Temple. You want the small <em>Chaos Temple (hut)</em> in level 38 Wilderness, northwest of the Forgotten Cemetery and west of the Lava Maze.</strong> Do <strong>not</strong> use the level ~11 Chaos Temple near Ferox that is packed with Zombie Pirates and aggressive level-129 Elder Chaos Druids. Those druids can hit hard, repeatedly Tele Block you and pull you back toward them. If you see a crowd of druids/pirates, you are at the wrong temple. <a href="https://oldschool.runescape.wiki/w/Wilderness" target="_blank" rel="noreferrer">Open the OSRS Wiki Wilderness map</a> and look for the level-38 <strong>Chaos Temple (hut)</strong>.</div>
+        <p><strong>Default route:</strong> bank all combat gear at <strong>Ferox Enclave</strong>, take only <strong>one disposable inventory of dragon bones</strong>, then run north into deep Wilderness toward the <strong>Forgotten Cemetery</strong>. Continue <strong>northwest</strong> to the small level-38 temple just south of the Frozen Waste Plateau. If you already have a <strong>burning amulet</strong>, its <strong>Lava Maze</strong> teleport is a faster optional route; run west/southwest from the maze to the same level-38 hut.</p>
+        <p>Inside the correct hut, use the bones on the <strong>Chaos Altar</strong> until the inventory is gone, then return and repeat. The altar gives the same <strong>350% XP</strong> as a gilded altar with both burners lit, and every offered bone has a <strong>50% chance not to be consumed</strong>, so a single bone can be offered multiple times. The hut itself is a known PK hotspot, which is why this guide deliberately risks only one bone inventory at a time.</p>
+
+        <ExpandableNote label="Optional Wilderness tips" title="Give yourself the best chance to hop before a PKer lands the first hit">
+          <p><strong>Before the first trip, set Private chat to Friends or Off.</strong> With Private set to Friends, players who are not on your Friends List see you as offline. That prevents a random PKer from simply adding your name and using private-chat status to follow your world between trips.</p>
+          <p><strong>Keep the logout/world-switch interface ready while you offer bones.</strong> A very practical setup is to open the World Switcher and leave the cursor over a different world. If another player logs in beside the altar and has not hit you yet, switch immediately instead of waiting to decide whether they look dangerous. Once you are in combat, you cannot world-hop and must be out of combat for 10 seconds first.</p>
+          <p><strong>Do not always hop to the next world in the list.</strong> Choosing a world several entries away is a reasonable anti-pattern habit because PKers often cycle through worlds looking for altar users. This is not protection or a guarantee—just a small way to make your next destination less predictable.</p>
+          <p><strong>The first hit is the important one.</strong> There is very little you can do once a geared PKer has landed a freeze/Tele Block and put you in combat. Your best defence on this low-risk route is noticing the login quickly, hopping before the first attack, and never risking more than one inventory of bones.</p>
+          <p><strong>Wine of Zamorak is for a clean suicide after the inventory is finished.</strong> When no player has damaged you, repeatedly taking the wine is a convenient way to die and return to your respawn point instead of running south. <strong>Do not rely on the wine to deny a PKer your remaining bones.</strong> If another player has already damaged you recently, the death uses Wilderness PvP death rules even if the wine deals the final point of damage; lost tradeable items are awarded under the PvP rules, generally to the player who dealt the most damage. If a PKer appears before touching you, hopping is the better escape attempt.</p>
+        </ExpandableNote>
+
+        <ExpandableNote label="Optional safety note" title="If you die and your bones are sitting in a dangerous gravestone">
+          <p><strong>You usually do not need to keep death-running a dangerous PvM grave.</strong> A normal gravestone lasts for 15 minutes of logged-in time, and you can ask <strong>Death</strong> to collect its contents for you. Ferox Enclave has access to <strong>Death's Office</strong>, so if retrieving the grave itself is becoming a second death trap, bank anything you kept and go there instead.</p>
+          <p><strong>The confusing “some items have been moved to Death's Office” message:</strong> if you die again while an existing grave already contains lots of normal unstackable items, the grave has a capacity rule. Excess items from the existing grave can be moved to Death's Office before the new death is added. That can make it look as though only the three items you kept on death survived, even though the rest may simply have been transferred to Death.</p>
+          <p>For this route, ordinary dragon bones are individually worth less than 100,000 coins, so reclaiming those low-value items from Death is normally <strong>free</strong>. Valuable equipment can have reclamation fees, which is another reason the altar trips should contain essentially nothing except disposable bones.</p>
+          <p><strong>Important:</strong> this explanation is for an ordinary gravestone/PvM death. A death involving another player in the Wilderness can use different item-loss rules. Always check the <strong>Items Kept on Death</strong> screen before risking anything you care about.</p>
+        </ExpandableNote>
+
+        <p><strong>Stop the moment you reach 43 Prayer.</strong> Any unused bones stay banked for later.</p>
+        <div class="optional-efficiency"><strong>Why this hybrid is recommended:</strong> green dragons save time while the Wilderness is quiet; Isle of Souls removes the PK risk when it is not. The Chaos Altar still supplies the enormous Prayer-efficiency gain, but you only risk one small bone inventory at a time instead of your entire gathering grind.</div>
       </RouteStep>
 
-      <RouteStep id="i14-imp" number="10" title="Complete Imp Catcher before finishing the Ranged target">
+      <RouteStep id="i14-imp" number="11" title="Complete Imp Catcher before finishing the Ranged target">
         <p>Check your bank for the four beads: <strong>red, yellow, black and white</strong>. If any are missing, kill imps around the <strong>Tower of Life / Ardougne area</strong> until you have one of each, then complete <strong>Imp Catcher</strong>.</p>
         <p>This is placed here because the Magic XP is still useful and it closes another Chapter 1 quest without creating a special trip later.</p>
       </RouteStep>
 
-      <TrainingOptions id="i14-ranged-training" skill="Ranged" target="45" why="Shadow of the Storm already contributed 10,000 Ranged XP in 1.3. Finish the remaining gap here so Temple of Ikov and the remaining quest combat are comfortable." recommended="Gemstone Crab in the Tlati Rainforest. Children of the Sun was completed in 1.2, so Varlamore is already unlocked. Travel to Varlamore, run south into the Tlati Rainforest, and enter any of the three Gemstone Crab mine caves; the caves route you to whichever mine currently has the crab. Bring your best Ranged gear and the knives/darts/arrows you intend to use. The crab effectively has infinite HP and stays in place for about 10 minutes; when it burrows, use the nearby cave to follow it. It gives 12.5% less XP per hit than normal targets, but the long idle windows and lack of overkill downtime make it excellent for this guide's AFK preference." relaxed="Sand Crabs or Ammonite Crabs are still excellent low-attention alternatives if you prefer familiar crab spots. Let quest combat finish the last level or two if you are already close." resource="Loar Shades are valid if you specifically want shade remains, but Chapter 1 does not require them." fast="High-input knife/dart training is optional." />
+      <RouteStep id="i14-slayer-ranged-30" number="12" title="Use one Slayer assignment to reach 18 Slayer, and train Ranged to 30 with the arrows you already made">
+        <p><strong>Do not buy 1,200 throwing knives for the default route.</strong> The steel arrows made during the 46 Fletching block are now your deliberate early-Ranged ammunition. Shadow of the Storm already supplied <strong>10,000 Ranged XP</strong>, so the baseline account is around 27 Ranged and only needs a short push to 30.</p>
+        <p>The Slayer gap is also intentionally small. By this point the guide has guaranteed <strong>3,000 Slayer XP</strong>: 1,000 from the Varrock Museum Natural History Quiz, 1,000 from A Porcine of Interest, and 1,000 from Recipe for Disaster: Freeing the Mountain Dwarf. That puts the baseline account at <strong>16 Slayer</strong>; level 18 is only <strong>523 XP</strong> farther away.</p>
+        <ol>
+          <li><strong>If you already have an active Slayer task, use it.</strong> Otherwise go to <strong>Vannaka in Edgeville Dungeon</strong> and ask for an assignment. Vannaka requires 40 Combat, which the normal route has already cleared. Receiving his task also completes the corresponding <strong>Varrock Medium Diary</strong> task for later.</li>
+          <li>Before leaving Vannaka, check whether the assignment needs a Slayer item such as earmuffs, a mirror shield or a bag of salt and buy it there if necessary.</li>
+          <li>Use your <strong>best shortbow + steel arrows</strong> on the assignment whenever the monster/location is reasonable to range. A willow shortbow is already sufficient for the steel arrows; a maple shortbow at 30 is a small optional upgrade, not another required shopping stop.</li>
+          <li><strong>Reach 18 Slayer.</strong> If the assignment is awkward to range, kill the monsters with melee/magic instead; the important requirement is 18 Slayer, not forcing every Slayer kill to double as Ranged training.</li>
+          <li>If you are still below <strong>30 Ranged</strong> when 18 Slayer is reached, finish the short gap at <strong>Gemstone Crab</strong>, Sand Crabs or another comfortable safespot using the same steel arrows.</li>
+        </ol>
+        <div class="callout"><strong>Why Vannaka instead of moving another quest forward?</strong> The only easy quest XP that belongs here has already been collected: the Museum quiz, A Porcine of Interest and the Mountain Dwarf subquest are the reason the account is already 16 Slayer. The next large quest reward, Wanted!, would require dragging Black Knights' Fortress and Recruitment Drive forward too. One small Slayer assignment is cleaner.</div>
+        <p><a href="https://oldschool.runescape.wiki/w/Vannaka" target="_blank" rel="noreferrer">Open the OSRS Wiki Vannaka page</a> if you need the Edgeville Dungeon map or assignment details.</p>
+      </RouteStep>
+
+      <RouteStep id="i14-animal-magnetism" number="13" title="Complete Ernest the Chicken, then Animal Magnetism for Ava’s attractor">
+        <p>Now that you have <strong>18 Slayer and 30 Ranged</strong>, pull Animal Magnetism forward instead of waiting until Chapter 2. The other requirements are already covered: <strong>The Restless Ghost</strong> and <strong>Priest in Peril</strong> are complete, and the route is far above 19 Crafting / 35 Woodcutting.</p>
+        <p><strong>First complete Ernest the Chicken</strong> in Draynor Manor. The quest does not require outside supplies; collect the pressure gauge, rubber tube and oil can inside/around the manor, solve the basement lever puzzle, and return to Professor Oddenstein. Quest Helper is fine for the lever puzzle.</p>
+        <p><strong>Then prepare Animal Magnetism.</strong> Bring or obtain:</p>
+        <ul>
+          <li><strong>1 mithril axe</strong> — the one deliberately bought at the Woodcutting Guild in 1.3 / the 60 Woodcutting checkpoint. No other axe substitutes for this quest step.</li>
+          <li><strong>5 unnoted iron bars</strong>, <strong>hammer</strong> and your <strong>ghostspeak amulet</strong>.</li>
+          <li><strong>20 ecto-tokens.</strong> If you do not already have them, take 4 bones, 4 empty pots and 4 buckets to the Ectofuntus north of Port Phasmatys. Grind the four bones upstairs into bonemeal, fill the four buckets from the slime pool downstairs, worship four times, then talk to a ghost disciple while wearing the ghostspeak amulet. Each worship is worth 5 tokens.</li>
+          <li><strong>1 hard leather.</strong> If missing, tan a cowhide into hard leather at Ellis in Al Kharid.</li>
+          <li><strong>1 holy symbol.</strong> If missing, make an unblessed symbol from a silver bar + holy mould, string it with wool, then have Brother Jered upstairs in the Edgeville Monastery bless it. Your 43 Prayer already clears the monastery's 31 Prayer entry requirement.</li>
+          <li><strong>Polished buttons.</strong> Check the bank first; if missing, pickpocket H.A.M. members in the hideout east of Draynor until you get buttons, then polish them by clicking them.</li>
+        </ul>
+        <p>Complete <strong>Animal Magnetism</strong> from start to finish. At under 50 Ranged, Ava rewards <strong>Ava’s attractor</strong>. Wear it for the rest of the Ranged grind: it automatically recovers <strong>60% of fired ammunition</strong>, another 20% drops to the floor, and 20% breaks. Do not wear a metal torso that interferes with the device.</p>
+        <div class="later-note"><strong>Reserve at least 75 steel arrows.</strong> At 50 Ranged, Ava can upgrade the attractor to <strong>Ava’s accumulator</strong> using 75 steel arrows; the accumulator automatically recovers 72% of fired ammunition.</div>
+        <p><a href="https://oldschool.runescape.wiki/w/Animal_Magnetism" target="_blank" rel="noreferrer">Open the OSRS Wiki Animal Magnetism guide</a> if you want the dialogue/puzzle walkthrough while following this route's preparation list.</p>
+      </RouteStep>
+
+      <TrainingOptions id="i14-ranged-training" skill="Ranged" target="45" why="The route has now converted the early arrow-making grind into useful combat progression: Shadow of the Storm gets you into the high 20s, the Vannaka/18-Slayer checkpoint gets you to 30, and Animal Magnetism gives Ava's attractor before the longer AFK portion. Finish 45 here so Temple of Ikov and the remaining quest combat are comfortable." recommended="Equip Ava's attractor, your best Ranged gear, a shortbow and the steel arrows already made during the Fletching block, then use Gemstone Crab in the Tlati Rainforest. Children of the Sun was completed in 1.2, so Varlamore is already unlocked. Travel to Varlamore, run south into the Tlati Rainforest, and enter any of the three Gemstone Crab mine caves; the caves route you to whichever mine currently has the crab. The crab effectively has infinite HP and stays in place for about 10 minutes; when it burrows, use the nearby cave to follow it. It gives 12.5% less XP per hit than normal targets, but the long idle windows and lack of overkill downtime make it excellent for this guide's AFK preference." relaxed="Sand Crabs or Ammonite Crabs are equally valid low-attention alternatives if you prefer familiar crab spots. With Ava's attractor equipped, most arrows return automatically; occasionally pick up the floor pile if you care about stretching the stack even farther." resource="Use the steel-arrow stock instead of buying a separate 1,200-knife stack. Keep at least 75 steel arrows banked for the Ava's accumulator upgrade at 50 Ranged. Loar Shades remain valid if you specifically want shade remains, but Chapter 1 does not require them." fast="Throwing knives remain the faster 2-tick alternative if you care about maximizing low-level Ranged XP/hour, and Ava's devices can recover knives too. They are no longer the default because the guide already produced thousands of arrows and prioritizes low-attention training." />
 
       <RouteStep id="i14-optional-melee" number="Optional" optional={true} title="Optional AFK break: take melee to 60 Attack / 60 Strength / 60 Defence at Gemstone Crab">
         <p>If you want to front-load combat while doing something almost entirely second-screen, stay at <strong>Gemstone Crab</strong> after 45 Ranged and train melee to <strong>60 Attack, 60 Strength and 60 Defence</strong>.</p>
@@ -137,11 +221,11 @@ const base = import.meta.env.BASE_URL;
         <div class="optional-efficiency"><strong>This is genuinely optional.</strong> The original Chapter 1 finish line is only about 46 Attack / 50 Strength / 34 Defence. Going to 60/60/60 makes a large amount of Chapter 2 combat more comfortable and is a good use of AFK time, but no following Chapter 1 step assumes you did it.</div>
       </RouteStep>
 
-      <RouteStep id="i14-journey" number="11" title="Complete Enlightened Journey and A Soul’s Bane">
+      <RouteStep id="i14-journey" number="14" title="Complete Enlightened Journey and A Soul’s Bane">
         <p>Complete <strong>Enlightened Journey</strong> for balloon transport, then complete <strong>A Soul’s Bane</strong>. You are already guaranteed <strong>30 Farming</strong> from the quest XP math in Step 3, so there is no extra Farming grind before Enlightened Journey.</p>
       </RouteStep>
 
-      <RouteStep id="i14-glass" number="12" title="Final Crafting checkpoint: finish the 1,590 unpowered orbs">
+      <RouteStep id="i14-glass" number="15" title="Final Crafting checkpoint: finish the 1,590 unpowered orbs">
         <p>Part 1.3 already established the full glass plan, and this is the deadline. Your original <strong>1,600 molten glass</strong> should be accounted for as:</p>
         <ul>
           <li><strong>1,590 unpowered orbs</strong></li>
@@ -152,7 +236,7 @@ const base = import.meta.env.BASE_URL;
         <p>If you chose to split the bankstanding grind across the chapter, <strong>finish every remaining unpowered orb now</strong>. The orb blowing — not merely making the molten glass — is the Crafting XP that brings the route to roughly <strong>56 Crafting</strong>. Do not start the Earth-orb charging block until all <strong>1,590</strong> are ready.</p>
       </RouteStep>
 
-      <RouteStep id="i14-quests" number="13" title="Complete Biohazard, then Watchtower">
+      <RouteStep id="i14-quests" number="16" title="Complete Biohazard, then Watchtower">
         <p>Complete these as two normal standalone quests, rebanking between them:</p>
         <ol>
           <li><strong>Biohazard</strong></li>
@@ -165,12 +249,12 @@ const base = import.meta.env.BASE_URL;
 
       <TrainingOptions id="i14-hunter-training" skill="Hunter" target="46" why="Birdhouses should already have supplied much of this level. 46 is the Chapter 1 benchmark and leaves the account in a good place for future Hunter content." recommended="Keep doing birdhouse runs until 46 Hunter. If you are only a few levels short, there is no need to force a separate grind." relaxed="Wait for additional birdhouse cycles across normal play sessions." resource="If you want to finish immediately, use a conventional Hunter method appropriate to your level." fast="Kebbit/chinchompa routes are available if you want faster active XP." />
 
-      <RouteStep id="i14-ikov" number="14" title="Complete Temple of Ikov without hunting a yew longbow">
+      <RouteStep id="i14-ikov" number="17" title="Complete Temple of Ikov without hunting a yew longbow">
         <p>Bring <strong>20 unnoted limpwurt roots</strong>, a light source, weight-reducing gear, and <strong>darts or throwing knives</strong>. Complete <strong>Temple of Ikov</strong>.</p>
         <p>You do <strong>not</strong> need to grind Puro-Puro for a yew longbow. In the ice chamber, search the chests until you obtain at least <strong>1 ice arrow</strong>. Equip the ice arrow in your ammo slot, then use darts/throwing knives on the Fire Warrior of Lesarkus; the current quest mechanics allow thrown weapons to bypass the normal yew-bow requirement.</p>
       </RouteStep>
 
-      <RouteStep id="i14-dt" number="15" title="Complete Desert Treasure from start to finish">
+      <RouteStep id="i14-dt" number="18" title="Complete Desert Treasure from start to finish">
         <p>With <strong>The Dig Site, The Tourist Trap, Troll Stronghold, Priest in Peril, Waterfall Quest</strong> and <strong>Temple of Ikov</strong> completed, all quest prerequisites are done. Your Chapter 1 stats also clear the hard gates: <strong>53 Thieving, 50 Magic, 50 Firemaking and 10 Slayer</strong>.</p>
         <p><strong>Before starting, withdraw or confirm you have:</strong></p>
         <ul>
@@ -185,7 +269,7 @@ const base = import.meta.env.BASE_URL;
         <div class="later-note"><strong>One worthwhile future pickup:</strong> if your Kamil/ice route already gives you easy access to <strong>1 Trollweiss</strong>, bank it for Troll Romance. If getting it would require starting another quest or assembling a separate sled setup, skip it and collect it during Troll Romance later.</div>
       </RouteStep>
 
-      <RouteStep id="i14-paddewwa" number="16" title="Make all 108 Paddewwa teleport tablets now">
+      <RouteStep id="i14-paddewwa" number="19" title="Make all 108 Paddewwa teleport tablets now">
         <p>After Desert Treasure, switch to Ancient Magicks and prepare:</p>
         <ul>
           <li><strong>108 soft clay</strong></li>
@@ -198,12 +282,12 @@ const base = import.meta.env.BASE_URL;
 
       <TrainingOptions id="i14-construction-training" skill="Construction" target="39" why="Scrambled! has a hard 38 Construction requirement, while the Chapter 1 / early Chapter 2 handoff is cleaner at 39. Getting Ahead and Wintertodt repairs help, but neither guarantees the level, so finish it explicitly here." recommended="Use Mahogany Homes with your banked oak planks until 39. This is the preferred lower-intensity route." relaxed="Break the contracts into short sessions around birdhouse runs or Farming timers." resource="Use existing planks first and buy only what you need to close the gap." fast="Oak larders/furniture in your POH are faster if you want the level immediately." />
 
-      <RouteStep id="i14-varlamore" number="17" title="Finish the Varlamore unlocks and buy the cosmic-rune total">
+      <RouteStep id="i14-varlamore" number="20" title="Finish the Varlamore unlocks and buy the cosmic-rune total">
         <p><strong>Children of the Sun was completed in 1.2</strong>, so the Varlamore chain is ready. Complete <strong>Twilight’s Promise</strong>, then—with <strong>39 Construction</strong> now guaranteed—complete <strong>Scrambled!</strong>. Then use the Tal Teklan rune shop and other existing stock to bring your bank to <strong>4,900 cosmic runes total</strong>.</p>
         <p>The orb batch consumes <strong>4,770 cosmic runes</strong>—three per orb—so 4,900 leaves a small buffer for enchanting and mistakes.</p>
       </RouteStep>
 
-      <RouteStep id="i14-orbs" number="18" title="Charge all 1,590 Earth orbs with the simple route">
+      <RouteStep id="i14-orbs" number="21" title="Charge all 1,590 Earth orbs with the simple route">
         <p>Use the low-complexity version rather than the gravestone/corpse method:</p>
         <ol>
           <li>Equip an <strong>earth staff</strong> and a bank teleport such as a ring of dueling.</li>
@@ -215,7 +299,7 @@ const base = import.meta.env.BASE_URL;
         <p>Continue until all <strong>1,590</strong> are charged. This is slower than an optimized death/gravestone storage route, but it is much easier to follow and produces the same Chapter 2 resource.</p>
       </RouteStep>
 
-      <RouteStep id="i14-hand" number="19" title="Complete The Hand in the Sand with the exact inventory">
+      <RouteStep id="i14-hand" number="22" title="Complete The Hand in the Sand with the exact inventory">
         <p>Your Farming Contracts should have produced/grown the whiteberry by now. Bring:</p>
         <ul>
           <li><strong>150 coins</strong></li>
@@ -246,6 +330,7 @@ const base = import.meta.env.BASE_URL;
           <li><strong>15 salmon</strong> reserved from the Fishing section for the later Myreque quest chain</li>
           <li><strong>Heavy fishing rod</strong> kept from Barbarian Training; Chapter 2 returns to Barbarian Fishing</li>
           <li><strong>2 teak trees planted/growing</strong> in the western Fossil Island hardwood patches if seed RNG allowed it</li>
+          <li><strong>Ava’s attractor</strong> unlocked from Animal Magnetism and <strong>at least 75 steel arrows</strong> kept available for the accumulator upgrade at 50 Ranged</li>
           <li><strong>Kharedst's memoirs</strong>, <strong>crystal saw</strong>, <strong>gas mask</strong>, <strong>rune sword</strong>, green d'hide chaps/vambraces and your teleport jewelry</li>
           <li><strong>2 spare goutweed</strong> banked for much later quest use</li>
         </ul>
@@ -255,7 +340,7 @@ const base = import.meta.env.BASE_URL;
       <section id="chapter-complete" class="completion-panel">
         <div class="section-label">Chapter 1 complete</div>
         <h3>The account now has a midgame backbone.</h3>
-        <p>You now have passive Hunter, fairy rings, Farming Contracts, protection prayers, Ancient Magicks, a practical teleport network, the exact early-Chapter-2 carryovers above, and <strong>1,590 Earth orbs</strong> ready for the battlestaff/alchemy money loop.</p>
+        <p>You now have passive Hunter, fairy rings, Farming Contracts, protection prayers, Ava’s attractor, Ancient Magicks, a practical teleport network, the exact early-Chapter-2 carryovers above, and <strong>1,590 Earth orbs</strong> ready for the battlestaff/alchemy money loop.</p>
       </section>
 
       <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-3/`}>← 1.3</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a></div>

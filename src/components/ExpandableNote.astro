@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  label?: string;
+}
+
+const { title, label = 'Optional info' } = Astro.props;
+---
+
+<details class="expandable-note">
+  <summary>
+    <span class="expandable-note-label">{label}</span>
+    <span class="expandable-note-title">{title}</span>
+  </summary>
+  <div class="expandable-note-body">
+    <slot />
+  </div>
+</details>
