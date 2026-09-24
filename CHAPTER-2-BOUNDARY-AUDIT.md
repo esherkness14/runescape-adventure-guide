@@ -55,7 +55,7 @@ Important derived assumptions for the Intermediate rewrite:
 - 39 Construction is a valid Chapter 1 handoff. Chapter 2 itself must explicitly train Construction before asking for the Mahogany eagle lectern; do not silently assume the original guide's Mahogany Homes XP happened if we replace its multiskilling route.
 - 77 Thieving is a valid Chapter 1 handoff, but any Chapter 2 diary step requiring 78 Thieving must either be preceded by an explicit 78 checkpoint or postponed. Our relaxed route must not assume artefact-running supplied the level.
 - 60 Cooking at the handoff is valid for Chapter 1. Chapter 2 must explicitly reach 70 Cooking before Recipe for Disaster/Awowogei if we do not use BruhSailer's cut-eat Barbarian Fishing assumption.
-- The optional 60/60/60 melee detour is comfort only; no Chapter 2 requirement may assume it was taken.
+- The optional 65/65/65 melee detour is comfort/acceleration only; no Chapter 2 requirement may assume it was taken. Completion already clears Warriors' Guild's 130 Attack+Strength, 60 Defence to equip the dragon defender, and actual 65 Defence for King's Ransom; 70 Defence for Piety remains. Skipping it requires explicit Chapter 2 catch-up for every one of those gates.
 
 ## Dragon bone / 43 Prayer correction
 

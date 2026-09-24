@@ -1,0 +1,136 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+import ChapterGoals from '../../components/ChapterGoals.astro';
+import RouteStep from '../../components/RouteStep.astro';
+import TrainingOptions from '../../components/TrainingOptions.astro';
+import ExpandableNote from '../../components/ExpandableNote.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate 2.1 · Cash & Construction Backbone" current="intermediate">
+  <div class="page-grid">
+    <aside class="sidebar"><IntermediateNav current="2-1" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate · Chapter 2.1</div>
+        <h1 class="chapter-title">Cash & Construction Backbone</h1>
+        <p class="chapter-summary">Chapter 1 did the slow preparation. This block turns its Earth orbs into spendable cash, then gives your house the tools to make the quest-heavy rest of Chapter 2 less of a travel chore. Work through it in a few comfortable sessions; there is no need to juggle artefacts, teak ticks and alchs at once.</p>
+      </header>
+
+      <ChapterGoals
+        summary="Use all 1,590 banked Earth orbs for battlestaves, alch the finished staves, train Construction from about 39 to actual 50, earn a plank sack through Mahogany Homes, reach at least base 62 for the lectern boost, and make an initial stack of 100 house teleport tablets. Combat is irrelevant here; the optional Chapter 1 melee detour is never assumed."
+        stats={["About 56 Crafting → at least 61 (usually about 62–63) from 178,875 stave XP", "63 Magic → about 65 from 103,350 alchemy XP; confirm the actual level", "About 39 Construction → actual 50 → at least actual 62 for the lectern boost", "350 Mahogany Homes points spent on the plank sack; 100 house tablets banked"]}
+        unlocks={["The first large, repeatable cash injection for Chapter 2 supplies", "Adept Mahogany Homes and its 28-plank sack", "A mahogany eagle lectern and a practical house-teleport stock"]}
+      />
+
+      <div class="callout"><strong>Bring forward from 1.4:</strong> 1,590 charged Earth orbs, four mushroom pies, about 56 Crafting, 63 Magic, about 39 Construction, the crystal saw, and any planted Fossil Island teaks. Chapter 1.3 also banked <strong>1,650 nature runes</strong>. Check your actual XP, contract points and remaining runes before buying supplies; the quantities below are budgets, not claims that every account has exactly the same inventory.</div>
+
+      <section>
+        <div class="section-label">The cash engine</div>
+        <h2>Finally spend the Earth-orb stock.</h2>
+        <p>We carried the orbs instead of selling them because each orb can become an <strong>Earth battlestaff</strong>: a solid Crafting XP drop, a High Alchemy cast, and cash to fund planks and house rooms. It is fine to split this over several days. Buy a manageable batch of plain battlestaves, attach orbs at a bank, then alch the products while doing something easy or while bankstanding.</p>
+      </section>
+
+      <RouteStep id="i21-spellbook-and-staves" number="1" title="Set up the guild shop, runes and first cash cycle">
+        <ol>
+          <li><strong>Return to the standard spellbook</strong> if Desert Treasure left you on Ancient Magicks. High Level Alchemy and the house-tablet spell are standard spells; switch at the Desert Pyramid altar (or another spellbook switch you have actually unlocked).</li>
+          <li>Go to the <strong>Wizards' Guild in Yanille</strong>. Entry needs <strong>66 Magic</strong>, but your 63 Magic plus a <strong>Wizard's mind bomb (+3)</strong> is enough. Drink immediately before entering; repeat for a later re-entry if the boost expires. The Guild rune-and-staff shop also requires <strong>The Hand in the Sand</strong>, finished at the end of 1.4.</li>
+          <li>Buy plain <strong>battlestaves</strong> from Wizard Akutha's rune-and-staff shop upstairs. It normally stocks five at about <strong>7,000 coins each</strong>; hop worlds or return as stock replenishes. Zaff in Varrock is a small supplementary source. Do not expect all 1,590 in one purchase.</li>
+          <li>Set aside <strong>1,590 nature runes</strong>, one per High Alchemy cast. The 1,650 bought in 1.3 already covers this with 60 spare if untouched. If you used some, replace only the shortfall from this Guild shop (normally 250 in stock) or another nature-rune source. Equip a fire staff or supply fire runes for High Alchemy.</li>
+        </ol>
+        <p>If your coin pile is small, buy only a few staves, craft and alch them, then recycle the proceeds into the next batch. A finished Earth battlestaff alchs for <strong>9,300 coins</strong>; against a roughly 7,000-coin base staff, that is around <strong>2,300 coins returned above the staff cost</strong> before rune costs and shop-price variation. Across the full stock, roughly <strong>3.6 million coins of gross spread</strong> is a planning estimate, not a guaranteed final cash balance.</p>
+      </RouteStep>
+
+      <RouteStep id="i21-attach-and-alch" number="2" title="Use mushroom pie only until actual 58 Crafting, then finish the stock normally">
+        <p><strong>Earth battlestaves require 58 Crafting.</strong> At the Chapter 1 baseline around 56, eat a bite of the four banked <strong>mushroom pies</strong> for +4 Crafting. At a bank, use a charged Earth orb on a plain battlestaff and choose Make-All. Each attachment gives <strong>112.5 Crafting XP</strong>. Refresh the pie boost only while your current Crafting level is below 58.</p>
+        <div class="callout"><strong>The transition matters:</strong> as soon as your <em>actual, unboosted</em> Crafting level reaches <strong>58</strong>, stop eating pie for this task. Continue attaching the remaining orbs without boosts. The full 1,590 attachments give <strong>178,875 Crafting XP</strong>; check your live level rather than treating the projected exit level as exact.</div>
+        <p>High Alch the finished staves on the standard spellbook, using one nature rune per staff. All 1,590 casts award <strong>103,350 Magic XP</strong>. Alch during convenient downtime or simply stand at a bank; there is no Thieving XP in the mandatory budget. From <strong>actual 63 Magic</strong>, this batch passes <strong>actual 65</strong>, the later Lunar Diplomacy gate. Check your level anyway: if you entered below 63 or alched fewer staves, explicitly close any remaining gap later.</p>
+      </RouteStep>
+
+      <TrainingOptions id="i21-alchemy-method" skill="Staves + alchemy" target="all 1,590 orbs used" why="This converts the large Chapter 1 resource stock into immediate GP, Crafting XP and Magic XP before the costly house work." recommended="Buy manageable staff batches, attach orbs at the bank, then High Alch at your own pace. The simple buy → craft → alch cycle keeps working even with a small starting cash pile." relaxed="Bank the crafted staves and alch later during travel, waiting time, or a quiet bankstanding session. Keep 1,590 nature runes earmarked until the whole batch is gone." fast="If you already enjoy Piscarilius artefacts, alch between movement actions for extra Thieving XP. This is optional and is not priced into any later Thieving checkpoint." />
+
+      <RouteStep id="i21-optional-artefacts" number="Optional" optional={true} title="Try Piscarilius artefacts only if you want active Thieving multiskilling">
+        <ExpandableNote title="What is Piscarilius artefact stealing?" label="Activity primer">
+          <p>At <strong>49 Thieving</strong>, talk to <strong>Captain Khaled</strong> in the east-side foodhall of Port Piscarilius. He assigns a house on the western docks. Bring a <strong>lockpick or hair clip</strong>, pick the assigned drawers, then walk the stolen artefact back past the patrols; teleporting while carrying it loses it. Hand it to Khaled for Thieving XP and another job. You can cast High Alchemy during the running portions if you like active multiskilling.</p>
+          <p>This is a real extra activity, not a free side effect of the battlestaff route. If you skip it, the guide still works. In particular, a future <strong>78 Thieving</strong> diary action—if retained—will receive an explicit training step rather than silently assuming artefact XP.</p>
+        </ExpandableNote>
+      </RouteStep>
+
+      <section>
+        <div class="section-label">The house foundation</div>
+        <h2>Turn the cash into lower-friction Construction.</h2>
+        <p>Mahogany Homes is a contract loop: repair an NPC's house with planks, collect a completion reward, and take the next job. It uses fewer planks per XP than repetitive POH furniture building and lets us stop at useful unlocks. You already met it briefly in Chapter 1; here is the full routine.</p>
+      </section>
+
+      <TrainingOptions id="i21-construction-50" skill="Construction" target="actual 50" why="Adept Mahogany Homes contracts unlock at real level 50. The Chapter 1 handoff is only around 39, so this bridge is mandatory even if Wintertodt or earlier contracts gave you extra XP." recommended="Continue Novice Mahogany Homes contracts using oak planks until your actual Construction level is 50. From the level-39 floor this is about 37 average contracts, 375 oak planks and 15 steel bars. Prepare roughly 400–450 oak planks and 20 bars as a buffer; stop at 50 and save leftovers." relaxed="Break the novice jobs into short sets between Farming or birdhouse runs. You already know the basic activity, and there is no need to chase fastest route tiles." fast="If you would rather finish this short bridge entirely in your POH, ordinary oak furniture/larders work; budget more oak planks because they lack contract-completion XP. The guide's material budget assumes Novice contracts." />
+
+      <RouteStep id="i21-oak-prep" number="3" title="Make the 39 → 50 oak-plank budget and finish Novice contracts">
+        <p>Check your bank first. Chop any missing <strong>oak logs</strong> normally, or use banked logs. The <strong>Woodcutting Guild</strong> has oak trees, a sawmill and a bank; your Chapter 1 Woodcutting level opens it. Ask the sawmill operator to turn each oak log into an oak plank for <strong>250 coins</strong>. A 400–450-plank budget costs about <strong>100,000–112,500 coins</strong> in conversion fees, plus any travel/steel-bar costs. Buy a saw if yours is missing; bring a hammer. Steel bars can be smelted from one iron ore and two coal each at your current Smithing level.</p>
+        <p>Take <strong>Novice</strong> jobs from Amy just south of Falador park (or a Mahogany Homes contractor in Varrock, Hosidius or East Ardougne). Carry oak planks, a few steel bars, hammer, saw and ordinary city teleports. Go to the named client's home, repair or replace the marked furniture, speak to the homeowner for completion XP and points, then ask any contractor for the next job. No nails are needed. Stop only when the skill tab shows <strong>actual 50 Construction</strong>.</p>
+      </RouteStep>
+
+      <RouteStep id="i21-teak-prep" number="4" title="Chop teaks normally and convert a practical plank stock">
+        <p>The two teaks planted in Chapter 1 occupy the <strong>two western hardwood patches in Fossil Island's Mushroom Forest</strong>. Take a <strong>Digsite pendant</strong> to Fossil Island, use the mushtree network to <strong>Mushroom Meadow</strong>, then walk south-east to the hardwood patches. Bring an axe; chop normally, take each inventory back to the <strong>Museum Camp bank</strong> via the mushtree, and repeat. There is no 1.5-tick or 2-tick technique in this route. If your saplings are still growing—or birdhouse RNG never supplied both seeds—cut the accessible teak tree <strong>south-west of Castle Wars</strong> instead (ring of dueling to the bank, or fairy ring <strong>BKP</strong> nearby). Do not block the chapter waiting for a Farming timer.</p>
+        <p>Plan on about <strong>900–1,000 teak logs/planks</strong> and <strong>40–50 steel bars</strong> for the Adept phase and possible level-62 catch-up, then stop preparing more if your live level/point balance needs fewer. This is a buffered estimate: each Adept job averages about 11.6 teak planks and half a steel bar, but house layouts vary. Convert banked logs in normal inventory trips at the <strong>Woodcutting Guild sawmill</strong> for <strong>500 coins per teak plank</strong>, then use its bank. Expect roughly <strong>450,000–500,000 coins</strong> in sawmill fees if you convert the full budget. The Varrock Lumber Yard sawmill is an equally valid alternative. No butler or plank spell is required.</p>
+      </RouteStep>
+
+      <RouteStep id="i21-adept-primer" number="5" title="Start Adept Mahogany Homes and learn the normal contract loop">
+        <p>With <strong>actual 50 Construction</strong>, ask Amy or another Mahogany Homes contractor for an <strong>Adept</strong> job. These use <strong>teak planks</strong> instead of oak. Carry a hammer, saw, around 15 teak planks, one or two steel bars, and teleports for <strong>Falador, Varrock, Hosidius and East Ardougne</strong>. Kharedst's memoirs and your existing jewellery help with Kourend travel; walk the short remaining distance rather than trying to memorize a perfect teleport route.</p>
+        <ol>
+          <li>Read the assigned homeowner and city in the contract dialogue, then travel to that house.</li>
+          <li>Inside, click the damaged/highlighted furniture. Some pieces are <strong>repaired</strong>; others are removed and <strong>rebuilt</strong> with the teak planks. A damaged range or bathtub may consume a steel bar.</li>
+          <li>Talk to the homeowner when all work is done. This awards the completion XP and <strong>four carpenter points</strong> for a full Adept contract. Ask any contractor for the next job; you do not need to return to Amy specifically.</li>
+          <li>Bank more planks/bars when your inventory runs low. Repeating this ordinary loop is enough; NPC Contact, marked tiles and optimized guard-free routes are unnecessary.</li>
+        </ol>
+        <p>We are earning a <strong>plank sack</strong>, not training indefinitely. It costs <strong>350 carpenter points</strong> and holds up to <strong>28 planks</strong>, cutting down bank trips for future contracts and Construction. Check your current point balance first: Chapter 1's earlier Mahogany Homes jobs and this section's Novice bridge may already have earned points. <strong>From zero points, 88 full-value Adept jobs produce 352 points</strong> (88 × 4); with earlier points, fewer are needed. The mean per Adept job is about <strong>11.6 teak planks, 0.5 steel bars and 3,260 total Construction XP</strong>, not a guaranteed per-job bill.</p>
+      </RouteStep>
+
+      <RouteStep id="i21-plank-sack" number="6" title="Buy the plank sack, then verify base 62 Construction">
+        <p>Continue Adept contracts until your <strong>total unspent points reach at least 350</strong>, then buy the plank sack from the Mahogany Homes reward shop. Use it on subsequent jobs if more XP is needed. Check your <strong>actual, unboosted Construction level</strong>: the lectern plan needs <strong>at least 62</strong>. If the point grind leaves you below that, continue the same Adept loop to 62; if you reached 62 first, continue until you can buy the sack. Do not infer your level from the number of contracts alone.</p>
+        <div class="callout"><strong>Useful planning scale:</strong> from the exact level-50 XP floor, reaching 62 takes about 232,500 XP, or roughly <strong>72 average Adept jobs</strong>. The Novice bridge has already earned points, so the sack may arrive before 62. Conversely, 88 Adept jobs from zero points may place you above 62. Both outcomes are normal. Save any spare teak planks for the later actual-70 Construction checkpoint in Chapter 2.</div>
+      </RouteStep>
+
+      <section>
+        <div class="section-label">House travel</div>
+        <h2>Build the lectern once; use it for the rest of the route.</h2>
+        <p>The <strong>mahogany eagle lectern</strong> in a POH <strong>study</strong> makes standard house-teleport tablets. Those turn future quest preparation and contract travel into a predictable one-slot teleport instead of repeated spellbook/rune juggling. Its displayed build requirement is 67 Construction; our deterministic route uses base 62 plus two compatible boosts.</p>
+      </section>
+
+      <RouteStep id="i21-lectern-supplies" number="7" title="Prepare the study, kitchen and exact lectern materials">
+        <p>Set aside a <strong>hammer, crystal saw, two mahogany planks and one gold leaf</strong> for the lectern. Cut two mahogany logs from the trees <strong>north of the Farming Guild</strong> (or use two already banked), then make the planks at a sawmill for <strong>1,500 coins each</strong>. Obtain the leaf from the <strong>Stonemason in south-west Keldagrim</strong> for about <strong>130,000 coins</strong>. Add a <strong>study</strong> in POH build mode (requires actual 40 Construction; 50,000 coins) and leave its lectern hotspot open. Room requirements cannot use the saw's invisible boost, but your actual 62 already covers this.</p>
+        <p>For the reliable <strong>+2 tea</strong>, add a <strong>kitchen</strong> to the same house if you lack one (5,000 coins). Build or confirm: <strong>wooden shelves 3</strong> (three regular planks, six soft clay, three steel nails) or higher shelves that supply a <strong>porcelain cup</strong>; a <strong>wooden larder</strong> for tea leaves (eight regular planks and eight steel nails), or a better larder; a <strong>pump and drain</strong> (five steel bars), or better water source; and a <strong>firepit with hook</strong> (two steel bars, two soft clay), or a higher stove. A plain firepit is <em>not</em> enough to boil the kettle. If building the minimum setup from scratch, that is <strong>11 regular planks, 11 steel nails, eight soft clay and seven steel bars</strong>, plus the room fee. The porcelain cup determines the +2 boost.</p>
+      </RouteStep>
+
+      <RouteStep id="i21-lectern-build" number="8" title="Make porcelain tea, apply both boosts and build immediately">
+        <ol>
+          <li>Enter your POH with the <strong>crystal saw equipped or in inventory</strong>, a hammer, two mahogany planks and the gold leaf. Turn on <strong>build mode</strong> before the final build.</li>
+          <li>From the kitchen shelves take a <strong>kettle, teapot and porcelain cup</strong>; get <strong>tea leaves</strong> from the larder. Use the kettle on the pump/sink to fill it, then put it on the firepit <em>with hook</em> or higher stove. Put leaves into the teapot. When the kettle boils, remove it and use the hot kettle on the teapot; pour a serving into the <em>porcelain</em> cup. The handoff's Cooking level already exceeds the tea's 20 Cooking requirement.</li>
+          <li>Drink the tea and check the skill tab: the <strong>visible level should show at least 64</strong> from base 62. The crystal saw adds another <strong>invisible +3</strong> only when building furniture that uses a saw. It does <em>not</em> appear in the skill tab, so confirm the saw is present and the lectern recipe is the 67-Construction furniture build.</li>
+          <li>Go straight to the study's lectern hotspot and build the <strong>mahogany eagle lectern</strong>. If the tea boost decays below +2 before you click, drink another freshly made porcelain tea; if you cannot make the furniture, recheck the saw, hammer, build mode and materials. Never assume an expired boost counts.</li>
+        </ol>
+        <p>If your Adept sessions carried you to actual 63 or higher, this exact setup still works; the extra level simply gives more timing slack. The permanent lectern is the payoff—the tea is only for construction, not for making tablets afterward.</p>
+      </RouteStep>
+
+      <RouteStep id="i21-house-tabs" number="9" title="Make and bank 100 house teleport tablets">
+        <p>Use a round first stock of <strong>100 tablets</strong>. Bring <strong>100 soft clay, 100 law runes, 100 air runes and 100 earth runes</strong> to the finished lectern, in inventory batches. The <strong>Teleport to House</strong> tablet requires 40 Magic and the <strong>standard spellbook</strong>; select it from the lectern interface and repeat until the stack reaches 100. An elemental staff can replace the matching elemental runes if you prefer, but the listed rune budget works without one.</p>
+        <p>For clay, use any soft clay already banked. Otherwise mine <strong>100 ordinary clay</strong> at a convenient clay-rock mine, bank it, and use water from buckets or jugs on it to soften it. A bracelet of clay makes clay rocks yield soft clay directly if you have one; it is convenience, not a prerequisite. Buy any missing law/elemental runes from an accessible rune shop, including the Wizards' Guild shop while you have access.</p>
+        <div class="callout"><strong>Why 100, not 106 or 112?</strong> This is an initial utility stock, not a quest gate with an exact tablet count. It covers many upcoming house visits and returns while leaving a simple refill rule: make more when the stack gets low. Bank the tablets with the remaining cash and construction materials for 2.2.</div>
+      </RouteStep>
+
+      <section id="chapter-complete" class="completion-panel">
+        <div class="section-label">2.1 exit check</div>
+        <h3>The account has a usable cash-and-house backbone.</h3>
+        <ul>
+          <li>All <strong>1,590 Earth orbs</strong> have become battlestaves and been alched; bank the resulting cash. Actual Crafting should comfortably exceed 61; verify actual Magic against the later 65 gate.</li>
+          <li><strong>Actual 50+</strong> Construction unlocked Adept contracts; <strong>350 points</strong> bought the plank sack; <strong>actual 62+</strong> and the +5 setup built the mahogany eagle lectern. Your ending Construction level may be higher, depending on starting XP and contract layouts.</li>
+          <li><strong>100 house teleport tablets</strong> are banked. Save unused oak/teak planks, steel bars and runes for the later quest and actual-70 Construction blocks.</li>
+        </ul>
+        <p>Next comes the coherent quest-infrastructure section. Nothing here assumed optional Gemstone Crab melee or Piscarilius Thieving XP.</p>
+      </section>
+
+      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-4/`}>← 1.4</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a></div>
+    </article>
+    <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-1" title="2.1 progress" /></aside>
+  </div>
+</GuideLayout>

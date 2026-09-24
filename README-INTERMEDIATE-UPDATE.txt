@@ -19,7 +19,7 @@ This revision includes:
 - Completed route steps visibly dim when checked.
 - Optional route blocks can still be checked/dimmed but no longer inflate required progress.
 - Restored the full 1,600-bucket sandstone target, with Shooting Stars as the relaxed finish and 2,000 stardust banked.
-- Added Gemstone Crab as the recommended AFK Ranged option and an optional 60/60/60 melee break.
+- Added Gemstone Crab as the recommended AFK Ranged option; the current optional melee break stops at 65/65/65.
 - Expanded the 43 Prayer step into an explicit hybrid: use fast green dragons while the Wilderness is quiet, then finish roughly 75–80 total bones on safespotted Isle of Souls blue dragons if PK traffic becomes annoying. The walkthrough now explains the Soul Wars teleport, dungeon route, safespot, Water Strike fallback, 100-chaos-rune reserve, banking, and one-inventory-at-a-time Chaos Altar cash-in.
 - Added Chapter 2 carryover checks (mushroom pies, teak trees, stardust, gout tuber, harralander, bucket sap, slime, salmon, heavy fishing rod, spare molten glass, etc.).
 - Explicit Desert Treasure supply list and retained Plague City gas mask.
