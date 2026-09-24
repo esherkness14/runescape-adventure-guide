@@ -1,0 +1,147 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+import ChapterGoals from '../../components/ChapterGoals.astro';
+import RouteStep from '../../components/RouteStep.astro';
+import TrainingOptions from '../../components/TrainingOptions.astro';
+import ExpandableNote from '../../components/ExpandableNote.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate 2.2 · Quest Infrastructure" current="intermediate">
+  <div class="page-grid">
+    <aside class="sidebar"><IntermediateNav current="2-2" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate · Chapter 2.2</div>
+        <h1 class="chapter-title">Quest Infrastructure</h1>
+        <p class="chapter-summary">Turn the 2.1 cash and house travel into a dependable quest backbone. Prepare for one quest, finish it, bank, then move to the next. This is not a tour of every nearby diary task or a demand to keep five quests half-finished at once.</p>
+      </header>
+
+      <ChapterGoals
+        summary="Finish the kingdom, Lunar, Recipe for Disaster and later elf-chain prerequisites that are useful now: Dragon Slayer I, Underground Pass, Shilo Village, the Dorgesh-Kaan chain, Between a Rock, Heroes' Quest and Monkey Madness I. Make the Smithing and Mining gates explicit. Family Crest was already finished in 1.4, not repeated here."
+        stats={["Actual 50 Smithing before Between a Rock", "Actual 50 Mining before Heroes' Quest", "About 40 Herblore carries through; no new Herblore gate in 2.2", "Check the real Attack/Strength/Defence levels after quest rewards; no 65/65/65 assumption"]}
+        unlocks={["Upgraded Iban's staff banked", "Shilo Village and Dorgesh-Kaan access", "Dorgesh-Kaan–Keldagrim train and Tears of Guthix", "Heroes' Guild / Throne of Miscellania prerequisite", "Ape Atoll progression and dragon scimitar purchase access"]}
+      />
+
+      <div class="callout"><strong>Already complete—do not repeat:</strong> Chapter 1 finished Shield of Arrav, Lost City, Merlin's Crystal, Jungle Potion, The Lost Tribe, The Giant Dwarf, The Dig Site, Dwarf Cannon, Fishing Contest, Biohazard, The Grand Tree, Tree Gnome Village and <strong>Family Crest</strong>. Keep its steel gauntlets: Avan can turn them into <strong>goldsmith gauntlets</strong> for much better gold-smelting XP if you later choose that Smithing method. It also finished Ernest the Chicken, Animal Magnetism and the relevant Barbarian Training foundation. Dragon Slayer I was only <em>started</em> in 1.4 for the anti-dragon shield; this page finishes it. Bring the 2.1 house tablets and ordinary teleport jewellery for banking between quests, not every reserved Chapter 1 item at once.</div>
+
+      <section>
+        <div class="section-label">Skill gate and first quest</div>
+        <h2>Close the real Smithing requirement, then finish the dragon quest.</h2>
+      </section>
+
+      <RouteStep id="i22-smithing-50" number="1" title="Reach actual 50 Smithing for Between a Rock">
+        <p><strong>Why 50:</strong> the gold helmet in Between a Rock needs 50 Smithing. The Chapter 1 handoff is around 42; neither the crystal saw nor a projected quest reward solves this. Check your live XP and stop at <strong>actual, unboosted 50</strong>. Keep four gold bars and any bars reserved for future construction or quests out of the training pile.</p>
+        <p><strong>Recommended: Giants' Foundry.</strong> Sleeping Giants in 1.2 already unlocked Kovac's workshop under the Giants' Plateau east of Al Kharid; a ring of dueling to Emir's Arena or the Giants' Foundry minigame teleport gets you close. Check the Wintertodt/Tempoross ore and bar bank first. Bring metal bars or unwanted smithable metal equipment, plus a bucket or ice gloves; the workshop has a bank. A straightforward early sword uses <strong>14 iron and 14 steel bars</strong>. Smelt missing iron from iron ore and missing steel from one iron ore plus two coal each, using banked ore or ordinary mining/shop stock. Do not sacrifice the steel bars set aside for Mahogany Homes and later quest supplies.</p>
+        <ol>
+          <li>Ask <strong>Kovac</strong> for a commission and pick moulds matching its two descriptive words.</li>
+          <li>Put <strong>28 bars' worth</strong> of usable metal into the crucible, pour the preform, then follow the temperature bar through the hammer, grind and polish stations. Cool or heat the sword when the interface calls for it; working at the wrong temperature damages quality.</li>
+          <li>Hand the finished sword to Kovac for Smithing XP, coins and reputation. Repeat with banked iron/steel until the skill tab shows <strong>actual 50</strong>; save spare reputation and metal for the later 70-Smithing block.</li>
+        </ol>
+        <TrainingOptions id="i22-smithing-methods" informational={true} skill="Smithing" target="actual 50" why="Between a Rock consumes this level now; 70 for Song of the Elves belongs to a later, separately budgeted block." recommended="Giants' Foundry with banked iron/steel is resource-efficient and pays back coins. A 14/14 mix is a simple learning recipe, not a fixed number of swords to force." relaxed="Use ordinary bars at an anvil if you prefer less minigame attention; check the bank first and make only enough items to reach 50." fast="Blast Furnace can process banked ore faster, but do not buy an oversized gold-ore stock solely to replace this short checkpoint." />
+      </RouteStep>
+
+      <RouteStep id="i22-dragon-slayer" number="2" title="Finish Dragon Slayer I; retain the shield and count its combat XP">
+        <p><strong>Prerequisite:</strong> the Champions' Guild's 32 Quest Points were earned in Chapter 1, and 1.4 deliberately started Dragon Slayer I to obtain the anti-dragon shield for dragon bones. If your journal shows only that opening stage, continue it now rather than starting a duplicate quest. This completion supplies the missing Heroes' Quest prerequisite and awards <strong>18,650 Strength and 18,650 Defence XP</strong>.</p>
+        <p><strong>Bank check:</strong> get <strong>three regular planks, 90 steel nails, a hammer and 2,000 coins</strong> for the ship; an <strong>unfired bowl, one Wizard's mind bomb, lobster pot and silk</strong> for the map pieces; and either Telekinetic Grab runes with a suitable attack or another <strong>10,000 coins</strong> for Wormbrain's piece. Keep the anti-dragon shield from Duke Horacio, food, a teleport and combat runes/gear. Buy missing nails from the Varrock sawmill operator, a lobster pot at a fishing shop, and a mind bomb at the Falador or Burthorpe pub; make an unfired bowl from soft clay at a pottery wheel if the bank lacks one.</p>
+        <p>Resolve the three map pieces, repair the ship at Port Sarim and sail to Crandor. For <strong>Elvarg</strong>, equip the anti-dragon shield, use your 43 Prayer and bring prayer restoration and strong food; Magic or Ranged is reasonable if your melee stats are still near the mandatory Chapter 1 floor. Unlock the Karamja Volcano passage before leaving so a failed attempt is easier to recover. Finish with Oziach, retain the shield, and check the awarded Defence level rather than inferring it from the XP. <a href="https://oldschool.runescape.wiki/w/Dragon_Slayer_I" target="_blank" rel="noreferrer">Wiki map-piece and fight details</a>.</p>
+      </RouteStep>
+
+      <section>
+        <div class="section-label">Western passage and southern Karamja</div>
+        <h2>Build the elf-route and Shilo access as complete quests.</h2>
+      </section>
+
+      <RouteStep id="i22-underground-pass" number="3" title="Finish Underground Pass and upgrade Iban's staff">
+        <p><strong>Why now:</strong> Underground Pass is the route's doorway to Regicide and the later elf line, and its staff becomes a useful midgame Magic weapon. Biohazard is complete and the <strong>25 Ranged</strong> gate is already exceeded. Start with King Lathas in Ardougne, then treat the pass as one long quest—not a corridor for unrelated errands.</p>
+        <p><strong>Withdraw:</strong> <strong>two or more ropes</strong>, a normal bow with a few <strong>non-poisoned metal-tipped arrows</strong>, spade, food, prayer/energy supplies, light combat gear, a teleport out and room for quest items. Your roughly 51 Agility helps but does not eliminate failed obstacles. Bank before entry and bring extra food rather than trying to save every slot. The route expects retries: if the obstacles become frustrating, restock or return another session; no new Agility mega-grind is being hidden here.</p>
+        <p>Finish Iban and collect <strong>Iban's staff</strong>, then visit the <strong>Dark Mage in West Ardougne</strong> with <strong>200,000 coins</strong> to upgrade it to <strong>Iban's staff (u)</strong> and its <strong>2,500-charge</strong> capacity. Bank the staff. It requires <strong>50 Attack and 50 Magic to wield</strong>; Magic is covered, but the mandatory Chapter 1 Attack baseline may still be below 50. The later selected Monkey Madness reward closes that gap—do not pretend the staff is wieldable yet. This quest also gives <strong>3,000 Attack and 3,000 Agility XP</strong>; check your real level after claiming it. <a href="https://oldschool.runescape.wiki/w/Underground_Pass" target="_blank" rel="noreferrer">Wiki obstacle and Iban walkthrough</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i22-shilo" number="4" title="Complete Shilo Village and open the village/cart route">
+        <p><strong>Why now:</strong> Shilo is a prerequisite for Lunar Diplomacy's quest chain and Sir Amik's Recipe for Disaster step, as well as a useful southern Karamja bank/cart destination. <strong>Jungle Potion</strong> was finished in 1.3; the <strong>20 Crafting and 32 Agility</strong> checks are already passed. Reach Mosol Rei outside Shilo with fairy ring <strong>CKR</strong> and the dramen staff, or use a gnome glider and walk.</p>
+        <p><strong>Bring:</strong> <strong>one spade, one rope, one chisel, one lit torch or candle</strong> (that light is consumed), <strong>one bronze wire</strong> and <strong>three ordinary bones</strong>. The Tai Bwo Wannai general store sells most small tools and a bronze bar; smith the wire at its nearby anvil if you did not bank one. Bones can be obtained during the quest, but banking three first avoids accidentally burying the last one. Add antipoison, food, prayer restoration, a teleport and Magic/Ranged gear.</p>
+        <p>Finish the temple and tomb sequence, then fight <strong>Nazastarool's three forms</strong> (roughly level 91/68/93). Use the dolmen as a safespot with Magic or Ranged if your optional melee training was skipped; fire spells or Crumble Undead are good choices. Bank between phases/trips when the quest permits. Keep the <strong>beads of the dead</strong> until the quest is truly complete, then verify Shilo entry and cart travel. <a href="https://oldschool.runescape.wiki/w/Shilo_Village" target="_blank" rel="noreferrer">Wiki tomb map and Nazastarool positions</a>.</p>
+      </RouteStep>
+
+      <section>
+        <div class="section-label">Dorgesh-Kaan chain</div>
+        <h2>Open the cave-goblin city, its weekly XP utility and its railway.</h2>
+        <p><strong>Dorgesh-Kaan</strong> is the cave-goblin city beneath Lumbridge, reached through the castle cellar/Dorgeshuun mine after The Lost Tribe. It is not a Thieving grind stop. These three quests form one coherent local chain; finish and rebank after each.</p>
+      </section>
+
+      <RouteStep id="i22-death-dorgeshuun" number="5" title="Complete Death to the Dorgeshuun and enter the cave-goblin city">
+        <p><strong>The Lost Tribe</strong>, Goblin Diplomacy and Rune Mysteries are already complete; 23 Agility/Thieving are far below your current levels. In the Lumbridge castle cellar, go through the rear cave to Mistag. Bring a <strong>safe enclosed light source</strong>, pickaxe, food and Magic/melee gear. The quest needs <strong>two full seven-piece H.A.M. outfits</strong> (hood, shirt, robe, logo, cloak, gloves, boots). Check the bank from the earlier H.A.M. work; pickpocket members at the hideout east of Draynor for missing pieces after starting the quest, when the outfit chance improves.</p>
+        <p>Show Zanik the surface and finish the H.A.M. investigation, then return with a pickaxe and light for the swamp-cave section. Use prayer, food and a teleport; open flames are unsafe in gas pockets. At the final mill fight, handle the guards before <strong>Sigmund</strong> and switch from a protected style as Zanik attacks. Complete the quest before moving on: it gives <strong>2,000 Thieving and 2,000 Ranged XP</strong> and opens <strong>Dorgesh-Kaan</strong> and the H.A.M. storeroom. No 78-Thieving rich-chest diary action is part of this step. <a href="https://oldschool.runescape.wiki/w/Death_to_the_Dorgeshuun" target="_blank" rel="noreferrer">Wiki Zanik route and cave map</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i22-tears-guthix" number="6" title="Complete Tears of Guthix and retain the sapphire lantern">
+        <p><strong>Why now:</strong> the short quest unlocks the weekly Tears of Guthix minigame, which gives XP to your lowest skill; it does not award a predetermined Herblore level. The <strong>43 Quest Points, 49 Firemaking, 20 Crafting and 20 Mining</strong> checks are already met. Before entering the Lumbridge Swamp Caves, prepare a <strong>lit sapphire lantern</strong>: check for a bullseye lantern already banked, or buy an empty one from <strong>Miltog's Lamps</strong> in the Dorgesh-Kaan market opened in Step 5. Get <strong>one swamp tar</strong> from Lumbridge Swamp; use it on the lamp still beside Miltog, then use the lantern on the still to fill it. Use a <strong>cut sapphire</strong> on the lantern to replace its lens, and light it with a tinderbox. Keep an ordinary enclosed light too. The Chapter 1 molten glass remains banked for later uses rather than being consumed unnecessarily here.</p>
+        <p>Bring <strong>rope, pickaxe, chisel, food, antipoison and a teleport</strong>; the cave has aggressive monsters and a water crossing that can extinguish a light. Reach <strong>Juna</strong> in the Chasm of Tears from the swamp caves/Dorgeshuun mine, use the sapphire lantern on a light creature, mine the magic stone, chisel the stone bowl and return to Juna. Bank the sapphire lantern afterward: Lunar Diplomacy can reuse its lantern body, and later quests may need it again. Weekly tears are a useful optional habit, not a hidden source of any level required in this chapter. <a href="https://oldschool.runescape.wiki/w/Tears_of_Guthix" target="_blank" rel="noreferrer">Wiki light-creature and bowl details</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i22-another-slice" number="7" title="Complete Another Slice of H.A.M. and open the Keldagrim train">
+        <p><strong>Prerequisites:</strong> Death to the Dorgeshuun just finished; The Giant Dwarf and The Dig Site were completed in 1.3; actual <strong>15 Attack and 25 Prayer</strong> are already covered. Bring an enclosed light, food, a teleport and <strong>Magic or Ranged gear</strong>—the final two level-30 enemies cannot be dealt with using melee. Leave at least <strong>eight free inventory slots</strong> for artefacts. The trowel and specimen brush are provided during the quest.</p>
+        <p>Start in Dorgesh-Kaan, excavate and clean the artefacts, then finish Zanik's investigation and the fight with Sigmund. The city-to-<strong>Keldagrim railway</strong> is the useful transport payoff; the quest also gives the ancient mace, <strong>3,000 Mining and 3,000 Prayer XP</strong>. Check your live Mining XP before training the Heroes' Quest gap in Step 9. A moving-over-distance sphere from Oldak can later return you to Dorgesh-Kaan; do not require one for every trip. <a href="https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M." target="_blank" rel="noreferrer">Wiki artefact and fight details</a>.</p>
+      </RouteStep>
+
+      <section>
+        <div class="section-label">Dwarven and Heroes' Guild gates</div>
+        <h2>Spend the quest XP first; train only the remaining Mining gap.</h2>
+      </section>
+
+      <RouteStep id="i22-between-rock" number="8" title="Complete Between a Rock with actual 50 Smithing">
+        <p><strong>Dwarf Cannon and Fishing Contest</strong> were finished in 1.2. Check <strong>30 Defence, 40 Mining and actual 50 Smithing</strong> before starting; the mandatory Chapter 1 Defence/Mining baseline already clears the first two even without optional melee. Travel to Keldagrim via the new Dorgesh-Kaan train or the normal mine-cart route, then speak to <strong>Dondakan</strong> at the mine outside the city.</p>
+        <p><strong>Withdraw or obtain:</strong> <strong>four gold bars</strong> (smelt missing bars from gold ore, or use the bank), a <strong>hammer, pickaxe and ammo mould</strong>, a teleport, food and combat gear. Nulodion near the Dwarf Cannon start sells an ammo mould if yours is missing. The quest turns one gold bar into a cannonball and three into a gold helmet; reserve all four rather than discovering a shortage mid-story. Bring protection/healing for the Arzinian mine fight, and follow the schematic dialogue/puzzle in the <a href="https://oldschool.runescape.wiki/w/Between_a_Rock..." target="_blank" rel="noreferrer">Wiki Between a Rock walkthrough</a>.</p>
+        <p>Finish the quest and bank the <strong>gold helmet</strong>; it opens the Arzinian gold mine if you want that resource later. The completion rewards <strong>5,000 Mining, Smithing and Defence XP each</strong>. These rewards plus Another Slice's 3,000 Mining XP are why the route waits until now to train Mining to 50. Check your actual Defence level after both this and Dragon Slayer I; none of the later combat gates are silently inferred from it.</p>
+      </RouteStep>
+
+      <RouteStep id="i22-mining-50" number="9" title="Reach actual 50 Mining for Heroes' Quest">
+        <p>Read your skill tab after the <strong>3,000 Mining XP</strong> from Another Slice and <strong>5,000</strong> from Between a Rock. Train only the remaining gap from the Chapter 1 ~44 handoff to <strong>actual 50 Mining</strong>. Heroes' Quest consumes 50 now; <strong>52 Mining for full Legends' Quest</strong> and 60 for Lunar Diplomacy belong to later checkpoints. Do not silently count this as either of those levels.</p>
+        <p>Take the <strong>2,000 stardust</strong> Chapter 1 reserved to <strong>Dusuri's Star Shop</strong> and buy the <strong>celestial ring</strong> if you have not already. Its invisible +4 Mining boost helps success rate but <em>does not satisfy</em> Heroes' Quest's level check. Returning to Shooting Stars now is for relaxed Mining XP, not to re-earn the already-spent ring purchase.</p>
+        <TrainingOptions id="i22-mining-methods" informational={true} skill="Mining" target="actual 50" why="Heroes' Quest requires this level in 2.2; higher Legends/Lunar/Song of the Elves targets are deliberately staged later." recommended="Shooting Stars: inspect the telescope or community star notice, travel to a landed star you can mine, and click its layers until it disappears or you want a break. Extra stardust may buy later shop rewards, but there is no new 2,000-dust quota." relaxed="Motherlode Mine beneath Falador: mine pay-dirt veins, deposit it in the hopper, collect ores from the sack and bank them. It is available from 30 Mining and feeds later Smithing. Calcified rocks are another low-attention option only if you already opened Cam Torum through Perilous Moons; that side quest is not required here." fast="Mine iron or use another active method if you want the last levels quickly; sandstone/granite are not the default merely for speed." />
+      </RouteStep>
+
+      <RouteStep id="i22-heroes" number="10" title="Complete Heroes' Quest with a current co-op partner">
+        <p><strong>Why now:</strong> Heroes' Quest is the remaining direct prerequisite for <strong>Throne of Miscellania</strong> in 2.3, and it also feeds Sir Amik/Legends later. Check <strong>55 Quest Points, 53 Cooking, 53 Fishing, 25 Herblore and actual 50 Mining</strong>. Chapter 1 already supplied Shield of Arrav, Lost City and Merlin's Crystal; Step 2 finished Dragon Slayer I. Do not redo any of them.</p>
+        <p>Start with Achietties outside the Heroes' Guild between Burthorpe and Taverley. For the lava eel, withdraw the <strong>one harralander reserved in 1.3</strong>, <strong>one vial of water</strong> and a <strong>normal fishing rod</strong>. Get blamish snail slime through the quest, make the harralander potion (unf), add the slime, then oil the rod. Obtain a dusty key for Taverley Dungeon if you lack the 70-Agility shortcut, and bring fishing bait, food, antipoison and a teleport. Cook the caught eel. For Entrana, get <strong>ice gloves</strong> from the Ice Queen if you do not have them; bring a pickaxe, combat supplies and food for that trip, then bank prohibited gear before travelling to Entrana for the fire feather. Keep the gloves afterward.</p>
+        <p><strong>Partner check:</strong> the current quest still needs a player from the <em>opposite Shield of Arrav gang</em> for the Master Thieves' Armband section; it is not soloable just because you are an Ironman. Check your quest journal for your gang, then use the in-game <strong>Grouping → Shield of Arrav</strong> channel to find the opposite side. A player who already completed Heroes' Quest can still help. Coordinate the Brimhaven mansion/key/candlestick sequence rather than attempting to buy a quest item or assuming an arbitrary player can bypass your role. Finish with Achietties and bank the ice gloves and oily fishing rod. <a href="https://oldschool.runescape.wiki/w/Heroes%27_Quest" target="_blank" rel="noreferrer">Wiki gang-specific steps and dungeon map</a>.</p>
+        <p>The quest gives about <strong>3,075 Attack, Strength, Defence and Hitpoints XP</strong> each, plus smaller skill rewards. Let the skill tab, not this projection, determine your next training stop.</p>
+      </RouteStep>
+
+      <section>
+        <div class="section-label">Ape Atoll and the combat-reward decision</div>
+        <h2>Unlock the dragon scimitar without assuming the optional melee detour.</h2>
+      </section>
+
+      <RouteStep id="i22-monkey-madness" number="11" title="Complete Monkey Madness I and take Daero's Attack/Defence reward">
+        <p><strong>Why now:</strong> The Grand Tree and Tree Gnome Village are complete from Chapter 1. Monkey Madness I opens Ape Atoll progression, the <strong>dragon scimitar purchase</strong> and the Awowogei Recipe for Disaster prerequisite in 2.4. The Chapter 1 optional 65/65/65 crab branch is <em>not</em> assumed. Talk to King Narnode in the Grand Tree, finish this quest, and only then collect the chosen XP from Daero.</p>
+        <p><strong>Check or gather:</strong> <strong>one gold bar, a ball of wool and five free inventory slots</strong> for bananas you pick from the Ape Atoll garden during the quest, plus room for Karamjan monkey bones/corpse and other quest items. A gold bar may remain from The Dig Site or can be smelted from ore; kill a regular monkey on Karamja for its bones if you do not already have them. Take anti-poison, several prayer potions, strong food, energy restoration, a teleport and gear for Magic or Ranged. Rebank before each dangerous Ape Atoll/tunnel section. Use <strong>Protect from Melee</strong> where the monkeys swarm; do not try to face-tank the island at the ~34-Defence Chapter 1 baseline. The <strong>Jungle Demon</strong> can be fought from a safer ranged/magic position with prayers and food. <a href="https://oldschool.runescape.wiki/w/Monkey_Madness_I" target="_blank" rel="noreferrer">Wiki greegree, tunnel and boss details</a>.</p>
+        <div class="callout"><strong>Daero reward choice for this route:</strong> choose <strong>35,000 XP each in Attack and Defence</strong> and <strong>20,000 XP each in Strength and Hitpoints</strong>. Dragon Slayer I and Heroes already added Strength/Defence XP; this option deliberately pushes the skipped-optional baseline toward <strong>50 Attack</strong> for the upgraded Iban's staff and toward the later <strong>60/65/70 Defence</strong> gates. From the approximate Chapter 1 floor of 46 Attack, Underground Pass + Heroes + this 35,000-XP choice clear the level-50 Attack threshold, but <strong>check your actual level</strong> before equipping the staff. It does not magically finish the <strong>130 Attack+Strength</strong> Warriors' Guild gate or Piety's 70 Defence; 2.5 will train both visibly.</div>
+        <p>The dragon scimitar is now <strong>available to buy</strong> from Daga on Ape Atoll, but needs <strong>60 Attack to wield</strong>. Buy one when you have the coins and level, not by assuming the optional melee block occurred. Keep your greegree and other useful quest items for Awowogei's later return to the island.</p>
+      </RouteStep>
+
+      <ExpandableNote label="Deliberate deferrals" title="Why the other nearby quests and diaries are not in 2.2">
+        <p><strong>Family Crest is already complete in 1.4.</strong> Haunted Mine and its salve amulet belong with the undead-heavy Morytania/combat work in 2.5; its difficult Treus Dayth fight need not interrupt the kingdom/Lunar prerequisites. Black Knights' Fortress, Recruitment Drive and Wanted! are saved for the King's Ransom/Proselyte path when those rewards matter. Ghosts Ahoy, Big Chompy Bird Hunting and RFD-specific errands belong with their 2.4–2.5 consumers. Temple of the Eye, Enakhra's Lament, Spirits of the Elid, Icthlarin's Little Helper, Contact!, Scorpion Catcher and Zogre Flesh Eaters are not required by this section's exit state; their later inclusion needs a named payoff rather than geographical coincidence.</p>
+        <p><strong>Legends' Quest:</strong> Sir Amik's RFD step requires <em>starting</em> Legends and entering the Kharazi Jungle, not completing it. In 2.4, check the <strong>107 Quest Points</strong> and start it when Sir Amik needs access. Full completion is deferred to the later Chapter 2 70s/Chapter 3-preparation lane, when 45 Herblore and 52 Mining are naturally surpassed and its selectable XP lamps can go to <strong>Herblore</strong>. Neither level is imposed in 2.2 solely for a future quest.</p>
+        <p>The Dorgesh-Kaan <strong>78-Thieving rich chest</strong> is also deferred; the optional Piscarilius activity in 2.1 was not part of the required XP budget.</p>
+      </ExpandableNote>
+
+      <section id="chapter-complete" class="completion-panel">
+        <div class="section-label">2.2 exit check</div>
+        <h3>The account is ready to start its kingdom and the next quest chains.</h3>
+        <ul>
+          <li><strong>Dragon Slayer I, Underground Pass, Shilo Village, Death to the Dorgeshuun, Tears of Guthix, Another Slice of H.A.M., Between a Rock, Heroes' Quest and Monkey Madness I</strong> complete. Family Crest remains complete from 1.4.</li>
+          <li><strong>Actual 50 Smithing and actual 50 Mining</strong> verified; Herblore remains at least the Chapter 1 actual-40 floor, with no 45 requirement yet.</li>
+          <li><strong>Iban's staff (u)</strong>, anti-dragon shield, ice gloves, sapphire lantern, gold helmet, useful quest items and house tablets banked; Shilo, Dorgesh-Kaan, its Keldagrim train and Ape Atoll opened. Dragon scimitar purchase access is unlocked; its 60-Attack wield requirement is a later checkpoint.</li>
+          <li><strong>Daero reward recorded:</strong> 35,000 Attack/Defence and 20,000 Strength/Hitpoints XP. Verify actual combat stats before relying on Iban's staff or later Warriors' Guild/King's Ransom/Piety gates.</li>
+        </ul>
+        <p>Next, 2.3 can begin <strong>Throne of Miscellania</strong> using Heroes' Quest and the Chapter 1 Fremennik Trials. Royal Trouble still needs a visible <strong>40 Slayer</strong> checkpoint; the Chapter 1 handoff's ~20 Slayer is not enough. Lunar Diplomacy and Recipe for Disaster have their Shilo, Heroes, Underground Pass and Monkey Madness prerequisites ready for 2.4.</p>
+      </section>
+
+      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-2-1/`}>← 2.1</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a></div>
+    </article>
+    <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-2" title="2.2 progress" /></aside>
+  </div>
+</GuideLayout>
