@@ -78,13 +78,15 @@ BRUHsailer Chapter 2 is much more EHP-heavy than the intended Intermediate guide
 
 - Attaching/alching Earth battlestaves while running Piscarilius artefacts: allow bankstanding/normal alching instead, with artefacts as the faster option.
 - 2-tick/1.5-tick teak methods: replace with normal teak chopping/butler or Mahogany Homes-friendly plank preparation.
-- Cut-eat Barbarian Fishing and eventual 99 Fishing: offer ordinary Barbarian Fishing and a bounded target needed for later requirements; 99 Fishing should be an optional macro-efficiency branch, not mandatory Intermediate progression.
+- Ordinary Barbarian Fishing and normal fish gutting are compatible with the relaxed route: use a knife on a leaping fish, then let the automatic cutting action process the inventory for its small Cooking XP. This must not be confused with high-input 3-tick "cut-eat" fishing used to maintain a tick-manipulated cycle; that technique is optional and is never assumed. Any Barbarian Fishing block needs a bounded dependency target, while 99 Fishing should be an optional "finish Fishing forever" branch rather than mandatory Intermediate progression.
 - Tick-manipulated gem mining, chin catching, Blast Mine loops and similar high-input methods: provide conventional/AFK alternatives.
 - Hallowed Sepulchre to 84/98 Agility: treat as an optional high-efficiency long grind; establish explicit minimum Agility breakpoints for quests/diaries instead.
-- Large green-dragon grind to 70 Prayer: keep the macro goal and bone/hide value, but offer safer/lower-attention alternatives and split the grind into sensible blocks.
+- Large green-dragon grind to 70 Prayer: keep the useful macro goals but decompose the inherited block first. Prayer XP, combat XP, Crafting XP from hides, and GP/alchables are separate outputs; retain a combined dragon grind only where gathering them together remains the best fit for this route. Derive the bone target from the player's actual Prayer XP rather than preserving a fixed 1,300-kill count. Wilderness green dragons may remain the faster opt-in route, but safespottable Isle of Souls blue dragons must remain a serious safe alternative whenever bones or hides are relevant. Split any retained work into sensible blocks.
 - Multi-questing chains: retain geographic grouping where useful but finish quests in coherent blocks with exact inventories.
 - Diary steps that are only opportunistic micro-optimisation should be postponed or grouped rather than interrupting quest/skilling flow.
 - Any XP level that BruhSailer gets “for free” through multiskilling must become an explicit checkpoint in the Intermediate version.
+
+The dragon example is the general rule for every inherited mega-grind: identify all outputs, map each output to a verified downstream dependency, decide whether the outputs are still best earned together, set the mandatory cutoff from the hard dependencies, and make any efficiency-only continuation explicitly optional.
 
 ## Boundary status after this pass
 
