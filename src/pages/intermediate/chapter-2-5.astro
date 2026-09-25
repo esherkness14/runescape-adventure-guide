@@ -1,0 +1,233 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import IntermediateNav from '../../components/IntermediateNav.astro';
+import ChapterGoals from '../../components/ChapterGoals.astro';
+import RouteStep from '../../components/RouteStep.astro';
+import TrainingOptions from '../../components/TrainingOptions.astro';
+import ExpandableNote from '../../components/ExpandableNote.astro';
+import ProgressTracker from '../../components/ProgressTracker.astro';
+const base = import.meta.env.BASE_URL;
+---
+<GuideLayout title="Intermediate 2.5 · Defender, Piety & Morytania" current="intermediate">
+  <div class="page-grid">
+    <aside class="sidebar"><IntermediateNav current="2-5" /></aside>
+    <article class="content">
+      <header class="chapter-header">
+        <div class="chapter-kicker">Intermediate · Chapter 2.5</div>
+        <h1 class="chapter-title">Defender, Piety & Morytania</h1>
+        <p class="chapter-summary">Build lasting melee and Prayer strength while following the Temple Knights and Myreque stories. Alternate quests, Slayer, gear, bones and skill checks; the destination is Piety and Sins of the Father, not an inherited dragon-kill quota.</p>
+      </header>
+
+      <ChapterGoals
+        summary="Finish the Temple Knight chain, full Legends' Quest, Ghosts Ahoy, Haunted Mine/Tarn, A Kingdom Divided and the Myreque story through Sins; obtain the dragon defender and Piety; finish Troubled Tortugans."
+        stats={["Actual 60 Attack; Attack + Strength ≥130; actual 70 Defence and Prayer", "Actual 54 Agility, 60 Fletching and 60 Herblore before Sins", "Actual 50 Slayer for Sins, then 51 for Troubled Tortugans", "45 Sailing already owned; 45→67 continues in 2.6"]}
+        unlocks={["Proselyte, Ectophial, Salve amulet (e), dragon defender and Piety", "Full Legends and 120,000 selectable Herblore XP", "Book of the Dead, Darkmeyer and Hallowed Sepulchre access", "Great Conch and the later Red Reef path"]}
+      />
+
+      <div class="callout"><strong>Carry-forward check:</strong> Enter from 2.4 with Barrows gloves, actual 40+ Herblore, 40+ Slayer from 2.3, 45 Sailing, the partially started Legends' Quest and (possibly) a banked RFD lamp. Read your <em>actual</em> Attack, Strength, Defence, Agility, Prayer and Fletching levels; no optional 65/65/65 melee, extra birdhouse runs or Wilderness dragon block is assumed. This long chapter deliberately changes activity after substantial quest or training clusters.</div>
+
+      <section><div class="section-label">Temple Knights · useful XP first</div><h2>Advance the chain, then cash out the Herblore floor.</h2></section>
+
+      <RouteStep id="i25-black-knights" number="1" title="Complete Black Knights' Fortress">
+        <p>Speak to <strong>Sir Amik Varze</strong> in Falador Castle and resolve the Black Knights' weapon plot at the fortress north of Ice Mountain. Bring an <strong>iron chainbody, bronze med helm and cabbage</strong> (not one from Draynor Manor), plus food and a teleport. This short old quest opens Recruitment Drive and is also a hard prerequisite for King's Ransom later. <a href="https://oldschool.runescape.wiki/w/Black_Knights%27_Fortress" target="_blank" rel="noreferrer">Quest guide</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-recruitment" number="2" title="Complete Recruitment Drive; record its Herblore, Agility and Prayer XP">
+        <p>Visit <strong>Sir Tiffy Cashien in Falador Park</strong> after Black Knights' Fortress. Bank <strong>all equipment and inventory items</strong> for the Temple Knight trials; the rooms contain self-supplied puzzle items. Work through the five randomized tests and the Sir Leye fight as the quest directs. Completion gives <strong>1,000.5 XP each in Herblore, Agility and Prayer</strong>. Claim and record them: the Herblore amount is part of the exact Legends checkpoint, and Prayer/Agility are real later inputs. <a href="https://oldschool.runescape.wiki/w/Recruitment_Drive" target="_blank" rel="noreferrer">Trial solutions</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-wanted" number="3" title="Complete Wanted! and record 5,000 Slayer XP">
+        <p>Continue from Sir Tiffy and the Temple Knights to hunt Solus Dellagar. Bring the quest's <strong>commorb</strong>, useful teleports, food and combat gear; this is a location-tracing quest, so follow the hints as one coherent chase rather than inventing a tile-by-tile route. Its <strong>5,000 Slayer XP</strong> reduces the later Sins gate and it opens The Slug Menace. Read the actual Slayer level after claiming the reward. <a href="https://oldschool.runescape.wiki/w/Wanted!" target="_blank" rel="noreferrer">Quest guide</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-temple-eye" number="4" title="Complete Temple of the Eye for Runecraft progress and Guardians access">
+        <p><strong>Returning-player primer:</strong> Temple of the Eye starts with <strong>Wizard Persten north of Al Kharid, near the Lumbridge gate and west of the Emir's Arena</strong>, and introduces the Guardians of the Rift (GOTR) portal beneath the Temple. GOTR is a team Runecraft minigame where players gather fragments, craft essence and power a guardian against incoming rifts. This route wants the <em>quest's</em> Runecraft XP and unlock, not a long minigame grind. Bring a pickaxe and the quest's requested supplies, then follow its short tutorial round and dialogues. The quest awards <strong>4,210 Runecraft XP along the way plus 5,000 at completion</strong>, or 9,210 total. <a href="https://oldschool.runescape.wiki/w/Temple_of_the_Eye" target="_blank" rel="noreferrer">Quest and minigame primer</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-rc-30" number="5" title="Verify actual 30 Runecraft for The Slug Menace">
+        <p>Chapter 1 left Runecraft around 24; Lunar Diplomacy alone did not guarantee 30. Read the <strong>actual skill-tab level</strong> after all 9,210 Temple XP. If it is still short because your starting XP differed, finish only the visible remainder with ordinary rune crafting or a few GOTR rounds: gather essence, craft at the opened altars, hand energy to the guardian and bank the runes. Stop at <strong>actual 30</strong>, the Slug Menace gate.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-slug-menace" number="6" title="Complete The Slug Menace and buy Proselyte">
+        <p>With Wanted!, the earlier Sea Slug quest, <strong>30 Runecraft and 30 Slayer</strong> checked, return to Sir Tiffy. Pack the <strong>commorb, a chisel, combat supplies, food and travel gear</strong>; the quest follows the slug threat through its own investigation and final encounter. Afterward buy the <strong>Proselyte armour pack from Sir Tiffy</strong> (25,000 coins). Its strong Prayer bonus makes routine Slayer and future prayer-heavy fights less resource-hungry; it is durable account gear, <strong>not</strong> a hard Sins requirement. <a href="https://oldschool.runescape.wiki/w/The_Slug_Menace" target="_blank" rel="noreferrer">Quest details</a>.</p>
+      </RouteStep>
+
+      <div class="callout"><strong>Change the texture:</strong> if you want combat now, pick up an ordinary Slayer assignment and make progress on Attack/Strength/Defence. No arbitrary number of tasks is a required progress activity. The only future Slayer stops are actual 50 before Sins and 51 before Troubled Tortugans.</div>
+
+      <section><div class="section-label">Zogre and Legends</div><h2>Let guaranteed quest XP replace the early Herblore grind.</h2></section>
+
+      <RouteStep id="i25-zogre" number="7" title="Complete Zogre Flesh Eaters">
+        <p>Big Chompy Bird Hunting is already complete. Speak to <strong>Grish in the Jiggig area south of Castle Wars</strong>. Bring your banked <strong>ogre bow and ogre arrows</strong>, a knife, chisel, food, <strong>anti-disease support</strong> (relies on the disease mechanic, not only poison protection) and a teleport. Make the quest's brutal arrows as instructed; zogres resist ordinary attacks, while <strong>Crumble Undead</strong> is a useful alternative. Rebank before <strong>Slash Bash</strong>, use ranged safespots and protection prayers where appropriate, and follow the grave/key clues in the <a href="https://oldschool.runescape.wiki/w/Zogre_Flesh_Eaters" target="_blank" rel="noreferrer">quest guide</a>. Claim <strong>2,000 XP each in Herblore, Fletching and Ranged</strong>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-herblore-45" number="8" title="STOP: verify actual 45 Herblore without a potion grind">
+        <p>The conservative route floor is <strong>37,224 XP</strong> at actual 40. Add Heroes' Quest <strong>1,325</strong>, both One Small Favour lamps <strong>20,000</strong>, Recruitment Drive <strong>1,000.5</strong>, and Zogre <strong>2,000</strong>: <strong>61,549.5 XP</strong>. Level 45 begins at <strong>61,512 XP</strong>, so the mandatory route clears it by 37.5 XP even with no incidental potion-making. Check the skill tab. If below 45, find an unclaimed named quest reward or lamp; do not conceal a missing reward with an invented grind.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-legends" number="9" title="Finish Legends' Quest and put all four rewards into Herblore">
+        <p>The 2.4 partial start already supplied the Kharazi map, Radimus notes and vanilla pod. Now the route has the missing <strong>45 Herblore</strong>. Check <strong>107+ QP, 50 Agility/Crafting/Strength/Thieving/Woodcutting/Smithing, 56 Magic, 52 Mining and 42 Prayer</strong>, plus the earlier prerequisite quests; the mandatory route owns all of these. This is the full completion, not another partial access trip.</p>
+        <p><strong>Long-quest bank plan:</strong> keep the <strong>Radimus notes</strong> from 2.4 and stage a <strong>rune-or-better axe, machete, bullroarer, charcoal and 3–5 papyrus</strong> for the jungle. For later phases bank <strong>two gold bars (spares if you can), hammer, rope, two ordinary lockpicks, pickaxe, vial of water, one each cut opal/jade/red topaz/sapphire/emerald/ruby/diamond, mind and soul runes, two law runes, an earth rune, an unpowered orb and runes for a Charge Orb spell</strong> (an extra orb/cast if you take the long cave path). <strong>Charge Orb needs the standard spellbook</strong>, so switch back from Lunar/Ancients before that phase. Ardrigal and snake weed can be obtained during the quest. Withdraw by phase, not in one overloaded inventory.</p>
+        <p><strong>Combat preflight:</strong> Nezikchened is a <strong>level-187 demon fought three times</strong>; he drains Prayer when a fight starts and can use melee and Magic. Bring antipoison for jungle travel, good food, prayer restores, a teleport and a comfortable melee or ranged setup; restore Prayer and use Protect from Melee where the encounter calls for it. The caves have dangerous enemies and several re-entry steps, so bank between sections and read the <a href="https://oldschool.runescape.wiki/w/Legends%27_Quest" target="_blank" rel="noreferrer">current quest walkthrough</a> for the binding-book and cave sequence. At reward selection choose <strong>Herblore all four times</strong>: 4 × 30,000 = <strong>120,000 Herblore XP</strong>. The same skill may be chosen repeatedly. <strong>Talk to Radimus again after the four choices</strong> so the quest actually completes and awards its Quest Points.</p>
+        <p>If the RFD <strong>20,000-XP lamp</strong> was banked in 2.4, Herblore is now eligible at level 50+, so use it on Herblore. If you already spent that very lamp on Herblore in 2.4, count it <strong>once</strong> and do not expect a second one. Record the live level; full Legends has moved here because guaranteed quest XP made its last gate deterministic.</p>
+      </RouteStep>
+
+      <section><div class="section-label">Morytania utility</div><h2>Open travel and an undead-specific tool, then break into combat.</h2></section>
+
+      <RouteStep id="i25-ghosts" number="10" title="Complete Ghosts Ahoy; keep the Ectophial">
+        <p>Bring the <strong>ghostspeak amulet</strong>, the Chapter 1 banked <strong>20 ecto-tokens and buckets of slime</strong>, bones/pots/buckets for any remaining tokens, a bucket of milk, silk, dyes, spade, oak longbow, needle/thread and roughly 400 coins. Check the bank first rather than gathering the reserved resources twice. The whole quest can need <strong>31 tokens without an activated ring of charos</strong> (20 with one), so make only the shortfall: each bone/bonemeal and slime offering gives five tokens. At Port Phasmatys, help Velorina, acquire the ghost disguise and petition signatures, and resolve Necrovarus's hold on the ghosts; the <a href="https://oldschool.runescape.wiki/w/Ghosts_Ahoy" target="_blank" rel="noreferrer">quest guide</a> handles the variable dyes and map clues. Claim <strong>2,400 Prayer XP</strong> before estimating your 70-Prayer bone budget.</p>
+        <p>The <strong>Ectophial</strong> teleports to the Ectofuntus/Port Phasmatys region and refills at the Ectofuntus. Keep it permanently: it shortens this chapter's eastern Morytania trips. The port is also permanently accessible without paying tokens.</p>
+      </RouteStep>
+
+      <section><div class="section-label">Fletching break</div><h2>Switch out of quest mode before the next Morytania stretch.</h2></section>
+
+      <RouteStep id="i25-fletching-60" number="11" title="Reach actual 60 Fletching for Sins">
+        <p>Read live Fletching after Chapter 1 and Zogre's 2,000 XP; Sins requires <strong>actual, unboosted 60</strong>. Use banked maple logs with a knife and ordinary <strong>Make-X</strong> bow fletching: <strong>maple shortbows at 50</strong>, then <strong>maple longbows at 55</strong>. If your kingdom's teak stock for Construction is healthy, temporarily move its five non-herb workers from teaks to <strong>maples</strong> for passive logs/nests; no daily collection schedule is assumed. Stop when the skill tab reads 60. <a href="https://oldschool.runescape.wiki/w/Fletching_training" target="_blank" rel="noreferrer">Fletching methods</a>.</p>
+        <TrainingOptions id="i25-fletch-methods" informational={true} skill="Fletching" target="actual 60" why="Sins has an unboostable Fletching gate; extra levels do not unlock this chapter." recommended="Banked/kingdom maple logs into shortbows from 50, longbows from 55, using Make-X." resource="Vale Totems if you want an active, higher-XP-per-log change of pace." fast="Broad arrows from 52 only if you independently choose the 300-Slayer-point Broader Fletching unlock and its expense." />
+      </RouteStep>
+
+      <ExpandableNote label="Optional Fletching method" title="Vale Totems: a modern active change of pace">
+        <p>If you prefer moving around to bankstanding, visit <strong>Ranulph in north-west Auburn Valley, Varlamore</strong> (fairy ring <strong>AIS</strong> is one route). The short <a href="https://oldschool.runescape.wiki/w/Vale_Totems_(miniquest)" target="_blank" rel="noreferrer">Vale Totems miniquest</a> requires Children of the Sun and 20 Fletching and teaches the activity. After it, bring a knife and logs/bows; build a totem from one log, carve the nearby spirits and decorate it with <strong>four matching-wood fletched items</strong>. Ent visits generate <strong>offerings and research points</strong> for rewards; totems eventually need rebuilding. Maple totems open at 50 Fletching. It is more active than the relaxed Make-X default and supplies no mandatory item. <a href="https://oldschool.runescape.wiki/w/Vale_Totems" target="_blank" rel="noreferrer">Full totem primer</a>.</p>
+      </ExpandableNote>
+
+      <section><div class="section-label">Morytania utility, continued</div><h2>Now explore the mine and Tarn's lair.</h2></section>
+
+      <RouteStep id="i25-haunted" number="12" title="Complete Haunted Mine and make a Salve amulet">
+        <p>Go to the <strong>Abandoned Mine west of Mort'ton</strong> (the Morytania route is easier with the Ectophial/fairy rings). Bring <strong>chisel, ball of wool, light source, food, prayer restore and Magic/Ranged combat gear</strong>; the mine's carts, levers and glowing fungus form a connected puzzle, so use the <a href="https://oldschool.runescape.wiki/w/Haunted_Mine" target="_blank" rel="noreferrer">current map/lever walkthrough</a>. Bank before <strong>Treus Dayth</strong>: he moves/invises and the machinery hits hard. Protect from Missiles and a ranged or Crumble Undead setup are practical; this is not a safe death. After winning, cut a <strong>salve shard</strong> from the crystal outcrop and string it with wool.</p>
+        <p>Keep the Salve amulet for <strong>undead</strong> opponents only. It is not a universal Morytania-vampyre or Sins-boss damage bonus, and its melee effect does not stack with a black mask/Slayer helm.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-tarn" number="13" title="Complete Lair of Tarn Razorlor and enchant the Salve amulet">
+        <p>Haunted Mine opens <strong>Tarn's Lair</strong> and 2.3 already gave actual <strong>40+ Slayer</strong>. Enter the maze with a <strong>light source, food, antipoison, prayer restore and a teleport</strong>; keep enough supplies for level-100 Tarn and the dungeon monsters, and consult the <a href="https://oldschool.runescape.wiki/w/Lair_of_Tarn_Razorlor" target="_blank" rel="noreferrer">maze route</a> rather than wandering blind. Claim <strong>5,000 Slayer XP</strong> and use <strong>Tarn's diary on the Salve amulet</strong> for Salve (e). Record actual Slayer afterward. This is useful undead gear, not a promised bonus against every later quest boss.</p>
+      </RouteStep>
+
+      <div class="callout"><strong>Prayer-resource break, first pass:</strong> after Recruitment Drive and Ghosts Ahoy, check your live Prayer XP and banked dragon bones. If you want a change from quests, gather one or two inventories now using the safe Isle of Souls method below, then return to the story. Do not turn this into one uninterrupted 70-Prayer session; the final required checkbox is the actual level-70 result.</div>
+
+      <section><div class="section-label">Myreque, first leg</div><h2>Establish Burgh de Rott; let quests interrupt melee training.</h2></section>
+
+      <RouteStep id="i25-in-search" number="14" title="Complete In Search of the Myreque">
+        <p>From <strong>Canifis</strong>, speak to Vanstrom Klause and carry weapons to the Myreque hidden south in Mort Myre. Bank <strong>one steel longsword, two steel swords, a steel mace, warhammer and dagger</strong>; bring <strong>six ordinary planks, hammer, 225 steel nails, a charged druid pouch, a silver weapon, food and 10 coins</strong>. The steel weapons can be bought around Shayzien/Keldagrim if not already banked. Cross the swamp with pouch charges, repair Cyreg's boat, then fight the <strong>Skeleton Hellhound</strong> at the hideout. This is the first of five connected story quests; finish it before changing regions. <a href="https://oldschool.runescape.wiki/w/In_Search_of_the_Myreque" target="_blank" rel="noreferrer">Quest route</a>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-in-aid" number="15" title="Complete In Aid of the Myreque; use the 15 banked salmon">
+        <p>Return to <strong>Veliaf behind the Canifis pub</strong> and help establish Burgh de Rott. Stage <strong>11 ordinary planks, 44 nails, hammer, pickaxe, spade, buckets, swamp paste, two steel bars, coal and tinderbox</strong> for the town repairs (some nails can be found during the quest). The general store asks for <strong>10 bronze axes, three tinderboxes and 10 raw mackerel or snail meats</strong>; check its request before collecting the fish/meat. For the Ivandis rod, later stage <strong>soft clay, silver and mithril bars, cut sapphire, rope and Lvl-1 Enchant runes</strong>; switch to the <strong>standard spellbook</strong> for that cast if needed. Use the <a href="https://oldschool.runescape.wiki/w/In_Aid_of_the_Myreque" target="_blank" rel="noreferrer">quest guide</a> for the repair order and coffin/rod details.</p>
+        <p><strong>Chapter 1 continuity:</strong> give Ivan Strom the <strong>15 cooked salmon</strong> reserved from the Fishing chapter for his escort, together with a steel med helm, chainbody, platelegs and silver sickle if banked. Do not require the salmon for your own food supply after handing it over. Complete the escort and keep the <strong>rod of Ivandis</strong> for the later chain. This quest also grants <strong>2,000 XP each in Attack, Strength, Crafting and Defence</strong>; record those combat levels before training.</p>
+      </RouteStep>
+
+      <div class="callout"><strong>Slayer is a recurring lane:</strong> take tasks from a master appropriate to your real combat level, ask about required special gear, and use Proselyte when Prayer bonus helps. Work on Attack, Strength or Defence according to the next gate. Stop to quest, fletch or gather bones whenever that feels better. There is no required task count or cannon/burst/block-list economy.</div>
+
+      <section><div class="section-label">Melee upgrade</div><h2>Train observed gaps, not an imaginary 65/65/65 baseline.</h2></section>
+
+      <RouteStep id="i25-attack-60" number="16" title="Reach actual 60 Attack and use the dragon scimitar">
+        <p>After In Aid's combat XP and any Slayer work, read the live skill tab. Train only the shortfall to <strong>actual 60 Attack</strong>. This makes the <strong>dragon scimitar unlocked by Monkey Madness I in 2.2</strong> usable as a normal melee weapon. Use ordinary Slayer assignments first; if a short gap remains when you want the weapon, the relaxed <strong>Gemstone Crab</strong> or another low-attention target is fine. The route does not assume the optional Chapter 1 combat branch.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-combined-130" number="17" title="Reach Attack + Strength ≥130 for the Warriors' Guild">
+        <p>Add your <strong>actual Attack and Strength levels</strong>. After Attack 60, train Strength only until the sum reaches <strong>at least 130</strong>; this often resembles 60/70, but extra quest or Slayer XP may make an exact 70 Strength unnecessary. Prefer task combat; if Slayer gets to 50 first, finish only this remaining sum at Gemstone Crab or another relaxed training spot. Players who did optional 65/65/65 can skip any targets already met.</p>
+        <TrainingOptions id="i25-melee-methods" informational={true} skill="Melee" target="60 Attack, then 130 combined" why="The dragon scimitar and guild entry are separate, observable gates." recommended="Ordinary Slayer tasks, rotating attack styles as the real levels change." relaxed="Gemstone Crab for only a remaining combat gap after quest and Slayer XP." />
+      </RouteStep>
+
+      <RouteStep id="i25-defence-60" number="18" title="Reach actual 60 Defence to equip the dragon defender">
+        <p>Read Defence after In Aid and ordinary combat. Train only the remainder to <strong>actual 60</strong>, preferably while progressing Slayer; use a low-attention combat spot if task RNG leaves a gap. The guild can be entered by the Attack + Strength sum, but the <strong>dragon defender itself cannot be equipped below 60 Defence</strong>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-defender" number="19" title="Earn and keep the dragon defender">
+        <p>Enter the <strong>Warriors' Guild west of Burthorpe</strong> once Attack + Strength is at least 130. For tokens, the simple starting activity is <strong>animated armour</strong>: bring a spare full metal set (helm, platebody, legs), animate it in the guild's animation room, defeat it and recover the pieces. Bank/refill tokens in modest trips; no giant stockpile is required. Bring food and the best available melee kit. <a href="https://oldschool.runescape.wiki/w/Warriors%27_Guild" target="_blank" rel="noreferrer">Guild and token guide</a>.</p>
+        <p>Spend tokens to fight <strong>upstairs Cyclopes</strong>. Their defenders advance in order: <strong>bronze → iron → steel → black → mithril → adamant → rune</strong>. Show the <strong>rune defender</strong> to the guild attendant for <strong>basement Cyclopes</strong>, then keep fighting until the <strong>dragon defender</strong> drops. Keep the defender and a backup rune defender if convenient; equip dragon at actual 60 Defence. The progress check is the dragon defender in your bank/gear, not a particular token count. <a href="https://oldschool.runescape.wiki/w/Dragon_defender" target="_blank" rel="noreferrer">Defender progression</a>.</p>
+      </RouteStep>
+
+      <section><div class="section-label">Myreque and Kourend</div><h2>Trade the guild grind for a story quest, an Agility stop and a different region.</h2></section>
+
+      <RouteStep id="i25-darkness" number="20" title="Complete Darkness of Hallowvale; allocate all three choices to Herblore">
+        <p>Start from <strong>Veliaf in Burgh de Rott</strong> after In Aid. Meiyerditch is a <strong>maze-like occupied city</strong>: prepare weight-reducing clothing, food, restores, <strong>knife, hammer, a few planks and nails, rope, charcoal and papyrus</strong>, plus the rod of Ivandis and travel supplies. Use the <a href="https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale" target="_blank" rel="noreferrer">current city traversal map</a> for roofs, barricades and the castle sketches rather than trying to memorize every turn. Bank before dangerous sections; do the city reconnaissance as one coherent quest.</p>
+        <p>Claim <strong>7,000 Agility, 6,000 Thieving and 2,000 Construction XP</strong>. Its three selectable <strong>2,000-XP rewards</strong> all go into <strong>Herblore</strong> (6,000 total). Record the <strong>actual Agility and Herblore levels</strong> now, because the next Kourend gate must be checked rather than inferred from incidental XP.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-agility-54" number="21" title="STOP: reach actual 54 Agility for A Kingdom Divided">
+        <p>Darkness may help but does <strong>not</strong> guarantee actual 54 from the route's prior Agility floor. Check the skill tab and train only the remaining XP. The recommended lower-input course is the <strong>basic Colossal Wyrm Agility Course</strong> (opens at 50) at the <strong>Colossal Wyrm Remains in the Avium Savannah, Varlamore</strong>. Travel via Varlamore's roads or an available transport, speak to <strong>Worm Tongue</strong> at the course, then follow the scaffolding obstacles for a complete lap. Termites are scooped automatically at some obstacles and can buy small rewards; blessed bone shards are a Prayer bonus, not a required bone-budget input. The August 2026 course adjustment lengthened laps and scaled XP/rewards to keep a similar pace with fewer inputs. <a href="https://oldschool.runescape.wiki/w/Colossal_agility" target="_blank" rel="noreferrer">Course and access map</a>.</p>
+        <p><strong>Seers' Village rooftop</strong> remains a familiar alternative: start by the bank, finish the rooftop loop and collect marks of grace as available. Neither Hallowed Sepulchre nor Brimhaven is required. Stop at <strong>actual 54</strong>.</p>
+        <TrainingOptions id="i25-agility-methods" informational={true} skill="Agility" target="actual 54" why="A Kingdom Divided's gate is unboostable." recommended="Basic Colossal Wyrm course: longer animations and fewer inputs per lap." relaxed="Seers rooftop if you prefer a familiar loop and marks of grace." />
+      </RouteStep>
+
+      <RouteStep id="i25-kingdom" number="22" title="Complete A Kingdom Divided; use both lamps on Herblore">
+        <p>Check <strong>actual 54 Agility, 52 Thieving, 52 Woodcutting, 50 Herblore, 42 Mining, 38 Crafting and 35 Magic</strong>; these are unboostable, and full Legends' XP covers Herblore 50. The earlier route completed <strong>The Depths of Despair, The Queen of Thieves, The Ascent of Arceuus, The Forsaken Tower and Tale of the Righteous</strong>. <strong>Architectural Alliance is removed and is not a prerequisite.</strong></p>
+        <p>Start with <strong>Martin Holt at Kourend Castle</strong>. Stage an axe, <strong>defence potion, volcanic sulphur, molten glass, dark essence block or pickaxe/chisel</strong>, fire-combat runes and food; the quest requires a <strong>standard-spellbook fire spell</strong>, so switch from Lunar/Ancients if necessary. It has several separated fights, including a melee-only target and Xamphur; bank between sections and use the <a href="https://oldschool.runescape.wiki/w/A_Kingdom_Divided" target="_blank" rel="noreferrer">quest guide</a> for the Kourend travel order. Claim the <strong>Book of the Dead</strong> and use <strong>both 10,000-XP lamps on Herblore</strong>. Record the live Herblore level.</p>
+      </RouteStep>
+
+      <div class="callout"><strong>Change the texture again:</strong> Kourend done, return to an ordinary Slayer task or another blue-dragon bone inventory if you want. You still need only the live 50-Slayer and 70-Prayer endpoints; extra tasks or hides are not a hidden requirement.</div>
+
+      <section><div class="section-label">Defence, Camelot and Myreque</div><h2>Claim the big Defence rewards before paying for the last levels.</h2></section>
+
+      <RouteStep id="i25-defence-65" number="23" title="Reach actual 65 Defence for King's Ransom">
+        <p>Use your dragon scimitar/defender on ordinary Slayer assignments where reasonable, training Defence only until the skill tab reads <strong>actual 65</strong>. If Slayer reaches its next gate first, use Gemstone Crab or another relaxed target for only the remaining Defence XP. Do <strong>not</strong> train 65→70 yet: King's Ransom and Knight Waves award Defence XP that would otherwise be overshot.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-kings-ransom" number="24" title="Complete King's Ransom; send the lamp to Herblore">
+        <p>Check <strong>actual 65 Defence and 45 Magic</strong>. The mandatory quest log already has <strong>Black Knights' Fortress</strong> above, <strong>Holy Grail/Merlin's Crystal</strong> from 1.3, and <strong>Murder Mystery/One Small Favour</strong> from 2.4. Begin with the <strong>Gossip outside Sinclair Mansion</strong>. Stage <strong>granite, Telekinetic Grab runes, full black armour (helm/body/legs), bronze med helm and iron chainbody</strong>; the last two may still be banked from Black Knights' Fortress. Follow the mansion evidence/court case, visit Wizard Cromperty and release King Arthur as the <a href="https://oldschool.runescape.wiki/w/King%27s_Ransom" target="_blank" rel="noreferrer">quest guide</a> directs. Claim <strong>33,000 Defence and 5,000 Magic XP</strong>, then use its <strong>5,000-XP level-50+ lamp on Herblore</strong>.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-knight-waves" number="25" title="Complete Knight Waves and claim all four combat rewards">
+        <p>Return to <strong>Camelot's training grounds</strong> after King's Ransom. Bring melee gear, <strong>dragon defender, Barrows gloves, good food and prayer restores</strong>; the waves are a sequence of knights with different combat effects, and you may regear/retry rather than treating it as a no-bank speedrun. Read the <a href="https://oldschool.runescape.wiki/w/Knight_Waves_Training_Grounds" target="_blank" rel="noreferrer">wave mechanics</a> before entering. Completion awards <strong>20,000 XP each in Attack, Strength, Defence and Hitpoints</strong> and opens Chivalry/Piety once their level gates are met. <strong>Read Defence again</strong> before any final 70 grind.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-taste" number="26" title="Complete A Taste of Hope; keep the medallion and flail">
+        <p>Return to the Myreque chain from Darkness with <strong>actual 48 Crafting, 45 Agility, 40 Attack, 40 Herblore and 38 Slayer</strong> already cleared. Stage the <strong>rod of Ivandis, an emerald, chisel, knife/sickle, enchant-emerald runes or tablet, food, prayer restore and combat gear</strong>. The quest moves between Meiyerditch and Ver Sinhaza, improves the Ivandis weapon and ends with <strong>Ranis Drakan</strong>; rebank before the abomination and final melee fight. Use the <a href="https://oldschool.runescape.wiki/w/A_Taste_of_Hope" target="_blank" rel="noreferrer">current boss/quest guide</a> for exact cues.</p>
+        <p>Put all <strong>three 2,500-XP choices into Herblore</strong> (7,500 total). Keep the <strong>Ivandis flail</strong> for the Sins weapon upgrade and <strong>Drakan's medallion</strong>: its free Ver Sinhaza teleport greatly shortens repeated Morytania travel. This is the fourth Myreque quest; Fletching 60 is already checked, but do not enter the fifth until the remaining Slayer, Prayer/Defence and Herblore preflight below.</p>
+      </RouteStep>
+
+      <section><div class="section-label">Remaining preflight</div><h2>Several different small stops, each with a reason.</h2></section>
+
+      <RouteStep id="i25-prayer-70" number="27" title="Calculate from live Prayer XP, gather bones in batches, reach actual 70">
+        <p><strong>Why:</strong> Piety needs actual 70 Prayer, not an inherited 1,300-green-dragon task. First claim Recruitment Drive and Ghosts Ahoy Prayer XP, read your <strong>current Prayer XP</strong>, and subtract it from the level-70 threshold. Dragon bones give <strong>72 base XP</strong>. The Wilderness <strong>Chaos Altar</strong> gives <strong>350%</strong> per offering and a <strong>50% chance not to consume</strong> that bone; each starting bone therefore yields <strong>504 expected XP</strong> over repeated offerings. Plan <strong>ceil(XP still needed ÷ 504)</strong>, subtract dragon bones already banked, then add a sensible buffer for altar RNG, deaths and mistakes. <strong>504 is an expectation, not a guarantee.</strong> Recheck live XP after each batch and stop at actual 70. <a href="https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training" target="_blank" rel="noreferrer">Chaos Altar mechanics</a>.</p>
+        <p><strong>Safe/default bone supplier:</strong> <strong>Isle of Souls blue dragons</strong>. Use fairy ring <strong>BJP</strong> on the north coast, run south-east to the dungeon, and find the blue-dragon room's <strong>cove by the adamantite rocks</strong> (check the map before engaging). Attack from behind the terrain with <strong>Water spells or Ranged</strong>; bring an anti-dragon shield/dragonfire protection for travel and any approach mistakes, food, runes/ammo and a teleport. Prioritize <strong>dragon bones</strong>; hides are optional value, <em>not</em> a Crafting dependency. Bank at the <strong>Soul Wars lobby</strong> via its minigame teleport or another convenient bank, then return via BJP. The <a href="https://oldschool.runescape.wiki/w/Isle_of_Souls_Dungeon" target="_blank" rel="noreferrer">dungeon guide</a> marks the safespot. Split collection across sessions around quests and Slayer.</p>
+        <p><strong>At the altar:</strong> the Wilderness risk is real even if the bones came from safe dragons. Use disposable gear and small, <strong>unnoted one-inventory trips</strong>; bank your valuable kit and expect possible PK losses. If you decline Wilderness entirely, use a safer Prayer method but recalculate the bone quantity because the 504-XP expectation no longer applies. <strong>Wilderness green dragons</strong> are a faster optional bone source only if you voluntarily accept PK risk; no step assumes their hides, combat XP or coin drops.</p>
+        <TrainingOptions id="i25-prayer-methods" informational={true} skill="Prayer" target="actual 70" why="Piety is the gate; bone count follows live XP and altar outcome." recommended="Isle of Souls blue dragons for bones; small disposable Chaos Altar inventories if accepting altar risk." relaxed="Keep blue-dragon collection and altar offerings in separate short sessions; recalculate live XP between them." fast="Wilderness green dragons only by informed opt-in; their faster bones come with PK exposure." />
+      </RouteStep>
+
+      <RouteStep id="i25-slayer-50" number="28" title="STOP: reach actual 50 Slayer before Sins">
+        <p>Check the skill tab after <strong>Royal Trouble's 5,000 XP</strong> in 2.3, Wanted!'s <strong>5,000</strong>, Tarn's <strong>5,000</strong> and every ordinary task you chose between this chapter's blocks. Train <strong>only the remaining XP to actual 50</strong> with regular assignments; no cannon, bursting, expensive skips or optimized task block list is assumed. Do <strong>not</strong> insist on 51 yet—that level belongs after Sins and before Troubled Tortugans.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-piety" number="29" title="Close the remaining Defence gap to actual 70 and unlock Piety">
+        <p>Knight Waves is complete and its <strong>20,000 Defence XP</strong> has already been claimed, as has King's Ransom's <strong>33,000</strong>. Read live Defence now; train <strong>only the remaining gap to actual 70</strong> through Slayer or a relaxed combat spot. With <strong>actual 70 Prayer</strong> from the preceding bone block and Knight Waves complete, <strong>Piety is unlocked</strong>. This is the chapter's major combat milestone: Barrows gloves, Helm of Neitiznot, dragon scimitar (or best available weapon), dragon defender, Proselyte where Prayer bonus matters, and Piety are a solid guaranteed baseline. Optional fighter torso or berserker ring is not assumed.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-herblore-60" number="30" title="Reach actual 60 Herblore before Sins, then stop">
+        <p><strong>Why grind now?</strong> Sins rewards a tome with <strong>six 15,000-XP choices</strong> in a skill at level 60 or above, and all six can go to the same skill. Reaching actual 60 <em>before claiming it</em> lets Herblore receive <strong>90,000 XP</strong>. The minimum guaranteed accounting, counting RFD's lamp exactly once, is <strong>37,224</strong> XP at the level-40 floor + <strong>1,325</strong> Heroes + <strong>20,000</strong> One Small Favour + <strong>1,000.5</strong> Recruitment + <strong>2,000</strong> Zogre + <strong>120,000</strong> Legends + <strong>20,000</strong> RFD + <strong>5,000</strong> King's + <strong>20,000</strong> A Kingdom Divided + <strong>6,000</strong> Darkness + <strong>7,500</strong> A Taste = <strong>240,049.5 XP</strong>. Level 60 begins at <strong>273,742 XP</strong>, so this floor leaves <strong>33,692.5 real Herblore XP</strong>—roughly 34k—<em>before</em> any live potion XP. If the RFD lamp was used earlier on Herblore, it still counts once; if it was used on another skill despite the route, add that missing 20k back to the live gap.</p>
+        <p>Read <strong>live Herblore XP</strong> and make only the remaining XP in potions your account will use, from <strong>banked herbs/secondaries, kingdom herbs and Farming Contract or herb-run supplies</strong>. Prioritize useful combat/prayer/antipoison potions rather than stockpiling an arbitrary herb count. Stop at <strong>actual 60</strong>; the later level-70 SotE requirement is not this chapter's grind. <a href="https://oldschool.runescape.wiki/w/Herblore_training" target="_blank" rel="noreferrer">Herblore method reference</a>.</p>
+        <TrainingOptions id="i25-herblore-methods" informational={true} skill="Herblore" target="actual 60 before Sins" why="This precise stop turns Sins' six rewards into 90,000 Herblore XP." recommended="Use banked and kingdom herbs for potions you will actually drink; check live XP between batches." resource="Herb runs and Farming Contracts can replenish only the remaining live-XP gap." />
+      </RouteStep>
+
+      <section><div class="section-label">Story finale and Sailing handoff</div><h2>Claim the Sins payoff, then open the Great Conch.</h2></section>
+
+      <RouteStep id="i25-sins" number="31" title="Complete Sins of the Father; put all six tome choices into Herblore">
+        <p><strong>Preflight—actual, unboosted:</strong> <strong>62 Woodcutting, 60 Fletching, 56 Crafting, 52 Agility, 50 Attack, 50 Slayer and 49 Magic</strong>. The route already supplied the non-Fletching/Slayer floors; verify each in the skill tab. Also confirm <strong>actual 60 Herblore before claiming the tome</strong>, actual 70 Prayer/Defence, Piety and a working dragon defender. No optional 65/65/65, fighter torso or berserker ring is assumed.</p>
+        <p>Begin with <strong>Veliaf outside Slepe church</strong>. Follow the quest's Darkmeyer/Meiyerditch story, turn the <strong>Ivandis flail into the Blisterwood flail</strong> as instructed, and bank/regear before <strong>Vanstrom Klause</strong>. Bring the flail, Barrows gloves, defender, Helm of Neitiznot or suitable headgear, high-healing food, prayer restores and sensible combat potions. During the first phase use <strong>Protect from Magic and Piety</strong>, kill the summoned bloodveld promptly, avoid/lure around the blood orb, and turn away for his darkness cue. In the second phase protection prayers no longer solve the damage: move off marked lightning tiles and keep healing. Study the <a href="https://oldschool.runescape.wiki/w/Sins_of_the_Father" target="_blank" rel="noreferrer">current boss cues</a> before a serious attempt; a retry is better than assuming optional gear.</p>
+        <p>Completion opens <strong>Darkmeyer and Hallowed Sepulchre</strong> as an option. Keep the <strong>Blisterwood flail and Drakan's medallion</strong>. Use the tome <strong>all six times on Herblore</strong> for <strong>90,000 XP</strong>, then record the resulting actual level. There is no exact promised final level beyond the reward itself.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-slayer-51" number="32" title="Train only the Slayer 50→actual 51 remainder">
+        <p>Sins itself is not an 8,000-Slayer-XP reward; that reward comes <em>after</em> Troubled Tortugans. Read actual Slayer and finish only the remaining XP to <strong>51</strong> with ordinary tasks. This is an unboostable Tortugans entry gate, not a general push toward a higher Slayer level.</p>
+      </RouteStep>
+
+      <RouteStep id="i25-tortugans" number="33" title="Complete Troubled Tortugans and unlock the Great Conch">
+        <p>Return to the Sailing route introduced in 2.3. Check <strong>actual 51 Slayer, 48 Construction, 45 Sailing, 45 Hunter, 40 Woodcutting and 34 Crafting</strong>; the non-Slayer floors were already supplied. You know the basic Sailing loop—board/manage your ship from a port, use its map and facilities, and bank or repair between trips—so this is a refresher, not another 1→45 tutorial. Begin the <a href="https://oldschool.runescape.wiki/w/Troubled_Tortugans" target="_blank" rel="noreferrer">Troubled Tortugans quest</a> and sail to its island story with combat supplies.</p>
+        <p>For the <strong>Shellbane gryphon</strong>, assemble and equip the quest's <strong>Tortugan shield</strong> before the fight. Its melee hits are devastating without that shield even through Protect from Melee; with the shield and Protect from Melee, watch for its <strong>ranged and special attacks</strong>, keep food/restores, and use a comfortable melee setup/Piety rather than optional high-end gear. Wind Magic is a possible weakness but not a required switch. Claim <strong>10,000 Sailing and 8,000 Slayer XP</strong> and access to the <strong>Great Conch</strong>, the later Red Reef path.</p>
+      </RouteStep>
+
+      <section id="chapter-complete" class="completion-panel">
+        <div class="section-label">2.5 exit check</div>
+        <h3>Piety online; Morytania and the Great Conch open.</h3>
+        <ul>
+          <li>Temple Knight chain through <strong>The Slug Menace</strong>, Temple of the Eye and Zogre complete; <strong>full Legends' Quest</strong> done after a deterministic actual-45 Herblore check, with all four 30k rewards to Herblore and the RFD lamp counted once.</li>
+          <li><strong>Ectophial, Salve (e), Proselyte, dragon defender and Barrows gloves</strong> kept; Warriors' Guild entry, actual 60+ Attack, Attack + Strength ≥130, actual 70 Defence/Prayer and <strong>Piety</strong> secured.</li>
+          <li>Myreque chain through <strong>Sins of the Father</strong> complete; actual 54+ Agility, A Kingdom Divided and Book of the Dead, actual 60 Fletching, actual 50 Slayer and <strong>actual 60 Herblore before Sins</strong>; all six Sins choices allocated to Herblore.</li>
+          <li><strong>Actual 51+ Slayer</strong>, Troubled Tortugans and Great Conch access. Keep Drakan's medallion and Blisterwood flail. Record live post-quest levels instead of assuming extra Herblore, Slayer, combat or Sailing levels.</li>
+        </ul>
+        <p><strong>Stop Sailing here.</strong> The 45→67 continuation is intentionally assigned to 2.6, where it can break up several skill-to-70 blocks. No Chapter 2.6 page or Sailing grind is added in this chapter.</p>
+      </section>
+
+      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-2-4/`}>← 2.4</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a></div>
+    </article>
+    <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-5" title="2.5 progress" /></aside>
+  </div>
+</GuideLayout>
