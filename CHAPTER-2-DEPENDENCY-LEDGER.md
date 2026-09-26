@@ -34,7 +34,7 @@ The boundary audit remains authoritative for the full item and unlock list. The 
 | Fishing / Cooking | 74 / 60 | Fishing already exceeds every identified Chapter 2 quest gate; Cooking does not. |
 | Firemaking / Woodcutting / Farming | 89 / 70 / 63 | Woodcutting already meets Song of the Elves; Farming needs passive lead time. |
 
-Critical carried resources include 1,590 Earth orbs, four mushroom pies, planted Fossil Island teaks, the crystal saw, gout tuber, reserved quest supplies, transport jewellery, and the Chapter 1 unlock network. See the boundary audit rather than duplicating its complete inventory here.
+Critical carried resources include 1,590 Earth orbs, **four mushroom pies or actual 58 Crafting**, the crystal saw, reserved quest supplies, transport jewellery, and the Chapter 1 unlock network. Plant Fossil Island teaks if seeds arrive; otherwise use the stated ordinary teak fallback. A regular gout tuber is optional Karamja Medium preparation, not a Chapter 2 dependency. See the boundary audit rather than duplicating its complete inventory here.
 
 ### Why the live BRUHsailer finish line cannot be copied wholesale
 
@@ -127,7 +127,7 @@ BRUHsailer interleaves many quests and diaries for tile/EHP efficiency. The Inte
 
 | Gate / activity | Exact requirement | Boostable? | Expected before | Mandatory supplier | Relevant XP / incidental output | Downstream reason | Source | Status / notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Attach Earth orbs | 58 Crafting | Yes: mushroom pie +4 | 56 Crafting; four pies banked | Chapter 1 stock | 1,590 staves × 112.5 = **178,875 Crafting XP** | Cash engine; clears 61 Crafting for Lunar without relying on other skilling | [Battlestaff](https://oldschool.runescape.wiki/w/Battlestaff), local boundary | Verified / derived 2026-09-24. Keep the boost instruction until actual 58. |
+| Attach Earth orbs | 58 Crafting | Yes: mushroom pie +4 | Actual 56 Crafting and four pies, **or actual 58 Crafting without pies** | Chapter 1 stock or explicit extra-Crafting branch | 1,590 staves × 112.5 = **178,875 Crafting XP** | Cash engine; clears 61 Crafting for Lunar without relying on other skilling | [Battlestaff](https://oldschool.runescape.wiki/w/Battlestaff), local boundary | Verified / derived 2026-09-26. Check live Crafting; boost only while below actual 58. |
 | Alch finished staves | 55 Magic and Nature runes | No useful dependency issue | 63 Magic | Chapter 1 Magic and rune/cash stock | 1,590 × 65 = **103,350 Magic XP**, excluding other casts | Cash and progress toward 65/66 Magic gates | [High Level Alchemy](https://oldschool.runescape.wiki/w/High_Level_Alchemy) | Verified / derived 2026-09-24. Bankstanding is default; artefacts are optional. |
 | Wizards' Guild purchase access | 66 Magic | Yes: 63 + Wizard's mind bomb (+3) | 63 | Chapter 1 Magic | None required | Battlestaff/shop logistics if retained | [Wizards' Guild](https://oldschool.runescape.wiki/w/Wizards%27_Guild) | Verified 2026-09-24. Do not call 66 a permanent checkpoint here. |
 | Adept Mahogany Homes contracts | 50 Construction | Use actual 50; crystal saw does not obtain contracts | About 39 before the explicit Novice bridge to 50 | Teak/plank preparation and Novice Mahogany Homes | Contract XP varies by layout; do not promise BRUHsailer's exact level | Points and relaxed Construction progression | [Adept contract](https://oldschool.runescape.wiki/w/Adept_contract) | Verified 2026-09-24. |

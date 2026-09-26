@@ -5,10 +5,10 @@ Audit basis: BRUHsailer current guide (updated 2026-08-30) plus current OSRS Wik
 ## Chapter 1 handoff items that must exist
 
 - 1,590 charged Earth orbs for the Chapter 2 battlestaff cash engine.
-- 4 mushroom pies to bridge the early Crafting requirement while attaching the first Earth orbs.
+- 4 mushroom pies to bridge the early Crafting requirement while attaching the first Earth orbs, **or actual 58 Crafting** from extra training.
 - 2,000 unspent stardust for the Celestial ring.
 - At least 1 spare molten glass for early Chapter 2 quest/utility use.
-- 1 regular gout tuber from Tai Bwo Wannai Cleanup for the Karamja Medium machete exchange. This is now mandatory in Chapter 1 rather than “if RNG cooperates.”
+- At least 60% Tai Bwo Wannai favour for My Arm's Big Adventure. A regular gout tuber and 100% favour are optional Karamja Medium preparation; no mandatory Chapter 2 step consumes the regular tuber.
 - 1 harralander reserved for the Heroes' Quest oily fishing rod step.
 - 1 bucket of sap reserved for Icthlarin's Little Helper.
 - 10 buckets of slime reserved from the charter-shop purchase.
@@ -25,7 +25,7 @@ Audit basis: BRUHsailer current guide (updated 2026-08-30) plus current OSRS Wik
 - Teleport jewellery stock retained.
 - 2 spare goutweed retained for later quests.
 - At least 100 chaos runes retained after the Chapter 1 green-dragon grind.
-- Two teak trees planted in the western Fossil Island hardwood patches as soon as seed RNG permits; early Chapter 2 uses mature player-grown teaks for the plank/Construction block.
+- Two teak trees planted in the western Fossil Island hardwood patches as soon as seed RNG permits; early Chapter 2 also gives an ordinary teak fallback if seeds did not arrive.
 
 ## Chapter 1 unlocks/transport Chapter 2 assumes
 
@@ -51,7 +51,7 @@ BRUHsailer's current Chapter 1 finish line is approximately: 46 Attack, 50 Stren
 Important derived assumptions for the Intermediate rewrite:
 
 - 63 Magic + Wizard's Mind Bomb reaches the 66 Magic Wizards' Guild entry requirement.
-- 56 Crafting + mushroom pie is enough to start attaching Earth orbs; Chapter 2 must keep the boost instructions explicit until normal Crafting level catches up.
+- Actual 56 Crafting + mushroom pie is enough to start attaching Earth orbs; alternatively, reach actual 58 before Chapter 2 and use no pie. Chapter 2 keeps the boost instructions explicit until normal Crafting catches up.
 - 39 Construction is a valid Chapter 1 handoff. Chapter 2 itself must explicitly train Construction before asking for the Mahogany eagle lectern; do not silently assume the original guide's Mahogany Homes XP happened if we replace its multiskilling route.
 - 77 Thieving is a valid Chapter 1 handoff, but any Chapter 2 diary step requiring 78 Thieving must either be preceded by an explicit 78 checkpoint or postponed. Our relaxed route must not assume artefact-running supplied the level.
 - 60 Cooking at the handoff is valid for Chapter 1. Chapter 2 must explicitly reach 70 Cooking before Recipe for Disaster/Awowogei if we do not use BruhSailer's cut-eat Barbarian Fishing assumption.
@@ -93,7 +93,7 @@ The dragon example is the general rule for every inherited mega-grind: identify 
 After pulling Ernest the Chicken and Animal Magnetism forward, no further Chapter 1 quest needs to be added before Chapter 2. The substantive Chapter 1 corrections found across the audit/re-read were:
 
 1. Expand the Prayer step into a green-dragon → Isle of Souls blue-dragon hybrid, preserve 100 chaos runes, and use the Chaos Altar one disposable inventory at a time.
-2. Make the regular gout tuber a required Chapter 1 carryover rather than an optional RNG success.
+2. The 2026-09-26 second-pass audit supersedes the earlier tuber decision: require only 60% favour for My Arm, and leave 100% favour plus the regular gout tuber as optional Karamja Medium preparation.
 3. Make the five Sulliuscep caps an explicit Tar Swamp chopping grind rather than implying birdhouse runs provide them.
 4. Buy the rune axe at the Woodcutting Guild when 60 Woodcutting is available, and bank a mithril axe at the same stop for Animal Magnetism later in Chapter 1.
 5. Pull Ernest the Chicken + Animal Magnetism into Chapter 1: use the existing steel arrows to reach 30 Ranged, get the small 16→18 Slayer gap from a Vannaka assignment, then unlock Ava's attractor before the long Ranged grind.

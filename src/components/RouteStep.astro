@@ -5,8 +5,9 @@ interface Props {
   title: string;
   note?: string;
   optional?: boolean;
+  informational?: boolean;
 }
-const { id, number, title, note, optional = false } = Astro.props;
+const { id, number, title, note, optional = false, informational = false } = Astro.props;
 ---
 <article class={`route-step${optional ? ' optional-route-step' : ''}`} id={id}>
   <div class="route-step-head">
@@ -17,8 +18,8 @@ const { id, number, title, note, optional = false } = Astro.props;
     </div>
   </div>
   <div class="route-step-body"><slot /></div>
-  <div class="check-row">
+  {!informational && <div class="check-row">
     <input class="progress-check" type="checkbox" id={`${id}-check`} data-progress-id={id} data-progress-required={optional ? 'false' : 'true'} />
     <label for={`${id}-check`}>{optional ? 'Mark this optional block complete' : 'Mark this block complete'}</label>
-  </div>
+  </div>}
 </article>
