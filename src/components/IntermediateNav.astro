@@ -1,5 +1,5 @@
 ---
-interface Props { current: 'overview' | '1-1' | '1-2' | '1-3' | '1-4' | '2-1' | '2-2' | '2-3' | '2-4' | '2-5' | '2-6' | '2-7' | '3-1' | '3-2' | '3-3' | '3-4' | '3-5'; }
+interface Props { current: 'overview' | '1-1' | '1-2' | '1-3' | '1-4' | '2-1' | '2-2' | '2-3' | '2-4' | '2-5' | '2-6' | '2-7' | '3-1' | '3-2' | '3-3' | '3-4' | '3-5' | '3-6'; }
 const { current } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const chapters = [
@@ -24,6 +24,7 @@ const chapters = [
     ['3-3', '3.3 · Ranged & Fire Cape'],
     ['3-4', '3.4 · Slayer, MM2 & Theatre'],
     ['3-5', '3.5 · Dragons & the Fallen Empire'],
+    ['3-6', '3.6 · Blood Moon & Graduation'],
   ] },
 ] as const;
 ---
