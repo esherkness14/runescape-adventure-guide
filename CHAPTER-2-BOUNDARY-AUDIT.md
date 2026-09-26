@@ -41,7 +41,7 @@ Audit basis: BRUHsailer current guide (updated 2026-08-30) plus current OSRS Wik
 
 ## Skill-boundary checks
 
-BRUHsailer's current Chapter 1 finish line is approximately: 46 Attack, 50 Strength, 34 Defence, 39 Hitpoints, 45 Ranged, 43 Prayer, 63 Magic, 24 Runecraft, 39 Construction, 51 Agility, 40 Herblore, 77 Thieving, 56 Crafting, 48 Fletching, 16 Slayer, 46 Hunter, 44 Mining, 42 Smithing, 74 Fishing, 60 Cooking, 89 Firemaking, 70 Woodcutting, 63 Farming. The Intermediate route now intentionally diverges here by reaching 18 Slayer and completing Animal Magnetism in Chapter 1, leaving at least 20 Slayer afterward.
+BRUHsailer's current Chapter 1 finish line is approximately: 46 Attack, 50 Strength, 34 Defence, 39 Hitpoints, 45 Ranged, 43 Prayer, 63 Magic, 24 Runecraft, 39 Construction, 51 Agility, 40 Herblore, 77 Thieving, 56 Crafting, 48 Fletching, 16 Slayer, 46 Hunter, 44 Mining, 42 Smithing, 74 Fishing, 60 Cooking, 89 Firemaking, 70 Woodcutting, 63 Farming. This is a **source-route projection**, not our guaranteed exit. The Intermediate route intentionally diverges by reaching 18 Slayer and completing Animal Magnetism in Chapter 1, leaving at least 20 Slayer afterward; it also treats full Angler as optional and the Crafting handoff as actual 58 **or** sufficient pie boosts after the Chapter 1 quest XP check.
 
 
 **Ranged / Animal Magnetism correction:** the Intermediate route no longer buys a separate 1,200-knife stack and postpones Ava to Chapter 2. The early steel-arrow stock is used to reach 30 Ranged; one Vannaka assignment closes the guaranteed 3,000 Slayer XP baseline from level 16 to 18; Ernest the Chicken + Animal Magnetism are then completed immediately. Ava's attractor is therefore a Chapter 1 handoff unlock, and at least 75 steel arrows should remain available for the accumulator upgrade at 50 Ranged. Training exactly to 18 Slayer before Animal Magnetism plus the quest's 1,000 Slayer XP leaves the account at level 20.
@@ -51,7 +51,7 @@ BRUHsailer's current Chapter 1 finish line is approximately: 46 Attack, 50 Stren
 Important derived assumptions for the Intermediate rewrite:
 
 - 63 Magic + Wizard's Mind Bomb reaches the 66 Magic Wizards' Guild entry requirement.
-- Actual 56 Crafting + mushroom pie is enough to start attaching Earth orbs; alternatively, reach actual 58 before Chapter 2 and use no pie. Chapter 2 keeps the boost instructions explicit until normal Crafting catches up.
+- Chapter 1 now claims Animal Magnetism, Enlightened Journey and The Hand in the Sand Crafting XP before the live handoff check. The conservative arithmetic no longer promises actual 56: the functional exit is either actual 58 Crafting or enough mushroom-pie boosts to start attaching the 1,590 Earth orbs. Chapter 2 stops using boosts as soon as actual Crafting reaches 58.
 - 39 Construction is a valid Chapter 1 handoff. Chapter 2 itself must explicitly train Construction before asking for the Mahogany eagle lectern; do not silently assume the original guide's Mahogany Homes XP happened if we replace its multiskilling route.
 - 77 Thieving is a valid Chapter 1 handoff, but any Chapter 2 diary step requiring 78 Thieving must either be preceded by an explicit 78 checkpoint or postponed. Our relaxed route must not assume artefact-running supplied the level.
 - 60 Cooking at the handoff is valid for Chapter 1. Chapter 2 must explicitly reach 70 Cooking before Recipe for Disaster/Awowogei if we do not use BruhSailer's cut-eat Barbarian Fishing assumption.

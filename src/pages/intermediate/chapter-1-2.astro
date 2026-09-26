@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL;
       <ChapterGoals
         summary="The important endpoints are about 50 Agility, roughly 74 Fishing, 60 Cooking, 77 Thieving and at least 1.35m GP. The route also completes the low-level quests that unlock Herblore, Giant Foundry, later quest chains and the combat XP used throughout Chapter 1."
         stats={["About 50 Agility", "About 74 Fishing", "60 Cooking", "77 Thieving", "At least 1.35m GP before leaving the section"]}
-        unlocks={["Druidic Ritual / Herblore", "Sleeping Giants / Giant Foundry", "Angler outfit", "Waterfall Quest and Fight Arena combat XP", "Tree Gnome Village / spirit-tree access", "Rogue outfit", "Stored My Arm quest items"]}
+        unlocks={["Druidic Ritual / Herblore", "Sleeping Giants / Giant Foundry", "Tempoross fishing supplies; Angler outfit optional", "Waterfall Quest and Fight Arena combat XP", "Tree Gnome Village / spirit-tree access", "Full Rogue outfit", "Stored My Arm quest items"]}
       />
 
       <RouteStep id="i12-foundation" number="1" title="Clear the low-level quest foundation before the long Fishing grind">
@@ -65,12 +65,16 @@ const base = import.meta.env.BASE_URL;
         <div class="optional-efficiency"><strong>No blackjacking here.</strong> Once The Feud is complete, leave Pollnivneach. The dedicated Thieving block later in this subsection gives several methods.</div>
       </RouteStep>
 
-      <RouteStep id="i12-tempoross" number="4" title="Use Tempoross to build the Fishing bank, then get Angler">
+      <RouteStep id="i12-tempoross" number="4" title="Use Tempoross to build the Fishing bank">
         <p><strong>Entry gate:</strong> Tempoross requires <strong>actual 35 Fishing</strong>. Sea Slug in 1.1 awards useful early XP but does not reach 35 on its own. Read the skill tab and fly-fish trout/salmon at Barbarian Village or another comfortable spot until 35; bank at least the later <strong>10 trout and 15 salmon</strong> if you catch them here. Bring a fly fishing rod and feathers. Stop the bridge at 35.</p>
         <p><strong>First-timer loop:</strong> take Ferryman Sathwood south of Al Kharid bank to the Ruins of Unkah, then board Captain Dudi's boat on a Tempoross mass world. Bring a harpoon (and a rope, bucket and hammer, all obtainable at the cove). Fish harpoonfish, optionally cook them, load the ammunition crates and fire the cannons; tether to a mast/pole for incoming waves or lightning. When Tempoross is subdued, fish its spirit pool for reward permits, then use a small net at the reward pool after the match. This is a Fishing skilling boss, not a normal combat boss. Leave at about 56 Fishing with a useful bank rather than chasing a unique drop.</p>
         <p>Train Fishing at <strong>Tempoross to about 56 Fishing</strong>. Standard mass worlds are fine. Prioritize a useful bank of fish, planks, gems and other supplies over squeezing every possible permit per hour.</p>
-        <p>Then use <strong>Fishing Trawler</strong> at Port Khazard on an official activity world until you have the <strong>full Angler outfit</strong>. Board Murphy's trawler, help repair leaks or bail water until your contribution bar reaches at least <strong>50</strong>, and inspect the net west of the boat after each roughly six-minute round. The outfit pieces are random (about one new piece per 12 eligible games), so this is a variable-length efficiency outfit, not a fixed number of trips. Once you reach the activity threshold for a round, you can play the remainder more passively.</p>
         <div class="later-note"><strong>Catherby charter-shop purchase:</strong> buy and bank <strong>1,600 soda ash</strong> and <strong>10 buckets of slime</strong>. The soda ash is the predictable Crafting/glass supply for 1.3; the slime is kept for later Prayer/quest utility.</div>
+      </RouteStep>
+
+      <RouteStep id="i12-optional-angler" number="Optional" optional={true} title="Try Fishing Trawler for Angler only if you want a long-term Fishing investment">
+        <p><strong>Full Angler is not a route gate.</strong> Its four pieces give a total <strong>2.5% Fishing-XP bonus</strong>, useful if you personally plan a very large later Fishing grind. This guide has no quest or skill checkpoint that needs the outfit, so skip the random set hunt by default.</p>
+        <p>For a first visit, board <strong>Murphy's Fishing Trawler at Port Khazard</strong> on an official activity world. Help repair leaks or bail water until your contribution reaches at least <strong>50</strong>, then inspect the net west of the boat after each roughly six-minute round. Outfit pieces are random; do not plan an exact trip count. Ardougne Easy later asks you to start a Trawler trip, independently of whether you own any Angler piece.</p>
       </RouteStep>
 
       <RouteStep id="i12-quest-xp" number="5" title="Take the large combat-XP quests before manual combat training">
@@ -84,7 +88,7 @@ const base = import.meta.env.BASE_URL;
       </RouteStep>
 
       <RouteStep id="i12-sidequests" number="6" title="Finish the self-contained travel/skill quests in this section">
-        <p>Complete <strong>Fishing Contest</strong>, <strong>Observatory Quest</strong>, <strong>Dwarf Cannon</strong> and <strong>Death on the Isle</strong> as full quests, one at a time. Keep the <strong>heavy fishing rod</strong> from Barbarian Training when you unlock Barbarian Fishing.</p>
+        <p>Complete <strong>Fishing Contest</strong>, <strong>Observatory Quest</strong> and <strong>Dwarf Cannon</strong> as full quests. Before <strong>Death on the Isle</strong>, check <strong>actual 32 Agility and 34 Thieving</strong>; both are unboostable start gates. Earlier Thieving quest XP should cover 34, but the Tourist Trap Agility lamps alone do <em>not</em> guarantee 32. Train only the live Agility remainder with ordinary rooftop laps, then complete Death on the Isle (Children of the Sun is already done). Its two low-level foes are fought without equipment. This short Agility bridge counts toward the later actual-50 Rogue's Den checkpoint; it is not additional total Agility grinding. Keep the <strong>heavy fishing rod</strong> from Barbarian Training when you unlock Barbarian Fishing.</p>
       </RouteStep>
 
       <TrainingOptions id="i12-fishing-agility-training" skill="Fishing / Agility" target="50 Agility and about 74 Fishing" why="Barbarian Fishing gives Fishing, Strength and Agility together. Barbarian Fishing lets the Fishing grind supply much of the Agility breakpoint without requiring a separate rooftop grind." recommended="Normal Barbarian Fishing. Fish normally and drop when your inventory fills; no cut-eating and no tick manipulation are required." relaxed="Use normal Barbarian Fishing in long AFK-ish sessions and accept the slower actions per hour. Stop to bank/quest whenever you are bored." resource="Keep at least 10 trout and 15 salmon banked before leaving this section. They are used by later quests." fast="Cut-eating or tick-manipulated Barbarian Fishing is faster, but entirely optional." />
@@ -113,7 +117,7 @@ const base = import.meta.env.BASE_URL;
           <li><strong>1,600 empty buckets</strong> reserved for the Sandstorm grinder</li>
           <li><strong>1,600 soda ash</strong> reserved for molten glass</li>
         </ul>
-        <p>Keep your <strong>Angler outfit, Rogue outfit, 4 Ugthanki dung, beers/vodkas, 1,600 buckets, 1,600 soda ash and rune stack</strong> banked. 1.3 deliberately spends this preparation on permanent infrastructure.</p>
+        <p>Keep your <strong>full Rogue outfit, 4 Ugthanki dung, beers/vodkas, 1,600 buckets, 1,600 soda ash and rune stack</strong> banked. If you chose the optional Trawler investment, keep any Angler pieces too; no later required step assumes them. 1.3 deliberately spends the mandatory preparation on permanent infrastructure.</p>
       </RouteStep>
 
       <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-1/`}>← 1.1</a><a class="button" href={`${base}intermediate/chapter-1-3/`}>Continue to 1.3 →</a></div>
