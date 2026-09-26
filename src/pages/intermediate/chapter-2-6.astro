@@ -1,6 +1,7 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import IntermediateNav from '../../components/IntermediateNav.astro';
+import IntermediatePager from '../../components/IntermediatePager.astro';
 import ChapterGoals from '../../components/ChapterGoals.astro';
 import RouteStep from '../../components/RouteStep.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
@@ -181,8 +182,8 @@ const base = import.meta.env.BASE_URL;
         <p><strong>2.7 owns the elf quests</strong>—Regicide → Roving Elves → Mourning's End Parts I/II → Song of the Elves—along with their inventory and boss preparation. Chapter 3 owns the actual-56 Slayer catch-up/Path of Glouphrie before While Guthix Sleeps, the deferred Curse of Arrav, and Sailing beyond 67. Do not add 2.7, Fishing 99, Agility 84/98, Smithing 74 or Slayer 56 here.</p>
       </section>
 
-      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-2-5/`}>← 2.5</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a><a class="button secondary" href={`${base}intermediate/chapter-2-7/`}>2.7 →</a></div>
     </article>
     <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-6" title="2.6 progress" /></aside>
+    <IntermediatePager previousHref={`${base}intermediate/chapter-2-5/`} previousLabel="← 2.5" nextHref={`${base}intermediate/chapter-2-7/`} nextLabel="2.7 →" />
   </div>
 </GuideLayout>

@@ -1,6 +1,7 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import IntermediateNav from '../../components/IntermediateNav.astro';
+import IntermediatePager from '../../components/IntermediatePager.astro';
 import ChapterGoals from '../../components/ChapterGoals.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
 import RouteStep from '../../components/RouteStep.astro';
@@ -122,8 +123,8 @@ const base = import.meta.env.BASE_URL;
         <div class="callout"><strong>1.1 complete:</strong> the account now has the early quest/travel foundation, a house, a useful bank and enough Firemaking that the skill can mostly disappear from the rest of Chapter 1.</div>
       </RouteStep>
 
-      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/`}>← Overview</a><a class="button" href={`${base}intermediate/chapter-1-2/`}>Continue to 1.2 →</a></div>
     </article>
     <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-1-1" title="1.1 progress" /></aside>
+    <IntermediatePager nextHref={`${base}intermediate/chapter-1-2/`} nextLabel="Continue to 1.2 →" />
   </div>
 </GuideLayout>

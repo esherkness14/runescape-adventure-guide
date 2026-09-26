@@ -186,8 +186,9 @@ details.hint[open] summary::before { content: '−'; }
   .hero { grid-template-columns: 1fr; padding-top: 58px; }
   .page-grid { display: block; }
   .sidebar { position: static; margin-bottom: 28px; }
-  .main-nav { gap: 11px; font-size: .9rem; }
+  .main-nav { min-width: 0; flex-wrap: wrap; justify-content: flex-end; gap: 11px; font-size: .9rem; }
   .header-inner { width: min(100% - 24px, 1180px); }
+  .content { overflow-wrap: anywhere; }
 }
 
 .footer {
@@ -379,7 +380,16 @@ details.hint[open] summary::before { content: '−'; }
 .intermediate-card { border-color: #6c5932; }
 
 .intermediate-overview-grid { grid-template-columns: 255px minmax(0, 880px); justify-content: center; }
+.intermediate-nav-card { max-height: calc(100vh - 118px); overflow-y: auto; overscroll-behavior: contain; scrollbar-color: var(--gold-soft) transparent; scrollbar-width: thin; }
 .intermediate-nav-card a.active { color: var(--text); font-weight: 700; }
+.intermediate-nav-group { border-top: 1px solid var(--border); margin-top: 6px; padding-top: 6px; }
+.intermediate-nav-group summary { cursor: pointer; list-style: none; padding: 9px 0; color: var(--muted); font-size: .94rem; font-weight: 700; }
+.intermediate-nav-group summary::-webkit-details-marker { display: none; }
+.intermediate-nav-group summary::before { content: '▸'; display: inline-block; width: 18px; color: var(--gold); }
+.intermediate-nav-group[open] summary { color: var(--text); }
+.intermediate-nav-group[open] summary::before { content: '▾'; }
+.intermediate-nav-group summary:hover { color: var(--text); }
+.intermediate-nav-links { border-left: 1px solid var(--border); margin-left: 7px; padding-left: 12px; }
 .intermediate-nav-card small { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 14px; }
 
 .goal-panel {
@@ -530,7 +540,23 @@ details.hint[open] summary::before { content: '−'; }
 .subchapter-card strong { color: var(--text); font-size: 1.12rem; }
 .subchapter-card small { color: var(--muted); line-height: 1.5; }
 .source-note { border-top: 1px solid var(--border); padding-top: 26px; }
-.subchapter-pager { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin: 36px 0 0; }
+.intermediate-pager { grid-column: 2 / 4; display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 34px; min-width: 0; }
+.intermediate-pager-main { display: flex; justify-content: space-between; align-items: start; gap: 14px; min-width: 0; }
+.intermediate-pager-main .next { margin-left: auto; }
+.intermediate-pager-overview .button { width: 100%; text-align: center; }
+
+@media (max-width: 1100px) {
+  .intermediate-pager { grid-column: 2; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .intermediate-pager-main { flex-wrap: wrap; }
+}
+
+@media (max-width: 780px) {
+  .intermediate-nav-card { max-height: none; overflow-y: visible; overscroll-behavior: auto; }
+  .intermediate-pager { display: block; }
+  .intermediate-pager-main { flex-direction: column; align-items: stretch; margin-bottom: 14px; }
+  .intermediate-pager-main .button { width: 100%; max-width: 100%; text-align: center; }
+  .intermediate-pager-main .next { margin-left: 0; }
+}
 
 @media (max-width: 900px) {
   .track-grid, .goal-columns, .training-grid, .principle-grid, .chapter-card-grid { grid-template-columns: 1fr; }

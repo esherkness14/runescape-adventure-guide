@@ -1,6 +1,7 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import IntermediateNav from '../../components/IntermediateNav.astro';
+import IntermediatePager from '../../components/IntermediatePager.astro';
 import ChapterGoals from '../../components/ChapterGoals.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
 import RouteStep from '../../components/RouteStep.astro';
@@ -235,8 +236,8 @@ const base = import.meta.env.BASE_URL;
         <div class="callout"><strong>1.3 complete:</strong> the next subsection deliberately opens with a long, simple Woodcutting break before returning to quests.</div>
       </RouteStep>
 
-      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-2/`}>← 1.2</a><a class="button" href={`${base}intermediate/chapter-1-4/`}>Continue to 1.4 →</a></div>
     </article>
     <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-1-3" title="1.3 progress" /></aside>
+    <IntermediatePager previousHref={`${base}intermediate/chapter-1-2/`} previousLabel="← 1.2" nextHref={`${base}intermediate/chapter-1-4/`} nextLabel="Continue to 1.4 →" />
   </div>
 </GuideLayout>

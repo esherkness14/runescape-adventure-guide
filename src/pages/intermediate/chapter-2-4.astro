@@ -1,6 +1,7 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import IntermediateNav from '../../components/IntermediateNav.astro';
+import IntermediatePager from '../../components/IntermediatePager.astro';
 import ChapterGoals from '../../components/ChapterGoals.astro';
 import RouteStep from '../../components/RouteStep.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
@@ -147,8 +148,8 @@ const base = import.meta.env.BASE_URL;
         <p>Next, the combat/Piety/Morytania lane can use the new gloves and food. Do not assume optional 65/65/65 melee training, a completed Legends' Quest, or early Making Friends.</p>
       </section>
 
-      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-2-3/`}>← 2.3</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a><a class="button" href={`${base}intermediate/chapter-2-5/`}>2.5 →</a></div>
     </article>
     <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-4" title="2.4 progress" /></aside>
+    <IntermediatePager previousHref={`${base}intermediate/chapter-2-3/`} previousLabel="← 2.3" nextHref={`${base}intermediate/chapter-2-5/`} nextLabel="2.5 →" />
   </div>
 </GuideLayout>

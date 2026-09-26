@@ -1,0 +1,20 @@
+---
+interface Props {
+  previousHref?: string;
+  previousLabel?: string;
+  nextHref?: string;
+  nextLabel?: string;
+}
+
+const { previousHref, previousLabel, nextHref, nextLabel } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<nav class="intermediate-pager" aria-label="Intermediate subsection navigation">
+  <div class="intermediate-pager-main">
+    {previousHref && <a class="button secondary previous" href={previousHref}>{previousLabel}</a>}
+    {nextHref && <a class="button next" href={nextHref}>{nextLabel}</a>}
+  </div>
+  <div class="intermediate-pager-overview">
+    <a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a>
+  </div>
+</nav>

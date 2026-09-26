@@ -1,6 +1,7 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import IntermediateNav from '../../components/IntermediateNav.astro';
+import IntermediatePager from '../../components/IntermediatePager.astro';
 import ChapterGoals from '../../components/ChapterGoals.astro';
 import RouteStep from '../../components/RouteStep.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
@@ -130,8 +131,8 @@ const base = import.meta.env.BASE_URL;
         <p>Next comes the coherent quest-infrastructure section. Nothing here assumed optional Gemstone Crab melee or Piscarilius Thieving XP.</p>
       </section>
 
-      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-1-4/`}>← 1.4</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a><a class="button" href={`${base}intermediate/chapter-2-2/`}>Continue to 2.2 →</a></div>
     </article>
     <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-1" title="2.1 progress" /></aside>
+    <IntermediatePager previousHref={`${base}intermediate/chapter-1-4/`} previousLabel="← 1.4" nextHref={`${base}intermediate/chapter-2-2/`} nextLabel="Continue to 2.2 →" />
   </div>
 </GuideLayout>

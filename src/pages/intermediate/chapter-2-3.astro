@@ -1,6 +1,7 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import IntermediateNav from '../../components/IntermediateNav.astro';
+import IntermediatePager from '../../components/IntermediatePager.astro';
 import ChapterGoals from '../../components/ChapterGoals.astro';
 import RouteStep from '../../components/RouteStep.astro';
 import TrainingOptions from '../../components/TrainingOptions.astro';
@@ -121,8 +122,8 @@ const base = import.meta.env.BASE_URL;
         <p><strong>Troubled Tortugans is deliberately postponed.</strong> Sailing is ready, and the route already covers its 48 Construction, 45 Hunter, 40 Woodcutting and 34 Crafting gates, but it requires <strong>actual 51 Slayer</strong>. The later Morytania/Slayer block will raise 40 → 50 → 51 and then reopen Sailing. Neither optional Chapter 1 melee, Barbarian Assault nor Dagannoth Rex is assumed.</p>
       </section>
 
-      <div class="subchapter-pager"><a class="button secondary" href={`${base}intermediate/chapter-2-2/`}>← 2.2</a><a class="button secondary" href={`${base}intermediate/`}>Back to Intermediate overview</a><a class="button" href={`${base}intermediate/chapter-2-4/`}>2.4 →</a></div>
     </article>
     <aside class="sidebar right-rail"><ProgressTracker storageKey="rsag-intermediate-2-3" title="2.3 progress" /></aside>
+    <IntermediatePager previousHref={`${base}intermediate/chapter-2-2/`} previousLabel="← 2.2" nextHref={`${base}intermediate/chapter-2-4/`} nextLabel="2.4 →" />
   </div>
 </GuideLayout>
