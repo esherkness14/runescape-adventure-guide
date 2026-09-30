@@ -442,11 +442,11 @@ details.hint[open] summary::before { content: '−'; }
 .route-step .route-step-body { transition: opacity .18s ease, filter .18s ease; }
 .route-step.is-complete {
   border-color: var(--border);
-  background: #191d17;
+  background: #10130f;
 }
 .route-step.is-complete .route-step-head,
 .route-step.is-complete .route-step-body {
-  opacity: .85;
+  opacity: .72;
   filter: saturate(.7);
 }
 .route-step.is-complete .check-row {
@@ -471,12 +471,12 @@ details.hint[open] summary::before { content: '−'; }
 .training-options .training-grid { transition: opacity .18s ease, filter .18s ease; }
 .training-options.is-complete {
   border-color: var(--border);
-  background: #191d17;
+  background: #10130f;
 }
 .training-options.is-complete .training-heading,
 .training-options.is-complete .training-why,
 .training-options.is-complete .training-grid {
-  opacity: .85;
+  opacity: .72;
   filter: saturate(.7);
 }
 .training-options.is-complete .check-row { color: var(--muted); }
