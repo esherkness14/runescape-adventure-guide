@@ -99,3 +99,9 @@ After pulling Ernest the Chicken and Animal Magnetism forward, no further Chapte
 5. Pull Ernest the Chicken + Animal Magnetism into Chapter 1: use the existing steel arrows to reach 30 Ranged, get the small 16→18 Slayer gap from a Vannaka assignment, then unlock Ava's attractor before the long Ranged grind.
 
 The remaining differences are Chapter 2 authoring concerns rather than Chapter 1 blockers.
+
+## 2026-10-09 Farming playtesting amendment
+
+The 63-Farming figure in the BRUHsailer source-route projection above is **not** this guide's Chapter 1 guarantee. Following direct playtesting feedback, Chapter 1.4 now starts a passive ordinary/fruit-tree lane and continues unrelated quests rather than requiring Tithe to actual 62 first. Chapter 1 exits with a live Farming level dependent on banked seeds and elapsed growth; neither 62 nor 63 is promised. Easy contracts become available at actual 45 (or 42 + Garden pie), medium contracts at actual 65 (or 62 + pie), but both are supply milestones, not exit conditions. Actual 49 is checked before finishing Fairytale II in 2.6; actual 70 is required before Song of the Elves and rechecked in 2.7. Any measured shortage can be closed with more passive runs or a bounded optional active method. No fixed seed yield, XP/day or date is projected.
+
+Keep the two western Fossil Island teaks planted after their health check until 2.1 has its Construction logs; the Castle Wars fallback remains. Magic tree seeds are reserved for 75+ Farming and have no named mandatory quest consumer; the separately reserved 16 magic logs still follow their original sourcing plan. This amendment updates the boundary logic only; the older audit did not test the revised passive Farming experience.
