@@ -1,0 +1,2778 @@
+{
+  "title": "Intermediate 1.1–1.2 quest supply and preparation coverage",
+  "audit_date": "2026-10-18",
+  "baseline": {
+    "repository": "esherkness14/runescape-adventure-guide",
+    "sha": "6a0a409ee8bc4568b81cba2b2a350ee63dc28080",
+    "branch": "codex/quest-supply-preparation-audit"
+  },
+  "scope": {
+    "owned_files": [
+      "src/pages/intermediate/chapter-1-1.astro",
+      "src/pages/intermediate/chapter-1-2.astro"
+    ],
+    "actual_quests_and_miniquests": 37,
+    "chapter_1_1_quests": 20,
+    "chapter_1_2_quests": 17,
+    "quest_helper_classes": 38,
+    "route_steps": 18,
+    "training_blocks": 5,
+    "notes": "Includes both Shield of Arrav branches and Pirate's Treasure's delegated RumSmugglingStep. Nonquest RouteSteps reviewed for preparation continuity. No optional block is used as a guaranteed prior item stock."
+  },
+  "source_registry": {
+    "quest_helper": {
+      "repository": "Zoinkwiz/quest-helper",
+      "sha": "5f791937a99a676f23c02aa48c4e4d5b50e7edad",
+      "url": "https://github.com/Zoinkwiz/quest-helper/tree/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers",
+      "method": "Reviewed getItemRequirements, actual ItemRequirement constructors and acquisition steps; getItemRecommended handled separately. Source strings were first extracted from local pinned checkout and recovered from GitHub during the filesystem outage."
+    },
+    "bruhsailer": {
+      "repository": "umkyzn/BRUHsailer",
+      "sha": "6422739188591a5ae18f41a424d7b1d29835f543",
+      "path": "data/guide_data.json",
+      "blob_sha": "8ba1d9a882dd99d753ce772f5eb90efaee03ab3b",
+      "data_updated_on": "2026-08-30",
+      "url": "https://github.com/umkyzn/BRUHsailer/blob/6422739188591a5ae18f41a424d7b1d29835f543/data/guide_data.json",
+      "public_url": "https://umkyzn.github.io/BRUHsailer/",
+      "indexing": "chapters/sections/steps indices in quest rows are zero-based; bracketed alternatives identify separate steps."
+    },
+    "mechanics": [
+      {
+        "url": "https://oldschool.runescape.wiki/w/Shop_keeper_(Lumbridge)",
+        "evidence": "Named general-store tools/stock; current available page content reviewed."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Iron_bar",
+        "evidence": "15 Smithing; potential failure; zero-default-stock shops not used as Ironman suppliers; available Wiki content reviewed."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Dwarf",
+        "evidence": "Low-level Ice Mountain/Dwarven Mine dwarves have iron-bar drops; not a guaranteed kill-count result."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Construction",
+        "evidence": "Crude wooden chair: 2 planks, 2 nails, 58 XP; threshold arithmetic checked."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Antique_lamp_(X_Marks_the_Spot)",
+        "evidence": "Unbankable and reclaimable from Veos; BRUH corroborates X Marks and Client lamp workflow."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Fishing",
+        "evidence": "Heavy rod 48 Fishing/15 Agility/15 Strength and Otto bed/feather method; normal/fly rod distinction."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Waterfall_Quest/Quick_guide",
+        "evidence": "18 physical runes and rope; bank combat items/runes for tomb."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Mistrock",
+        "evidence": "Sunset Coast–Aldarin Antonia boat connection; basic Varlamore entry also checked against QH/BRUH."
+      }
+    ],
+    "limitations": "Direct live OSRS Wiki requests often returned robots/restricted-URL failures; available Wiki page content was cross-checked with the pinned current Quest Helper and 2026 BRUH data. Stale Fandom/third-party mirrors were not used as the authority for changed quest requirements. No in-game execution was performed."
+  },
+  "key_fixes": [
+    "Sea Slug consumed swamp paste before the guide's later Brimhaven purchase; supplier now precedes quest at Port Khazard.",
+    "Early Sheep Shearer cannot rely on later bought balls; Sleeping Giants needs unspun wool, a different item.",
+    "Knight's Sword lacked 10 Mining, whole pie recipe/ingredients and an attainable two-iron-bar recovery. Self-making explicitly closes 15 Mining/Smithing rather than assuming unearned bars.",
+    "Daddy's Home needs ten planks, five cloth and successful nails plus bending allowance. House is free from Marlo. It only grants level 8, so a minimal four-chair bridge closes Tower of Life's level 10.",
+    "Optional Wintertodt Fletching does not supply Tourist Trap's 10 gate; live bridge added. Quest-local tools and prototype failures distinguished from shopping list.",
+    "A low-level Witch's House magic kit is supplied before the later rune purchase. Feud timed-fight recovery includes actual 17 Magic and chaos-rune refill if needed.",
+    "Waterfall requires physical runes; tomb bank restrictions require a second bank stop. Glarial's pebble retained/recoverable.",
+    "Fishing Contest ordinary rod and worm acquisition, Observatory material reserve/antipoison spawn, and Aldarin early travel now have concrete actions.",
+    "Rods/bait and Cooking entry levels are closed; handoff reserves are cooked trout/salmon.",
+    "All existing IDs/storage keys, route order, optional flags and training targets remain; preparation is in eight closed-by-default disclosures labelled Quest preparation."
+  ],
+  "cross_boundary_notes": [
+    "1.2 leaves 10 cooked trout and 15 cooked salmon for later quest consumers; add their own recovery at 1.3 if already eaten.",
+    "1.1 protects three Daddy's Home normal planks for Observatory, consumed in 1.2. Do not double count those or the eight maximum planks in the Construction bridge later.",
+    "Sleeping Giants' ten nails and one raw wool are actively acquired; the 30-ball reserve is separate. Nail stock after bends is live, not projected.",
+    "The 150 death runes in the first rune bank are a DT hand-in reserve; spent runes require replacement before DT.",
+    "1.2's five loose dung buckets are separate from the 1600 Sandstorm empty buckets. Four filled Ugthanki dung, three beers and three vodkas remain reserved.",
+    "Temple of the Eye is not done in these chapters; a later GOTR nature-talisman recovery must add its prerequisite/setup."
+  ],
+  "validation": {
+    "identifiers": "Compared complete id/storageKey sequences to baseline: exact match in both pages.",
+    "markup": "All static HTML/Astro component tags balanced; frontmatter delimiters intact; four new ExpandableNote instances per chapter, all label Quest preparation, no open attribute. Identifiers and markup rechecked after final copy edits.",
+    "runtime": "Local exec became environment_offline (409) after chapter 1.1 first patch; complete strings reconstructed in orchestration store. Astro/build/TypeScript validation must run on the integrated review branch via GitHub Actions. No claim of a successful local build."
+  },
+  "route_steps": [
+    {
+      "chapter": "1.1",
+      "anchor": "i11-start",
+      "status": "fixed",
+      "review": "Starter tools and cash recovery; five quests; separate early spun wool and lamp reclaim.",
+      "quest_names": [
+        "X Marks the Spot",
+        "The Restless Ghost",
+        "Misthalin Mystery",
+        "Rune Mysteries",
+        "Sheep Shearer"
+      ]
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "status": "fixed",
+      "review": "Three quests; safe ordinary paid-boat access; correct water containers/log source.",
+      "quest_names": [
+        "Clock Tower",
+        "Monk's Friend",
+        "Hazeel Cult"
+      ]
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-ardy-supplies",
+      "status": "fixed",
+      "review": "Live coin and stall entry bridge; exact supplies; Sea Slug paste moved before consumer; three quests; reserve sand/ash pair.",
+      "quest_names": [
+        "Sheep Herder",
+        "Sea Slug",
+        "Tribal Totem"
+      ]
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "status": "fixed",
+      "review": "Eight quests; all food/tool/material sources; Knight iron/pie/Mining gates; free house and minimal Construction bridge.",
+      "quest_names": [
+        "Cook's Assistant",
+        "Pirate's Treasure",
+        "Gertrude's Cat",
+        "Romeo & Juliet",
+        "Daddy's Home",
+        "Witch's Potion",
+        "The Knight's Sword",
+        "Tower of Life"
+      ]
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-kourend",
+      "status": "fixed",
+      "review": "Client feather supplier, normal ship/walking route, reclaimable lamps.",
+      "quest_names": [
+        "Client of Kourend"
+      ]
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-warm",
+      "status": "covered",
+      "review": "Nonquest: named free Gilbert clothing plus earlier dig supplies establish four warm items.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-wt-prep",
+      "status": "covered",
+      "review": "Nonquest: actual 50 Firemaking and reusable tools; earlier source and replenishment covers cakes.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-wt-loop",
+      "status": "covered",
+      "review": "Nonquest: method uses tools established before entry; optional fletching remains optional.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.1",
+      "anchor": "i11-finish",
+      "status": "covered",
+      "review": "Nonquest: actual Reward Cart withdrawal, no guaranteed RNG loot; later magic-log shortage recovery remains explicit.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "status": "fixed",
+      "review": "Eight quests; all outside supplies and quest-local distinctions; partner handovers, current wool form, live skill bridges.",
+      "quest_names": [
+        "Doric's Quest",
+        "Goblin Diplomacy",
+        "Witch's House",
+        "Druidic Ritual",
+        "Shield of Arrav",
+        "Children of the Sun",
+        "Ethically Acquired Antiquities",
+        "Sleeping Giants"
+      ]
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-runes",
+      "status": "fixed",
+      "review": "Nonquest: shop named, actual bank target after earlier magic; Waterfall physical rune and DT death-rune reserves separated; stock/cash recovery.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-desert",
+      "status": "fixed",
+      "review": "Two quests; clothing/bars/prototype retries, actual Fletching/Thieving; timed fight fallback; five dung buckets separate from 1600.",
+      "quest_names": [
+        "The Tourist Trap",
+        "The Feud"
+      ]
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-tempoross",
+      "status": "fixed",
+      "review": "Nonquest: Fishing 35 bridge now buys named rods/harpoon/net/feathers; local/tool-shop refills; mass-world loop unchanged.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-optional-angler",
+      "status": "fixed",
+      "review": "Nonquest optional: axe/hammer supplier and railings/tentacle loop replace unsourced repair/bailing instructions; Angler remains optional.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-quest-xp",
+      "status": "fixed",
+      "review": "Three quests; logs, brew, safespot ammunition, Waterfall tomb banking and retained pebble.",
+      "quest_names": [
+        "Fight Arena",
+        "Tree Gnome Village",
+        "Waterfall Quest"
+      ]
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-sidequests",
+      "status": "fixed",
+      "review": "Four quests; ordinary rod/red vine worm; Observatory consumed material reserve and antipoison spawn; Dwarf Cannon tools; basic Aldarin travel and local costume.",
+      "quest_names": [
+        "Fishing Contest",
+        "Observatory Quest",
+        "Dwarf Cannon",
+        "Death on the Isle"
+      ]
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-rogues",
+      "status": "covered",
+      "review": "Nonquest: real 50 Thieving/Agility gates and all maze tools obtained inside. Wealthy Citizens cash source already fully introduced.",
+      "quest_names": []
+    },
+    {
+      "chapter": "1.2",
+      "anchor": "i12-finish",
+      "status": "fixed",
+      "review": "Nonquest handoff: explicitly cooked trout/salmon form; protected bucket/ash/dung/alcohol and actual cash reserves retained.",
+      "quest_names": []
+    }
+  ],
+  "training_blocks": [
+    {
+      "anchor": "i11-wc-fm-training",
+      "status": "covered",
+      "review": "Existing own-logs normal/oak entry method and actual 50-Firemaking gate; reusable axe/tinderbox now sourced."
+    },
+    {
+      "anchor": "i11-wintertodt-training",
+      "status": "covered",
+      "review": "89 recommended and 99 optional preserved; no assumption of optional fletching or particular loot."
+    },
+    {
+      "anchor": "i12-fishing-agility-training",
+      "status": "fixed",
+      "review": "Otto location/start, bed's heavy rod, 48 Fishing/15 Strength/15 Agility entry and Gerrant feather recovery introduced. No guaranteed Cooking XP from dropping fish."
+    },
+    {
+      "anchor": "i12-cooking-training",
+      "status": "fixed",
+      "review": "Actual 15 Cooking trout/25 salmon gates; raw-beef bridge if banked fish initially unusable; explicit fly-fishing shortage source and cooked quest reserves."
+    },
+    {
+      "anchor": "i12-thieving-training",
+      "status": "covered",
+      "review": "Actual 50-entry and 1.35m liquid cash stop; existing local Wealthy Citizens/Oriana source remains. No projected 72/77 level."
+    }
+  ],
+  "quests": [
+    {
+      "name": "X Marks the Spot",
+      "chapter": "1.1",
+      "anchor": "i11-start",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Spade",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy at Lumbridge General Store; reusable.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Veos/dig sites: treasure scrolls, mysterious orb, ancient casket"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/xmarksthespot/XMarksTheSpot.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/xmarksthespot/XMarksTheSpot.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[0,10]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tspade\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tglory\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "spade = new ItemRequirement(\"Spade\", ItemID.SPADE).isNotConsumed();",
+        "glory = new ItemRequirement(\"Amulet of Glory for faster teleport to Draynor Village.\", ItemCollections.AMULET_OF_GLORIES).isNotConsumed();",
+        "ancientCasket = new ItemRequirement(\"Ancient casket\", ItemID.CLUEQUEST_CASKET);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "The Restless Ghost",
+      "chapter": "1.1",
+      "anchor": "i11-start",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Father Urhney supplies/replaces ghostspeak amulet in south-west Lumbridge Swamp hut",
+        "Skull in Wizards' Tower basement; no skeleton kill required"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/therestlessghost/TheRestlessGhost.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/therestlessghost/TheRestlessGhost.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tlumbridgeTeleports,\n\t\t\tpassage\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "lumbridgeTeleports = new ItemRequirement(\"Lumbridge teleports\", ItemID.POH_TABLET_LUMBRIDGETELEPORT, 2);",
+        "ghostspeakAmulet = new ItemRequirement(\"Ghostspeak amulet\", ItemID.AMULET_OF_GHOSTSPEAK, 1, true).isNotConsumed();",
+        "skull = new ItemRequirement(\"Ghost's skull\", ItemID.GHOSTSKULL);",
+        "passage = new ItemRequirement(\"Necklace of passage\", ItemID.NECKLACE_OF_PASSAGE_5);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Misthalin Mystery",
+      "chapter": "1.1",
+      "anchor": "i11-start",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Bucket, knife, tinderbox and puzzle keys from island rooms/barrels"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/misthalinmystery/MisthalinMystery.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/misthalinmystery/MisthalinMystery.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "bucket = new ItemRequirement(\"Bucket\", ItemID.BUCKET_EMPTY);",
+        "manorKey = new ItemRequirement(\"Manor key\", ItemID.MISTMYST_FRONTDOOR_KEY);",
+        "knife = new ItemRequirement(\"Knife\", ItemID.KNIFE);",
+        "notes1 = new ItemRequirement(\"Notes\", ItemID.MISTMYST_CLUE_LIBRARY);",
+        "rubyKey = new ItemRequirement(\"Ruby key\", ItemID.MISTMYST_RUBY_KEY);",
+        "tinderbox = new ItemRequirement(\"Tinderbox\", ItemID.TINDERBOX);",
+        "notes2 = new ItemRequirement(\"Notes\", ItemID.MISTMYST_CLUE_OUTSIDE);",
+        "emeraldKey = new ItemRequirement(\"Emerald key\", ItemID.MISTMYST_EMERALD_KEY);",
+        "notes3 = new ItemRequirement(\"Notes\", ItemID.MISTMYST_CLUE_KITCHEN);",
+        "sapphireKey = new ItemRequirement(\"Sapphire key\", ItemID.MISTMYST_SAPPHIRE_KEY);",
+        "killersKnife = new ItemRequirement(\"Killer's knife\", ItemID.MISTMYST_CUTSCENE_KNIFE);",
+        "killersKnifeEquipped = new ItemRequirement(\"Killer's knife\", ItemID.MISTMYST_CUTSCENE_KNIFE, 1, true);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Rune Mysteries",
+      "chapter": "1.1",
+      "anchor": "i11-start",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Air talisman from Duke Horacio",
+        "Research package from Sedridor",
+        "Research notes from Aubury; recover lost deliveries from issuer"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/runemysteries/RuneMysteries.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/runemysteries/RuneMysteries.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[0]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tvarrockTeleport,\n\t\t\twizardTeleport\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "airTalisman = new ItemRequirement(\"Air talisman\", ItemID.AIR_TALISMAN).isNotConsumed();",
+        "researchPackage = new ItemRequirement(\"Research package\", ItemID.RESEARCH_PACKAGE);",
+        "notes = new ItemRequirement(\"Research notes\", ItemID.RESEARCH_NOTES);",
+        "varrockTeleport = new ItemRequirement(\"Varrock teleport\", ItemID.POH_TABLET_VARROCKTELEPORT);",
+        "wizardTeleport = new ItemRequirement(\"A teleport to the Wizard's Tower\", ItemCollections.NECKLACE_OF_PASSAGES);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Sheep Shearer",
+      "chapter": "1.1",
+      "anchor": "i11-start",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Ball of wool",
+          "quantity": 20,
+          "form": "spun balls; not raw wool",
+          "supplier": "Buy shears at Lumbridge General Store, shear twenty local sheep, spin wool upstairs in Lumbridge Castle. Later Ardougne 30-wool purchase is separate.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Shears",
+          "quantity": 1,
+          "form": "reusable gathering tool",
+          "supplier": "Buy at Lumbridge General Store, then shear local sheep.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/sheepshearer/SheepShearer.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/sheepshearer/SheepShearer.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\ttotalBallsNeeded,\n\t\t\tshears\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "ballOfWool = new ItemRequirement(\"Balls of wool\", ItemID.BALL_OF_WOOL);",
+        "shears = new ItemRequirement(\"Shears\", ItemID.SHEARS).isNotConsumed();",
+        "woolOrBalls = new ItemRequirement(\"Wool\", ItemID.WOOL);",
+        "onlyWool = new ItemRequirement(\"Wool\", ItemID.WOOL);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Clock Tower",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Bucket of water",
+          "quantity": 1,
+          "form": "water-filled bucket; ice gloves optional alternative",
+          "supplier": "Fill starter bucket at Cedric's well east of tower; bucket also spawns there. Refill/recollect if lost.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Four cogs and rat poison from Clock Tower dungeon"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/clocktower/ClockTower.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/clocktower/ClockTower.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tbucketOfWater\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tstaminaPotions,\n\t\t\tardougneCloak\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "bucketOfWater = new ItemRequirement(\"Bucket of Water or a pair of ice gloves or smiths gloves(i)\", ItemID.BUCKET_WATER);",
+        "emptyBucket = new ItemRequirement(\"Bucket\", ItemID.BUCKET_EMPTY);",
+        "noteAboutWater = new ItemRequirement(\"There's a bucket and a well and just next to brother cedric for the black cog\", -1, -1);",
+        "staminaPotions = new ItemRequirement(\"Stamina Potions\", ItemCollections.STAMINA_POTIONS);",
+        "ardougneCloak = new ItemRequirement(\"Ardougne Cloak to teleport to monastery\", ItemID.ARDY_CAPE_EASY);",
+        "redCog = new ItemRequirement(\"Red Cog\", ItemID.REDCOG);",
+        "blueCog = new ItemRequirement(\"Blue Cog\", ItemID.BLUECOG);",
+        "whiteCog = new ItemRequirement(\"White Cog\", ItemID.WHITECOG);",
+        "blackCog = new ItemRequirement(\"Black Cog\", ItemID.BLACKCOG);",
+        "ratPoison = new ItemRequirement(\"Rat Poison\", ItemID.RAT_POISON);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Monk's Friend",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Logs",
+          "quantity": 1,
+          "form": "normal logs; not oak",
+          "supplier": "Chop an ordinary tree with starter axe.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Jug of water",
+          "quantity": 1,
+          "form": "filled jug; bucket does not substitute",
+          "supplier": "Buy jug from a general store and fill at fountain/sink.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Child's blanket in quest cave"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/monksfriend/MonksFriend.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/monksfriend/MonksFriend.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tjugOfWater,\n\t\t\tlog\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tardougneCloak\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "log = new ItemRequirement(\"Logs\", ItemID.LOGS);",
+        "jugOfWater = new ItemRequirement(\"Jug of Water\", ItemID.JUG_WATER);",
+        "blanket = new ItemRequirement(\"Child's blanket\", ItemID.CHILDS_BLANKET);",
+        "ardougneCloak = new ItemRequirement(\"Ardougne cloak 1 or higher for teleports to the monastery\", ItemCollections.ARDOUGNE_CLOAK).isNotConsumed();"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Hazeel Cult",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Cult branch: poison from Clivet; key/scroll from Carnillean house",
+        "Ceril branch: starter weapon/food for local fight and armour recovery"
+      ],
+      "entry_checks": "Both story choices remain available",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/hazeelcult/HazeelCult.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/hazeelcult/HazeelCult.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tardougneCloak\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "ardougneCloak = new ItemRequirement(\"Ardougne cloak for Monastery teleport\", ItemID.ARDY_CAPE_EASY).isNotConsumed();",
+        "poison = new ItemRequirement(\"Poison\", ItemID.POISON);",
+        "hazeelScroll = new ItemRequirement(\"Hazeel scroll\", ItemID.HAZEEL_SCROLL).hideConditioned(givenAlomoneScroll);",
+        "carnilleanArmour = new ItemRequirement(\"Carnillean armour\", ItemID.CARNILLEAN_ARMOUR).hideConditioned(givenArmour);",
+        "key = new ItemRequirement(\"Chest key\", ItemID.CARNILLEANCHESTKEY);",
+        "hazeelMark = new ItemRequirement(\"Hazeel's mark\", ItemID.MARK_OF_HAZEEL);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Sheep Herder",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-supplies",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 100,
+          "form": "for Doctor Orbon's protective outfit",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Protective outfit bought from Doctor Orbon after starting",
+        "Halgrive supplies sheep feed",
+        "Cattle prod in Farmer Brumty's enclosure"
+      ],
+      "entry_checks": "None; spade is separate route clothing pickup",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/sheepherder/SheepHerder.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/sheepherder/SheepHerder.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[6,8]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tcoins100\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tenergyRestore\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "coins100 = new ItemRequirement(\"Coins\", ItemCollections.COINS, 100);",
+        "energyRestore = new ItemRequirement(\"Energy restoring items\", ItemCollections.RUN_RESTORE_ITEMS);",
+        "sheepFeed = new ItemRequirement(\"Sheep feed\", ItemID.POISONED_FEED);",
+        "plagueJacket = new ItemRequirement(\"Plague jacket\", ItemID.PLAGUE_JACKET);",
+        "plagueTrousers = new ItemRequirement(\"Plague trousers\", ItemID.PLAGUE_TROUSERS);",
+        "cattleprod = new ItemRequirement(\"Cattle prod\", ItemID.CATTLEPROD);",
+        "redSheepBones = new ItemRequirement(\"Sheep bones 1\", ItemID.SHEEPBONESA);",
+        "greenSheepBones = new ItemRequirement(\"Sheep bones 2\", ItemID.SHEEPBONESB);",
+        "blueSheepBones = new ItemRequirement(\"Sheep bones 3\", ItemID.SHEEPBONESC);",
+        "yellowSheepBones = new ItemRequirement(\"Sheep bones 4\", ItemID.SHEEPBONESD);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Sea Slug",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-supplies",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Swamp paste",
+          "quantity": 1,
+          "form": "finished swamp paste; neither swamp tar nor raw swamp paste",
+          "supplier": "Buy finished swamp paste from Khazard General Store at Port Khazard before speaking to Holgart; restock/change world if empty.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Torch from Bailey",
+        "Broken glass and damp sticks on platform"
+      ],
+      "entry_checks": "Actual 30 Firemaking; continue established log-burning bridge if short",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/seaslug/SeaSlug.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/seaslug/SeaSlug.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[8]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tswampPaste\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "swampPaste = new ItemRequirement(\"Swamp paste\", ItemID.SWAMPPASTE);",
+        "dampSticks = new ItemRequirement(\"Damp sticks\", ItemID.DAMP_STICKS);",
+        "drySticks = new ItemRequirement(\"Dry sticks\", ItemID.DRY_STICKS);",
+        "torch = new ItemRequirement(\"Unlit torch\", ItemID.TORCH_UNLIT);",
+        "litTorch = new ItemRequirement(\"Lit torch\", ItemID.TORCH_LIT);",
+        "glass = new ItemRequirement(\"Broken glass\", ItemID.BROKEN_GLASS);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Tribal Totem",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-supplies",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 90,
+          "form": "three ordinary Ardougne–Brimhaven crossings; more for optional extra trips",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "ordinary boat travel",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Address label from delivery depot; totem obtained during quest"
+      ],
+      "entry_checks": "Actual 21 Thieving; silk stall bridge if short",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/tribaltotem/TribalTotem.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/tribaltotem/TribalTotem.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[8]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n    {\n        ArrayList<ItemRequirement> reqs = new ArrayList<>();\n        reqs.add(coins);\n        reqs.add(amuletOfGlory);\n        reqs.add(ardougneTeleport);\n\t\treqs.add(brimhavenTeleports);\n        return reqs;\n    }",
+      "qh_item_declarations": [
+        "coins = new ItemRequirement(\"Coins or more for boat trips\", ItemCollections.COINS, 90);",
+        "amuletOfGlory = new ItemRequirement(\"Amulet of glory\", ItemCollections.AMULET_OF_GLORIES).isNotConsumed();",
+        "ardougneTeleport = new ItemRequirement(\"Ardougne teleport\", ItemID.POH_TABLET_ARDOUGNETELEPORT);",
+        "brimhavenTeleports = new ItemRequirement(\"Brimhaven teleports\", ItemID.NZONE_TELETAB_BRIMHAVEN, 2);",
+        "addressLabel = new ItemRequirement(\"Address label\", ItemID.TRIBAL_TOTEM_LABEL);",
+        "totem = new ItemRequirement(\"Totem\", ItemID.TRIBAL_TOTEM);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Cook's Assistant",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Egg",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Pick up at Lumbridge chicken farm.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Pot of flour",
+          "quantity": 1,
+          "form": "flour in a pot",
+          "supplier": "Buy pot if missing; pick wheat, use Lumbridge windmill hopper/controls, collect flour in pot.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Bucket of milk",
+          "quantity": 1,
+          "form": "milk-filled bucket",
+          "supplier": "Milk Lumbridge dairy cow using starter/general-store bucket.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/cooksassistant/CooksAssistant.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/cooksassistant/CooksAssistant.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tegg,\n\t\t\tflour,\n\t\t\tmilk\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tcoins\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "egg = new ItemRequirement(\"Egg\", ItemID.EGG);",
+        "milk = new ItemRequirement(\"Bucket of milk\", ItemID.BUCKET_MILK);",
+        "flour = new ItemRequirement(\"Pot of flour\", ItemID.POT_FLOUR);",
+        "bucket = new ItemRequirement(\"Bucket\", ItemID.BUCKET_EMPTY);",
+        "pot = new ItemRequirement(\"Pot\", ItemID.POT_EMPTY);",
+        "coins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 3);",
+        "grain = new ItemRequirement(\"Grain\", ItemID.GRAIN);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Pirate's Treasure",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 60,
+          "form": "30 outbound fare + 30 rum; Luthas pays 30 for return",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Spade",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Starter tool; buy replacement at Lumbridge General Store.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Karamjan rum from Zambo's pub",
+        "10 bananas from Luthas's plantation; ship rum and bananas in quest crate",
+        "White apron spawn in Gerrant's fishing shop",
+        "Key from Frank/message from Blue Moon Inn chest"
+      ],
+      "entry_checks": "Level-4 gardener fight; starter weapon and replenished cakes if needed",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/piratestreasure/PiratesTreasure.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/piratestreasure/PiratesTreasure.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[10]",
+      "uncertainties": [],
+      "additional_sources": [
+        {
+          "path": "src/main/java/com/questhelper/helpers/quests/piratestreasure/RumSmugglingStep.java",
+          "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/piratestreasure/RumSmugglingStep.java"
+        }
+      ],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tsixtyCoins,\n\t\t\tspade,\n\t\t\ttenBananas\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tteleportVarrock,\n\t\t\tteleportFalador\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "sixtyCoins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 60);",
+        "spade = new ItemRequirement(\"Spade\", ItemID.SPADE).isNotConsumed();",
+        "teleportVarrock = new ItemRequirement(\"A teleport to Varrock\", ItemID.POH_TABLET_VARROCKTELEPORT);",
+        "teleportFalador = new ItemRequirement(\"A teleport to Falador\", ItemID.POH_TABLET_FALADORTELEPORT);",
+        "tenBananas = new ItemRequirement(\"Bananas\", ItemID.BANANA, 10).canBeObtainedDuringQuest();",
+        "pirateMessage = new ItemRequirement(\"Pirate message\", ItemID.PIRATEMESSAGE);",
+        "chestKey = new ItemRequirement(\"Chest key\", ItemID.CHEST_KEY);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Gertrude's Cat",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 100,
+          "form": "payment to children",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Bucket of milk",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Milk another Lumbridge dairy cow with bucket.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Raw sardine",
+          "quantity": 1,
+          "form": "raw; do not cook",
+          "supplier": "Buy at Lovecraft's Tackle in Witchaven; restock/change world if missing.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Pick doogle leaves just south of Gertrude's house and add to sardine",
+        "Find kitten in lumberyard crates"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/gertrudescat/GertrudesCat.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/gertrudescat/GertrudesCat.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[8,13]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tbucketOfMilk,\n\t\t\tcoins,\n\t\t\tsardineHighlighted\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tvarrockTeleport,\n\t\t\tlumberyardTeleport\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "bucketOfMilk = new ItemRequirement(\"Bucket of milk\", ItemID.BUCKET_MILK).hideConditioned(hasGivenFluffsMilkAndSardine);",
+        "coins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 100);",
+        "sardineHighlighted = new ItemRequirement(\"Raw Sardine\", ItemID.RAW_SARDINE).highlighted().hideConditioned(hasGivenFluffsMilkAndSardine);",
+        "seasonedSardine = new ItemRequirement(\"Seasoned Sardine\", ItemID.SEASONED_SARDINE).hideConditioned(hasGivenFluffsMilkAndSardine);",
+        "doogleLeaves = new ItemRequirement(\"Doogle Leaves\", ItemID.DOOGLELEAVES);",
+        "kitten = new ItemRequirement(\"Fluffs' Kitten\", ItemID.GERTRUDEKITTENS);",
+        "lumberyardTeleport = new ItemRequirement(\"Lumberyard teleport\", ItemID.TELEPORTSCROLL_LUMBERYARD);",
+        "varrockTeleport = new ItemRequirement(\"Varrock teleports\", ItemID.POH_TABLET_VARROCKTELEPORT, 2);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Romeo & Juliet",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Cadava berries",
+          "quantity": 1,
+          "form": "one item/bunch",
+          "supplier": "Pick from bushes south-east of Varrock.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Letter from Juliet",
+        "Apothecary makes cadava potion during quest"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/romeoandjuliet/RomeoAndJuliet.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/romeoandjuliet/RomeoAndJuliet.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tcadavaBerry\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "cadavaBerry = new ItemRequirement(\"Cadava berries\", ItemID.CADAVABERRIES);",
+        "letter = new ItemRequirement(\"Message\", ItemID.JULIETMESSAGE);",
+        "cadavaPotion = new ItemRequirement(\"Cadava potion\", ItemID.CADAVA);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Daddy's Home",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Plank",
+          "quantity": 10,
+          "form": "normal planks",
+          "supplier": "Chop ten ordinary logs and pay Varrock sawmill 100 coins per normal plank; count existing planks first.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Bolt of cloth",
+          "quantity": 5,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy at Varrock sawmill, 650 coins each.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Nails",
+          "quantity": "14 successful; take about 100 steel nails",
+          "form": "any nails work; steel starter recommendation",
+          "supplier": "Buy at Varrock sawmill; buy small additional batch if bends consume reserve.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Hammer",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Starter tool; replace at general store.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Saw",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Buy at Varrock sawmill; keep afterwards.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Coins",
+          "quantity": "about 5,000 working budget",
+          "form": "covers ten normal plank conversions, five cloth, saw and spare steel nails",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "procurement budget; count actual shop bill",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "3 waxwood logs in Yarlo's crates; free sawmill conversion into 3 waxwood planks",
+        "Marlo's reward: free house if none owned, 25 normal planks and 50 mithril nails retained"
+      ],
+      "entry_checks": "No pre-owned house required",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/miniquests/daddyshome/DaddysHome.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/daddyshome/DaddysHome.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[10,13,14]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tplank10,\n\t\t\tnails20,\n\t\t\tbolt5,\n\t\t\tsaw,\n\t\t\thammer\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tlumberyardTeleport,\n\t\t\tvarrockTeleport3\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "plank10 = new ItemRequirement(\"Plank\", ItemID.WOODPLANK, 10);",
+        "bolt5 = new ItemRequirement(\"Bolt of cloth\", ItemID.CLOTH, 5);",
+        "nails20 = new ItemRequirement(\"Nails (bring more in case you fail with some)\", ItemCollections.NAILS, 14);",
+        "hammer = new ItemRequirement(\"Hammer\", ItemCollections.HAMMER).isNotConsumed();",
+        "saw = new ItemRequirement(\"Saw\", ItemCollections.SAW).isNotConsumed();",
+        "waxwoodLog3 = new ItemRequirement(\"Waxwood log\", ItemID.DADDYSHOME_WAXWOOD_LOGS, 3);",
+        "waxwoodPlank3 = new ItemRequirement(\"Waxwood plank\", ItemID.DADDYSHOME_WAXWOOD_PLANK, 3);",
+        "bolt2 = new ItemRequirement(\"Bolt of cloth\", ItemID.CLOTH, 2);",
+        "bolt3 = new ItemRequirement(\"Bolt of cloth\", ItemID.CLOTH, 3);",
+        "nails2 = new ItemRequirement(\"Nails\", ItemCollections.NAILS, 2);",
+        "nails4 = new ItemRequirement(\"Nails\", ItemCollections.NAILS, 4);",
+        "plank = new ItemRequirement(\"Plank\", ItemID.WOODPLANK);",
+        "plank3 = new ItemRequirement(\"Plank\", ItemID.WOODPLANK, 3);",
+        "plank2 = new ItemRequirement(\"Plank\", ItemID.WOODPLANK, 2);",
+        "lumberyardTeleport = new ItemRequirement(\"Lumberyard Teleport\", ItemID.TELEPORTSCROLL_LUMBERYARD);",
+        "varrockTeleport3 = new ItemRequirement(\"Varrock Teleports\", ItemID.POH_TABLET_VARROCKTELEPORT, 3);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Witch's Potion",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Onion",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Pick from field north of Rimmington.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Burnt meat",
+          "quantity": 1,
+          "form": "burnt meat; not raw/cooked",
+          "supplier": "Kill Lumbridge cow, cook beef, then use cooked meat on range again to force burning.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Eye of newt",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy at Betty's Magic Emporium in Port Sarim.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Start quest, then kill small Rimmington rat for rat's tail"
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/witchspotion/WitchsPotion.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/witchspotion/WitchsPotion.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[10,14]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tonion,\n\t\t\tburntMeat,\n\t\t\teyeOfNewt\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "ratTail = new ItemRequirement(\"Rat's tail\", ItemID.RATS_TAIL);",
+        "onion = new ItemRequirement(\"Onion\", ItemID.ONION);",
+        "burntMeat = new ItemRequirement(\"Burnt meat\", ItemID.BURNT_MEAT);",
+        "eyeOfNewt = new ItemRequirement(\"Eye of newt\", ItemID.EYE_OF_NEWT);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "The Knight's Sword",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Redberry pie",
+          "quantity": 1,
+          "form": "whole cooked pie; not raw or half-eaten",
+          "supplier": "At 10 Cooking mix flour + water into pastry; use pie dish from Varrock Palace kitchen, add redberries from south-east Varrock, cook at range; repeat burnt attempts.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Iron bar",
+          "quantity": 2,
+          "form": "iron bars, not ores",
+          "supplier": "Check actual bank. If empty, mine copper/tin and smelt/smith bronze at furnace + Varrock west bank anvils to actual 15 Smithing; actual 15 Mining then mine/smelt iron until two successes. Alternative low-level Ice Mountain/Dwarven Mine dwarf drops; no fixed kill count.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Pickaxe",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Starter/Tutorial Island pickaxe; free bronze replacement at Lumbridge Castle gate tower.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Food",
+          "quantity": "live refill",
+          "form": "for ice dungeon traversal",
+          "supplier": "Cook farm chicken/beef initially; from Ardougne onward steal replacement cakes from bakery stalls (5 Thieving) after each use. Use the Cooking/Fishing bank only after it exists.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "recommended support",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Portrait in Falador Castle",
+        "Mine one blurite ore in quest ice dungeon south of Port Sarim"
+      ],
+      "entry_checks": "Actual 10 Mining for blurite; copper/tin bridge. Pie 10 Cooking covered by completed Cook's Assistant + Gertrude's Cat. Self-making iron conditional 15 Mining/Smithing explicitly established.",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/theknightssword/TheKnightsSword.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/theknightssword/TheKnightsSword.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[3,10]; chapters[0].sections[1].steps[1,3,4]",
+      "uncertainties": [
+        "Dwarf drops are random, not a guaranteed two-bar stock; self-smelting is the fully reproducible fallback.",
+        "Current Wiki live fetch restricted; iron-smelting entry gate and dwarf drop confirmed in available Wiki page content; no shop with zero default iron-bar stock used."
+      ],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tredberryPie,\n\t\t\tironBars,\n\t\t\tpickaxe\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tvarrockTeleport,\n\t\t\tfaladorTeleports,\n\t\t\thomeTele\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "redberryPie = new ItemRequirement(\"Redberry pie\", ItemID.REDBERRY_PIE);",
+        "ironBars = new ItemRequirement(\"Iron bar\", ItemID.IRON_BAR, 2);",
+        "bluriteOre = new ItemRequirement(\"Blurite ore\", ItemID.BLURITE_ORE);",
+        "pickaxe = new ItemRequirement(\"Any pickaxe\", ItemCollections.PICKAXES).isNotConsumed();",
+        "varrockTeleport = new ItemRequirement(\"A teleport to Varrock\", ItemID.POH_TABLET_VARROCKTELEPORT);",
+        "faladorTeleports = new ItemRequirement(\"Teleports to Falador\", ItemID.POH_TABLET_FALADORTELEPORT, 3);",
+        "homeTele = new ItemRequirement(\"A teleport near Mudskipper Point, such as POH teleport or Fairy Ring to AIQ\", ItemID.NZONE_TELETAB_RIMMINGTON, 2);",
+        "bluriteSword = new ItemRequirement(\"Blurite sword\", ItemID.FALADIAN_SWORD);",
+        "portrait = new ItemRequirement(\"Portrait\", ItemID.KNIGHTS_PORTRAIT);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Tower of Life",
+      "chapter": "1.1",
+      "anchor": "i11-starter-cleanup",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Beer",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy at Flying Horse Inn in East Ardougne.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Hammer",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Starter tool/general-store replacement.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Saw",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Retained from Daddy's Home; replacement Varrock sawmill.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Normal planks for level bridge",
+          "quantity": 8,
+          "form": "four crude wooden chairs; keep another 3 planks for Observatory",
+          "supplier": "Use eight of Daddy's Home's guaranteed 25 reward planks; sawmill normal logs if already spent.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "conditional entry-level bridge if below 10 Construction",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Nails for level bridge",
+          "quantity": "8 successful + spares",
+          "form": "two successful nails per crude chair",
+          "supplier": "Use Daddy's Home reward/remaining nails; refill at Varrock sawmill.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "conditional entry-level bridge if below 10 Construction",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Builders' outfit from workers; metal sheets/balls/wheels/pipes/rings/rivets/bars/fluid from tower crates"
+      ],
+      "entry_checks": "Actual 10 Construction. Daddy's Home finishes at 944 XP (level 8); four crude wooden chairs add 232 XP to 1176, crossing level-10 threshold 1154. Build/remove at free house's parlour in Rimmington.",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/toweroflife/TowerOfLife.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/toweroflife/TowerOfLife.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[14,16]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn Arrays.asList(beer, hammer, saw);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn Arrays.asList(rawSwordfish, rawChicken);\n\t}",
+      "qh_item_declarations": [
+        "rawSwordfish = new ItemRequirement(\"Raw swordfish (for diary task)\", ItemID.RAW_SWORDFISH);",
+        "rawChicken = new ItemRequirement(\"Raw chicken (for diary task)\", ItemID.RAW_CHICKEN);",
+        "beer = new ItemRequirement(\"Beer\", ItemID.BEER);",
+        "hammer = new ItemRequirement(\"Hammer\", ItemCollections.HAMMER).isNotConsumed();",
+        "saw = new ItemRequirement(\"Saw\", ItemCollections.SAW).isNotConsumed();",
+        "buildersHat = new ItemRequirement(\"Hard Hat\", ItemID.TOL_PLAYER_CONSTRUCTION_HARDHAT);",
+        "buildersShirt = new ItemRequirement(\"Builder's Shirt\", ItemID.TOL_PLAYER_CONSTRUCTION_SHIRT);",
+        "buildersTrousers = new ItemRequirement(\"Builder's Trousers\", ItemID.TOL_PLAYER_CONSTRUCTION_TROUSERS);",
+        "buildersBoots = new ItemRequirement(\"Builder's Boots\", ItemID.TOL_PLAYER_CONSTRUCTION_BOOTS);",
+        "buildersHatEquipped = new ItemRequirement(\"Hard Hat\", ItemID.TOL_PLAYER_CONSTRUCTION_HARDHAT, 1, true);",
+        "buildersShirtEquipped = new ItemRequirement(\"Builder's Shirt\", ItemID.TOL_PLAYER_CONSTRUCTION_SHIRT, 1, true);",
+        "buildersTrousersEquipped = new ItemRequirement(\"Builder's Trousers\", ItemID.TOL_PLAYER_CONSTRUCTION_TROUSERS, 1, true);",
+        "buildersBootsEquipped = new ItemRequirement(\"Builder's Boots\", ItemID.TOL_PLAYER_CONSTRUCTION_BOOTS, 1, true);",
+        "pressureMachineSheets = new ItemRequirement(\"Metal sheets\", ItemID.TOL_METAL_SHEET, 3);",
+        "pressureMachineBalls = new ItemRequirement(\"Coloured balls\", ItemID.TOL_PRESSURE_BALL, 4);",
+        "pressureMachineWheels = new ItemRequirement(\"Valve wheels\", ItemID.TOL_WHEEL, 4);",
+        "pipeMachinePipes = new ItemRequirement(\"Pipes\", ItemID.TOL_PIPE, 4);",
+        "pipeMachineRings = new ItemRequirement(\"Pipe rings\", ItemID.TOL_RING, 5);",
+        "pipeMachineRivets = new ItemRequirement(\"Rivets\", ItemID.TOL_RIVETS, 6);",
+        "cageMetalBar = new ItemRequirement(\"Metal bars\", ItemID.TOL_BAR, 5);",
+        "cageBindingFluid = new ItemRequirement(\"Binding fluid\", ItemID.TOL_GLUE, 4);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Client of Kourend",
+      "chapter": "1.1",
+      "anchor": "i11-kourend",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Feather",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy from Gerrant in Port Sarim or kill a chicken; take Veos's ship to Port Piscarilius.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Veos gives enchanted scroll and orb; feather creates enchanted quill",
+        "Replace quest objects from Veos",
+        "Reward lamps cannot bank: destroy and reclaim from Veos after Druidic Ritual; keep Kharedst's memoirs"
+      ],
+      "entry_checks": "X Marks the Spot complete; no teleport spell or paid minecart required, walking route provided",
+      "supplier_recovery": "Named in the consumer's Quest preparation disclosure; common coin/food/tool fallbacks are established earlier and explicitly referenced.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/clientofkourend/ClientOfKourend.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/clientofkourend/ClientOfKourend.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[16]; chapters[0].sections[1].steps[1]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tfeather\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tgamesNecklace,\n\t\t\tcoinsForMinecart\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "feather = new ItemRequirement(\"Feather\", ItemID.FEATHER);",
+        "gamesNecklace = new ItemRequirement(\"Games necklace\", ItemCollections.GAMES_NECKLACES);",
+        "coinsForMinecart = new ItemRequirement(\"Coins\", ItemCollections.COINS, 100);",
+        "enchantedScroll = new ItemRequirement(\"Enchanted scroll\", ItemID.VEOS_SCROLL);",
+        "mysteriousOrb = new ItemRequirement(\"Mysterious orb\", ItemID.VEOS_ORB);",
+        "enchantedQuill = new ItemRequirement(\"Enchanted quill\", ItemID.VEOS_QUILL);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Doric's Quest",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Clay",
+          "quantity": 6,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Mine at Rimmington using starter pickaxe; count actual bank first.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Copper ore",
+          "quantity": 4,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Mine at Rimmington; keep as ore.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Iron ore",
+          "quantity": 2,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Reach actual 15 Mining by mining copper/tin if needed, then mine iron at Rimmington; keep ores unsmelted.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [],
+      "entry_checks": "15 Mining for self-gathered iron explicitly bridged; Knight's Sword's 10 gate alone insufficient",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/doricsquest/DoricsQuest.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/doricsquest/DoricsQuest.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[3]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tclay,\n\t\t\tcopper,\n\t\t\tiron\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "clay = new ItemRequirement(\"Clay (UNNOTED)\", ItemID.CLAY, 6);",
+        "copper = new ItemRequirement(\"Copper ore (UNNOTED)\", ItemID.COPPER_ORE, 4);",
+        "iron = new ItemRequirement(\"Iron ore (UNNOTED)\", ItemID.IRON_ORE, 2);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Goblin Diplomacy",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Orange dye",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Aggie, Draynor: 3 redberries + 5 coins make red; 2 onions + 5 coins make yellow; combine dyes. Pick redberries south-east Varrock and onions north Rimmington.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Blue dye",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Offer Wyson in Falador Park 20 coins for 2 woad leaves, then pay Aggie 5 coins with leaves for blue.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "3 goblin mail from crates: up south-village ladder, west hut, north of generals; kill goblins only for a missed/lost replacement. Dye two mail, retain third brown."
+      ],
+      "entry_checks": "None",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/goblindiplomacy/GoblinDiplomacy.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/goblindiplomacy/GoblinDiplomacy.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[0].steps[10]; chapters[0].sections[1].steps[3]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tblueDye,\n\t\t\torangeDye,\n\t\t\tmailReq\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "blueDye = new ItemRequirement(\"Blue dye\", ItemID.BLUEDYE);",
+        "orangeDye = new ItemRequirement(\"Orange dye\", ItemID.ORANGEDYE);",
+        "goblinMailThree = new ItemRequirement(\"Goblin mail\", ItemID.GOBLIN_ARMOUR, 3);",
+        "mailReq = new ItemRequirement(\"Goblin mail\", ItemID.GOBLIN_ARMOUR, 3);",
+        "goblinMailTwo = new ItemRequirement(\"Goblin mail\", ItemID.GOBLIN_ARMOUR, 2);",
+        "goblinMail = new ItemRequirement(\"Goblin mail\", ItemID.GOBLIN_ARMOUR);",
+        "blueArmour = new ItemRequirement(\"Blue goblin mail\", ItemID.GOBLIN_ARMOUR_DARKBLUE);",
+        "orangeArmour = new ItemRequirement(\"Orange goblin mail\", ItemID.GOBLIN_ARMOUR_ORANGE);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Witch's House",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Cheese",
+          "quantity": "1 required; take 2 for retry",
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy from Wydin's Food Store, Port Sarim.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Leather gloves",
+          "quantity": 1,
+          "form": "leather; clue hunter gloves do not substitute",
+          "supplier": "Buy from Thessalia, Varrock.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Combat gear/runes/food",
+          "quantity": "refillable",
+          "form": "500 mind-rune starter batch, not guaranteed total",
+          "supplier": "Staff of air bought from Zaff; mind runes from Aubury/Betty (500 initial for Witch's House, refill actual spent stock). Wind Strike standard spellbook, remove metal Magic penalties, use quest safespots. Refill cakes at East Ardougne bakery stalls.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Door key, magnet and shed key in house/garden quest area"
+      ],
+      "entry_checks": "Magic starter is available before the later general rune stock; all experiment forms have safespots",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/witchshouse/WitchsHouse.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/witchshouse/WitchsHouse.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[3]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tcheese,\n\t\t\tleatherGloves,\n\t\t\tarmourAndWeapon\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "cheese = new ItemRequirement(\"Cheese (multiple if you mess up)\", ItemID.CHEESE);",
+        "leatherGloves = new ItemRequirement(\"Leather gloves\", ItemID.LEATHER_GLOVES, 1, true).isNotConsumed();",
+        "houseKey = new ItemRequirement(\"Door key\", ItemID.WITCHES_DOORKEY);",
+        "magnet = new ItemRequirement(\"Magnet\", ItemID.MAGNET);",
+        "shedKey = new ItemRequirement(\"Key\", ItemID.WITCHES_SHEDKEY);",
+        "ball = new ItemRequirement(\"Ball\", ItemID.BALL);",
+        "armourAndWeapon = new ItemRequirement(\"Combat gear and food for monsters up to level 53\", -1, -1).isNotConsumed();",
+        "witchesDiary = new ItemRequirement(\"Witch's diary\", ItemID.WITCHES_DIARY);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Druidic Ritual",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Raw beef",
+          "quantity": 1,
+          "form": "raw",
+          "supplier": "Kill Lumbridge cow.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Raw chicken",
+          "quantity": 1,
+          "form": "raw",
+          "supplier": "Kill Lumbridge farm chicken.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Raw rat meat",
+          "quantity": 1,
+          "form": "raw",
+          "supplier": "Kill giant rat south-east of Varrock.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Raw bear meat",
+          "quantity": 1,
+          "form": "raw",
+          "supplier": "Kill bear south-east of Varrock, using terrain to safespot with the supplied magic kit.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Use quest cauldron to enchant the four meats"
+      ],
+      "entry_checks": "Unlocks Herblore; then reclaim saved X Marks/Client lamps from Veos",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/druidicritual/DruidicRitual.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/druidicritual/DruidicRitual.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[3]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\trawRat,\n\t\t\trawBear,\n\t\t\trawBeef,\n\t\t\trawChicken\n\t\t);\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "rawRat = new ItemRequirement(\"Raw rat meat\", ItemID.RAW_RAT_MEAT);",
+        "rawBear = new ItemRequirement(\"Raw bear meat\", ItemID.RAW_BEAR_MEAT);",
+        "rawBeef = new ItemRequirement(\"Raw beef\", ItemID.RAW_BEEF);",
+        "rawChicken = new ItemRequirement(\"Raw chicken\", ItemID.RAW_CHICKEN);",
+        "enchantedBear = new ItemRequirement(\"Enchanted bear\", ItemID.ENCHANTED_BEAR_MEAT);",
+        "enchantedBeef = new ItemRequirement(\"Enchanted beef\", ItemID.ENCHANTED_BEEF);",
+        "enchantedChicken = new ItemRequirement(\"Enchanted chicken\", ItemID.ENCHANTED_CHICKEN);",
+        "enchantedRat = new ItemRequirement(\"Enchanted rat\", ItemID.ENCHANTED_RAT_MEAT);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Shield of Arrav",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 20,
+          "form": "Phoenix branch payment to Baraek",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Partner in opposite gang",
+          "quantity": 1,
+          "form": "required cooperative dependency",
+          "supplier": "Use in-game OSRS SOA grouping/friends-chat resources; arrange the complementary branch and quest handovers.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "cooperative quest dependency",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Combat gear/food",
+          "quantity": "as needed",
+          "form": "Weaponsmaster for Black Arm branch; Jonny the beard for Phoenix",
+          "supplier": "Staff of air bought from Zaff; mind runes from Aubury/Betty (500 initial for Witch's House, refill actual spent stock). Wind Strike standard spellbook, remove metal Magic penalties, use quest safespots. Refill cakes at East Ardougne bakery stalls.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Phoenix: report from Jonny the beard, weapon-store key from Straven, shield half from headquarters",
+        "Black Arm: partner supplies weapon-store key; obtain 2 specific Phoenix crossbows in Phoenix weapons store and give Katrine",
+        "Museum gives certificate halves; use key/certificate on recipient for Ironman handover, pick up at feet; combine opposite halves and deliver to King Roald"
+      ],
+      "entry_checks": "Complete both linked halves with partner; stop only when quest log complete",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/shieldofarrav/ShieldOfArravPhoenixGang.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/shieldofarrav/ShieldOfArravPhoenixGang.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[3]",
+      "uncertainties": [],
+      "additional_sources": [
+        {
+          "path": "src/main/java/com/questhelper/helpers/quests/shieldofarrav/ShieldOfArravBlackArmGang.java",
+          "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/shieldofarrav/ShieldOfArravBlackArmGang.java",
+          "reviewed_sections": [
+            "setupRequirements / ItemRequirement declarations",
+            "getItemRequirements",
+            "setupSteps / quest-local acquisition",
+            "skill/quest requirements",
+            "recommended-versus-required distinction"
+          ]
+        }
+      ],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\tArrayList<ItemRequirement> reqs = new ArrayList<>();\n\t\treqs.add(twentyCoins);\n\t\treturn reqs;\n\t}",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [
+        "book = new ItemRequirement(\"Book\", ItemID.THE_SHIELD_OF_ARRAV);",
+        "intelReport = new ItemRequirement(\"Intel report\", ItemID.INTELLIGENCE_REPORT);",
+        "twentyCoins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 20);",
+        "shieldHalf = new ItemRequirement(\"Broken shield\", ItemID.ARRAVSHIELD1);",
+        "certificateHalf = new ItemRequirement(\"Half certificate\", ItemID.ARRAVCERTIFICATE_LFT);",
+        "blackArmCertificateHalf = new ItemRequirement(\"Half certificate\", ItemID.ARRAVCERTIFICATE_RHT);",
+        "certificate = new ItemRequirement(\"Certificate\", ItemID.ARRAVCERTIFICATE);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Children of the Sun",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Noah in Varrock Square starts local investigation; quest supplies all objects"
+      ],
+      "entry_checks": "None; unlocks Regulus's basic Varrock–Fortis quetzal before Twilight's Promise",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/childrenofthesun/ChildrenOfTheSun.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/childrenofthesun/ChildrenOfTheSun.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[2]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "No override in this class.",
+      "qh_item_declarations": [],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Ethically Acquired Antiquities",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Fortis trader's tattered sail; Artima repairs it",
+        "Betty's notes and museum confession obtained in quest"
+      ],
+      "entry_checks": "Actual 25 Thieving: silk-stall bridge if short; completed Shield of Arrav + Children of Sun. Return via basic quetzal/Varrock then walk Port Sarim, so optional 3000-coin charter or Fortis teleport not required.",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/ethicallyacquiredantiquities/EthicallyAcquiredAntiquities.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/ethicallyacquiredantiquities/EthicallyAcquiredAntiquities.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[3,5]",
+      "uncertainties": [],
+      "qh_required_method": "No override in this class; branch/local steps inspected.",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn Arrays.asList(coinsForCharter, varrockTeleport, civitasIllaFortisTeleport.quantity(2), staminaPotion);\n\t}",
+      "qh_item_declarations": [
+        "coinsForCharter = new ItemRequirement(\"Coins\", ItemID.COINS, 3000);",
+        "staminaPotion = new ItemRequirement(\"Stamina potion\", ItemID._4DOSESTAMINA);",
+        "tatteredSail = new ItemRequirement(\"Tattered sails\", ItemID.EAA_TATTERED_SAIL);",
+        "fixedSail = new ItemRequirement(\"Sails\", ItemID.EAA_FIXED_SAIL);",
+        "bettysNotes = new ItemRequirement(\"Betty's Notes\", ItemID.EAA_RUNE_ORDER);",
+        "storeRoomKey = new ItemRequirement(\"Key for Storeroom\", ItemID.EAA_STORE_ROOM_KEY);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Sleeping Giants",
+      "chapter": "1.2",
+      "anchor": "i12-foundation",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Oak logs",
+          "quantity": 3,
+          "form": "oak logs",
+          "supplier": "Chop ordinary oak trees; do not assume Wintertodt drops.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Wool",
+          "quantity": 1,
+          "form": "raw/unspun wool, not balls of wool",
+          "supplier": "Shear a Lumbridge sheep using general-store shears; do not spin.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Nails",
+          "quantity": 10,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Use remaining Daddy's Home nails; buy replacement at Varrock sawmill.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Hammer",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Retained starter tool/general-store replacement.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Chisel",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Retained starter tool/general-store replacement.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Take tutorial metal from foundry supply crate",
+        "Pick bucket from pile, fill at waterfall, cool hot preform before taking; ice gloves optional"
+      ],
+      "entry_checks": "Actual 15 Smithing covered by completed Knight's Sword",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/sleepinggiants/SleepingGiants.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/sleepinggiants/SleepingGiants.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn Arrays.asList(oakLogs, wool, nails, hammer, chisel);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn Arrays.asList(iceGloves, alKharidTeleport);\n\t}",
+      "qh_item_declarations": [
+        "oakLogs = new ItemRequirement(\"Oak Logs\", ItemID.OAK_LOGS);",
+        "wool = new ItemRequirement(\"Wool\", ItemID.WOOL);",
+        "nails = new ItemRequirement(\"Nails\", ItemID.NAILS_BRONZE);",
+        "hammer = new ItemRequirement(\"Hammer\", ItemID.HAMMER);",
+        "chisel = new ItemRequirement(\"Chisel\", ItemCollections.CHISEL);",
+        "iceGloves = new ItemRequirement(\"Ice Gloves\", ItemID.ICE_GLOVES);",
+        "bucket = new ItemRequirement(\"Bucket\", ItemID.BUCKET_EMPTY);",
+        "bucketOfWater = new ItemRequirement(\"Bucket of Water\", ItemID.BUCKET_WATER);",
+        "alKharidTeleport = new ItemRequirement(\"Al Kharid Teleport\", ItemCollections.RING_OF_DUELINGS);",
+        "twoOakLogs = new ItemRequirement(\"Oak Logs\", ItemID.OAK_LOGS);",
+        "fiveNails = new ItemRequirement(\"Nails\", ItemID.NAILS_BRONZE);",
+        "oneOakLog = new ItemRequirement(\"Oak Logs\", ItemID.OAK_LOGS);",
+        "preform = new ItemRequirement(\"Preform\", ItemID.GIANTS_FOUNDRY_PREFORM).equipped();"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "The Tourist Trap",
+      "chapter": "1.2",
+      "anchor": "i12-desert",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Desert shirt",
+          "quantity": 1,
+          "form": "spare top optional",
+          "supplier": "Buy from Shantay at Shantay Pass.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Desert robe",
+          "quantity": 1,
+          "form": "spare robe optional",
+          "supplier": "Buy from Shantay at Shantay Pass.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Desert boots",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy from Shantay at Shantay Pass.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Bronze bars",
+          "quantity": "3 minimum; prototype failures may need more",
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy from Shantay; bank spare bars and return for additional if a failed prototype exhausts stock.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Feathers",
+          "quantity": 50,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy from Gerrant in Port Sarim; keep distinct from Fletching/fishing expenditure.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Hammer",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Starter tool/general-store replacement.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Waterskins, knife, pickaxe, food and coins",
+          "quantity": "trip/retry supplies",
+          "form": "QH recommended/transport/retry equipment, not each a quest hand-in",
+          "supplier": "Buy filled waterskins and passes at Shantay; reuse knife/pickaxe, refill cacti, replace food at stalls or bank; coin fallback established.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "recommended travel/retry support",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Slave clothes exchanged locally",
+        "Bedabin key, plans, Tenti pineapple, prototype and barrel/Ana supplied/created during quest"
+      ],
+      "entry_checks": "Actual 10 Fletching: cut normal-log arrow shafts/optional headless arrows if Wintertodt fletching skipped. Actual 20 Smithing covered by Knight's Sword. Both XP rewards to Agility.",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/thetouristtrap/TheTouristTrap.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thetouristtrap/TheTouristTrap.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn Arrays.asList(desertTop, desertBottom, desertBoot, bronzeBar3, hammer, feather50);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn Arrays.asList(combatGear, waterskins, knife, pickaxe, coins100);\n\t}",
+      "qh_item_declarations": [
+        "combatGear = new ItemRequirement(\"Combat gear\", -1, -1).isNotConsumed();",
+        "desertTop = new ItemRequirement(\"Desert shirt\", ItemID.DESERT_SHIRT);",
+        "desertBottom = new ItemRequirement(\"Desert robe\", ItemID.DESERT_ROBE);",
+        "desertBoot = new ItemRequirement(\"Desert boots\", ItemID.DESERT_BOOTS);",
+        "desertTopWorn = new ItemRequirement(\"Desert shirt\", ItemID.DESERT_SHIRT, 1, true);",
+        "desertBottomWorn = new ItemRequirement(\"Desert robe\", ItemID.DESERT_ROBE, 1, true);",
+        "desertBootWorn = new ItemRequirement(\"Desert boots\", ItemID.DESERT_BOOTS, 1, true);",
+        "bronzeBar3 = new ItemRequirement(\"Bronze bars\", ItemID.BRONZE_BAR, 3);",
+        "hammer = new ItemRequirement(\"Hammer\", ItemCollections.HAMMER).isNotConsumed();",
+        "slaveTop = new ItemRequirement(\"Slave shirt\", ItemID.SLAVE_SHIRT);",
+        "slaveTopWorn = new ItemRequirement(\"Slave shirt\", ItemID.SLAVE_SHIRT, 1, true);",
+        "slaveRobe = new ItemRequirement(\"Slave robe\", ItemID.SLAVE_ROBE);",
+        "slaveRobeWorn = new ItemRequirement(\"Slave robe\", ItemID.SLAVE_ROBE, 1, true);",
+        "slaveBoot = new ItemRequirement(\"Slave boots\", ItemID.SLAVE_BOOTS);",
+        "slaveBootWorn = new ItemRequirement(\"Slave boots\", ItemID.SLAVE_BOOTS, 1, true);",
+        "bedabinKey = new ItemRequirement(\"Bedabin key\", ItemID.THBEDOBINKEY);",
+        "technicalPlans = new ItemRequirement(\"Technical plans\", ItemID.THCAPTPLANS);",
+        "prototypeDart = new ItemRequirement(\"Prototype dart\", ItemID.THPROTODART);",
+        "prototypeDartTip = new ItemRequirement(\"Prototype dart tip\", ItemID.THPROTODARTTIP);",
+        "feather50 = new ItemRequirement(\"Feather\", ItemID.FEATHER, 50);",
+        "bronzeBar = new ItemRequirement(\"Bronze bar\", ItemID.BRONZE_BAR);",
+        "bronzeBarHighlighted = new ItemRequirement(\"Bronze bar\", ItemID.BRONZE_BAR);",
+        "tentiPineapple = new ItemRequirement(\"Tenti pineapple\", ItemID.TENTIPINEAPPLE);",
+        "barrel = new ItemRequirement(\"Barrel\", ItemID.THMINEBARREL_EMPTY);",
+        "barrelHighlighted = new ItemRequirement(\"Barrel\", ItemID.THMINEBARREL_EMPTY);",
+        "anaInABarrel = new ItemRequirement(\"Ana in a barrel\", ItemID.THANAINABARREL);",
+        "anaInABarrelHighlighted = new ItemRequirement(\"Ana in a barrel\", ItemID.THANAINABARREL);",
+        "waterskins = new ItemRequirement(\"Waterskins\", ItemID.WATER_SKIN4, -1);",
+        "knife = new ItemRequirement(\"Knife\", ItemID.KNIFE).isNotConsumed();",
+        "pickaxe = new ItemRequirement(\"Any pickaxe\", ItemCollections.PICKAXES).isNotConsumed();",
+        "coins100 = new ItemRequirement(\"Coins\", ItemCollections.COINS, 100);",
+        "hasSlaveClothes = new ItemRequirements(slaveTop, slaveBoot, slaveRobe);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "The Feud",
+      "chapter": "1.2",
+      "anchor": "i12-desert",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": "at least 800 + extra travel/supplies",
+          "form": "QH required amount; separate return/optional carpet/carry stock",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Leather gloves",
+          "quantity": 1,
+          "form": "leather is accessible; QH graceful alternative not assumed",
+          "supplier": "Reuse Witch's House gloves; replacement Thessalia.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Combat gear/runes/food",
+          "quantity": "refillable",
+          "form": "100 chaos rune initial bank target; refill actual spent quantity",
+          "supplier": "Staff of air bought from Zaff; mind runes from Aubury/Betty (500 initial for Witch's House, refill actual spent stock). Wind Strike standard spellbook, remove metal Magic penalties, use quest safespots. Refill cakes at East Ardougne bakery stalls. If timed Tough Guy repeatedly despawns, reach actual 17 Magic with Wind Strike on cows/goblins and use banked/purchased chaos runes for Wind Bolt with air staff.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Empty buckets",
+          "quantity": "1 quest + 4 retained, total 5",
+          "form": "collect brown Ugthanki dung, not ordinary camel dung",
+          "supplier": "Buy five loose buckets at Shantay separately from sixteen packs.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Buy Kharidian headpiece and fake beard from Ali Morrisane; combine disguise",
+        "Buy 3 quest beers locally; buy 3 additional beers and 3 vodkas for later route reserve",
+        "Ali Operator gives blackjack/keys for quest action; no blackjacking training needed",
+        "Snake charmer: use coin on pot for charm and basket; kebab seller hot sauce; Ali Hag makes poison"
+      ],
+      "entry_checks": "Actual 30 Thieving bridged with established Ardougne stalls; completed quest then leave Pollnivneach",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/thefeud/TheFeud.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thefeud/TheFeud.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[5]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn Arrays.asList(coins, gloves, combatGear);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn Arrays.asList(ringOfDueling, pollnivneachTeleport);\n\t}",
+      "qh_item_declarations": [
+        "coins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 800);",
+        "unspecifiedCoins = new ItemRequirement(\"Coins\", ItemCollections.COINS, -1);",
+        "highlightedCoins = new ItemRequirement(\"Coins\", ItemCollections.COINS);",
+        "gloves = new ItemRequirement(\"Leather or Graceful Gloves\", ItemID.LEATHER_GLOVES).isNotConsumed();",
+        "headPiece = new ItemRequirement(\"Kharidian Headpiece\", ItemID.FEUD_KARIDIAN_TURBAN).isNotConsumed();",
+        "fakeBeard = new ItemRequirement(\"Fake Beard\", ItemID.FEUD_KARIDIAN_FAKEBEARD).isNotConsumed();",
+        "desertDisguise = new ItemRequirement(\"Desert Disguise\", ItemID.FEUD_DESERT_DISGUISE).isNotConsumed();",
+        "disguiseEquipped = new ItemRequirement(\"Desert Disguise\", ItemID.FEUD_DESERT_DISGUISE, 1, true).isNotConsumed();",
+        "shantayPass = new ItemRequirement(\"Shantay Pass\", ItemID.SHANTAY_PASS);",
+        "beer = new ItemRequirement(\"Beer\", ItemID.BEER, 3);",
+        "oakBlackjack = new ItemRequirement(\"Oak Blackjack\", ItemID.BLACKJACK_OAK).isNotConsumed();",
+        "doorKeys = new ItemRequirement(\"Keys\", ItemID.FEUD_MAYORS_HOUSE_KEYS);",
+        "snakeCharmHighlighted = new ItemRequirement(\"Snake Charm\", ItemID.SNAKE_FLUTE);",
+        "snakeBasket = new ItemRequirement(\"Snake Basket\", ItemID.BASKET_FOR_SNAKE);",
+        "snakeBasketFull = new ItemRequirement(\"Snake Basket (Full)\", ItemID.BASKET_WITH_SNAKE);",
+        "redHotSauce = new ItemRequirement(\"Red Hot Sauce\", ItemID.SUPERHOT_KEBAB_SAUCE);",
+        "bucket = new ItemRequirement(\"Bucket\", ItemID.BUCKET_EMPTY);",
+        "dung = new ItemRequirement(\"Dung\", ItemID.FEUD_CAMEL_POOH_BUCKET);",
+        "poisonHighlighted = new ItemRequirement(\"Hag's Poison\", ItemID.POISON_FROM_HAG);",
+        "combatGear = new ItemRequirement(\"Combat Gear bring Range or Mage Gear if safe spotting.\", -1, -1 );",
+        "ringOfDueling = new ItemRequirement(\"Ring of dueling\", ItemCollections.RING_OF_DUELINGS);",
+        "pollnivneachTeleport = new ItemRequirement(\"Pollnivneach teleport\", ItemID.NZONE_TELETAB_POLLNIVNEACH);",
+        "oakBlackjackEquipped = new ItemRequirements(new ItemRequirement(\"Oak Blackjack\", ItemID.BLACKJACK_OAK, 1, true));",
+        "doesNotHaveBucket = new ComplexRequirement(LogicType.NOR, \"\", new ItemRequirement(\"Bucket\", ItemID.BUCKET_EMPTY));"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Fight Arena",
+      "chapter": "1.2",
+      "anchor": "i12-quest-xp",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 5,
+          "form": "buy Khali brew from local bartender",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Combat gear/runes/food",
+          "quantity": "refillable",
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Staff of air bought from Zaff; mind runes from Aubury/Betty (500 initial for Witch's House, refill actual spent stock). Wind Strike standard spellbook, remove metal Magic penalties, use quest safespots. Refill cakes at East Ardougne bakery stalls.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "recommended support for required fights",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Khazard helmet and armour from chest in north-eastern arena house",
+        "Keys supplied during quest"
+      ],
+      "entry_checks": "Required fights safespotted; final General Khazard fight optional",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/fightarena/FightArena.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/fightarena/FightArena.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tcoins\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tcombatGear\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "coins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 5);",
+        "combatGear = new ItemRequirement(\"Combat equipment and food (magic/ranged if you want to safe spot)\", -1, -1).isNotConsumed();",
+        "khazardHelmet = new ItemRequirement(\"Khazard helmet\", ItemID.KHAZARD_HELMET);",
+        "khazardPlatebody = new ItemRequirement(\"Khazard armour\", ItemID.KHAZARD_PLATEMAIL);",
+        "khaliBrew = new ItemRequirement(\"Khali brew\", ItemID.KHALI_BREW);",
+        "cellKeys = new ItemRequirement(\"Khazard cell keys\", ItemID.KHAZARD_CELLKEYS);",
+        "hasKhazardArmour = new ItemRequirements(khazardHelmet, khazardPlatebody);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Tree Gnome Village",
+      "chapter": "1.2",
+      "anchor": "i12-quest-xp",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Logs",
+          "quantity": 6,
+          "form": "normal logs; not oak",
+          "supplier": "Chop six normal trees for Commander Montai; use starter axe if bank empty.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Combat gear/runes/food",
+          "quantity": "refillable",
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Staff of air bought from Zaff; mind runes from Aubury/Betty (500 initial for Witch's House, refill actual spent stock). Wind Strike standard spellbook, remove metal Magic penalties, use quest safespots. Refill cakes at East Ardougne bakery stalls. Refill spent cast runes at Betty/Aubury after prior fights.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Orbs recovered during quest, including Khazard warlord drop"
+      ],
+      "entry_checks": "No assumed teleports or Prayer-potion stack",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/treegnomevillage/TreeGnomeVillage.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/treegnomevillage/TreeGnomeVillage.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tsixLogs,\n\t\t\tcombatGear\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tfood\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "food = new ItemRequirement(\"Food\", ItemCollections.GOOD_EATING_FOOD, -1);",
+        "combatGear = new ItemRequirement(\"Combat gear (magic is best)\", -1, -1);",
+        "sixLogs = new ItemRequirement(\"Logs\", ItemID.LOGS, 6).hideConditioned(givenWood);",
+        "firstOrb = new ItemRequirement(\"Orb of protection\", ItemID.ORB_OF_PROTECTION, 1);",
+        "orbsOfProtection = new ItemRequirement(\"Orbs of protection\", ItemID.ORBS_OF_PROTECTION);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Waterfall Quest",
+      "chapter": "1.2",
+      "anchor": "i12-quest-xp",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Rope",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Use Aemad starter reserve; if gone buy from Aemad in Ardougne or Ned in Draynor.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Air runes",
+          "quantity": 6,
+          "form": "physical hand-in; staff does not substitute",
+          "supplier": "Reserve from Step 2 bank target; refill Betty/Aubury.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Water runes",
+          "quantity": 6,
+          "form": "physical hand-in; staff does not substitute",
+          "supplier": "Reserve from Step 2 bank target; refill Betty/Aubury.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Earth runes",
+          "quantity": 6,
+          "form": "physical hand-in; staff does not substitute",
+          "supplier": "Reserve from Step 2 bank target; refill Betty/Aubury.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Food",
+          "quantity": "for dangerous traversal",
+          "form": "no mandatory fight; no Prayer potion required",
+          "supplier": "Cook farm chicken/beef initially; from Ardougne onward steal replacement cakes from bakery stalls (5 Thieving) after each use. Use the Cooking/Fishing bank only after it exists.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "recommended support",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Glarial's pebble from Golrie; bank for Roving Elves afterwards/reclaim from Golrie if lost",
+        "Glarial's amulet and urn from her tomb"
+      ],
+      "entry_checks": "Bank ALL combat equipment and runes before tomb; take pebble/food/free spaces. Second bank trip retrieves rope and 18 runes for waterfall dungeon.",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/waterfallquest/WaterfallQuest.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/waterfallquest/WaterfallQuest.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[12]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\thighlightRope,\n\t\t\tairRunes,\n\t\t\tearthRunes,\n\t\t\twaterRunes\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tgamesNecklace,\n\t\t\tfood\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "rope = new ItemRequirement(\"Rope\", ItemID.ROPE).isNotConsumed();",
+        "book = new ItemRequirement(\"Book on baxtorian\", ItemID.BAXTORIAN_BOOK_WATERFALL_QUEST);",
+        "glarialsPebble = new ItemRequirement(\"Glarial's pebble\", ItemID.GLARIALS_PEBBLE_WATERFALL_QUEST);",
+        "glarialsUrn = new ItemRequirement(\"Glarial's urn\", ItemID.GLARIALS_URN_FULL_WATERFALL_QUEST);",
+        "glarialsAmulet = new ItemRequirement(\"Glarial's amulet\", ItemID.GLARIALS_AMULET_WATERFALL_QUEST, 1, true);",
+        "unequippedAmulet = new ItemRequirement(\"Glarial's amulet\", ItemID.GLARIALS_AMULET_WATERFALL_QUEST);",
+        "key = new ItemRequirement(\"Key\", ItemID.GOLRIE_KEY_WATERFALL_QUEST);",
+        "baxKey = new ItemRequirement(\"Key\", ItemID.BAXTORIAN_KEY_WATERFALL_QUEST);",
+        "airRunes = new ItemRequirement(\"Air runes\", ItemID.AIRRUNE, 6);",
+        "airRune = new ItemRequirement(\"Air rune\", ItemID.AIRRUNE);",
+        "earthRunes = new ItemRequirement(\"Earth runes\", ItemID.EARTHRUNE, 6);",
+        "earthRune = new ItemRequirement(\"Earth rune\", ItemID.EARTHRUNE);",
+        "waterRunes = new ItemRequirement(\"Water runes\", ItemID.WATERRUNE, 6);",
+        "waterRune = new ItemRequirement(\"Water rune\", ItemID.WATERRUNE);",
+        "gamesNecklace = new ItemRequirement(\"Games necklace\", ItemCollections.GAMES_NECKLACES);",
+        "food = new ItemRequirement(\"Food\", ItemCollections.GOOD_EATING_FOOD, -1);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Fishing Contest",
+      "chapter": "1.2",
+      "anchor": "i12-sidequests",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": "5; 10 if buying rod from Grandpa Jack",
+          "form": "entry fee plus optional local normal-rod purchase",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Fishing rod",
+          "quantity": 1,
+          "form": "normal rod, not fly/heavy",
+          "supplier": "Buy ordinary fishing rod from Gerrant or Grandpa Jack in Hemenster.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Spade",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Retained starter tool; replacement Lumbridge General Store.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Garlic",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Take from cupboard upstairs in Morgan's Draynor house.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Red vine worm",
+          "quantity": 1,
+          "form": "QH currently requires one; spare optional",
+          "supplier": "Enter McGrubor's Wood through loose northern fence; use spade on red vine, avoid guard dogs; dig another if attempt consumes it.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Fishing pass from White Wolf Mountain dwarf; return for replacement"
+      ],
+      "entry_checks": "10 Fishing covered by Sea Slug",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/fishingcontest/FishingContest.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/fishingcontest/FishingContest.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn Arrays.asList(coins, redVineWorm, garlic, spade, fishingRod);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn Arrays.asList(combatBracelet, camelotTeleport);\n\t}",
+      "qh_item_declarations": [
+        "coins = new ItemRequirement(\"Coins\", ItemCollections.COINS, 5);",
+        "fishingPass = new ItemRequirement(\"Fishing Pass\", ItemID.FISHING_COMPETITION_PASS);",
+        "garlic = new ItemRequirement(\"Garlic\", ItemID.GARLIC);",
+        "fishingRod = new ItemRequirement(\"Fishing Rod\", ItemID.FISHING_ROD).isNotConsumed();",
+        "spade = new ItemRequirement(\"Spade\", ItemID.SPADE).isNotConsumed();",
+        "redVineWorm = new ItemRequirement(\"Red Vine Worm\", ItemID.RED_VINE_WORM, 1);",
+        "food = new ItemRequirement(\"Food for low levels\", ItemCollections.GOOD_EATING_FOOD, -1);",
+        "winningFish = new ItemRequirement(\"Raw Giant Carp\", ItemID.RAW_GIANT_CARP);",
+        "trophy = new ItemRequirement(\"Fishing Trophy\", ItemID.HEMENSTER_FISHING_TROPHY);",
+        "combatBracelet = new ItemRequirement(\"Combat Bracelet\", ItemCollections.COMBAT_BRACELETS);",
+        "camelotTeleport = new ItemRequirement(\"Camelot Teleport\", ItemID.POH_TABLET_CAMELOTTELEPORT);",
+        "noCombatBracelet = new ItemRequirements(LogicType.NOR, \"\", combatBracelet);",
+        "noFishingRod = new ItemRequirements(LogicType.NOR, \"\", fishingRod);",
+        "noWorms = new ItemRequirements(LogicType.NOR, \"\", redVineWorm);",
+        "needsGarlic = and(nor(hasPutGarlicInPipe), new ItemRequirements(LogicType.NOR, \"\", garlic));"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Observatory Quest",
+      "chapter": "1.2",
+      "anchor": "i12-sidequests",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Plank",
+          "quantity": 3,
+          "form": "normal planks",
+          "supplier": "Use three protected Daddy's Home reward planks; if spent convert three ordinary logs at Varrock sawmill for 300 coins.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Bronze bar",
+          "quantity": 1,
+          "form": "ordinary/unnoted where handed in",
+          "supplier": "Buy from Shantay or smelt one copper + one tin ore.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Molten glass",
+          "quantity": 1,
+          "form": "molten; do not glassblow",
+          "supplier": "Smelt one sand + one soda ash at furnace from seven-item early charter bank; refill pair at charter shop if spent.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        },
+        {
+          "item": "Food and antipoison",
+          "quantity": "trip supply, recommended",
+          "form": "superantipoison is an accessible recommended safety supply, no Herblore assumption",
+          "supplier": "Refill cakes/fish; collect superantipoison dose from ruined building north of Observatory and another respawning dose if needed.",
+          "coverage": "fixed",
+          "quantity_kind": "variable or minimum with recovery",
+          "necessity": "recommended support",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Goblin kitchen key/lens mould from dungeon; professor's lens created locally"
+      ],
+      "entry_checks": "No swamp paste requirement; recipe works at starting Crafting",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/observatoryquest/ObservatoryQuest.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/observatoryquest/ObservatoryQuest.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[6]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\tplank,\n\t\t\tbronzeBar,\n\t\t\tmoltenGlass\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tduelingRing,\n\t\t\tantipoison,\n\t\t\tfood\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "plank = new ItemRequirement(\"Plank\", ItemID.WOODPLANK, 3);",
+        "bronzeBar = new ItemRequirement(\"Bronze bar\", ItemID.BRONZE_BAR);",
+        "moltenGlass = new ItemRequirement(\"Molten glass\", ItemID.MOLTEN_GLASS);",
+        "food = new ItemRequirement(\"Food\", ItemCollections.GOOD_EATING_FOOD, -1);",
+        "duelingRing = new ItemRequirement(\"Ring of dueling\", ItemCollections.RING_OF_DUELINGS);",
+        "antipoison = new ItemRequirement(\"Antipoison (there is a spawn of superantipoison near the Observatory)\", ItemCollections.ANTIPOISONS);",
+        "mould = new ItemRequirement(\"Lens mould\", ItemID.LENS_MOULD).isNotConsumed();",
+        "lens = new ItemRequirement(\"Observatory lens\", ItemID.LENS).isNotConsumed();",
+        "key = new ItemRequirement(\"Goblin kitchen key\", ItemID.KEEP_KEY).isNotConsumed();"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Dwarf Cannon",
+      "chapter": "1.2",
+      "anchor": "i12-sidequests",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Hammer",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Retain starter hammer or take spawn in building east of Captain Lawgof.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; check live bank, acquire shortfall through named action"
+        }
+      ],
+      "quest_local_inputs": [
+        "Railings and toolkit from Lawgof",
+        "Ammo mould and notes from Nulodion; keep mould"
+      ],
+      "entry_checks": "No cannon or cannonball purchase required",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/dwarfcannon/DwarfCannon.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/dwarfcannon/DwarfCannon.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1]",
+      "uncertainties": [],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of(\n\t\t\thammer\n\t\t);\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of(\n\t\t\tstaminas,\n\t\t\tteleToAsg,\n\t\t\tteleToKand\n\t\t);\n\t}",
+      "qh_item_declarations": [
+        "hammer = new ItemRequirement(\"Hammer\", ItemCollections.HAMMER).isNotConsumed().canBeObtainedDuringQuest();",
+        "staminas = new ItemRequirement(\"Stamina Potions\", ItemCollections.STAMINA_POTIONS);",
+        "teleToAsg = new ItemRequirement(\"Teleport to Falador, Amulet of Glory, or Combat Bracelet\",",
+        "teleToKand = new ItemRequirement(\"Teleport to Ardougne, Skills Necklace, or Games Necklace\",",
+        "railing = new ItemRequirement(\"Railing\", ItemID.MCANNONRAILING1_OBJ);",
+        "toolkit = new ItemRequirement(\"Toolkit\", ItemID.MCANNONTOOLKIT);",
+        "dwarfRemains = new ItemRequirement(\"Dwarf Remains\", ItemID.MCANNONREMAINS);",
+        "cannonballMould = new ItemRequirement(\"Ammo mould\", ItemID.AMMO_MOULD);",
+        "nulodionsNotes = new ItemRequirement(\"Nulodion's notes\", ItemID.NULODIONS_NOTES);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Death on the Isle",
+      "chapter": "1.2",
+      "anchor": "i12-sidequests",
+      "path": "src/pages/intermediate/chapter-1-2.astro",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_inputs": [
+        "Patzi at entrance to Villa Lucens starts quest",
+        "Wardrobe in house north of villa supplies butler uniform",
+        "Investigation objects acquired locally; bank following kitten and combat gear as instructed"
+      ],
+      "entry_checks": "Actual unboostable 32 Agility and 34 Thieving; live rooftop bridge for Agility shortfall. Children of Sun complete. Basic Regulus quetzal to Fortis, walk to Sunset Coast, pay Antonia 20 coins to Aldarin; no fairy rings/Twilight network assumption.",
+      "supplier_recovery": "Named in consumer Quest preparation disclosure; common tool, coin, food and rune sources reused with live bank checks.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/deathontheisle/DeathOnTheIsle.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/deathontheisle/DeathOnTheIsle.java",
+        "reviewed_sections": [
+          "setupRequirements / ItemRequirement declarations",
+          "getItemRequirements",
+          "setupSteps / quest-local acquisition",
+          "skill/quest requirements",
+          "recommended-versus-required distinction"
+        ]
+      },
+      "bruh_reference": "chapters[0].sections[1].steps[12]",
+      "uncertainties": [],
+      "transport_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 20,
+          "form": "Antonia's Sunset Coast–Aldarin boat; paid charter optional",
+          "supplier": "Use earlier mandatory quest rewards, then the live shortfall only from i11-ardy-supplies: cake stalls to 20 Thieving if needed; steal silk, allow merchant refusal to expire, sell at 60 each while retaining 11 quest silk. In 1.2 count Reward Cart coins first; no future 1.35m assumption.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "chosen ordinary travel route",
+          "ownership_assumption": "none"
+        }
+      ],
+      "qh_required_method": "public List<ItemRequirement> getItemRequirements()\n\t{\n\t\treturn List.of();\n\t}",
+      "qh_recommended_method": "public List<ItemRequirement> getItemRecommended()\n\t{\n\t\treturn List.of();\n\t}",
+      "qh_item_declarations": [
+        "uniformTop = new ItemRequirement(\"Butler's uniform shirt\", ItemID.DOTI_BUTLERUNIFORM);",
+        "uniformBottom = new ItemRequirement(\"Butler's uniform pants\", ItemID.DOTI_BUTLERUNIFORM_LEGS);",
+        "uniform = new ItemRequirements(\"Butler's uniform\", uniformTop, uniformBottom);",
+        "uniformEquipped = new ItemRequirements(\"Butler's uniform\", uniformTopEquipped, uniformBottomEquipped).highlighted();",
+        "wineLabels = new ItemRequirement(\"Wine labels\", ItemID.DOTI_LABELS);",
+        "threateningNote = new ItemRequirement(\"Threatening note\", ItemID.DOTI_LETTER);",
+        "drinkingFlask = new ItemRequirement(\"Drinking flask\", ItemID.DOTI_FLASK);",
+        "shippingContract = new ItemRequirement(\"Shipping contract\", ItemID.DOTI_CONTRACT);"
+      ],
+      "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
+      "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    }
+  ],
+  "status_definitions": {
+    "fixed": "Guide omission repaired; does not indicate current player ownership.",
+    "covered": "Existing source/gate sufficient, retained after review.",
+    "quest_local": "No outside quest ingredients; acquisition is within quest, with travel separately identified.",
+    "unverified": "Explicit remaining uncertainty; none is silently presented as a supplied stock."
+  }
+}
