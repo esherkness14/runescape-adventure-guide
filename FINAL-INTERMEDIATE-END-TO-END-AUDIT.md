@@ -1,5 +1,7 @@
 # Final Intermediate end-to-end audit
 
+> **18 October 2026 quest-preparation amendment:** The [new quest supply audit](QUEST-SUPPLY-AUDIT.md) supersedes this report's broad acquisition conclusion. It inventories grouped quests against current requirements, supplies ordinary items and recipe gates at their consumer, and replaces Desert Treasure's assumed potions/flicking with a supplied no-flick plan. See the [coverage index](QUEST-SUPPLY-COVERAGE.csv) for all 17 pages and the final review CI for the actual tested revision.
+
 > **15 October 2026 resource-acquisition amendment:** This September report's “no acquisition blockers” conclusion was correct only for its then-reviewed prerequisites and did not prove that every named bank item had a usable supplier. A later literal-player Temple of Ikov failure exposed the missing 20-unnoted-limpwurt chain. The [new resource audit](RESOURCE-DEPENDENCY-AUDIT.md) and [allocation ledger](RESOURCE-ACQUISITION-LEDGER.csv) document the revised source/recovery paths and remaining variable-resource limitations. Keep this report as historical evidence; use the newer audit for current acquisition claims.
 
 Audit date: 26 September 2026. Baseline: `a1041ab0b614569cc953690085bdee448089c6d3` (`main`). Scope: the mandatory route from Tutorial Island through Intermediate 1.1–3.6 and the Quest point cape; no Chapter 3.7 or route redesign. This is a source, arithmetic, generated-HTML and build audit, **not** a claim that every quest was played through in-game or that every viewport was visually tested.

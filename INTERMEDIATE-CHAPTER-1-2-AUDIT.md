@@ -1,5 +1,7 @@
 # Intermediate Chapters 1–2: second-pass QA audit
 
+> **18 October 2026 quest-preparation amendment:** A new requirement-led pass found additional missing small-item suppliers beyond the prerequisite/XP audit recorded below. The [quest supply audit](QUEST-SUPPLY-AUDIT.md) records the new corrections and verification. In the current route, My Arm's convenient path reserves eight of fifteen supercompost buckets (seven plus plant cure is also valid), and the conservative post-My-Arm Herblore floor is 38,333 XP without relying on when Jungle Potion's 775 XP is claimed.
+
 Original audit baseline: `8f4ee9323e656d73fb478373cefb6c14d285b01e`; focused follow-up baseline: `8a21af6a7b58a740c9c4962e3e0790f369bc3b44`; Fishing/Thieving macro cleanup from approved `c849fbc74b8fab0900228a363942cd104240abb0` (2026-09-26). Scope: Intermediate 1.1–1.4, 2.1–2.7, their handoffs, progress and relevant planning ledgers. This is a route/static-content audit, not a claim that an Ironman account was played through every quest. Historical quantitative comparisons below are retained as comparisons; the live route now has the cash-driven Thieving and 65-Fishing stops. A live bank/XP check supersedes planning estimates.
 
 ## Findings

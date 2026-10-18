@@ -1,0 +1,4549 @@
+{
+  "schema_version": 1,
+  "audit": "Intermediate Chapter 3 quest-item supply preparation",
+  "authored_at": "2026-10-18",
+  "repository": "esherkness14/runescape-adventure-guide",
+  "baseline_commit": "6a0a409ee8bc4568b81cba2b2a350ee63dc28080",
+  "scope": {
+    "pages": [
+      "src/pages/intermediate/chapter-3-1.astro",
+      "src/pages/intermediate/chapter-3-2.astro",
+      "src/pages/intermediate/chapter-3-3.astro",
+      "src/pages/intermediate/chapter-3-4.astro",
+      "src/pages/intermediate/chapter-3-5.astro",
+      "src/pages/intermediate/chapter-3-6.astro"
+    ],
+    "route_steps": 65,
+    "primary_quests": 39,
+    "miniquests": 5,
+    "miniquest_scope_note": "Barbarian Training is partial Firemaking/pyre dialogue, not full completion; Skippy is required for the Mogre bone.",
+    "excluded": "Chapter 3.7, shared components, old audits, macro routing, checkbox IDs and mandatory/optional flags."
+  },
+  "methodology": {
+    "required_item_check": "Current pinned Quest Helper getItemRequirements, definitions, quantities, conditional routing and quest-local supplier steps inspected for every primary quest/miniquest in scope. Not a keyword/contradiction-only pass.",
+    "route_check": "All 65 RouteSteps scanned, including grouped cleanup and Quest Cape journal rows. Nonquest skill rows are documented separately.",
+    "macro_comparison": "Compared current BRUH source before the shared executor outage; source coordinates below are zero-based chapter/section/step indices, not public step numbers.",
+    "actual_bank": "No account bank export was available. Supplies are conditional recovery actions based on actual remaining stock; RNG yields and fixed inventory budgets are never presented as guaranteed completion.",
+    "presentation": "Compact visible preflight plus closed-by-default ExpandableNote labelled Quest preparation; no new checkboxes or IDs.",
+    "source_freshness": "QH and BRUH commits are pinned. Canonical OSRS Wiki/Jagex references were used where accessible. Direct Wiki reads were robots-blocked and many search snippets were cached over a year ago; those alone were not treated as fresh verification of changed mechanics. Unresolved supplier/mechanic questions are recorded below; no Fandom or third-party Wiki mirrors are used as cited authority."
+  },
+  "source_revisions": {
+    "quest_helper": {
+      "repository": "Zoinkwiz/quest-helper",
+      "commit": "5f791937a99a676f23c02aa48c4e4d5b50e7edad",
+      "files_reviewed": 46,
+      "extra_reference": "TearsOfGuthix.java was read for sapphire-lantern recovery; HopespearsWill.java was read to confirm that the separately mentioned optional miniquest adds no mandatory Chapter 3 consumer."
+    },
+    "bruh": {
+      "repository": "umkyzn/BRUHsailer",
+      "commit": "6422739188591a5ae18f41a424d7b1d29835f543",
+      "path": "data/guide_data.json",
+      "updated_on": "2026-08-30",
+      "url": "https://github.com/umkyzn/BRUHsailer/blob/6422739188591a5ae18f41a424d7b1d29835f543/data/guide_data.json"
+    },
+    "astro_component_documentation": "https://docs.astro.build/en/basics/astro-components/"
+  },
+  "statuses": {
+    "fixed": "Missing requirement, source, form, quantity, reserve or recovery was added/corrected.",
+    "covered": "Existing route already supplies the input or step; verified at its actual consumer.",
+    "quest-local": "Quest itself supplies the relevant tools/materials; guide identifies local pickup and avoids unnecessary outside manufacture.",
+    "unverified": "Source or mechanic remains uncertain; not represented as a verified mandatory dependency."
+  },
+  "route_steps": [
+    {
+      "id": "i31-rum-deal",
+      "title": "Complete Rum Deal; keep the Holy wrench",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Rum Deal"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i31-cabin-fever",
+      "title": "Complete Cabin Fever; open Mos Le'Harmless",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Cabin Fever"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i31-brain-robbery",
+      "title": "Complete The Great Brain Robbery; put its 5,000-XP lamp into Slayer",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Great Brain Robbery"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i31-slayer-56",
+      "title": "Reach actual 56 Slayer and verify actual 60 Strength",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Existing Nieve/eligible-master live Slayer bridge. Bring only actual task equipment from Slayer shop and replenish food/ammunition; no fixed task count or extra product reserve assumed."
+    },
+    {
+      "id": "i31-path",
+      "title": "Complete The Path of Glouphrie and claim all four fixed XP lamps",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Path of Glouphrie"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i31-slayer-58",
+      "title": "Finish only the live Slayer remainder to actual 58",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Same live Slayer bridge after Path XP; no new named quest input here."
+    },
+    {
+      "id": "i31-black-mask",
+      "title": "Black mask — recommended, optional and resumable",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": true,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Optional black-mask hunt remains optional and RNG. No downstream mandatory quest assumes success or ownership."
+    },
+    {
+      "id": "i31-magic-67",
+      "title": "Reach actual 67 Magic, and no higher target yet",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Actual Magic-XP gap only. Existing shop-rune/low-attention methods; this row does not prove a future rune stack remains."
+    },
+    {
+      "id": "i31-wgs",
+      "title": "Complete While Guthix Sleeps and claim its permanent rewards",
+      "source_path": "src/pages/intermediate/chapter-3-1.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "While Guthix Sleeps"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i32-moons",
+      "title": "Complete Perilous Moons and claim one normal Lunar Chest reward",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Perilous Moons"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i32-heart",
+      "title": "Complete The Heart of Darkness while in Varlamore",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Heart of Darkness"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i32-slayer-60",
+      "title": "Finish only the live remainder to actual 60 Slayer",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Live Slayer-XP bridge using existing kit and actual task supplies; no banked herb/drop guarantee."
+    },
+    {
+      "id": "i32-rc-47",
+      "title": "Reach actual 47 Runecraft after the Moon reward",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Existing GOTR or Daeyalt/ZMI instructions explain access and supplies; only live Runecraft gate. No future essence/rune stock projected."
+    },
+    {
+      "id": "i32-fallen",
+      "title": "Complete Fallen From Grace using your own camphor skiff",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Fallen From Grace"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i32-craft-65",
+      "title": "Reach actual 65 Crafting after Fallen From Grace",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Fresh glass recovery is already explicit in row: sand+soda ash furnace, retained pipe. Train actual gap after Fallen XP."
+    },
+    {
+      "id": "i32-rc-50",
+      "title": "Reach actual 50 Runecraft, then secure the quest pouch",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Same explained Runecraft method, live gap after prior quest XP; no new quest consumables."
+    },
+    {
+      "id": "i32-devious",
+      "title": "Complete Devious Minds and claim 5,000 Runecraft XP",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Devious Minds"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i32-rc-52",
+      "title": "Reach actual 52 Runecraft after Devious Minds",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Same explained Runecraft method, live gap after Devious XP; no new quest consumables."
+    },
+    {
+      "id": "i32-dawn",
+      "title": "Complete The Final Dawn and claim its 25,000 Runecraft XP",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Final Dawn"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i32-rc-55",
+      "title": "Reach actual 55 Runecraft after The Final Dawn",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Same explained Runecraft method, live gap after Final Dawn XP; no new quest consumables."
+    },
+    {
+      "id": "i32-exiles",
+      "title": "Complete The Fremennik Exiles; record post-quest XP",
+      "source_path": "src/pages/intermediate/chapter-3-2.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Fremennik Exiles"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i33-ranged-62",
+      "title": "Bridge to actual 62 Ranged after the Final Dawn lamp",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Nardok supplies Dorgeshuun crossbow and bone bolts/packs; live early Ranged gap only."
+    },
+    {
+      "id": "i33-troll-romance",
+      "title": "Complete Troll Romance",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Troll Romance"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i33-arrav",
+      "title": "Complete The Curse of Arrav; leave the zombie drops optional",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Curse of Arrav"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i33-ranged-kit",
+      "title": "Secure sufficient deterministic Fight Cave ammo and the ranged weapon floor",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [],
+      "activity_coverage": [
+        "i33-ranged-kit"
+      ],
+      "nonquest_review": null
+    },
+    {
+      "id": "i33-ranged-70",
+      "title": "Train actual 62 → 70 Ranged with cheap ammunition",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Live Ranged bridge using affordable actual ammunition. Does not consume a projected future enchanted-bolt reserve."
+    },
+    {
+      "id": "i33-ruff",
+      "title": "Quest break: complete A Ruff Situation",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "A Ruff Situation"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i33-crab-quest",
+      "title": "Quest break: complete Crab Quest",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Crab Quest"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i33-ranged-75",
+      "title": "Resume cheap Ranged training to the normal actual-75 Jad target",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Live final Ranged bridge before Fight Caves; check actual bolts independently in Caves preparation."
+    },
+    {
+      "id": "i33-fire-cape",
+      "title": "Complete the ranged Fight Caves and obtain the Fire Cape",
+      "source_path": "src/pages/intermediate/chapter-3-3.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [],
+      "activity_coverage": [
+        "i33-fire-cape"
+      ],
+      "nonquest_review": null
+    },
+    {
+      "id": "i34-crafting-70",
+      "title": "Reach actual 70 Crafting for Monkey Madness II",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Existing fresh-glass recovery, optional banked gems only if actually present, live XP after preceding quest rewards."
+    },
+    {
+      "id": "i34-slayer-65",
+      "title": "Train live Slayer to actual 65; unlock dust devils",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Normal eligible Slayer tasks with shop/task gear; 65 only, no fixed task/drop count."
+    },
+    {
+      "id": "i34-land-goblins",
+      "title": "Quest break: complete Land of the Goblins",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Land of the Goblins"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i34-slayer-69",
+      "title": "Continue Slayer from actual 65 to actual 69 before MM2",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Same supply method after Land of Goblins XP; bank counts remain actual."
+    },
+    {
+      "id": "i34-mm2",
+      "title": "Verify the Grand Tree balloon route and complete Monkey Madness II",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Monkey Madness II"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i34-slayer-74",
+      "title": "Use post-MM2 Slayer to reach actual 74, then re-audit cash and runes",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Same supply method after MM2 XP; 74 hard stop for Blood Moon, no task-drop product assumed."
+    },
+    {
+      "id": "i34-night-theatre",
+      "title": "Complete A Night at the Theatre after Slayer 74",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "A Night at the Theatre"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i34-magic-75",
+      "title": "Resolve the six combat rewards, then reach actual 75 Magic",
+      "source_path": "src/pages/intermediate/chapter-3-4.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Live 75-Magic gate and existing rune-purchase training alternatives. DS2 quest casts and later boss runes are budgeted separately."
+    },
+    {
+      "id": "i35-prince-ali",
+      "title": "Complete Prince Ali Rescue",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Prince Ali Rescue"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-classic-cleanup",
+      "title": "Clear the remaining classic Quest Cape entries",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Corsair Curse",
+        "Scorpion Catcher",
+        "Spirits of the Elid",
+        "Ratcatchers",
+        "Rag and Bone Man I",
+        "Skippy and the Mogres",
+        "Rag and Bone Man II",
+        "Olaf's Quest",
+        "Grim Tales"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-varlamore-cleanup",
+      "title": "Finish the currently released Varlamore and Lumbridge loose ends",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Ides of Milk",
+        "Meat and Greet",
+        "The Ribbiting Tale of a Lily Pad Labour Dispute",
+        "At First Light",
+        "Shadows of Custodia"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-contact",
+      "title": "Complete Contact! immediately after Prince Ali Rescue",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Contact!"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-beneath-sands",
+      "title": "Complete Beneath Cursed Sands",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Beneath Cursed Sands"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-enakhra",
+      "title": "Complete Enakhra's Lament on the standard spellbook",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Enakhra's Lament"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-empty-lord",
+      "title": "Complete Curse of the Empty Lord and claim its museum lamp",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Curse of the Empty Lord"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-general-shadow",
+      "title": "Complete The General's Shadow",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The General's Shadow"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-secrets",
+      "title": "Complete Secrets of the North; do not farm Phantom Muspah",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Secrets of the North"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-faithful",
+      "title": "Complete His Faithful Servants, not a Barrows gear grind",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "His Faithful Servants"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-ds2-preflight",
+      "title": "Secure the Dragon Slayer II quest kit and live boss supplies",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Barbarian Training (Firemaking and pyre dialogue only)",
+        "Dragon Slayer II"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-ds2",
+      "title": "Complete Dragon Slayer II with the retained ranged kit",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Dragon Slayer II"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-rc-60",
+      "title": "Reach actual 60 Runecraft for Desert Treasure II",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Live 60-Runecraft gate for DT2 after previous quest XP. Uses established method; no new item supplier assumed."
+    },
+    {
+      "id": "i35-dt2-preflight",
+      "title": "Verify every Desert Treasure II gate and prepare modular supplies",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Desert Treasure II"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i35-dt2",
+      "title": "Complete Desert Treasure II with deterministic melee, ranged and Magic setups",
+      "source_path": "src/pages/intermediate/chapter-3-5.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "Desert Treasure II"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-woodcutting",
+      "title": "Reach actual 74 Woodcutting, then stop",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Changed handoff: include Grim Tales' already-earned 60,000 Woodcutting XP, then train actual remaining gap to 74."
+    },
+    {
+      "id": "i36-smithing",
+      "title": "Reach actual 72 Smithing from the post-DS2 XP total",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Existing actual-72 Smithing bridge, bank ore/bar deficits at accessible ore shops/methods; prior bolt bars are not promised to remain."
+    },
+    {
+      "id": "i36-cooking",
+      "title": "Reach actual 72 Cooking and leave useful food behind",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Existing actual-72 Cooking bridge with explained ordinary food methods; read live XP and actual food stocks."
+    },
+    {
+      "id": "i36-fletching",
+      "title": "Reach actual 70 Fletching using the bank you actually have",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Existing actual-70 Fletching bridge; no requirement to manufacture redundant ranged weapons or a giant arrow stack."
+    },
+    {
+      "id": "i36-preflight",
+      "title": "Verify every Blood Moon gate and prepare the first inventory",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Blood Moon Rises"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-early-story",
+      "title": "Start with Sarius, reach Vampyrium and survive the Blood Hunt",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Blood Moon Rises"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-flail",
+      "title": "Make the deterministic Hallowed flail during Hallowed Preparations",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Blood Moon Rises"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-theatre-wyrd",
+      "title": "Finish the Theatre return and Wyrd before the final siege",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Blood Moon Rises"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-siege",
+      "title": "Hold Drakan's Siege and complete the later story encounter",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Blood Moon Rises"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-drakan",
+      "title": "Defeat final Drakan and complete The Blood Moon Rises",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [
+        "The Blood Moon Rises"
+      ],
+      "activity_coverage": [],
+      "nonquest_review": null
+    },
+    {
+      "id": "i36-journal",
+      "title": "Confirm every currently released quest is green",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "covered",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Quest Cape journal audit retains every named late quest and earlier prerequisites; The Red Reef is covered in Chapter 2 agent's audit. Quest journal remains final authority if a named entry is still red."
+    },
+    {
+      "id": "i36-cape",
+      "title": "Buy the Quest point cape and hood — graduate",
+      "source_path": "src/pages/intermediate/chapter-3-6.astro",
+      "route_step_attributes_preserved": true,
+      "optional": false,
+      "status": "fixed",
+      "quest_coverage": [],
+      "activity_coverage": [],
+      "nonquest_review": "Changed: 99,000 liquid coins for cape only after other spending. If short, use familiar Ardougne Knights in existing Rogue outfit until the actual cash deficit is filled."
+    }
+  ],
+  "quests": [
+    {
+      "name": "Rum Deal",
+      "route_steps": [
+        "i31-rum-deal"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/rumdeal/RumDeal.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Rake and seed dibber",
+          "quantity": 1,
+          "form": "one of each reusable Farming tool",
+          "supplier": "Tool leprechaun store or Sarah south of Falador.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Slayer gloves",
+          "quantity": 1,
+          "form": "wearable pair, not generic gloves",
+          "supplier": "Any Slayer equipment shop; wear around fever spiders.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat food, prayer and stat restoration",
+          "quantity": "actual fight deficit",
+          "form": "Prayer potions and ordinary restore potions are separate",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Current Prayer",
+          "quantity": 47,
+          "form": "current points, not only base level",
+          "supplier": "Restore at an altar before sailing.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Quest-area bucket and brewing/quest ingredients."
+      ],
+      "decisions": [
+        "The previous generic carry instruction omitted Slayer gloves and did not provide Farming-tool recovery; disease protection now has a real supplier."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/rumdeal/RumDeal.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(combatGear, dibber, rake, slayerGloves);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Rum_Deal"
+    },
+    {
+      "name": "Cabin Fever",
+      "route_steps": [
+        "i31-cabin-fever"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/cabinfever/CabinFever.java",
+      "status": "quest-local",
+      "external_inputs": [
+        {
+          "item": "Inventory space",
+          "quantity": 11,
+          "form": "empty slots",
+          "supplier": "Bank before sailing.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Ship repair planks, tacks, paste, rope and cannon supplies come from the onboard/enemy-ship containers."
+      ],
+      "decisions": [
+        "No outside plank/nail/cannonball manufacture is required for this quest; current helper has no external getItemRequirements override."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/cabinfever/CabinFever.java",
+      "required_item_method_snapshot": null,
+      "requirement_method_note": "No getItemRequirements override: item definitions and phase steps were inspected for external versus quest-local supply.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Cabin_Fever"
+    },
+    {
+      "name": "The Great Brain Robbery",
+      "route_steps": [
+        "i31-brain-robbery"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thegreatbrainrobbery/TheGreatBrainRobbery.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Diving equipment",
+          "quantity": 1,
+          "form": "fishbowl helmet plus diving apparatus, or valid medallion alternative",
+          "supplier": "Murphy at Port Khazard replaces the gear; bank both following and inventory pets.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Ring of charos",
+          "quantity": 1,
+          "form": "actual ring in bank/inventory",
+          "supplier": "Recover from Fenkenstrain when his quest dialogue permits.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Holy symbol",
+          "quantity": 1,
+          "form": "blessed and strung symbol",
+          "supplier": "Smelt one silver ore if needed; one silver bar + holy mould from Dommik at a furnace, add one spun wool, ask Brother Jered upstairs in Edgeville Monastery (31 Prayer).",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ordinary hammer",
+          "quantity": 1,
+          "form": "normal hammer handed over and consumed",
+          "supplier": "Lumbridge general store; Imcando hammer cannot satisfy the handoff.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Nails",
+          "quantity": 200,
+          "form": "100 for stairs plus 100 for crate",
+          "supplier": "Sawmill operator; this corrects the previous ~100 total.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Normal planks",
+          "quantity": 18,
+          "form": "eight quest planks plus one per each of ten missing wooden cats",
+          "supplier": "Normal logs to sawmill at 100 coins/plank. Subtract cats actually owned.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Furs",
+          "quantity": 10,
+          "form": "one ordinary fur per missing wooden cat",
+          "supplier": "Pellem's Fur Store at Hunter Guild, three stocked and replenishing; do not assume optional hunting supplied them.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Crafting table 1",
+          "quantity": 1,
+          "form": "Crafting table 1 or better in POH Workshop clockmaking space",
+          "supplier": "If absent: four oak logs to sawmill at 250 each, four oak planks + saw/hammer to build at 16 Construction. Cats require 16 Crafting.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Workshop room",
+          "quantity": 1,
+          "form": "conditional facility if not already built",
+          "supplier": "10,000 coins, 15 Construction. No table-2 upgrade required.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat food and potions",
+          "quantity": "actual remaining deficit",
+          "form": "Prayer restoration versus stat restoration",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Crate parts and shipping material from Rufus/Fenkenstrain; quest-specific tools and explosives through story."
+      ],
+      "decisions": [
+        "200 nails is a factual quantity correction.",
+        "18 planks is only for making all ten cats; eight other planks remain necessary.",
+        "Workshop cost and table are independent of optional POH upgrades."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thegreatbrainrobbery/TheGreatBrainRobbery.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(fishbowlHelmet, divingApparatus, catsOrResources, plank.quantity(8), hammer,\n\t\t\tnails.quantity(200), holySymbol, ringOfCharos, noPet);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Great_Brain_Robbery"
+    },
+    {
+      "name": "The Path of Glouphrie",
+      "route_steps": [
+        "i31-path"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thepathofglouphrie/ThePathOfGlouphrie.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Mith grapple",
+          "quantity": 1,
+          "form": "complete, rope-attached grapple",
+          "supplier": "One mithril bar -> tip at 59 Smithing; one finished mithril bolt (or second bar into bolts plus one feather); combine at 59 Fletching; attach one rope from Ned.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Grapple-capable crossbow",
+          "quantity": 1,
+          "form": "actual weapon equipped for crossing",
+          "supplier": "Nardok in the Dorgesh-Kaan mine after The Lost Tribe sells Dorgeshuun crossbow.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tree Gnome Village dungeon key",
+          "quantity": 1,
+          "form": "conditional key before Roving Elves",
+          "supplier": "If helper asks, search the dungeon crate; this route already completed Roving Elves.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Combat food and Prayer potions",
+          "quantity": "actual remaining deficit",
+          "form": "food and Prayer-restoring doses",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Coloured discs and puzzle materials are obtained through the quest."
+      ],
+      "decisions": [
+        "BRUH's fixed mithril-product smithing batch was removed; 59 Smithing/Fletching alone does not prove a grapple exists."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thepathofglouphrie/ThePathOfGlouphrie.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(\n\t\t\tcrossbow,\n\t\t\tmithGrapple,\n\t\t\ttreeGnomeVillageDungeonKey,\n\t\t\tcombatGear,\n\t\t\tprayerPotions,\n\t\t\tfood\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Path_of_Glouphrie"
+    },
+    {
+      "name": "While Guthix Sleeps",
+      "route_steps": [
+        "i31-wgs"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/whileguthixsleeps/WhileGuthixSleeps.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Disguise",
+          "quantity": 1,
+          "form": "bronze med helm and iron chainbody",
+          "supplier": "Peksa Barbarian Village and Wayne Falador.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Coins",
+          "quantity": 520,
+          "form": "500 identity alternative plus 20 pink dye; 20 if using activated ring",
+          "supplier": "Actual available coins after other purchases; activated ring is optional convenience.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Knife and normal log",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Lumbridge general store for knife; cut an ordinary tree.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Seed dibber",
+          "quantity": 1,
+          "form": "reusable tool",
+          "supplier": "Leprechaun store/Sarah; preserve the seed Thaerisk gives.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Lantern lens",
+          "quantity": 1,
+          "form": "loose glass lens for pink dye, distinct from carrying a lantern",
+          "supplier": "One molten glass via charter sand + soda ash; glassblowing pipe from Entrana house. Reuse any lens returned by sapphire conversion if available.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Unpowered orb",
+          "quantity": 1,
+          "form": "not a charged orb",
+          "supplier": "One fresh molten glass; glassblowing pipe. Charged orb recipe is used during quest.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Sapphire lantern",
+          "quantity": 1,
+          "form": "filled and lit",
+          "supplier": "Recover actual Tears of Guthix lantern; if absent, one steel bar -> bullseye frame at 49 Smithing, glass lens at 49 Crafting, cut sapphire, lamp oil from one Lumbridge swamp tar at Rimmington Chemist, light at 49 Firemaking. Steel = one iron ore + two coal; Shilo gem rocks supply a missing sapphire.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Astral Contact runes",
+          "quantity": 4,
+          "form": "four casts: eight air, four astral, four cosmic",
+          "supplier": "Baba Yaga sells missing runes; Lunar spellbook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Charge Orb runes",
+          "quantity": 1,
+          "form": "one cast: 30 chosen elemental rune + three cosmic",
+          "supplier": "Baba Yaga or appropriate rune shop; standard spellbook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Puzzle/combat spell runes",
+          "quantity": "phase checklist and attempt dependent",
+          "form": "At least one each air/water/earth/fire/mind/law/death for investigation plus proper combat, binding, weakening, Telegrab/alchemy supplies",
+          "supplier": "Buy actual deficits, not assume old rune stack survived.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual phase deficit",
+          "form": "three damage styles, food, Prayer potions plus ordinary restores, emergency non-rune teleport",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Thaerisk supplies snapdragon seed; reserve it for quest.",
+        "Charcoal and papyrus: drawers southeast of Thaerisk.",
+        "Mort myre fungus bait: Feldip Hunting Expert.",
+        "Silif's lobster and ordinary restore: northeast table in Black Knights' Catacombs; both are reserved for Silif.",
+        "Chasm tools from skeleton; temple druid pouch, Bloom at roots and druid spirits supply herb-puzzle ingredients.",
+        "After delivering Movario's notes to Thaerisk, southwest study tunnel leads to one-time cache of 100 unnoted magic logs."
+      ],
+      "decisions": [
+        "The guide now collects only missing MM2 balloon logs from Movario's actual remaining cache; a cache that was previously looted is not bank stock.",
+        "Ordinary restore potion does not restore Prayer; the local Silif potion is not the player's combat budget.",
+        "Lantern is retained for later dark quests; each later glass consumer needs fresh glass if earlier pieces were consumed."
+      ],
+      "cross_chapter_needs": [
+        "i34-mm2: reserve three magic logs only if the Grand Tree balloon destination remains locked."
+      ],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/whileguthixsleeps/WhileGuthixSleeps.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tknife, logs, coins.quantity(520), dibber, lanternLens, unpoweredOrb, bronzeMedHelm, ironChainbody, litSapphireLantern,\n\t\t\tastralRune.quantity(4), cosmicRune.quantity(4), airRune.quantity(8), chargeOrbSpell, meleeGear, magicGear,\n\t\t\trangedGear, food.quantity(-1)\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/While_Guthix_Sleeps"
+    },
+    {
+      "name": "Perilous Moons",
+      "route_steps": [
+        "i32-moons"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/perilousmoon/PerilousMoon.java",
+      "status": "quest-local",
+      "external_inputs": [
+        {
+          "item": "Combat equipment",
+          "quantity": 1,
+          "form": "ordinary appropriate melee weapons and defensive gear",
+          "supplier": "Existing mandatory melee kit.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Fishing supply crate: big fishing net and knife.",
+        "Herblore crate: pestle and mortar.",
+        "Hunting crate: rope.",
+        "Moon foods and Moonlight potions are made from local renewable supplies."
+      ],
+      "decisions": [
+        "QH lists tools in getItemRequirements but its own tooltips explicitly source all four locally; no external ranarr stock is implied."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/perilousmoon/PerilousMoon.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(pestleAndMortar, bigFishingNet, knife, rope, combatGear);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Perilous_Moons"
+    },
+    {
+      "name": "The Heart of Darkness",
+      "route_steps": [
+        "i32-heart"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/theheartofdarkness/TheHeartOfDarkness.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 30,
+          "form": "basement rental",
+          "supplier": "Pay Quetzacalli Gorge bartender after current bank check.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Prayer potions",
+          "quantity": 2,
+          "form": "initial attempt buffer, not guaranteed completion quantity",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat kit and food",
+          "quantity": "attempt dependent",
+          "form": "existing melee/ranged/magic equipment as phase requests",
+          "supplier": "Bank between investigations/fights.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Investigation clothes and emissary equipment from quest; retain emissary outfit for Final Dawn."
+      ],
+      "decisions": [
+        "Current helper puts 30-coin rental and many supplies in phase steps, not a getItemRequirements override."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/theheartofdarkness/TheHeartOfDarkness.java",
+      "required_item_method_snapshot": null,
+      "requirement_method_note": "No getItemRequirements override: item definitions and phase steps were inspected for external versus quest-local supply.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Heart_of_Darkness"
+    },
+    {
+      "name": "Fallen From Grace",
+      "route_steps": [
+        "i32-fallen"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/fallenfromgrace/FallenFromGrace.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Own raft or skiff",
+          "quantity": 1,
+          "form": "own eligible hull; sloop excluded",
+          "supplier": "Already mandatory Chapter 2 camphor-hulled skiff.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Combat food and potions",
+          "quantity": "first expedition plus actual retries",
+          "form": "mainland bank supplies",
+          "supplier": "Rebank on mainland before the island bank unlock; sail back to recover deficits.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Pickaxe, hammer and chisel from tent on Wyrmscraig's southeast coast."
+      ],
+      "decisions": [
+        "Quest tools are available locally even though helper lists them as required."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/fallenfromgrace/FallenFromGrace.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\traftOrSkiff,\n\t\t\tpickaxe,\n\t\t\tchisel,\n\t\t\thammer,\n\t\t\tcombatGear\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Fallen_From_Grace"
+    },
+    {
+      "name": "Devious Minds",
+      "route_steps": [
+        "i32-devious"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/deviousminds/DeviousMinds.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Mithril 2h sword",
+          "quantity": 1,
+          "form": "finished sword, consumed",
+          "supplier": "Gaius in Taverley; smithing levels alone do not prove a retained sword.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Bow string",
+          "quantity": 1,
+          "form": "actual bow string, not linen yarn",
+          "supplier": "Pick one flax at Seers' Village and spin it into a bow string.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Large essence pouch",
+          "quantity": 1,
+          "form": "repaired large pouch; quest consumes it",
+          "supplier": "Existing acquisition/repair recovery in this RouteStep; check actual pouch and reacquire if absent.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Bow-sword assembly occurs through quest."
+      ],
+      "decisions": [
+        "BRUH explicitly smithed the sword; relaxed smithing substitutions lost that output.",
+        "Sailing linen yarn cannot replace a bow string."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/deviousminds/DeviousMinds.java",
+      "required_item_method_snapshot": "\n\t\treturn new ArrayList<>(Arrays.asList(mith2h, bowString, largePouch));",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Devious_Minds"
+    },
+    {
+      "name": "The Final Dawn",
+      "route_steps": [
+        "i32-dawn"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thefinaldawn/TheFinalDawn.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Ordinary bones",
+          "quantity": 1,
+          "form": "normal bone for dog",
+          "supplier": "Kill a Lumbridge chicken/cow/goblin and keep one.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Knife",
+          "quantity": 1,
+          "form": "normal reusable knife",
+          "supplier": "Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Emissary outfit",
+          "quantity": 1,
+          "form": "all four pieces if banked set missing",
+          "supplier": "Chest at south of Tower of Ascension, south of Salvager Overlook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat food and potions",
+          "quantity": "actual deficit",
+          "form": "phase-specific combat kit",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Beer from upstairs Cam Torum pub; basement southwest cabinet supplies puzzle drinks."
+      ],
+      "decisions": [
+        "The outfit was obtained in Heart but actual bank stock is checked again."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thefinaldawn/TheFinalDawn.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tbone, combatGear\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Final_Dawn"
+    },
+    {
+      "name": "The Fremennik Exiles",
+      "route_steps": [
+        "i32-exiles"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thefremennikexiles/TheFremennikExiles.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Beer kegs",
+          "quantity": 2,
+          "form": "two actual kegs before exile",
+          "supplier": "Buy from Thora before speaking to Brundt.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Mirror shield",
+          "quantity": 1,
+          "form": "equipped anti-basilisk shield",
+          "supplier": "Slayer equipment shop.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Pet rock",
+          "quantity": 1,
+          "form": "retained quest item",
+          "supplier": "Askeladden replaces it.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fishing rod",
+          "quantity": 1,
+          "form": "normal or fly fishing rod as accepted",
+          "supplier": "Gerrant Port Sarim.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ice gloves",
+          "quantity": 1,
+          "form": "actual ice gloves or already-owned smiths gloves (i), not plain smithing gloves",
+          "supplier": "Recover from Ice Queen via White Wolf Mountain with pickaxe and 50 Mining; route already has access.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Molten glass",
+          "quantity": 1,
+          "form": "fresh glass after WGS",
+          "supplier": "One charter sand + one soda ash at furnace; retained pipe or WGS recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Astral runes",
+          "quantity": 100,
+          "form": "fresh count after Lunar spells",
+          "supplier": "Baba Yaga on Lunar Isle, carrying seal of passage.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Lunar bars",
+          "quantity": 3,
+          "form": "three bars or mine three ore during quest",
+          "supplier": "Mine lunar ore with pickaxe, smelt at furnace, forge required sigil; no old Lunar bank stock assumed.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Seal of passage",
+          "quantity": 1,
+          "form": "recover before exile",
+          "supplier": "Brundt in Rellekka.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fremennik shield",
+          "quantity": 1,
+          "form": "specific Fremennik shield",
+          "supplier": "Bardur purchase; activated ring of charos grants the listed one-time alternative. Existing local paragraph explains the actual option.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Rune throwingaxe",
+          "quantity": 1,
+          "form": "for solo Waterbirth doors",
+          "supplier": "Ranging Guild shop; no other player's help required.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Hammer and glassblowing pipe",
+          "quantity": 1,
+          "form": "one of each reusable tool",
+          "supplier": "General store; WGS Entrana pipe recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual remaining deficit",
+          "form": "food and Prayer restoration",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Shield repair investigation and lunar ore are available during quest."
+      ],
+      "decisions": [
+        "Shop purchases are made before exile removes Rellekka access; optional smiths outfit grind was not introduced."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thefremennikexiles/TheFremennikExiles.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(combatGear, mirrorShield, kegs2Or650Coins, moltenGlass, astralRunes.quantity(100), petRock,\n\t\t\truneThrowingaxeOrFriend, fishingOrFlyFishingRod, fremennikShield, iceGloves, hammer, glassblowingPipe, pickaxe, sealOfPassage);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Fremennik_Exiles"
+    },
+    {
+      "name": "Troll Romance",
+      "route_steps": [
+        "i33-troll-romance"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/trollromance/TrollRomance.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Sled materials",
+          "quantity": 1,
+          "form": "one iron bar, one maple or yew log, one rope",
+          "supplier": "Default: cut maple at Seers; mine southwest Varrock iron and smelt until one bar succeeds; Ned Draynor sells rope.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Wax mixture",
+          "quantity": 1,
+          "form": "one bucket of wax, one cake tin, one swamp tar",
+          "supplier": "Insect repellent in house north of Catherby bank, use on western beehive with bucket; cake tin from Culinaromancer's Chest; tar Lumbridge Swamp.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Climbing boots",
+          "quantity": 1,
+          "form": "actual wearable boots",
+          "supplier": "Tenzing replaces a missing pair.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual attempt deficit",
+          "form": "food and appropriate potions",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Sled assembly and quest flowers during quest."
+      ],
+      "decisions": [
+        "BRUH's earlier partial sled-preparation trip was not inherited; whole kit is supplied here."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/trollromance/TrollRomance.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(ironBar, mapleLog, rope, cakeTin, swampTar, bucketOfWax, combatGear, climbingBoots);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Troll_Romance"
+    },
+    {
+      "name": "The Curse of Arrav",
+      "route_steps": [
+        "i33-arrav"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thecurseofarrav/TheCurseOfArrav.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Dwellberries",
+          "quantity": 3,
+          "form": "three actual berries",
+          "supplier": "Existing Funch or McGrubor's Wood collection route.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Ring of life",
+          "quantity": 1,
+          "form": "enchanted, consumed by quest",
+          "supplier": "One gold bar + one cut diamond + ring mould at furnace (43 Crafting); Lvl-4 Enchant (57 Magic), one cosmic + ten earth. Mine gold Al Kharid, diamond Shilo gem rocks, mould Dommik.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Mith grapple and crossbow",
+          "quantity": 1,
+          "form": "completed grapple and actual compatible crossbow",
+          "supplier": "/intermediate/chapter-3-1/#i31-path full recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Pickaxe and insulated boots",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Existing pickaxe; Slayer equipment shop sells boots.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual phase deficit",
+          "form": "food and proper damage equipment",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Tomb/key-puzzle items local."
+      ],
+      "decisions": [
+        "Ring's diamond is separate from the future enchanted-bolt reserve; no old bank ring assumed."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thecurseofarrav/TheCurseOfArrav.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tdwellberries3,\n\t\t\tringOfLife,\n\t\t\tanyPickaxe,\n\t\t\tanyGrappleableCrossbow,\n\t\t\tmithrilGrapple,\n\t\t\tinsulatedBoots\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Curse_of_Arrav"
+    },
+    {
+      "name": "A Ruff Situation",
+      "route_steps": [
+        "i33-ruff"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/aruffsituation/ARuffSituation.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Needle and thread",
+          "quantity": 1,
+          "form": "one ordinary needle and one thread, or already-owned costume needle alternative",
+          "supplier": "Dommik Al Kharid.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Grain",
+          "quantity": 1,
+          "form": "one unprocessed grain",
+          "supplier": "Lumbridge wheat field.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fur",
+          "quantity": 1,
+          "form": "one fresh ordinary fur",
+          "supplier": "Pellem at Hunter Guild; Brain Robbery already consumed its own furs.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Quest investigation and stuffed-dog assembly local."
+      ],
+      "decisions": [
+        "Fresh fur is independently reserved after the earlier ten-cat batch."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/aruffsituation/ARuffSituation.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(needleOrCostumeNeedle, thread, fur, grain);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/A_Ruff_Situation"
+    },
+    {
+      "name": "Crab Quest",
+      "route_steps": [
+        "i33-crab-quest"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/crabquest/CrabQuest.java",
+      "status": "quest-local",
+      "external_inputs": [
+        {
+          "item": "Own eligible boat",
+          "quantity": 1,
+          "form": "retained Chapter 2 vessel",
+          "supplier": "Already available.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Free inventory space",
+          "quantity": 9,
+          "form": "approximately nine shell/instrument slots",
+          "supplier": "Bank unneeded items before island.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Big fishing net near flotsam; shells, sea-soaked bowstring and barrel/instrument parts are local."
+      ],
+      "decisions": [
+        "Quest material names are not a request for ordinary bow strings or construction planks."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/crabquest/CrabQuest.java",
+      "required_item_method_snapshot": null,
+      "requirement_method_note": "No getItemRequirements override: item definitions and phase steps were inspected for external versus quest-local supply.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Crab_Quest"
+    },
+    {
+      "name": "Land of the Goblins",
+      "route_steps": [
+        "i34-land-goblins"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/landofthegoblins/LandOfTheGoblins.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Toadflax potion (unf)",
+          "quantity": 1,
+          "form": "one unfinished potion kept unfinished",
+          "supplier": "One clean toadflax + vial water. Buy herb via three Brimhaven Agility vouchers if bank lacks it; Jatix vial/pestle supplies.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Dyes",
+          "quantity": 4,
+          "form": "one yellow, blue, orange and purple",
+          "supplier": "Oronwen: buy two red, two yellow, two blue; retain yellow/blue and combine remaining pairs into orange/purple.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Empty vial and pestle",
+          "quantity": 1,
+          "form": "one of each for black dye and potion steps",
+          "supplier": "Jatix Taverley.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fishing rod",
+          "quantity": 1,
+          "form": "ordinary rod",
+          "supplier": "Gerrant Port Sarim.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Raw slimy eel",
+          "quantity": 1,
+          "form": "must remain raw",
+          "supplier": "Bait-fish eel using the established Lumbridge Swamp Caves recovery route; Gerrant supplies bait.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Coins",
+          "quantity": 5,
+          "form": "whitefish sequence coins after purchases",
+          "supplier": "Keep separately after shopping.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Light and combat supplies",
+          "quantity": "one light plus actual consumable deficit",
+          "form": "lit lantern, food and Prayer/restoration",
+          "supplier": "WGS lantern recovery and common potion recovery.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Goblin mail unlimited from crate east inside temple beyond guards, enough for all six tribe colours.",
+        "Black mushroom in Goblin Cave is ground into the local black dye.",
+        "Whitefish is caught during quest and kept uncooked."
+      ],
+      "decisions": [
+        "Actual dyes, unfinished-potion form and raw fish are stated at consumer; previously looted goblin mail is not assumed."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/landofthegoblins/LandOfTheGoblins.java",
+      "required_item_method_snapshot": "\n\t\treturn new ArrayList<>(Arrays.asList(lightSource, toadflaxPotionUnf, goblinMail, yellowDye, blueDye, orangeDye,\n\t\t\tpurpleDye, pestleAndMortar, vial, fishingRod, rawSlimyEel, coins, combatGear));",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Land_of_the_Goblins"
+    },
+    {
+      "name": "Monkey Madness II",
+      "route_steps": [
+        "i34-mm2"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/monkeymadnessii/MonkeyMadnessII.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Magic logs",
+          "quantity": 3,
+          "form": "only missing logs if Grand Tree balloon destination locked",
+          "supplier": "WGS Movario treasure-room cache after giving notes to Thaerisk; take unnoted missing logs through southwest study tunnel. If entire one-time cache was already spent, cut at 75 Woodcutting.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Lemon and grapes",
+          "quantity": 1,
+          "form": "one lemon and one grapes item",
+          "supplier": "Heckel Funch Grand Tree.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Normal log",
+          "quantity": 1,
+          "form": "ordinary log for Entrana phase",
+          "supplier": "Cut a normal tree; bank combat equipment before Entrana.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Pestle and mortar, pickaxe, lit light",
+          "quantity": 1,
+          "form": "one of each reusable tool",
+          "supplier": "Jatix, existing pickaxe, WGS lantern recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Translation book",
+          "quantity": 1,
+          "form": "quest item",
+          "supplier": "Narnode replaces it.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "M'speak amulet",
+          "quantity": 1,
+          "form": "actual retained amulet or replacement",
+          "supplier": "/intermediate/chapter-2-2/#i22-monkey-madness replacement recipe.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ninja monkey greegree",
+          "quantity": 1,
+          "form": "actual ninja greegree; remains separate from Kruk talisman",
+          "supplier": "/intermediate/chapter-2-4/#i24-awowogei recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Monkey talisman",
+          "quantity": 1,
+          "form": "or 1,000 coins for Tutab",
+          "supplier": "Tutab's Magical Market on Ape Atoll; used for Kruk, not replaced by the ninja greegree.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Gu'Tanoth fare",
+          "quantity": 20,
+          "form": "conditional normal-approach fare",
+          "supplier": "Keep actual coins unless using unlocked shortcut.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Dungeon/fight supplies",
+          "quantity": "actual phase deficit",
+          "form": "slash weapon, food, Prayer, antipoison and ordinary energy",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Laboratory crates supply missing hammer/chisel; story explosives and satchels local."
+      ],
+      "decisions": [
+        "The baseline mandatory +5 stew supply was replaced with a direct one-time quest cache already reached by this route.",
+        "An already-looted cache is not guaranteed remaining stock; actual bank check and 75-Woodcutting repeatable fallback remain explicit.",
+        "No obligation to gather all 100 magic logs; three only if destination not unlocked."
+      ],
+      "cross_chapter_needs": [
+        "Chapter 2.2 actual M'speak amulet recovery and Chapter 2.4 ninja greegree recovery anchors."
+      ],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/monkeymadnessii/MonkeyMadnessII.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(lemon, grape, pestle, pickaxe, logs, lightSource, translationBook, hammerSidebar, chiselSidebar, mspeakAmulet, talismanOr1000Coins, ninjaGreegree);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Monkey_Madness_II"
+    },
+    {
+      "name": "A Night at the Theatre",
+      "route_steps": [
+        "i34-night-theatre"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/anightatthetheatre/ANightAtTheTheatre.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Blisterwood flail",
+          "quantity": 1,
+          "form": "actual retained weapon",
+          "supplier": "Ivan Strom, Myreque hideout beneath Old Man Ral's, 40,000 coins if missing after Sins of the Father.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ghostspeak amulet, saw and axe",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Father Urhney; sawmill operator; Bob Lumbridge.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Poisoned dragon dagger",
+          "quantity": 1,
+          "form": "ordinary weapon-poison treatment of a plain dagger",
+          "supplier": "Jukat in Zanaris for missing dagger, one spare cut diamond for market entry; Shilo gem rocks until diamond if absent.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Weapon poison recipe",
+          "quantity": 1,
+          "form": "one clean kwuarm + one vial water + one dragon scale dust, 60 Herblore",
+          "supplier": "Chaos druids Taverley for missing herb; Taverley blue-dragon-area ground scale via 70-Agility shortcut, grind with pestle; no dragon drop required.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Insulated boots",
+          "quantity": 1,
+          "form": "actual worn pair for solo Verzik",
+          "supplier": "Slayer equipment shop.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat equipment and supplies",
+          "quantity": "actual room deficit",
+          "form": "three styles, food, Prayer restoration and antipoison",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Strange eggs, acid and Hespori bark from investigation; no Farming seed.",
+        "Entry Mode bandages at supply chests after Bloat/Sotetseg and more supplies on failures."
+      ],
+      "decisions": [
+        "Ordinary antipoison first reduces venom to poison; a second dose cures poison if not re-envenomed.",
+        "Poison weapon, market-entry diamond and poison ingredients are a complete route after actual previous bolt consumption."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/anightatthetheatre/ANightAtTheTheatre.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(flail, saw, ghostSpeakAmulet, axe, combatGear, food);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/A_Night_at_the_Theatre"
+    },
+    {
+      "name": "Prince Ali Rescue",
+      "route_steps": [
+        "i35-prince-ali"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/princealirescue/PrinceAliRescue.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Soft clay",
+          "quantity": 1,
+          "form": "soft, not dry clay",
+          "supplier": "Mine clay southwest Varrock and add water.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Balls of wool",
+          "quantity": 3,
+          "form": "spun balls, not raw wool",
+          "supplier": "Shear three sheep at Lumbridge and spin in castle; give Ned for wig. Ned is not a wool shop.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Yellow dye",
+          "quantity": 1,
+          "form": "finished dye",
+          "supplier": "Oronwen Lletya, or Aggie with two onions from north-Rimmington field and five coins.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Redberries and flour",
+          "quantity": 1,
+          "form": "one redberries, one pot of flour",
+          "supplier": "Wydin Port Sarim.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ashes and water",
+          "quantity": 1,
+          "form": "one ashes, one bucket water",
+          "supplier": "Burn a log and collect ashes; fill a bucket.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Bronze bar",
+          "quantity": 1,
+          "form": "smelted bar",
+          "supplier": "Mine one copper and one tin at Lumbridge, smelt.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Pink skirt",
+          "quantity": 1,
+          "form": "specific skirt",
+          "supplier": "Thessalia Varrock.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Beer",
+          "quantity": 3,
+          "form": "ordinary beer",
+          "supplier": "Pub purchase.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Rope",
+          "quantity": 1,
+          "form": "ordinary rope",
+          "supplier": "Ned Draynor.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Coins",
+          "quantity": 100,
+          "form": "after shopping",
+          "supplier": "Keep quest fare/fees separate from purchase costs.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Wig, disguise paste, key imprint and key are assembled through quest."
+      ],
+      "decisions": [
+        "The original grouped item request depended on BRUH's much earlier food/dye/tool shopping; all ingredients now have local supply."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/princealirescue/PrinceAliRescue.java",
+      "required_item_method_snapshot": "\n\t\tArrayList<ItemRequirement> reqs = new ArrayList<>();\n\t\treqs.add(softClay);\n\t\treqs.add(ballsOfWool3);\n\t\treqs.add(yellowDye);\n\t\treqs.add(redberries);\n\t\treqs.add(ashes);\n\t\treqs.add(bucketOfWater);\n\t\treqs.add(potOfFlour);\n\t\treqs.add(bronzeBar);\n\t\treqs.add(pinkSkirt);\n\t\treqs.add(beers3);\n\t\treqs.add(rope);\n\t\treqs.add(coins100);\n\t\treturn reqs;",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Prince_Ali_Rescue"
+    },
+    {
+      "name": "The Corsair Curse",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thecorsaircurse/TheCorsairCurse.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Combat gear and food",
+          "quantity": "actual fight deficit",
+          "form": "bank before boarding Rimmington boat",
+          "supplier": "Existing combat kit and mainland bank; Corsair Cove bank only opens after completion.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Tinderbox near Gnocci upstairs; spade on south side of Cove."
+      ],
+      "decisions": [
+        "No imported tinderbox/spade grind; local investigation tools are identified."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thecorsaircurse/TheCorsairCurse.java",
+      "required_item_method_snapshot": "\n\t\tArrayList<ItemRequirement> reqs = new ArrayList<>();\n\t\treqs.add(combatGear);\n\t\treturn reqs;",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Corsair_Curse"
+    },
+    {
+      "name": "Scorpion Catcher",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/scorpioncatcher/ScorpionCatcher.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Dusty key",
+          "quantity": 0,
+          "form": "not needed when using route's 70-Agility Taverley pipe",
+          "supplier": "Existing 70 Agility opens the shortcut.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Dragonfire protection",
+          "quantity": 1,
+          "form": "anti-dragon shield for adult-dragon area",
+          "supplier": "Duke Horacio Lumbridge.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Barcrawl and monastery access",
+          "quantity": 1,
+          "form": "prior miniquest and Prayer gate",
+          "supplier": "Earlier mandatory route completed these; journal check.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Thormac gives the scorpion cage."
+      ],
+      "decisions": [
+        "Current QH item list shows dusty key, but routing uses already-earned shortcut."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/scorpioncatcher/ScorpionCatcher.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tdustyKey\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Scorpion_Catcher"
+    },
+    {
+      "name": "Spirits of the Elid",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/spiritsoftheelid/SpiritsOfTheElid.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Telekinetic Grab runes",
+          "quantity": 1,
+          "form": "one air + one law, standard spellbook",
+          "supplier": "Unlocked rune shop; check actual spellbook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Needle and thread",
+          "quantity": 1,
+          "form": "one normal needle plus two thread",
+          "supplier": "Dommik Al Kharid; costume needle does not repair robes.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Knife, rope, pickaxe and lit light",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Lumbridge general store, Ned, existing pickaxe, WGS lantern recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Damage styles",
+          "quantity": 3,
+          "form": "slash, stab and crush",
+          "supplier": "Dragon scimitar for slash; existing Heroes' Guild dragon mace for stab/crush; choose actual styles.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Food/desert water",
+          "quantity": "actual travel/fight deficit",
+          "form": "filled waterskins and food",
+          "supplier": "Existing desert kit; refill before travel.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Shortbow east of cave entrance and bronze arrows south of it; bow is required, crossbow not accepted.",
+        "Torn robes and ancestral key through Nardah investigation."
+      ],
+      "decisions": [
+        "Retain shortbow for DS2's Barbarian Firemaking partial unlock."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/spiritsoftheelid/SpiritsOfTheElid.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(airRune, lawRune, needle, thread, crushWep, stabWep, slashWep, lightSource, knife, rope, pickaxe, bow, arrows);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Spirits_of_the_Elid"
+    },
+    {
+      "name": "Ratcatchers",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/ratcatchers/RatCatchers.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Cat",
+          "quantity": 1,
+          "form": "non-overgrown, adult recommended",
+          "supplier": "Gertrude sells replacement kitten for 100 coins; raise during other cleanup if adult wanted. Purchase does not instantly create adult.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Catspeak amulet",
+          "quantity": 1,
+          "form": "basic or enchanted amulet accepted at this stage",
+          "supplier": "Sphinx Sophanem with cat present.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Cheese",
+          "quantity": 4,
+          "form": "four pieces",
+          "supplier": "Wydin or Culinaromancer's Chest.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Milk",
+          "quantity": 1,
+          "form": "bucket of milk",
+          "supplier": "Culinaromancer's Chest or milk a dairy cow.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Marrentill",
+          "quantity": 1,
+          "form": "clean herb",
+          "supplier": "Ordinary Taverley chaos druids until actual one-herb deficit filled.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Unicorn horn dust",
+          "quantity": 1,
+          "form": "ground horn",
+          "supplier": "Kill a unicorn near Lumbridge/Varrock and grind horn.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Pot of weeds",
+          "quantity": 1,
+          "form": "weeds in an empty pot",
+          "supplier": "Rake Farming patch; general-store pot.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Rat poison",
+          "quantity": 1,
+          "form": "ordinary rat-poison item accepted by step",
+          "supplier": "Clock Tower basement northwest branch spawn.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Rat-poison crafting alternative",
+          "quantity": 1,
+          "form": "one clean kwuarm + one red spiders' eggs + one empty vial",
+          "supplier": "Only if choosing Hooknosed Jack recipe instead of ground-spawn poison.",
+          "status": "covered",
+          "notes": []
+        },
+        {
+          "item": "Snake charm and coins",
+          "quantity": 1,
+          "form": "one charm and 101-coin sequence allowance",
+          "supplier": "Donate a coin to Ali the Snake Charmer Pollnivneach; separate replacement-kitten fee.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fish",
+          "quantity": 8,
+          "form": "about eight initial fish, more if the cat needs healing",
+          "supplier": "Gerrant inexpensive raw fish; use on hole to heal fighting cat.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tinderbox",
+          "quantity": 1,
+          "form": "ordinary tool",
+          "supplier": "Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Mansion and snake-charmer quest intermediates local."
+      ],
+      "decisions": [
+        "QH formal list still displays kwuarm/eggs/vial, but same accepted rat-poison item can be taken from Clock Tower; current helper item ID/step and canonical quick guide checked.",
+        "Cat food is an initial buffer; no fixed fish count guarantees a kitten's rat fight."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/ratcatchers/RatCatchers.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(cat, cheese.quantity(4), marrentill, unicornHornDust, bucketOfMilk,\n\t\t\tcatspeakAmuletOrDS2, vial, kwuarm, redEggs,\n\t\t\tpotOfWeeds, tinderbox, coins101, snakeCharm, fish8);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Ratcatchers"
+    },
+    {
+      "name": "Rag and Bone Man I",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/ragandboneman/RagAndBoneManI.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Pots",
+          "quantity": 8,
+          "form": "empty reusable pots",
+          "supplier": "General store.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Normal logs",
+          "quantity": 8,
+          "form": "fresh consumed logs",
+          "supplier": "Cut ordinary trees.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Vinegar",
+          "quantity": 8,
+          "form": "eight jugs, one coin each",
+          "supplier": "Ask Fortunato Draynor about vinegar, then buy; pour into pots.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tinderbox",
+          "quantity": 1,
+          "form": "reusable tool",
+          "supplier": "Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "After starting quest, collect special bones from goblin, monkey, bear, unicorn, giant rat, giant bat, ram, big frog; normal bones do not substitute.",
+        "Quest pot-boiler cleans each bone; pots can be reused."
+      ],
+      "decisions": [
+        "Late cleanup needs its own hunt and processing inventory; BRUH's early opportunistic bones were not guaranteed here."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/ragandboneman/RagAndBoneManI.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(coins.quantity(8), pots.quantity(8), logs.quantity(8), tinderbox);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Rag_and_Bone_Man_I"
+    },
+    {
+      "name": "Skippy and the Mogres",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/miniquests/skippyandthemogres/SkippyAndTheMogres.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Bucket water",
+          "quantity": 1,
+          "form": "filled bucket",
+          "supplier": "General-store bucket, fill at water source.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Nettle tea",
+          "quantity": 1,
+          "form": "cooked tea in bowl",
+          "supplier": "Gloves, nettles beside Edgeville yew trees, bowl water, cook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Hangover cure",
+          "quantity": 1,
+          "form": "one bucket milk + one chocolate dust + one snape grass",
+          "supplier": "Culinaromancer's Chest milk/chocolate, grind chocolate; gather one additional ground-spawn snape grass using common potion-supply link.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Skippy at Mudskipper Point opens Mogre kills."
+      ],
+      "decisions": [
+        "Mandatory prerequisite for Rag and Bone Man II's Mogre bone was omitted by the grouped cleanup; now explicit inside the existing RouteStep.",
+        "Snape grass is a separate item after potion batches; no double spending."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "miniquest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/skippyandthemogres/SkippyAndTheMogres.java",
+      "required_item_method_snapshot": "\n\t\tArrayList<ItemRequirement> reqs = new ArrayList<>();\n\t\treqs.add(bucketOfWater);\n\t\treqs.add(nettleTea);\n\t\treqs.add(bucketOfMilk);\n\t\treqs.add(chocolateDust);\n\t\treqs.add(snapeGrass);\n\t\treturn reqs;",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Skippy_and_the_Mogres"
+    },
+    {
+      "name": "Rag and Bone Man II",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/ragandboneman/RagAndBoneManII.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Pots",
+          "quantity": 27,
+          "form": "27 if preprocessing all bones, or reuse I's pots in smaller batches",
+          "supplier": "General-store pots; I's pots are reusable.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Normal logs",
+          "quantity": 27,
+          "form": "fresh consumed logs after I",
+          "supplier": "Cut ordinary trees.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Vinegar",
+          "quantity": 27,
+          "form": "fresh jugs after I",
+          "supplier": "Fortunato Draynor, one coin each.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Coins",
+          "quantity": 902,
+          "form": "27 vinegar + 875 Brimhaven entry, with transport fares separately",
+          "supplier": "Actual coins after shopping.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ice coolers and fishing explosives",
+          "quantity": 10,
+          "form": "ten each as initial collection buffer",
+          "supplier": "Slayer equipment shop; replenish if variable bone drops take more kills.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tools and combat",
+          "quantity": 1,
+          "form": "lit light, tinderbox, axe, ranged weapon/ammo, mirror shield or V's shield",
+          "supplier": "Existing Chapter 3 kit; WGS light recovery; Slayer shield shop.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Rope/dusty key",
+          "quantity": 1,
+          "form": "rope only if Lumbridge cave entrance not already roped; dusty key skipped at 70 Agility",
+          "supplier": "Ned for missing rope; use unlocked Taverley pipe.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "27 quest-specific drops, obtained only after list started: bat, cow, experiment, werewolf, ghoul, giant rat, zombie, cave goblin, jackal, snake, desert lizard, vulture, seagull, ice giant, mogre, jogre, moss giant, fire giant, baby blue dragon, troll, rabbit, basilisk, dagannoth, terrorbird, wolf, ogre, zogre.",
+        "Regional seven-row collection table in the guide names safe established areas for all 27."
+      ],
+      "decisions": [
+        "Skippy and the Mogres is completed before the Mogre hunt.",
+        "Each special bone is a variable quest drop; ten consumables is a starter buffer, not guaranteed kill count.",
+        "Fresh 27 logs/vinegar cannot be satisfied by I's already-consumed eight."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/ragandboneman/RagAndBoneManII.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(coins.quantity(902), pots.quantity(27), logs.quantity(27), tinderbox,\n\t\t\tlightSource, rope.hideConditioned(addedRope), rangedWeapon,\n\t\t\tdustyKey.hideConditioned(new SkillRequirement(Skill.AGILITY, 70, true)), iceCooler, fishingExplosive,\n\t\t\tmirrorShield, axe);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Rag_and_Bone_Man_II"
+    },
+    {
+      "name": "Olaf's Quest",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/olafsquest/OlafsQuest.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Axe, tinderbox and spade",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Bob basic axe; Lumbridge general store tinderbox/spade.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Food",
+          "quantity": "actual attempt deficit",
+          "form": "ordinary combat food",
+          "supplier": "Bank before cave attempt.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Weathered wood, carving and puzzle items acquired through quest."
+      ],
+      "decisions": [
+        "No optional axe/tool drop required."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/olafsquest/OlafsQuest.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(axe, tinderbox, spade);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Olaf's_Quest"
+    },
+    {
+      "name": "Grim Tales",
+      "route_steps": [
+        "i35-classic-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/grimtales/GrimTales.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Woodcutting gate",
+          "quantity": 71,
+          "form": "boostable but default is train live gap to actual 71",
+          "supplier": "Earlier route only guarantees 70; cut until actual 71 if short.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tarromin potions (unf)",
+          "quantity": 2,
+          "form": "two unfinished potions, no secondary added",
+          "supplier": "Two clean tarromin + two vials water; chaos druids for actual missing herbs, Jatix vials.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Witch's House key",
+          "quantity": 1,
+          "form": "quest key",
+          "supplier": "Pot outside the Witch's House in Taverley.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Seed dibber and watering can",
+          "quantity": 1,
+          "form": "one dibber, one filled can",
+          "supplier": "Tool leprechaun or Sarah; fill can before departure.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Axe and combat kit",
+          "quantity": 1,
+          "form": "usable axe and food/gear",
+          "supplier": "Bob replacement axe; existing combat gear.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Beans, beanstalk and story intermediates supplied through quest."
+      ],
+      "decisions": [
+        "Grim's 71-Woodcutting gate precedes its 60,000 Woodcutting XP reward.",
+        "Chapter 3.6 now reads actual Woodcutting after that 60,000 reward before topping up to 74; no double-counting."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/grimtales/GrimTales.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(houseKey, tarrominUnf2, dibber, can, axe, combatGear);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Grim_Tales"
+    },
+    {
+      "name": "The Ides of Milk",
+      "route_steps": [
+        "i35-varlamore-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/theidesofmilk/TheIdesOfMilk.java",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_supplies": [
+        "All required investigation ingredients and objects from the quest's local steps."
+      ],
+      "decisions": [
+        "No external milk/food stock implied by title or journal shortcut."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/theidesofmilk/TheIdesOfMilk.java",
+      "required_item_method_snapshot": null,
+      "requirement_method_note": "No getItemRequirements override: item definitions and phase steps were inspected for external versus quest-local supply.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Ides_of_Milk"
+    },
+    {
+      "name": "Meat and Greet",
+      "route_steps": [
+        "i35-varlamore-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/meatandgreet/MeatAndGreet.java",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_supplies": [
+        "All required meats and investigation objects obtained during the quest."
+      ],
+      "decisions": [
+        "Current QH getItemRequirements explicitly returns empty list; no external meat shopping required."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/meatandgreet/MeatAndGreet.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of();",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Meat_and_Greet"
+    },
+    {
+      "name": "The Ribbiting Tale of a Lily Pad Labour Dispute",
+      "route_steps": [
+        "i35-varlamore-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/theribbitingtaleofalilypadlabourdispute/TheRibbitingTaleOfALilyPadLabourDispute.java",
+      "status": "quest-local",
+      "external_inputs": [],
+      "quest_local_supplies": [
+        "Axe from the logs next to Marcellus; story materials local."
+      ],
+      "decisions": [
+        "Axe is formally required but current helper identifies the nearby spawn; no missing bank axe stops the route."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/theribbitingtaleofalilypadlabourdispute/TheRibbitingTaleOfALilyPadLabourDispute.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(axe);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Ribbiting_Tale_of_a_Lily_Pad_Labour_Dispute"
+    },
+    {
+      "name": "At First Light",
+      "route_steps": [
+        "i35-varlamore-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/atfirstlight/AtFirstLight.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Box trap or jerboa tails",
+          "quantity": 1,
+          "form": "one box trap or two jerboa tails",
+          "supplier": "Buy box trap from Imia in northern Hunter Guild for 41 coins; catch jerboas near Locus Oasis if choosing tails.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Needle on southeast Guild surface; hammer in house north of Atza.",
+        "Other hunting/camping quest materials provided during quest."
+      ],
+      "decisions": [
+        "No rare Hunter reward or assumed trap stock."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/atfirstlight/AtFirstLight.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(jerboaTail2OrBoxTrap, hammer, needleOrCostumeNeedle);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/At_First_Light"
+    },
+    {
+      "name": "Shadows of Custodia",
+      "route_steps": [
+        "i35-varlamore-cleanup"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/shadowsofcustodia/ShadowsOfCustodia.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Willow longbows",
+          "quantity": 4,
+          "form": "four finished STRUNG willow longbows",
+          "supplier": "Arcuani's Archery in Tal Teklan; fallback four willow logs + four flax spun into bow strings, assemble at 40 Fletching.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Maple logs",
+          "quantity": 4,
+          "form": "four unprocessed logs",
+          "supplier": "Cut at Seers' Village.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fishing rod and hammer",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Gerrant Port Sarim; Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Local quest intermediates."
+      ],
+      "decisions": [
+        "BRUH bought the finished bows in its Varlamore batch; a generic Fletching level or unstrung bow stock cannot substitute."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/shadowsofcustodia/ShadowsOfCustodia.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tfishingRod,\n\t\t\tfourMapleLogs,\n\t\t\thammer,\n\t\t\tfourWillowLongbows\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Shadows_of_Custodia"
+    },
+    {
+      "name": "Contact!",
+      "route_steps": [
+        "i35-contact"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/contact/Contact.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Light and tinderbox",
+          "quantity": 1,
+          "form": "lit reusable light and tinderbox",
+          "supplier": "WGS lantern recovery; Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual attempt deficit",
+          "form": "food, runes/ammo, Prayer potions and poison cure",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Scarab investigation/key/story items local."
+      ],
+      "decisions": [
+        "No antivenom manufacturing grind required; the specific poison/prayer supplies have recovery."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/contact/Contact.java",
+      "required_item_method_snapshot": "\n\t\tArrayList<ItemRequirement> reqs = new ArrayList<>();\n\t\treqs.add(lightSource);\n\t\treqs.add(tinderbox);\n\t\treqs.add(combatGear);\n\t\treqs.add(food);\n\t\treqs.add(prayerPotions);\n\t\treturn reqs;",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Contact!"
+    },
+    {
+      "name": "Beneath Cursed Sands",
+      "route_steps": [
+        "i35-beneath-sands"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/beneathcursedsands/BeneathCursedSands.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coal",
+          "quantity": 1,
+          "form": "one coal ore",
+          "supplier": "Mine a coal rock if bank empty.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Iron bar",
+          "quantity": 1,
+          "form": "one smelted bar",
+          "supplier": "Mine iron southwest Varrock and smelt until one bar succeeds.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Raw beef",
+          "quantity": 1,
+          "form": "raw, not cooked combat food",
+          "supplier": "Wydin Port Sarim or kill a cow.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tinderbox and spade",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Desert and combat supplies",
+          "quantity": "actual phase deficit",
+          "form": "filled waterskins, food, Prayer restoration and appropriate gear",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Quest investigation/ritual items local."
+      ],
+      "decisions": [
+        "The one raw meat is protected from cooking/food use."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/beneathcursedsands/BeneathCursedSands.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(coal, tinderbox, ironBar, spade, meat);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Beneath_Cursed_Sands"
+    },
+    {
+      "name": "Enakhra's Lament",
+      "route_steps": [
+        "i35-enakhra"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/enakhraslament/EnakhrasLament.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Soft clay and coal",
+          "quantity": 1,
+          "form": "one soft clay plus one coal",
+          "supplier": "Mine clay, add water; mine one coal.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Bread",
+          "quantity": 1,
+          "form": "one whole loaf, not eaten piece or generic food",
+          "supplier": "Culinaromancer's Chest; keep untouched for quest.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Candle",
+          "quantity": 1,
+          "form": "ordinary candle",
+          "supplier": "Catherby candle maker.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Logs",
+          "quantity": 4,
+          "form": "one each normal, oak, willow and maple",
+          "supplier": "Cut the actual four types.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Pickaxe, chisel and tinderbox",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Existing pickaxe; Dommik chisel; Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Starter quest combat spell runes",
+          "quantity": 10,
+          "form": "ten each Wind Bolt, Fire Bolt, Crumble Undead: 70 air, 40 fire, 20 earth, 30 chaos",
+          "supplier": "Aubury Varrock; spells need standard spellbook. Additional casts if actual fight takes more.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Mine 52 kg sandstone at the quarry for stone heads.",
+        "Two intact 5 kg granite pieces; do not chisel them into smaller sizes."
+      ],
+      "decisions": [
+        "Strike spells do not satisfy the bolt-level elemental encounters.",
+        "The full inventory is banked by phase; removed misleading one-trip implication."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/enakhraslament/EnakhrasLament.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tpickaxe,\n\t\t\tchiselHighlighted,\n\t\t\tsoftClay,\n\t\t\tbreadOrCake,\n\t\t\ttinderbox,\n\t\t\tlog,\n\t\t\toakLog,\n\t\t\twillowLog,\n\t\t\tmapleLog,\n\t\t\tcandle,\n\t\t\tcoal,\n\t\t\tfireSpellRunes,\n\t\t\tairSpellRunes,\n\t\t\tcrumbleUndeadRunes,\n\t\t\tgranite2.hideConditioned(new SkillRequirement(Skill.MINING, 45)),\n\t\t\tsandstone52.hideConditioned(new SkillRequirement(Skill.MINING, 35))\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Enakhra's_Lament"
+    },
+    {
+      "name": "Curse of the Empty Lord",
+      "route_steps": [
+        "i35-empty-lord"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/miniquests/curseoftheemptylord/CurseOfTheEmptyLord.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Ring of visibility",
+          "quantity": 1,
+          "form": "actual ring",
+          "supplier": "Rasolo west of Fishing Guild.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ghostspeak amulet",
+          "quantity": 1,
+          "form": "actual amulet",
+          "supplier": "Father Urhney Lumbridge Swamp.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Knife",
+          "quantity": 1,
+          "form": "needed by one route branch",
+          "supplier": "Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Ghosts give six ghostly clothing pieces as route progresses."
+      ],
+      "decisions": [
+        "Keep all six pieces for The General's Shadow."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "miniquest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/curseoftheemptylord/CurseOfTheEmptyLord.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(ringOfVis, ghostspeakItems, knife);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Curse_of_the_Empty_Lord"
+    },
+    {
+      "name": "The General's Shadow",
+      "route_steps": [
+        "i35-general-shadow"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/miniquests/thegeneralsshadow/TheGeneralsShadow.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Ghostly robes",
+          "quantity": 6,
+          "form": "hood, top, bottoms, gloves, boots, cloak",
+          "supplier": "Retained from preceding miniquest; missing piece from its awarding ghost.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ring of visibility and ghostspeak amulet",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Rasolo / Father Urhney recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Coins",
+          "quantity": 40,
+          "form": "actual cash for sequence",
+          "supplier": "Keep after shopping.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual fight deficit",
+          "form": "food and combat kit; Bouncer does not allow protection prayer",
+          "supplier": "Bank for this separate fight.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Quest cave/dialogue intermediates local."
+      ],
+      "decisions": [
+        "A prior completed miniquest does not prove all six clothing items are still banked."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "miniquest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/thegeneralsshadow/TheGeneralsShadow.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(coins40, ghostlyHood, ghostlyBody, ghostlyLegs, ghostlyGloves, ghostlyBoots, ghostlyCloak,\n\t\t\tringOfVisibility, ghostspeak, combatGear);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_General's_Shadow"
+    },
+    {
+      "name": "Secrets of the North",
+      "route_steps": [
+        "i35-secrets"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/secretsofthenorth/SecretsOfTheNorth.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Coins",
+          "quantity": 100,
+          "form": "actual cash after shopping",
+          "supplier": "Quest payment separate from lockpick cost.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Lockpick",
+          "quantity": 1,
+          "form": "NORMAL lockpick, not Strange Old Lockpick",
+          "supplier": "Martin Thwait, Rogues' Den beneath Burthorpe's Toad and Chicken; route clears 50 Agility and 50 Thieving.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tinderbox",
+          "quantity": 1,
+          "form": "reusable tool",
+          "supplier": "Lumbridge general store; local crate also available during quest.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": "actual separate-fight deficits",
+          "form": "food, antipoison, Prayer potions and Weiss transport",
+          "supplier": "Use /intermediate/chapter-1-4/#i14-potion-supplies; count actual remaining doses after intervening fights and manufacture only the deficit.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Potion/puzzle supplies in the quest chambers."
+      ],
+      "decisions": [
+        "Regular lockpick type and shop access are explicit; rebank between Evelot, Assassin and Strange Creature."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/secretsofthenorth/SecretsOfTheNorth.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(coins, lockpick, tinderbox, combatGear, food);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Secrets_of_the_North"
+    },
+    {
+      "name": "His Faithful Servants",
+      "route_steps": [
+        "i35-faithful"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/miniquests/hisfaithfulservants/HisFaithfulServants.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Spade",
+          "quantity": 1,
+          "form": "normal tool",
+          "supplier": "Lumbridge general store.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat supplies",
+          "quantity": 1,
+          "form": "one Barrows run with charged Magic weapon/runes, food and Prayer doses",
+          "supplier": "Existing kit; replenish using common potion recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Free inventory space",
+          "quantity": 6,
+          "form": "six spaces for miniquest items",
+          "supplier": "Bank irrelevant gear before run.",
+          "status": "covered",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Barrows icon and associated items obtained during the run."
+      ],
+      "decisions": [
+        "Required miniquest completion is a single run, not a Barrows gear farm."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "miniquest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/hisfaithfulservants/HisFaithfulServants.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(combatGear, spade);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/His_Faithful_Servants"
+    },
+    {
+      "name": "Barbarian Training (Firemaking and pyre dialogue only)",
+      "route_steps": [
+        "i35-ds2-preflight"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/miniquests/barbariantraining/BarbarianTraining.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Bow",
+          "quantity": 1,
+          "form": "normal bow; crossbow excluded",
+          "supplier": "Retain Spirits of the Elid shortbow or buy from Lowe Varrock.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Oak log",
+          "quantity": 1,
+          "form": "OAK specifically for initial Firemaking lesson",
+          "supplier": "Cut one oak log; current QH lightLogWithBow explicitly requires oakLogs.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Talk to Otto after bow fire, then ask about pyre ships to unlock Ancient Cavern."
+      ],
+      "decisions": [
+        "Only the partial section needed for DS2 is required; chewed bones, full pyre, other smithing/herblore/farming training inputs are not made mandatory.",
+        "A last-pass check corrected an ordinary-log draft before publication."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "miniquest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/barbariantraining/BarbarianTraining.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(seed, sapling, spade,\n\t\t\tbow, oakLogs, tinderbox, axe,\n\t\t\tfeathers, knife,\n\t\t\thammer, bronzeBar.quantity(2), logs.quantity(3),\n\t\t\tattackPotion, roe,\n\t\t\tantifireShield, combatGear);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Barbarian_Training"
+    },
+    {
+      "name": "Dragon Slayer II",
+      "route_steps": [
+        "i35-ds2-preflight",
+        "i35-ds2"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/dragonslayerii/DragonSlayerII.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Oak planks",
+          "quantity": 8,
+          "form": "fresh planks after Brain Robbery",
+          "supplier": "Eight oak logs at sawmill, 2,000 coins.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Swamp paste",
+          "quantity": 10,
+          "form": "finished paste",
+          "supplier": "Charter Trader Crewmember, e.g. Port Khazard.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Nails",
+          "quantity": 12,
+          "form": "minimum twelve plus breakage; 30 steel nails initial buffer",
+          "supplier": "Sawmill operator; restock if buffer exhausted.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tools",
+          "quantity": 1,
+          "form": "pickaxe, axe, hammer, machete, saw, chisel, spade, tinderbox, pestle, glassblowing pipe",
+          "supplier": "Existing tools; Jiminua for normal machete, sawmill saw, Dommik chisel, Lumbridge general store, Jatix pestle, WGS Entrana pipe recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Lit light",
+          "quantity": 1,
+          "form": "actual lantern",
+          "supplier": "Retain WGS lantern or use complete recovery.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Catspeak amulet (e)",
+          "quantity": 1,
+          "form": "enchanted amulet, not basic catspeak",
+          "supplier": "Sphinx with cat for basic amulet; Hild Burthorpe + five death runes to enchant.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ghostspeak amulet",
+          "quantity": 1,
+          "form": "actual item",
+          "supplier": "Father Urhney; no optional Morytania diary required.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Seal of passage",
+          "quantity": 1,
+          "form": "actual item",
+          "supplier": "Brundt before Lunar travel.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Goutweed",
+          "quantity": 1,
+          "form": "goutweed, not gout tuber",
+          "supplier": "Troll Stronghold kitchen storeroom crates; replace what Dream Mentor consumed.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Cut dragonstone",
+          "quantity": 1,
+          "form": "reserved quest gem",
+          "supplier": "Use actual gem, key or halves first; crystal chest Taverley guarantees uncut gem. If no key halves exist, Gorak Plane DIR can supply both on a variable gem-drop table; stop when actual pair acquired.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Molten glass",
+          "quantity": 2,
+          "form": "two fresh glass",
+          "supplier": "Two charter sand + two soda ash at a furnace.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Astral rune",
+          "quantity": 1,
+          "form": "separate quest rune",
+          "supplier": "Baba Yaga.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fire Wave runes",
+          "quantity": 3,
+          "form": "three casts: 21 fire, 15 air, three blood",
+          "supplier": "Baba Yaga; standard spellbook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Anti-dragon shield",
+          "quantity": 1,
+          "form": "equipped dragonfire protection",
+          "supplier": "Duke Horacio.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Insulated boots",
+          "quantity": 1,
+          "form": "retained boots for bolt/dragon phases",
+          "supplier": "Slayer equipment shop if missing.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Antifire potions",
+          "quantity": "actual attempt-and-retry deficit",
+          "form": "lantadyme + vial water + dragon scale dust, 69 Herblore; three doses per craft",
+          "supplier": "Actual banked herb first; aberrant spectres for missing lantadyme with no fixed kill claim; ground blue scales at Taverley via 70-Agility pipe, crush.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat ammo and potions",
+          "quantity": "remaining deficit after Fight Caves/MM2",
+          "form": "plain adamant/ruby(e)/diamond(e), food, Prayer restoration and poison/venom cures",
+          "supplier": "Chapter 3.3 manufacturing recovery plus common potion recovery.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Map/key-forging/ship-repair intermediates supplied during quest."
+      ],
+      "decisions": [
+        "Whole-quest checklist is staged at bank by phase, not carried as one inventory.",
+        "Dragonstone supplier chain remains repeatable RNG and is not described as a guaranteed Gorak drop or fixed kill count.",
+        "Oak-log Barbarian Firemaking access is separately closed before Ancient Cavern key forging."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/dragonslayerii/DragonSlayerII.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(pickaxe, axe, oakPlank8, swampPaste10, nails12OrMore, hammer, machete, saw, catspeakAmulet, lightSource, goutweed,\n\t\t\tastralRune, sealOfPassage, tinderbox, pestleAndMortarHighlighted, dragonstone, moltenGlass2, glassblowingPipe, ghostspeakOrMory2, chisel, spade,\n\t\t\trunesForFireWaveOrSurge3, antifireShield);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Dragon_Slayer_II"
+    },
+    {
+      "name": "Desert Treasure II",
+      "route_steps": [
+        "i35-dt2-preflight",
+        "i35-dt2"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/deserttreasureii/DesertTreasureII.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Opening Burst runes",
+          "quantity": 1,
+          "form": "one of each Burst: eight death, 16 chaos, two fire, three air, four water, two soul, two blood",
+          "supplier": "Baba Yaga; Ancient spellbook for opening, additional Shadow casts for repeated Leviathan stuns are separate.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ring of visibility",
+          "quantity": 1,
+          "form": "actual ring",
+          "supplier": "Rasolo west of Fishing Guild.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Facemask",
+          "quantity": 1,
+          "form": "actual Slayer equipment",
+          "supplier": "Any Slayer equipment shop.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Tinderbox, pestle and pickaxe",
+          "quantity": 1,
+          "form": "one of each",
+          "supplier": "Lumbridge general store; Jatix; retained pickaxe.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Magic weapon",
+          "quantity": 1,
+          "form": "owned Ancient staff or deterministic standard-spell staff",
+          "supplier": "If one-time Ancient-staff purchase was lost, Zaff's staff of earth works for standard Earth Wave where appropriate; manually cast Ancient opening/stuns on Ancient spellbook.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Combat food, potions and ammunition",
+          "quantity": "per-boss actual attempt deficit",
+          "form": "existing deterministic equipment, Prayer potions, poison/stat/energy recovery",
+          "supplier": "Common potion recovery and Chapter 3.3 bolt manufacturing.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "quest_local_supplies": [
+        "Vault puzzles, Duke's herbs/mushrooms/salts and other boss-area quest intermediates local."
+      ],
+      "decisions": [
+        "The one-time opening rune bundle is not the budget for all four bosses.",
+        "No mandatory new rare Ancient staff or raid/boss-drop weapon introduced."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/deserttreasureii/DesertTreasureII.java",
+      "required_item_method_snapshot": "\n\t\treturn Arrays.asList(combatGear, allBursts, facemask, ringOfVisibility);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/Desert_Treasure_II"
+    },
+    {
+      "name": "The Blood Moon Rises",
+      "route_steps": [
+        "i36-preflight",
+        "i36-early-story",
+        "i36-flail",
+        "i36-theatre-wyrd",
+        "i36-siege",
+        "i36-drakan"
+      ],
+      "qh_source": "src/main/java/com/questhelper/helpers/quests/thebloodmoonrises/TheBloodMoonRises.java",
+      "status": "fixed",
+      "external_inputs": [
+        {
+          "item": "Blisterwood flail",
+          "quantity": 1,
+          "form": "actual weapon retained after A Night at the Theatre",
+          "supplier": "Ivan Strom after SOTF for 40,000 coins if missing; Old Man Ral provides a replacement during relevant quest phase.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Vyre noble outfit",
+          "quantity": 1,
+          "form": "complete outfit",
+          "supplier": "Free chest near Ivan; not an old bank assumption.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Opening ranged weapon and ammo",
+          "quantity": 1,
+          "form": "actual ranged attack for acidic bloodvelds",
+          "supplier": "Existing crossbow/ammo; optional faster switch: two iron bars -> 20 iron dart tips plus 20 feathers, 19 Smithing/22 Fletching after Tourist Trap.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Opening food and potions",
+          "quantity": "actual attempt deficit",
+          "form": "Prayer restoration, energy/stat restoration",
+          "supplier": "Common potion recovery before starting.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Drakan's medallion",
+          "quantity": 1,
+          "form": "recommended travel item; hard shrine requirement is uncertain",
+          "supplier": "/intermediate/chapter-2-5/#i25-sins post-SOTF recovery.",
+          "status": "unverified",
+          "notes": [
+            "Current QH getItemRequirements lists only flail/outfit and has TODO around medallion shrine interaction; report does not promote optional travel advice into a verified hard gate."
+          ]
+        }
+      ],
+      "quest_local_supplies": [
+        "Vampyrium named crates/tables provide renewable food/potions, unavailable for banking outside quest.",
+        "Hallowed-flail room supplies blood diamond, tablet, sickle/bars/logs/tools; keep seven free spaces and make required five stakes.",
+        "Other siege/story materials obtained locally."
+      ],
+      "decisions": [
+        "Opening acidic bloodvelds need actual ranged attack, so generic 'combat gear' was insufficient.",
+        "No outside blood-diamond or later-phase potion farm is imposed."
+      ],
+      "cross_chapter_needs": [],
+      "kind": "quest",
+      "source_url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/thebloodmoonrises/TheBloodMoonRises.java",
+      "required_item_method_snapshot": "\n\t\treturn List.of(\n\t\t\tblisterwoodFlail,\n\t\t\tvyreNobleOutfit\n\t\t);",
+      "requirement_method_note": "Definitions, conditions and phase steps were inspected in addition to this list.",
+      "wiki_reference": "https://oldschool.runescape.wiki/w/The_Blood_Moon_Rises"
+    }
+  ],
+  "supporting_activities": [
+    {
+      "route_steps": [
+        "i33-ranged-kit"
+      ],
+      "status": "fixed",
+      "inputs": [
+        {
+          "item": "Adamant crossbow",
+          "quantity": 1,
+          "form": "if no actual rune crossbow",
+          "supplier": "Keldagrim adamantite limbs + one Prifddinas mahogany log -> stock + hammer + crossbow string (61 Fletching). Make missing string from raw beef on range, choose Make sinew, then spin at 10 Crafting.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Plain adamant bolts",
+          "quantity": "live starter deficit",
+          "form": "one bar -> ten unfinished bolts, then one feather per bolt",
+          "supplier": "73 Smithing if manufacturing. One adamant ore + three coal at Blast Furnace, or six coal at normal furnace. Existing bars/bolts first; Ore Seller and Gerrant fill deficits.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Ruby bolts (e)",
+          "quantity": 300,
+          "form": "starter total, not fixed total future consumption",
+          "supplier": "Apply ruby tips and enchant in ten-bolt batches; count the actual remaining stack.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Diamond bolts (e)",
+          "quantity": 250,
+          "form": "starter total",
+          "supplier": "Separate ring/market-entry diamonds from tip stock.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Full 300-ruby/250-diamond enchant rune budget",
+          "quantity": 1,
+          "form": "55 cosmic, 30 blood, 50 law, 150 fire, 250 earth",
+          "supplier": "Ruby: one cosmic + one blood + five fire per ten. Diamond: one cosmic + two law + ten earth per ten. Buy actual deficits at rune shops.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "notes": [
+        "Deterministic adamant crossbow avoids a mandatory limb/drop hunt.",
+        "73 Smithing is a product-making check even though later DS2 needs only 70.",
+        "Diamond enchantment uses two law runes, not one."
+      ]
+    },
+    {
+      "route_steps": [
+        "i33-fire-cape"
+      ],
+      "status": "fixed",
+      "inputs": [
+        {
+          "item": "Prayer potions or super restores",
+          "quantity": "14–17 four-dose inventory slots as initial plan",
+          "form": "56–68 actual doses",
+          "supplier": "From zero, 19–23 ordinary three-dose prayer-potion crafts before decanting; ceil(missing doses/3), subtract actual banked doses.",
+          "status": "fixed",
+          "notes": []
+        },
+        {
+          "item": "Fight Caves food and ammunition",
+          "quantity": "initial plan plus actual retries",
+          "form": "food/plain bolts and relevant swaps",
+          "supplier": "Restock after an attempt; later MM2/DS2 checks use remaining stock.",
+          "status": "fixed",
+          "notes": []
+        }
+      ],
+      "notes": [
+        "Ordinary restore potions cannot supply these Prayer doses.",
+        "Inventory recommendation is an initial planning buffer, not a guarantee of success.",
+        "No 1-tick flicking requirement or optional gear dependency introduced."
+      ]
+    }
+  ],
+  "bruh_comparison": [
+    {
+      "bruh_location": "1.1.11",
+      "topic": "Wydin food batch and Sarah tools",
+      "lost_output": "Early raw meat, cheese, redberries, flour and Farming tools were not guaranteed after relaxed route substitutions.",
+      "consumer": [
+        "Prince Ali Rescue",
+        "Ratcatchers",
+        "Beneath Cursed Sands",
+        "Rum Deal"
+      ],
+      "resolution": "Local shopping and material recipes at each actual consumer."
+    },
+    {
+      "bruh_location": "1.1.14 and 1.3.30",
+      "topic": "Rag and Bone Man I started early; incidental bone collection and nails",
+      "lost_output": "Late cleanup cannot inherit opportunistic special bones, spare logs or optional nail rewards.",
+      "consumer": [
+        "Rag and Bone Man I",
+        "Rag and Bone Man II",
+        "The Great Brain Robbery"
+      ],
+      "resolution": "Full special-bone processing and collection map; deterministic nail purchases; separate post-consumption counts."
+    },
+    {
+      "bruh_location": "1.2.8",
+      "topic": "Catherby wax/flax batch",
+      "lost_output": "Wax and actual spun bow strings not guaranteed; Sailing linen yarn is a different output.",
+      "consumer": [
+        "Troll Romance",
+        "Devious Minds"
+      ],
+      "resolution": "Catherby beehive recipe and one-flax bow-string recipe at consumer."
+    },
+    {
+      "bruh_location": "1.3.10",
+      "topic": "Early unicorn horn and special bone",
+      "lost_output": "Unicorn horn/bone retention from an old quest trip cannot be assumed.",
+      "consumer": [
+        "Ratcatchers",
+        "Rag and Bone Man I"
+      ],
+      "resolution": "Local horn kill/grind and distinct quest-bone hunt."
+    },
+    {
+      "bruh_location": "1.4.6",
+      "topic": "Bulk Slayer equipment purchase",
+      "lost_output": "Mirror shield, facemask, insulated boots, Slayer gloves and ice coolers not guaranteed.",
+      "consumer": [
+        "Rum Deal",
+        "The Fremennik Exiles",
+        "The Curse of Arrav",
+        "Rag and Bone Man II",
+        "Desert Treasure II"
+      ],
+      "resolution": "Slayer-shop recovery at the named consuming quests."
+    },
+    {
+      "bruh_location": "1.4.7",
+      "topic": "Partial Troll Romance sled preparation",
+      "lost_output": "A sled assembled during old travel route is absent.",
+      "consumer": [
+        "Troll Romance"
+      ],
+      "resolution": "One complete sled/wax ingredient set and access-tool recovery."
+    },
+    {
+      "bruh_location": "2.2.38",
+      "topic": "Smith mithril 2h sword and five grapples",
+      "lost_output": "Relaxed Smithing replacement trains skill without producing those items.",
+      "consumer": [
+        "The Path of Glouphrie",
+        "Devious Minds",
+        "The Curse of Arrav"
+      ],
+      "resolution": "Complete grapple recipe including mithril bolt and rope; direct mithril 2h shop."
+    },
+    {
+      "bruh_location": "2.3.9",
+      "topic": "Goblin temple mailbox/crate",
+      "lost_output": "Bulk goblin mail collection can be supplied locally; not a drop prerequisite.",
+      "consumer": [
+        "Land of the Goblins"
+      ],
+      "resolution": "Name unlimited crate east inside temple beyond guards and dye forms."
+    },
+    {
+      "bruh_location": "2.3.10",
+      "topic": "Rag and Bone Man II explicitly includes Skippy",
+      "lost_output": "Miniquest required to kill Mogres was omitted from grouped cleanup.",
+      "consumer": [
+        "Rag and Bone Man II"
+      ],
+      "resolution": "Skippy recipe and extra snape grass inside existing cleanup row."
+    },
+    {
+      "bruh_location": "2.3.12",
+      "topic": "Grim Tales tools and prior Woodcutting",
+      "lost_output": "Earlier relaxed route only guarantees 70 Woodcutting, not Grim's 71.",
+      "consumer": [
+        "Grim Tales",
+        "The Blood Moon Rises"
+      ],
+      "resolution": "Local 71 bridge, two unfinished tarromin potions, and carry 60,000 quest XP into final 74 check."
+    },
+    {
+      "bruh_location": "2.3.13",
+      "topic": "Pirate quest batch",
+      "lost_output": "Normal plank/fur/nail and diving stock must be real.",
+      "consumer": [
+        "Rum Deal",
+        "Cabin Fever",
+        "The Great Brain Robbery"
+      ],
+      "resolution": "Distinguish Cabin's local supplies from Brain's 200 nails and full cat/facility inputs."
+    },
+    {
+      "bruh_location": "2.2.32",
+      "topic": "Varlamore batch buys four willow longbows from Arcuani",
+      "lost_output": "Quest-list-only cleanup hid finished-bow purchase and trap/tool sources.",
+      "consumer": [
+        "Shadows of Custodia",
+        "At First Light"
+      ],
+      "resolution": "Four strung longbows and four maple logs; Arcuani shop plus self-made fallback; box-trap alternative."
+    },
+    {
+      "bruh_location": "3.1.7",
+      "topic": "WGS explicitly collects 100 magic logs for later Shades activity",
+      "lost_output": "Relaxed guide omitted one-time cache, then defaulted MM2 to +5 Woodcutting stew.",
+      "consumer": [
+        "While Guthix Sleeps",
+        "Monkey Madness II"
+      ],
+      "resolution": "Retain only actual missing three Grand Tree balloon logs; no 100-log quota or mandatory Shades activity."
+    },
+    {
+      "bruh_location": "3.1.9",
+      "topic": "Exiles/Bardur and MM2/Night at Theatre handoff",
+      "lost_output": "Transport items and combat supplies must survive intervening consumers.",
+      "consumer": [
+        "The Fremennik Exiles",
+        "Monkey Madness II",
+        "A Night at the Theatre"
+      ],
+      "resolution": "Recovery shops, earlier-quest item replacement links and actual potion/ammo counts."
+    },
+    {
+      "bruh_location": "3.2.2 and 3.2.3",
+      "topic": "DS2/DT2 with BRUH Bowfa and established supplies",
+      "lost_output": "A deterministic ordinary-crossbow route does not inherit Bowfa, incidental runes or restored consumable stocks.",
+      "consumer": [
+        "Dragon Slayer II",
+        "Desert Treasure II"
+      ],
+      "resolution": "Existing deterministic gear retained; manufacturing, elemental spell budgets and local potion recovery added."
+    }
+  ],
+  "cross_chapter_handoffs": [
+    {
+      "from": "Chapter 1.4 potion supply appendix",
+      "anchor": "/intermediate/chapter-1-4/#i14-potion-supplies",
+      "required": "Root supplies full repeatable Prayer/ordinary restore/energy/antipoison recipes and ingredient/shop recovery. Links appear at later combat consumers and Skippy."
+    },
+    {
+      "from": "Chapter 1.4 magic logs",
+      "required": "Root confirmed early mandatory reserve reduces from 16 to 13 (12 DT1 + one MEP1); MM2's three are deferred to actual WGS Movario cache/bank stock. No pre-WGS Grand Tree balloon consumer exists in Chapter 3."
+    },
+    {
+      "from": "Chapter 2.2 Monkey Madness I",
+      "anchor": "/intermediate/chapter-2-2/#i22-monkey-madness",
+      "required": "Chapter 2 owner provides postquest M'speak amulet replacement, including mould/dentures/gold/wool steps. Linked from MM2."
+    },
+    {
+      "from": "Chapter 2.4 RFD Awowogei",
+      "anchor": "/intermediate/chapter-2-4/#i24-awowogei",
+      "required": "Chapter 2 owner provides actual ninja greegree replacement with monkey talisman/bones/Zooknock. Linked from MM2."
+    },
+    {
+      "from": "Chapter 2.5 Sins of the Father",
+      "anchor": "/intermediate/chapter-2-5/#i25-sins",
+      "required": "Chapter 2 owner provides post-SOTF Drakan medallion replacement (not dead Kael Forshaw). Linked only as recommended travel recovery in Blood Moon; shrine hard requirement remains uncertain."
+    },
+    {
+      "from": "Chapter 2 Red Reef",
+      "required": "Quest Cape journal names The Red Reef; Chapter 2 owner audits its inputs. No duplicate Chapter 3 quest step added."
+    },
+    {
+      "from": "Chapter 3.1 While Guthix Sleeps",
+      "to": "Chapter 3.4 Monkey Madness II",
+      "required": "Collect only missing three magic logs after notes handoff; actual one-time cache/bank distinction. Restore fallback 75 Woodcutting only if cache spent."
+    },
+    {
+      "from": "Chapter 3.5 Grim Tales",
+      "to": "Chapter 3.6 Woodcutting",
+      "required": "Read actual XP including Grim's 60,000 Woodcutting before training to 74."
+    }
+  ],
+  "uncertainties": [
+    {
+      "subject": "Blood Moon medallion shrine interaction",
+      "status": "unverified",
+      "evidence": "Current QH getItemRequirements has flail/outfit; recommended medallion and TODO do not establish a hard gate.",
+      "handling": "Guide offers post-SOTF travel recovery, report explicitly leaves hard shrine requirement uncertain."
+    },
+    {
+      "subject": "Exact player bank and POH facilities",
+      "status": "unverified",
+      "handling": "Every limited material checks actual ownership and missing quantity; optional drops and prior gross yields never treated as bank guarantees."
+    },
+    {
+      "subject": "Herb/gem/key/bone drop timing and fight consumption",
+      "status": "unverified",
+      "handling": "Variable recovery until actual deficit filled; starter potion/ammo/cooler counts are not promises of success or fixed kill counts."
+    },
+    {
+      "subject": "Canonical Wiki access freshness",
+      "status": "unverified",
+      "handling": "Direct live pages blocked by robots; primary current QH code and pinned BRUH used for item gates/locations. Stable crafting/shop mechanics were cross-checked where possible; parent review should retain this limitation rather than claim a live in-game audit."
+    }
+  ],
+  "validation": {
+    "structural_checks": [
+      {
+        "path": "src/pages/intermediate/chapter-3-1.astro",
+        "chars": 37917,
+        "route_step_openings_unchanged": true,
+        "all_ids_unchanged": true,
+        "styles_unchanged": true,
+        "trackers_and_training_widgets_unchanged": true,
+        "counts": {
+          "RouteStep": {
+            "open": 9,
+            "close": 9
+          },
+          "ExpandableNote": {
+            "open": 5,
+            "close": 5
+          },
+          "p": {
+            "open": 40,
+            "close": 40
+          },
+          "ul": {
+            "open": 2,
+            "close": 2
+          },
+          "li": {
+            "open": 8,
+            "close": 8
+          },
+          "table": {
+            "open": 0,
+            "close": 0
+          },
+          "tr": {
+            "open": 0,
+            "close": 0
+          },
+          "td": {
+            "open": 0,
+            "close": 0
+          },
+          "th": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "new_notes_closed_by_default": true,
+        "new_notes_labelled": true,
+        "patch_round_trip_ok": true
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-2.astro",
+        "chars": 36835,
+        "route_step_openings_unchanged": true,
+        "all_ids_unchanged": true,
+        "styles_unchanged": true,
+        "trackers_and_training_widgets_unchanged": true,
+        "counts": {
+          "RouteStep": {
+            "open": 12,
+            "close": 12
+          },
+          "ExpandableNote": {
+            "open": 9,
+            "close": 9
+          },
+          "p": {
+            "open": 42,
+            "close": 42
+          },
+          "ul": {
+            "open": 3,
+            "close": 3
+          },
+          "li": {
+            "open": 10,
+            "close": 10
+          },
+          "table": {
+            "open": 0,
+            "close": 0
+          },
+          "tr": {
+            "open": 0,
+            "close": 0
+          },
+          "td": {
+            "open": 0,
+            "close": 0
+          },
+          "th": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "new_notes_closed_by_default": true,
+        "new_notes_labelled": true,
+        "patch_round_trip_ok": true
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-3.astro",
+        "chars": 30775,
+        "route_step_openings_unchanged": true,
+        "all_ids_unchanged": true,
+        "styles_unchanged": true,
+        "trackers_and_training_widgets_unchanged": true,
+        "counts": {
+          "RouteStep": {
+            "open": 9,
+            "close": 9
+          },
+          "ExpandableNote": {
+            "open": 8,
+            "close": 8
+          },
+          "p": {
+            "open": 35,
+            "close": 35
+          },
+          "ul": {
+            "open": 1,
+            "close": 1
+          },
+          "li": {
+            "open": 4,
+            "close": 4
+          },
+          "table": {
+            "open": 0,
+            "close": 0
+          },
+          "tr": {
+            "open": 0,
+            "close": 0
+          },
+          "td": {
+            "open": 0,
+            "close": 0
+          },
+          "th": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "new_notes_closed_by_default": true,
+        "new_notes_labelled": true,
+        "patch_round_trip_ok": true
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-4.astro",
+        "chars": 42251,
+        "route_step_openings_unchanged": true,
+        "all_ids_unchanged": true,
+        "styles_unchanged": true,
+        "trackers_and_training_widgets_unchanged": true,
+        "counts": {
+          "RouteStep": {
+            "open": 8,
+            "close": 8
+          },
+          "ExpandableNote": {
+            "open": 7,
+            "close": 7
+          },
+          "p": {
+            "open": 42,
+            "close": 42
+          },
+          "ul": {
+            "open": 2,
+            "close": 2
+          },
+          "li": {
+            "open": 7,
+            "close": 7
+          },
+          "table": {
+            "open": 0,
+            "close": 0
+          },
+          "tr": {
+            "open": 0,
+            "close": 0
+          },
+          "td": {
+            "open": 0,
+            "close": 0
+          },
+          "th": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "new_notes_closed_by_default": true,
+        "new_notes_labelled": true,
+        "patch_round_trip_ok": true
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-5.astro",
+        "chars": 55096,
+        "route_step_openings_unchanged": true,
+        "all_ids_unchanged": true,
+        "styles_unchanged": true,
+        "trackers_and_training_widgets_unchanged": true,
+        "counts": {
+          "RouteStep": {
+            "open": 15,
+            "close": 15
+          },
+          "ExpandableNote": {
+            "open": 16,
+            "close": 16
+          },
+          "p": {
+            "open": 70,
+            "close": 70
+          },
+          "ul": {
+            "open": 1,
+            "close": 1
+          },
+          "li": {
+            "open": 4,
+            "close": 4
+          },
+          "table": {
+            "open": 1,
+            "close": 1
+          },
+          "tr": {
+            "open": 8,
+            "close": 8
+          },
+          "td": {
+            "open": 14,
+            "close": 14
+          },
+          "th": {
+            "open": 2,
+            "close": 2
+          }
+        },
+        "new_notes_closed_by_default": true,
+        "new_notes_labelled": true,
+        "patch_round_trip_ok": true
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-6.astro",
+        "chars": 25858,
+        "route_step_openings_unchanged": true,
+        "all_ids_unchanged": true,
+        "styles_unchanged": true,
+        "trackers_and_training_widgets_unchanged": true,
+        "counts": {
+          "RouteStep": {
+            "open": 12,
+            "close": 12
+          },
+          "ExpandableNote": {
+            "open": 3,
+            "close": 3
+          },
+          "p": {
+            "open": 30,
+            "close": 30
+          },
+          "ul": {
+            "open": 2,
+            "close": 2
+          },
+          "li": {
+            "open": 8,
+            "close": 8
+          },
+          "table": {
+            "open": 0,
+            "close": 0
+          },
+          "tr": {
+            "open": 0,
+            "close": 0
+          },
+          "td": {
+            "open": 0,
+            "close": 0
+          },
+          "th": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "new_notes_closed_by_default": true,
+        "new_notes_labelled": true,
+        "patch_round_trip_ok": true
+      }
+    ],
+    "runtime": "The shared executor failed before this agent's edits could be written locally. All six reviewed page drafts were delivered as UTF-8 GitHub blobs. No local Astro build, browser render or test suite was executed by this agent; root handles integrated GitHub Actions/build validation.",
+    "remote_mutations": "Only create_blob authorized; no branch/tree/commit/PR writes by this agent."
+  },
+  "nonconsumer_quest_mentions": [
+    {
+      "name": "Zogre Flesh Eaters",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Creature of Fenkenstrain",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Recipe for Disaster",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Pirate Pete",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Roving Elves",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Desert Treasure I",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Below Ice Mountain",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Hazeel Cult",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "The Garden of Death",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Animal Magnetism",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Ghosts Ahoy",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Tears of Guthix",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "A Taste of Hope",
+      "pages": [
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Sins of the Father",
+      "pages": [
+        "3.4",
+        "3.6"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Dream Mentor",
+      "pages": [
+        "3.1",
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Legends' Quest",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Client of Kourend",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Bone Voyage",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Making Friends with My Arm",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Temple of the Eye",
+      "pages": [
+        "3.1",
+        "3.2",
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Enlightened Journey",
+      "pages": [
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Song of the Elves",
+      "pages": [
+        "3.1",
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "The Lost Tribe",
+      "pages": [
+        "3.1",
+        "3.3",
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Monkey Madness I",
+      "pages": [
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Lunar Diplomacy",
+      "pages": [
+        "3.2"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Lost City",
+      "pages": [
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Death Plateau",
+      "pages": [
+        "3.2",
+        "3.3"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "A Tail of Two Cats",
+      "pages": [
+        "3.1",
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "The Hand in the Sand",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Wanted!",
+      "pages": [
+        "3.1",
+        "3.2"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Nature Spirit",
+      "pages": [
+        "3.1"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Fight Arena",
+      "pages": [
+        "3.1",
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Defender of Varrock",
+      "pages": [
+        "3.1",
+        "3.3"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Enter the Abyss",
+      "pages": [
+        "3.1",
+        "3.2"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Gertrude's Cat",
+      "pages": [
+        "3.5"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Pandemonium",
+      "pages": [
+        "3.2"
+      ],
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    },
+    {
+      "name": "Hopespear's Will",
+      "pages": [
+        "3.4"
+      ],
+      "status": "covered",
+      "disposition": "Explicitly informational and optional; guide does not tell player to start it and no mandatory later row assumes completion or its items. Current QH lists ghostspeak, ring of visibility, goblin potion, fairy staff and unarmed combat supplies if the player independently chooses it.",
+      "source": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/miniquests/hopespearswill/HopespearsWill.java"
+    },
+    {
+      "name": "The Red Reef",
+      "pages": [
+        "3.6"
+      ],
+      "status": "covered",
+      "disposition": "Quest Cape list reference; substantive quest and item supply are owned by the Chapter 2 audit.",
+      "source": null
+    },
+    {
+      "name": "The Tourist Trap",
+      "pages": [
+        "3.6"
+      ],
+      "alias": "Tourist Trap",
+      "status": "covered",
+      "disposition": "Previously completed prerequisite or item-unlock reference. Chapter 1/2 owners audit the original consumer. Any item needed again by Chapter 3 has a local recovery or explicit earlier recovery link in this report.",
+      "source": null
+    }
+  ],
+  "inherited_requirements_note": "These references are not new Chapter 3 item-spending steps; original-quest inventories remain in the assigned Chapter 1/2 audits. Merely having finished a prerequisite is not treated as proof that a consumable/reusable quest item remains banked.",
+  "mechanics_reference_urls": [
+    "https://oldschool.runescape.wiki/w/Clockmaking_space",
+    "https://oldschool.runescape.wiki/w/Wooden_cat",
+    "https://oldschool.runescape.wiki/w/Workshop",
+    "https://oldschool.runescape.wiki/w/Holy_symbol",
+    "https://oldschool.runescape.wiki/w/Mith_grapple",
+    "https://oldschool.runescape.wiki/w/Sapphire_lantern",
+    "https://oldschool.runescape.wiki/w/Lantern_lens",
+    "https://oldschool.runescape.wiki/w/Crossbow_string",
+    "https://oldschool.runescape.wiki/w/Enchantment_spells",
+    "https://oldschool.runescape.wiki/w/Law_rune",
+    "https://oldschool.runescape.wiki/w/Ratcatchers/Quick_guide",
+    "https://oldschool.runescape.wiki/w/Skippy_and_the_Mogres/Quick_guide",
+    "https://oldschool.runescape.wiki/w/Barbarian_Training",
+    "https://oldschool.runescape.wiki/w/Ancient_Cavern",
+    "https://oldschool.runescape.wiki/w/Weapon_poison",
+    "https://oldschool.runescape.wiki/w/Balloon_transport_system",
+    "https://oldschool.runescape.wiki/w/While_Guthix_Sleeps"
+  ],
+  "delivery": {
+    "page_blobs": [
+      {
+        "path": "src/pages/intermediate/chapter-3-1.astro",
+        "sha": "b9826ae060b6ea520adc22d441c1e71f44c2cfd6"
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-2.astro",
+        "sha": "7e9f7a3e2d91e99211dddc83707290164ae6398e"
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-3.astro",
+        "sha": "bf2d96c301c9b8f4a33c96e6c8cadd4c134e74ff"
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-4.astro",
+        "sha": "8a39b405ccb288087ce82824f1f6b32aa76152b3"
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-5.astro",
+        "sha": "b11343d9d559297c1b5a02cfbbd28db4dbe7e738"
+      },
+      {
+        "path": "src/pages/intermediate/chapter-3-6.astro",
+        "sha": "fcc5d774591c64ea3e102d0e4d4ece591b58246a"
+      }
+    ],
+    "coverage_artifact": "audit-ch3.json",
+    "commit_or_branch_mutations": false
+  }
+}

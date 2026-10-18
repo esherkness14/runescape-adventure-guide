@@ -1,0 +1,20 @@
+{
+  "pages": 17,
+  "requiredTotal": 253,
+  "optionalTotal": 4,
+  "detailsTotal": 170,
+  "baseline": "6a0a409ee8bc4568b81cba2b2a350ee63dc28080",
+  "progressContract": "unchanged",
+  "localLinks": "passed",
+  "mobileAndDesktop": "passed",
+  "keyboardDisclosure": "passed",
+  "persistedProgress": "passed",
+  "browserErrors": [],
+  "source_commit": "99b5fa1088ad0761cb9be998816dc001f5fa1472",
+  "workflow_run_id": 39092975738,
+  "job_id": 117573431034,
+  "workflow_url": "https://github.com/esherkness14/runescape-adventure-guide/actions/runs/39092975738",
+  "production_build": "passed",
+  "generated_site_pages": 22,
+  "manual_in_game_validation": false
+}

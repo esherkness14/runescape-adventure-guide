@@ -1,0 +1,69 @@
+{
+  "audit_date": "2026-10-18",
+  "baseline": "6a0a409ee8bc4568b81cba2b2a350ee63dc28080",
+  "scope": "All 17 Intermediate pages; individual quest items including grouped quests, not a new exhaustive minigame/skill-method audit.",
+  "route_steps": 247,
+  "training_blocks": 37,
+  "required_checkboxes": 253,
+  "optional_checkboxes": 4,
+  "coverage_index_rows": 508,
+  "index_row_kinds": {
+    "route": 247,
+    "training": 37,
+    "quest/diary/conditional": 101,
+    "quest": 102,
+    "miniquest": 7,
+    "RFD quest segment": 6,
+    "quest preparation": 4,
+    "combat activity": 1,
+    "optional miniquest": 1,
+    "supporting activity": 2
+  },
+  "detail_files": [
+    {
+      "path": "audit/quest-supplies/chapter-1-early.json",
+      "route_steps": 18,
+      "named_records": 37
+    },
+    {
+      "path": "audit/quest-supplies/chapter-1-late.json",
+      "route_steps": 42,
+      "named_records": 64
+    },
+    {
+      "path": "audit/quest-supplies/chapter-2.json",
+      "route_steps": 122,
+      "named_records": 70
+    },
+    {
+      "path": "audit/quest-supplies/chapter-3.json",
+      "route_steps": 65,
+      "named_records": 44
+    }
+  ],
+  "sources": {
+    "quest_helper": "5f791937a99a676f23c02aa48c4e4d5b50e7edad",
+    "bruhsailer": "6422739188591a5ae18f41a424d7b1d29835f543"
+  },
+  "verified_page_commit": "99b5fa1088ad0761cb9be998816dc001f5fa1472",
+  "interpretation": "Records can include partial quests, recommendations, repeated consumers and optional branches; counts are not a claim of unique OSRS quests or live player ownership.",
+  "page_blobs": {
+    "src/pages/intermediate/chapter-1-1.astro": "9369b7cce8c295b7c551d684a6b63fb81feb4b49",
+    "src/pages/intermediate/chapter-1-2.astro": "56651874bac0523707f69ab5ebf1ffd4a5384267",
+    "src/pages/intermediate/chapter-1-3.astro": "be7757982f3e18916b5212a07951d7cc5c4ab311",
+    "src/pages/intermediate/chapter-1-4.astro": "328c0b7648f898f59c0e7542e190b3cb0348148a",
+    "src/pages/intermediate/chapter-2-1.astro": "c35ff89ceba5626d7d0ee2a560162487687017c0",
+    "src/pages/intermediate/chapter-2-2.astro": "8bc8e58256a513959fffc6d334c6280d8e6266b9",
+    "src/pages/intermediate/chapter-2-3.astro": "fa84aa8d79e135b06c82a4b8c151e1bace4d2457",
+    "src/pages/intermediate/chapter-2-4.astro": "f605bf24ba33a5d66f2928df39254f053ea2165b",
+    "src/pages/intermediate/chapter-2-5.astro": "ef91c2beff24d19c3a27ecdbf098ecdb56286aba",
+    "src/pages/intermediate/chapter-2-6.astro": "e9d59320f29227d6e12bdb7f5d04e43ea33b5e31",
+    "src/pages/intermediate/chapter-2-7.astro": "aa0c33f4bab06ab53c304a51b03ba72d6c36219f",
+    "src/pages/intermediate/chapter-3-1.astro": "b9826ae060b6ea520adc22d441c1e71f44c2cfd6",
+    "src/pages/intermediate/chapter-3-2.astro": "7e9f7a3e2d91e99211dddc83707290164ae6398e",
+    "src/pages/intermediate/chapter-3-3.astro": "bf2d96c301c9b8f4a33c96e6c8cadd4c134e74ff",
+    "src/pages/intermediate/chapter-3-4.astro": "8a39b405ccb288087ce82824f1f6b32aa76152b3",
+    "src/pages/intermediate/chapter-3-5.astro": "b11343d9d559297c1b5a02cfbbd28db4dbe7e738",
+    "src/pages/intermediate/chapter-3-6.astro": "fcc5d774591c64ea3e102d0e4d4ece591b58246a"
+  }
+}
