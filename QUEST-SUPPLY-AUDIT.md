@@ -135,7 +135,7 @@ The Red Reef's ship-repair recommendation is separated from Quest Helper's hard 
 
 The production build and browser verification run on the review branch through [Quest guide review](https://github.com/esherkness14/runescape-adventure-guide/actions/workflows/quest-guide-review.yml?query=branch%3Acodex%2Fquest-supply-preparation-audit). The workflow has read-only repository permissions and is scoped to this review branch; it does not deploy the guide.
 
-The first Chapter 1 checkpoint, `9836fbdf41ce4332e63dddafcfb06aed9ad5617c`, passed [production build and browser checks](https://github.com/esherkness14/runescape-adventure-guide/actions/runs/39091701565). The complete integrated revision is checked by the same workflow; its actual result and run link are recorded in the review PR.
+The complete page changes at `99b5fa1088ad0761cb9be998816dc001f5fa1472` passed [production build and browser checks](https://github.com/esherkness14/runescape-adventure-guide/actions/runs/39092975738): 22 site pages built, all 17 Intermediate pages checked, 253 required and four optional checkboxes preserved, and 170 disclosures starting closed. The [recorded verification result](audit/quest-supplies/verification.json) identifies that exact revision; the review PR also records the final branch check.
 
 The verification script checks:
 
