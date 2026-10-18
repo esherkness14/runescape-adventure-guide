@@ -11,13 +11,14 @@
       "src/pages/intermediate/chapter-1-1.astro",
       "src/pages/intermediate/chapter-1-2.astro"
     ],
-    "actual_quests_and_miniquests": 37,
-    "chapter_1_1_quests": 20,
+    "actual_quests_and_miniquests": 39,
+    "chapter_1_1_quests": 22,
     "chapter_1_2_quests": 17,
-    "quest_helper_classes": 38,
+    "quest_helper_classes": 41,
     "route_steps": 18,
     "training_blocks": 5,
-    "notes": "Includes both Shield of Arrav branches and Pirate's Treasure's delegated RumSmugglingStep. Nonquest RouteSteps reviewed for preparation continuity. No optional block is used as a guaranteed prior item stock."
+    "notes": "Includes both Shield of Arrav branches and Pirate's Treasure's delegated RumSmugglingStep. Nonquest RouteSteps reviewed for preparation continuity. No optional block is used as a guaranteed prior item stock. Early-cloak amendment adds two whole quests and one diary; named records40, actual quests/miniquests39.",
+    "chapter_1_1_diaries": 1
   },
   "source_registry": {
     "quest_helper": {
@@ -68,11 +69,48 @@
       {
         "url": "https://oldschool.runescape.wiki/w/Mistrock",
         "evidence": "Sunset Coast–Aldarin Antonia boat connection; basic Varlamore entry also checked against QH/BRUH."
+      },
+      {
+        "url": "https://danielpgleason.com/osrs/reference/grand-tree-groceries-41174c38/",
+        "evidence": "Wiki revision15302629 saved2026-09-27; Hudo location and4/2/6coin dwellberries/dust/milk stock. Ordinary Stronghold walking access."
+      },
+      {
+        "url": "https://danielpgleason.com/osrs/reference/mourner-boss-7e05113d/",
+        "evidence": "Wiki revision15238134 saved2026-09-27; Biohazard Mourner19HP/max2. Starter melee and10cakes is guide recommendation, not guaranteed fight simulation."
+      },
+      {
+        "url": "https://danielpgleason.com/osrs/reference/ardougne-diary-c5532655/",
+        "evidence": "Wiki revision15355135 saved2026-09-27; ten tasks,level30lamp and no Fishing requirement for departure-only Trawler task. Pinned QH independently inspected."
+      },
+      {
+        "url": "https://danielpgleason.com/osrs/reference/ardougne-cloak-1-0d30a745/",
+        "evidence": "Wiki revision15322173 saved2026-09-27; cloak teleport,Prayer bonus and free Two-pints replacement."
+      },
+      {
+        "url": "https://oldschoolrunescape.fandom.com/wiki/Antique_lamp_(easy)",
+        "evidence": "Legacy item description: unbankable, unreclaimable. Current canonical page inaccessible; conservative handling uses lamp soon without banking or destroying it."
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Captain_Barnaby",
+        "evidence": "Ordinary passenger travelArdougne/Rimmington/Brimhaven for30coins; pinned Biohazard QH directly confirms Rimmington trip."
+      },
+      {
+        "url": "https://danielpgleason.com/osrs/reference/h-a-m-member-433311bf/",
+        "evidence": "Female HAM15Thieving rusty-sword drop source; RNG not a guaranteed number of pickpockets."
+      },
+      {
+        "url": "https://osrsindex.com/wiki/silk-trader?site=osrs_wiki",
+        "evidence": "Al Kharid silk vendor3coin initial price,2if bargained; guide uses3."
+      },
+      {
+        "url": "https://danielpgleason.com/osrs/reference/fishing-trawler-fd824660/",
+        "evidence": "Departure-only diary task, Murphy return and barrel swim; separate15Fishing groupingteleport is not an entry requirement."
       }
     ],
     "limitations": "Direct live OSRS Wiki requests often returned robots/restricted-URL failures; available Wiki page content was cross-checked with the pinned current Quest Helper and 2026 BRUH data. Stale Fandom/third-party mirrors were not used as the authority for changed quest requirements. No in-game execution was performed."
   },
   "key_fixes": [
+    "First-visit cloak before the existing WC/FM grind: complete Plague City and Biohazard, source each Easy task, supply the low-level Mourner fight, and use the unbankable lamp once on Firemaking at 30 unless already eligible for Herblore.",
     "Sea Slug consumed swamp paste before the guide's later Brimhaven purchase; supplier now precedes quest at Port Khazard.",
     "Early Sheep Shearer cannot rely on later bought balls; Sleeping Giants needs unspun wool, a different item.",
     "Knight's Sword lacked 10 Mining, whole pie recipe/ingredients and an attainable two-iron-bar recovery. Self-making explicitly closes 15 Mining/Smithing rather than assuming unearned bars.",
@@ -90,7 +128,11 @@
     "Sleeping Giants' ten nails and one raw wool are actively acquired; the 30-ball reserve is separate. Nail stock after bends is live, not projected.",
     "The 150 death runes in the first rune bank are a DT hand-in reserve; spent runes require replacement before DT.",
     "1.2's five loose dung buckets are separate from the 1600 Sandstorm empty buckets. Four filled Ugthanki dung, three beers and three vodkas remain reserved.",
-    "Temple of the Eye is not done in these chapters; a later GOTR nature-talisman recovery must add its prerequisite/setup."
+    "Temple of the Eye is not done in these chapters; a later GOTR nature-talisman recovery must add its prerequisite/setup.",
+    "Early Ardougne lamp defaults to2500Firemaking at30, withHerblore only if already30; later38,333Herblore floor excludes it and remains unchanged.",
+    "Biohazard1250Thieving now occurs before actual50 in1.2, so do not add it to later quest XP; mandatory actual53 bridge remains live.",
+    "Plague City2425Mining is likewise already included in later actual-level Mining checkpoints; do not add it again.",
+    "EasyDiary already pays200deathrunes per extra adultcat from1.1; reserve one grown non-overgrown cat forEvilDave. DJP waits forfairyringpermission and dramenstaff in1.3; Battlefield spirit tree waits forTreeGnomeVillage in1.2."
   ],
   "validation": {
     "identifiers": "Compared complete id/storageKey sequences to baseline: exact match in both pages.",
@@ -115,12 +157,31 @@
       "chapter": "1.1",
       "anchor": "i11-ardy-quests",
       "status": "fixed",
-      "review": "Three quests; safe ordinary paid-boat access; correct water containers/log source.",
+      "review": "First-visit cloak before the existing WC/FM grind: complete Plague City and Biohazard, source each Easy task, supply the low-level Mourner fight, and use the unbankable lamp once on Firemaking at 30 unless already eligible for Herblore.",
       "quest_names": [
         "Clock Tower",
         "Monk's Friend",
-        "Hazeel Cult"
-      ]
+        "Hazeel Cult",
+        "Plague City",
+        "Biohazard",
+        "Ardougne Easy Diary"
+      ],
+      "preparation": [
+        {
+          "title": "Water in two different containers, and one ordinary log",
+          "text": "Clock Tower: bring 1 bucket of water for the hot black cog. Fill a bucket at the well by Cedric, east of the tower; a bucket also spawns there. The cogs and rat poison are found in the tower dungeon. Ice gloves are an optional substitute for the water bucket. Monk's Friend: bring 1 ordinary log + 1 jug of water . Chop a normal tree with your axe; buy a jug at a general store and fill it at a fountain/sink. Cedric needs a jug, so the Clock Tower bucket is the wrong container. The child's blanket is recovered in the quest's cave. Hazeel Cult: no outside quest item purchases. The cult-side path avoids a fight and obtains poison from Clivet and the key/scroll from the Carnillean house. If you choose the Ceril branch, bring your starter weapon and food for the quest fight; finish the butler-evidence ending and final conversation, rather than stopping at the first small payment. Full completion awards 2,000 coins and 1,500 Thieving XP."
+        },
+        {
+          "title": "Plague City and Biohazard: groceries, water, clothes and the early fight",
+          "text": "Plague City groceries: use the Hazeel reward for 1 dwellberries, 1 chocolate dust and 1 bucket of milk from Hudo's Grand Tree Groceries (normally 12 coins total). Walk north-west from Ardougne to the Tree Gnome Stronghold's southern gate, continue north to the Grand Tree, climb one floor above ground and find Hudo in the north-west corner. The shop needs no Grand Tree quest completion or spirit-tree unlock. Wait for stock or use another world if needed. Plague City tools and water: bring 1 rope, a spade, the three groceries and the 1 snape grass picked before sailing. Buy a missing rope at Aemad's Adventuring Supplies in East Ardougne; a spade and an empty bucket spawn by Edmond's house in north-west East Ardougne. The garden needs four uses of a bucket of water : refill that bucket at the house's sink between uses, or bring four filled buckets. Alrena makes the gas mask from the dwellberries. For Bravek's cure, add chocolate dust to the milk, then add the snape grass. Finish the quest and keep the mask; replace it from the cupboard in Edmond's house if lost. The grass has now been consumed, separately from future prayer potions. Biohazard fight: bring the retained gas mask, starter bronze sword (or your axe), wooden shield if still owned, and 10 whole cakes . Hazeel Cult already covers the 5 Thieving needed to steal these cakes in the market. The quest supplies the medical gown, bird feed, pigeon cage, key, distillator and samples as you progress. Its upstairs level-13 Mourner has 19 HP and a max hit of 2 : start at full HP, use ordinary melee and eat back toward full around 6 HP on a fresh account. If the fight is dragging, retreat downstairs while at least two cakes remain, restock and return. This is a food buffer, not a new combat-level or prayer-flicking requirement; leave at least four inventory spaces for quest items. Biohazard delivery and clothes: Captain Barnaby at the East Ardougne docks sails to Rimmington for 30 coins ; budget another 30 for the return after the Varrock delivery. Hand the three chemicals to the Chemist's helpers as directed, walk to south-east Varrock and recover them there; avoid teleporting with the fragile chemicals. Ask Asyff , in the clothes shop just north of the Dancing Donkey Inn, for the free priest top and bottom during the quest. If that once-free set was already claimed and lost, buy replacements for 12 coins . Finish with Elena and King Lathas, then rebank for the diary. Keep the gas mask afterwards for Desert Treasure. These are separate quest inventories. Count items actually retained, use the completed quests' coins for the purchases, and replace food consumed before starting the next activity. Plague City · Biohazard ."
+        },
+        {
+          "title": "All ten Easy tasks, including silk, the rusty sword and the Wilderness lever",
+          "text": "Prepare the sword: after Biohazard, check actual 15 Thieving and take food to the H.A.M. hideout north-west of Lumbridge . Picklock the trapdoor, descend and pickpocket female H.A.M. members until you actually receive one rusty sword . This is a random drop, so there is no fixed pickpocket count. One sword is required; a second is optional insurance. Carry 100 coins per identification attempt (200 is a small two-attempt buffer), plus the diary silk and separate boat fares. This sword source needs 15 Thieving; the diary itself only needs 5. Take an ordinary return boat to Ardougne, then bank between the town, southern and lever tasks. Sell the bought silk: give the East Ardougne silk merchant one unnoted silk for 60 coins , asking for 120 first and accepting 60 after his counteroffer. Do this before stealing silk in the next route step. If you already stole silk recently, spend ten consecutive minutes outside Ardougne without logging out before trying again; buying a fresh piece does not cancel his refusal. Steal a cake: successfully steal an actual cake from a market bakery stall at 5 Thieving. If the earlier food pickup already ticked the diary entry, it is done. Cromperty: right-click Teleport Wizard Cromperty in north-east East Ardougne to enter the rune essence mine, then leave through its portal. Rune Mysteries is complete; no pickaxe or mining is required. Town church altar: switch on Thick Skin until a Prayer point drains, then pray at the East Ardougne church . This task uses the church in town, not the monastery altar. Probita: right-click Check Probita in East Ardougne to inspect insured pets. You do not need a pet or an insurance payment. Combat Training Camp: after Biohazard, enter its gate north of West Ardougne . No fight or ranged equipment is needed for the entry task. Fishing Trawler: walk to Port Khazard , board Murphy's boat on an official Fishing Trawler world and wait for it to depart and the task to tick. No Fishing level, successful catch or Angler outfit is required. After credit, ask Murphy to return to shore, then use a barrel to reach the shore north of Port Khazard, then walk south to the docks; keep a little HP for the swim. You do not need repair supplies for this departure-only trip. Tindel Marchant: at the southern Port Khazard dock, pay 100 coins to identify the rusty sword. Talking alone is insufficient. A rare junk result fails the task: obtain another rusty sword and pay another 100 coins if that happens. Aleck: walk south-west to Yanille and open Aleck's Hunter Emporium. No purchase or Hunter level is required. Wilderness lever: return to an Ardougne bank and deposit everything in the inventory and every equipped item . Pull the lever west of the castle into deep Wilderness, then immediately pull the arrival lever to return. Stay inside the enclosure; no knife is needed for this return. Re-equip and withdraw supplies afterwards. Check all ten entries in the Easy Diary list , then claim the reward from Two-pints in the Flying Horse Inn , north of the castle in north-west East Ardougne. The reward is Ardougne cloak 1 and a 2,500-XP lamp ; Two-pints replaces a lost cloak for free."
+        }
+      ],
+      "visible_checkpoint": "Complete Clock Tower , Monk's Friend and Hazeel Cult as three separate quests. After each quest, bank if the next inventory would be cleaner. Two pickups before the first ship: buy 1 silk for 3 coins from the silk trader north of Al Kharid palace; the free northern entrance avoids the Lumbridge gate toll. Pick 1 snape grass from the peninsula west of the Crafting Guild, without entering the Guild. Start that pickup at full HP, bring the starter cooked food and run past the hobgoblins, then walk back to Port Sarim. This grass is for Plague City, and this silk is for the diary; neither belongs to the later potion or eleven-silk reserves. First trip to Ardougne: take the ordinary Port Sarim ship to Karamja for 30 coins , walk west to Brimhaven, then pay Captain Barnaby 30 coins to sail to Ardougne. Bring food for the walk; these ordinary boats do not need a teleport unlock. Get Ardougne cloak 1 on this first visit Now complete Plague City → Biohazard → Ardougne Easy Diary , banking between each activity. Rune Mysteries is already finished. The diary needs 5 Thieving ; the completed Hazeel Cult and Biohazard give 2,750 Thieving XP in total, enough for 16 , so they also cover the 15-Thieving rusty-sword source below. No Fishing level, fairy-ring unlock or 30 Herblore is needed to obtain the cloak. Keep the cloak equipped or in your inventory: its unlimited, rune-free Monastery Teleport lands south of Ardougne beside an altar. It gives +2 Prayer bonus while worn . Run north to the southern Ardougne bank and the city, or north-east to Captain Barnaby's dock for 30-coin passenger trips to Rimmington or Brimhaven . These boats need no Sailing level or personal ship. This is a monastery teleport with useful places nearby; the easy cloak does not teleport directly to a bank or Farming patch. Two later transport connections: after Tree Gnome Village in 1.2 , walk west/north-west from the monastery to the Khazard Battlefield spirit tree. After Fairytale II's fairy-ring permission in 1.3 , take your dramen staff and walk east past the Tower of Life to ring DJP . The cloak gives convenient access to these entrances; each network still needs its own unlock. Use this lamp once: the Easy Diary lamp needs a skill at actual level 30 and cannot be banked. If you already have 30 Herblore, use it there. On the fresh route, keep it only until 30 Firemaking during the immediately following grind , then put its 2,500 XP into Firemaking and continue to the existing target. This is a deliberate exception to the usual Herblore-lamp advice so you get the cloak now without an extra Herblore grind or a long inventory burden. Do not destroy it: this diary lamp cannot be reclaimed. Later Herblore minimums do not count it.",
+      "path": "src/pages/intermediate/chapter-1-1.astro"
     },
     {
       "chapter": "1.1",
@@ -137,7 +198,7 @@
       "chapter": "1.1",
       "anchor": "i11-starter-cleanup",
       "status": "fixed",
-      "review": "Eight quests; all food/tool/material sources; Knight iron/pie/Mining gates; free house and minimal Construction bridge.",
+      "review": "Eight quests; all food/tool/material sources; Knight iron/pie/Mining gates; free house and minimal Construction bridge. Easy Diary is already claimed; optional extra adult cats yield 200 death runes, with one grown non-overgrown cat protected for Evil Dave.",
       "quest_names": [
         "Cook's Assistant",
         "Pirate's Treasure",
@@ -230,7 +291,7 @@
       "chapter": "1.2",
       "anchor": "i12-optional-angler",
       "status": "fixed",
-      "review": "Nonquest optional: axe/hammer supplier and railings/tentacle loop replace unsourced repair/bailing instructions; Angler remains optional.",
+      "review": "Optional Angler outfit grind stays optional; the one departure for Ardougne Easy was completed in 1.1.",
       "quest_names": []
     },
     {
@@ -275,7 +336,7 @@
     {
       "anchor": "i11-wc-fm-training",
       "status": "covered",
-      "review": "Existing own-logs normal/oak entry method and actual 50-Firemaking gate; reusable axe/tinderbox now sourced."
+      "review": "Existing own-logs normal/oak entry method and actual 50-Firemaking gate; reusable axe/tinderbox now sourced. Use the early Easy Diary lamp on actual 30 Firemaking unless already used on eligible Herblore; finish the same live 35-WC/50-FM targets."
     },
     {
       "anchor": "i11-wintertodt-training",
@@ -668,6 +729,279 @@
       ],
       "required_method_interpretation": "External inputs include practical transport/recovery and recommended combat support as labelled. Quest-local list explains required objects acquired during play; no requirement is considered satisfied by an optional prior stock.",
       "quest_helper_recommendations_disposition": "Recommendations copied below are reference evidence, not adopted route requirements. Only support actually recommended in the guide has a live supplier action; optional teleports/equipment in Quest Helper are not presumed owned."
+    },
+    {
+      "name": "Plague City",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "requirement_review": "No skill requirement. Complete fully before Biohazard. Hudo is accessible on foot without The Grand Tree. Exact quantities, forms, live suppliers and recovery are in route_steps.preparation at i11-ardy-quests / i11-ardy-cloak.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/plaguecity/PlagueCity.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/plaguecity/PlagueCity.java",
+        "reviewed_sections": [
+          "getItemRequirements / getItemRecommended",
+          "ItemRequirement declarations and tooltips",
+          "quest-local acquisition and processing steps"
+        ]
+      },
+      "preparation_ref": "i11-ardy-quests",
+      "distinctions": {
+        "partial_or_conditional": false,
+        "random_item_branch": false,
+        "ownership": "A documented supplier is not a claim that the player still owns the item; bank after earlier consumption."
+      },
+      "detail_anchor": "i11-ardy-cloak",
+      "external_inputs": [
+        {
+          "item": "Dwellberries",
+          "quantity": 1,
+          "form": "unnoted",
+          "supplier": "Hudo, Grand Tree Groceries; 4 coins at normal stock, no quest gate.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Chocolate dust",
+          "quantity": 1,
+          "form": "finished dust",
+          "supplier": "Hudo, Grand Tree Groceries; 2 coins at normal stock. No crushing tool needed for this supplier.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Bucket of milk",
+          "quantity": 1,
+          "form": "milk in bucket",
+          "supplier": "Hudo, Grand Tree Groceries; 6 coins at normal stock.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Snape grass",
+          "quantity": 1,
+          "form": "unnoted; consumed in hangover cure",
+          "supplier": "Ground spawn on the peninsula west of the Crafting Guild before first Port Sarim ship; bring food, no Guild entry or Farming gate.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Rope",
+          "quantity": 1,
+          "form": "unnoted",
+          "supplier": "Aemad's Adventuring Supplies, East Ardougne; separate from later ropes.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Spade",
+          "quantity": 1,
+          "form": "reusable",
+          "supplier": "Retained starter spade or spawn by Edmond's house.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Water uses",
+          "quantity": 4,
+          "form": "bucket of water applied four times",
+          "supplier": "Refill the empty bucket spawn at Edmond's indoor sink between uses, or carry four filled buckets.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        }
+      ],
+      "entry_checks": "No skill requirement. Complete fully before Biohazard. Hudo is accessible on foot without The Grand Tree.",
+      "quest_local_inputs": [
+        "Alrena makes the gas mask after receiving dwellberries.",
+        "Picture, book, warrant and key supplied locally.",
+        "Chocolate dust + milk, then snape grass makes the hangover cure."
+      ],
+      "supplier_recovery": "Wait/restock or change world for Hudo stock; replace mask from Edmond's cupboard. The one consumed grass is excluded from later prayer potion reserves.",
+      "bruh_reference": "Chapter1.4 steps14,18,28 (zero-based indices13,17,27): BRUH defers these quests/diary until1.4 and claims reward on first cat hand-in; guide intentionally moves complete quests and cloak to first Ardougne visit."
+    },
+    {
+      "name": "Biohazard",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "requirement_review": "Plague City complete. No combat-level or protection-Prayer gate; fight level13 Mourner with starter melee and food. Exact quantities, forms, live suppliers and recovery are in route_steps.preparation at i11-ardy-quests / i11-ardy-cloak.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/quests/biohazard/Biohazard.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/biohazard/Biohazard.java",
+        "reviewed_sections": [
+          "getItemRequirements / getItemRecommended",
+          "ItemRequirement declarations and tooltips",
+          "quest-local acquisition and processing steps"
+        ]
+      },
+      "preparation_ref": "i11-ardy-quests",
+      "distinctions": {
+        "partial_or_conditional": false,
+        "random_item_branch": false,
+        "ownership": "A documented supplier is not a claim that the player still owns the item; bank after earlier consumption."
+      },
+      "detail_anchor": "i11-ardy-cloak",
+      "external_inputs": [
+        {
+          "item": "Gas mask",
+          "quantity": 1,
+          "form": "retained/reusable",
+          "supplier": "Plague City; replacement in Edmond's cupboard.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Starter melee weapon",
+          "quantity": 1,
+          "form": "equipped",
+          "supplier": "Retained Tutorial bronze sword preferred, or the already-supplied axe.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Wooden shield",
+          "quantity": 1,
+          "form": "equipped if retained",
+          "supplier": "Retained Tutorial shield; no new shield purchase assumed.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "optional support",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Whole cakes",
+          "quantity": 10,
+          "form": "cooked food; three bites each",
+          "supplier": "Steal from East Ardougne bakery stalls after Hazeel covers 5 Thieving; refill actual consumption.",
+          "coverage": "fixed",
+          "quantity_kind": "buffer; not hard gate",
+          "necessity": "recommended opening food buffer",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Boat fares",
+          "quantity": 60,
+          "form": "coins, two ordinary crossings",
+          "supplier": "Hazeel reward; Captain Barnaby Ardougne–Rimmington 30 each way. Additional trips cost separately.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Priest top and bottom",
+          "quantity": 1,
+          "form": "complete two-piece set, worn for Guidor",
+          "supplier": "Asyff in southeast Varrock gives first set free during quest; buy missing replacement set for 12 coins.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        }
+      ],
+      "entry_checks": "Plague City complete. No combat-level or protection-Prayer gate; fight level13 Mourner with starter melee and food.",
+      "quest_local_inputs": [
+        "Medical gown, bird feed, pigeon cage, key, distillator, samples, chemicals and touch paper obtained during quest.",
+        "Free priest set is once-only; 12-coin replacement is a conditional fallback."
+      ],
+      "supplier_recovery": "Restock cakes and retreat downstairs before food is exhausted. Fragile chemicals are handed to Chemist helpers and collected in southeast Varrock; avoid teleporting with them. Keep gas mask for DT.",
+      "bruh_reference": "Chapter1.4 steps14,18,28 (zero-based indices13,17,27): BRUH defers these quests/diary until1.4 and claims reward on first cat hand-in; guide intentionally moves complete quests and cloak to first Ardougne visit."
+    },
+    {
+      "name": "Ardougne Easy Diary",
+      "chapter": "1.1",
+      "anchor": "i11-ardy-quests",
+      "path": "src/pages/intermediate/chapter-1-1.astro",
+      "status": "fixed",
+      "requirement_review": "Rune Mysteries + Biohazard complete,5 Thieving. Hazeel1500 + Bio1250=2750 XP reaches16 and covers15 HAM supplier. Trawler departure has no Fishing level gate. Lamp alone needs30 in selected skill. Exact quantities, forms, live suppliers and recovery are in route_steps.preparation at i11-ardy-quests / i11-ardy-cloak.",
+      "source": {
+        "path": "src/main/java/com/questhelper/helpers/achievementdiaries/ardougne/ArdougneEasy.java",
+        "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/achievementdiaries/ardougne/ArdougneEasy.java",
+        "reviewed_sections": [
+          "getItemRequirements / getItemRecommended",
+          "ItemRequirement declarations and tooltips",
+          "quest-local acquisition and processing steps"
+        ]
+      },
+      "preparation_ref": "i11-ardy-quests",
+      "distinctions": {
+        "partial_or_conditional": false,
+        "random_item_branch": false,
+        "ownership": "A documented supplier is not a claim that the player still owns the item; bank after earlier consumption."
+      },
+      "detail_anchor": "i11-ardy-cloak",
+      "external_inputs": [
+        {
+          "item": "Silk",
+          "quantity": 1,
+          "form": "unnoted; sold for60 coins",
+          "supplier": "Al Kharid silk trader for3 coins before first ship; free north entrance avoids toll. Sell before silk theft; separate later eleven-silk reserve.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Rusty sword",
+          "quantity": 1,
+          "form": "actual rusty sword for identification",
+          "supplier": "Female H.A.M. pickpockets at15 Thieving; no fixed drop count. Optional spare covers rare junk result.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Identification fee",
+          "quantity": 100,
+          "form": "coins per attempt",
+          "supplier": "Use quest reward coins;200 is optional two-attempt buffer. Rare junk requires another sword and100 coins.",
+          "coverage": "fixed",
+          "quantity_kind": "fixed",
+          "necessity": "required preparation",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        },
+        {
+          "item": "Food",
+          "quantity": null,
+          "form": "retained cooked food",
+          "supplier": "Early cakes; carry food for HAM and a little HP for Trawler return.",
+          "coverage": "fixed",
+          "quantity_kind": "live buffer",
+          "necessity": "recommended support",
+          "ownership_assumption": "none; count live retained items and acquire the shortfall"
+        }
+      ],
+      "entry_checks": "Rune Mysteries + Biohazard complete,5 Thieving. Hazeel1500 + Bio1250=2750 XP reaches16 and covers15 HAM supplier. Trawler departure has no Fishing level gate. Lamp alone needs30 in selected skill.",
+      "quest_local_inputs": [
+        "No pet or payment for Probita; no Hunter purchase for Aleck.",
+        "No essence mining or pickaxe for Cromperty.",
+        "Only Trawler departure needed, no outfit or repair kit.",
+        "Enter camp without combat; recharge at town church, not monastery."
+      ],
+      "supplier_recovery": "Silk refusal: ten consecutive minutes outside Ardougne without logging out. Tindel must produce a sword; replace failed input and100coins. Bank every item/equipment for Wilderness lever and immediately return at arrival lever. Two-pints gives/replaces cloak at Flying Horse Inn.",
+      "lamp_allocation": "Claim cloak now. Use2500XP on Herblore if actual30 already; otherwise carry only into adjacent grind, use on actual30Firemaking and finish existing50target. Unbankable and unreclaimable; never counted in later Herblore floor.",
+      "bruh_reference": "Chapter1.4 steps14,18,28 (zero-based indices13,17,27): BRUH defers these quests/diary until1.4 and claims reward on first cat hand-in; guide intentionally moves complete quests and cloak to first Ardougne visit."
     },
     {
       "name": "Sheep Herder",

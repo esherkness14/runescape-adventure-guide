@@ -2,7 +2,7 @@ name: Quest guide review
 
 on:
   push:
-    branches: [codex/quest-supply-preparation-audit]
+    branches: [codex/quest-supply-preparation-audit, codex/early-ardougne-cloak]
   workflow_dispatch:
 
 permissions:
@@ -31,6 +31,8 @@ jobs:
         run: npm install --no-save --package-lock=false @playwright/test@1.56.1
       - run: npx playwright install --with-deps chromium
       - name: Check progress, links, keyboard access and mobile layout
+        env:
+          GUIDE_AUDIT_BASE: ae8000f11964e2835ffd90d232a29639389ec21a
         run: node scripts/verify-quest-supply-audit.mjs
       - uses: actions/upload-artifact@v4
         if: always()
