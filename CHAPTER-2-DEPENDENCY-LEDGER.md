@@ -1,5 +1,7 @@
 # Intermediate Ironman Guide — Chapter 2 dependency ledger
 
+> **18 October 2026 quest-preparation update:** The [quest supply audit](QUEST-SUPPLY-AUDIT.md) adds a requirement-led review of all Chapter 2 consumers, including grouped quests, external-item suppliers, recipes, light sources and reclaim paths. Use the local Quest preparation notes for exact quantities and bank-shortfall recovery; the progression decisions below remain the route boundary.
+
 This is a planning and audit document, not player-facing guide copy. It establishes the mandatory dependency spine before any Chapter 2 Astro page is written.
 
 ## Audit basis and status language
