@@ -74,6 +74,23 @@
       "branch": "codex/early-ardougne-cloak",
       "summary": "Move two quests and Easy Diary from1.3–1.4 into existing1.1Step2; preserve progressIDs/order/flags. Named records shift37/64 to40/61, overall508rows unchanged. Lamp allocated once; BiohazardXP moved beforelive50.",
       "verification": "verified_page_commit and page_blobs above remain the historical full-audit snapshot. This amendment is checked by Quest guide review on its own branch; see the review PR for the exact head and CI run."
+    },
+    {
+      "date": "2026-10-19",
+      "topic": "Player-facing wording review",
+      "baseline": "46fdadfa7c346d426658d5c7abc5b7485d3a57fa",
+      "branch": "codex/early-ardougne-cloak",
+      "summary": "Read all 17 Intermediate chapters, the overview and shared player-facing copy. Reword internal audit, projected-level, handoff and checkbox-accounting language as player actions, with the reason for each level or supply check. Preserve quest order, resource reservations, methods, optionality and the saved-progress contract. Synchronize current prose mirrors and route titles; historical audit reasoning and baseline instructions remain historical.",
+      "small_corrections": [
+        "Correct Aggie red-dye recipes in Enlightened Journey and Ghosts Ahoy to three redberries plus five coins.",
+        "Align the early Wintertodt reminder with the existing 13-magic-log plan: twelve for Desert Treasure and one for Mourning's End Part I. The separate later WGS supply for MM2 remains unchanged.",
+        "Make the existing mushroom pie +4 boost limit explicit: at least 54 Crafting is needed to reach 58."
+      ],
+      "mechanics_sources": [
+        "https://oldschool.runescape.wiki/w/Dye?oldid=14854367",
+        "https://oldschool.runescape.wiki/w/Temporary_skill_boost"
+      ],
+      "verification": "The page_blobs and verified_page_commit fields above remain the historical full-audit snapshot. This wording pass is checked at its own PR head by the production build and Quest guide review. See the PR for the exact commit and CI run; no new exhaustive mechanics audit is claimed."
     }
   ]
 }

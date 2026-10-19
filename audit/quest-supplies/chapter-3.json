@@ -91,7 +91,7 @@
     },
     {
       "id": "i31-slayer-56",
-      "title": "Reach actual 56 Slayer and verify actual 60 Strength",
+      "title": "Reach 56 Slayer and check that Strength is at least 60",
       "source_path": "src/pages/intermediate/chapter-3-1.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -115,7 +115,7 @@
     },
     {
       "id": "i31-slayer-58",
-      "title": "Finish only the live Slayer remainder to actual 58",
+      "title": "Resume Slayer tasks and stop at 58",
       "source_path": "src/pages/intermediate/chapter-3-1.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -137,7 +137,7 @@
     },
     {
       "id": "i31-magic-67",
-      "title": "Reach actual 67 Magic, and no higher target yet",
+      "title": "Reach 67 Magic for While Guthix Sleeps",
       "source_path": "src/pages/intermediate/chapter-3-1.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -187,7 +187,7 @@
     },
     {
       "id": "i32-slayer-60",
-      "title": "Finish only the live remainder to actual 60 Slayer",
+      "title": "Finish any remaining training to 60 Slayer",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -198,7 +198,7 @@
     },
     {
       "id": "i32-rc-47",
-      "title": "Reach actual 47 Runecraft after the Moon reward",
+      "title": "Reach 47 Runecraft after the Moon reward",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -222,7 +222,7 @@
     },
     {
       "id": "i32-craft-65",
-      "title": "Reach actual 65 Crafting after Fallen From Grace",
+      "title": "Reach 65 Crafting after Fallen From Grace",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -233,7 +233,7 @@
     },
     {
       "id": "i32-rc-50",
-      "title": "Reach actual 50 Runecraft, then secure the quest pouch",
+      "title": "Reach 50 Runecraft and obtain a pouch for Devious Minds",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -257,7 +257,7 @@
     },
     {
       "id": "i32-rc-52",
-      "title": "Reach actual 52 Runecraft after Devious Minds",
+      "title": "Reach 52 Runecraft after Devious Minds",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -281,7 +281,7 @@
     },
     {
       "id": "i32-rc-55",
-      "title": "Reach actual 55 Runecraft after The Final Dawn",
+      "title": "Reach 55 Runecraft after The Final Dawn",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -292,7 +292,7 @@
     },
     {
       "id": "i32-exiles",
-      "title": "Complete The Fremennik Exiles; record post-quest XP",
+      "title": "Complete The Fremennik Exiles and claim its skill rewards",
       "source_path": "src/pages/intermediate/chapter-3-2.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -305,7 +305,7 @@
     },
     {
       "id": "i33-ranged-62",
-      "title": "Bridge to actual 62 Ranged after the Final Dawn lamp",
+      "title": "Reach 62 Ranged after the Final Dawn lamp",
       "source_path": "src/pages/intermediate/chapter-3-3.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -342,7 +342,7 @@
     },
     {
       "id": "i33-ranged-kit",
-      "title": "Secure sufficient deterministic Fight Cave ammo and the ranged weapon floor",
+      "title": "Prepare a crossbow and bolts for the Fight Caves",
       "source_path": "src/pages/intermediate/chapter-3-3.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -355,7 +355,7 @@
     },
     {
       "id": "i33-ranged-70",
-      "title": "Train actual 62 → 70 Ranged with cheap ammunition",
+      "title": "Train 62 → 70 Ranged with cheap ammunition",
       "source_path": "src/pages/intermediate/chapter-3-3.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -392,7 +392,7 @@
     },
     {
       "id": "i33-ranged-75",
-      "title": "Resume cheap Ranged training to the normal actual-75 Jad target",
+      "title": "Resume Ranged training and stop at 75 for Jad",
       "source_path": "src/pages/intermediate/chapter-3-3.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -416,7 +416,7 @@
     },
     {
       "id": "i34-crafting-70",
-      "title": "Reach actual 70 Crafting for Monkey Madness II",
+      "title": "Reach 70 Crafting for Monkey Madness II",
       "source_path": "src/pages/intermediate/chapter-3-4.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -427,7 +427,7 @@
     },
     {
       "id": "i34-slayer-65",
-      "title": "Train live Slayer to actual 65; unlock dust devils",
+      "title": "Reach 65 Slayer and unlock dust devils",
       "source_path": "src/pages/intermediate/chapter-3-4.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -451,7 +451,7 @@
     },
     {
       "id": "i34-slayer-69",
-      "title": "Continue Slayer from actual 65 to actual 69 before MM2",
+      "title": "Continue from 65 to 69 Slayer before Monkey Madness II",
       "source_path": "src/pages/intermediate/chapter-3-4.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -475,7 +475,7 @@
     },
     {
       "id": "i34-slayer-74",
-      "title": "Use post-MM2 Slayer to reach actual 74, then re-audit cash and runes",
+      "title": "Reach 74 Slayer after Monkey Madness II",
       "source_path": "src/pages/intermediate/chapter-3-4.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -499,7 +499,7 @@
     },
     {
       "id": "i34-magic-75",
-      "title": "Resolve the six combat rewards, then reach actual 75 Magic",
+      "title": "Claim the six combat rewards and finish 75 Magic",
       "source_path": "src/pages/intermediate/chapter-3-4.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -639,7 +639,7 @@
     },
     {
       "id": "i35-faithful",
-      "title": "Complete His Faithful Servants, not a Barrows gear grind",
+      "title": "Complete His Faithful Servants with one Barrows run",
       "source_path": "src/pages/intermediate/chapter-3-5.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -652,7 +652,7 @@
     },
     {
       "id": "i35-ds2-preflight",
-      "title": "Secure the Dragon Slayer II quest kit and live boss supplies",
+      "title": "Prepare the Dragon Slayer II quest items and boss supplies",
       "source_path": "src/pages/intermediate/chapter-3-5.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -679,7 +679,7 @@
     },
     {
       "id": "i35-rc-60",
-      "title": "Reach actual 60 Runecraft for Desert Treasure II",
+      "title": "Reach 60 Runecraft for Desert Treasure II",
       "source_path": "src/pages/intermediate/chapter-3-5.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -690,7 +690,7 @@
     },
     {
       "id": "i35-dt2-preflight",
-      "title": "Verify every Desert Treasure II gate and prepare modular supplies",
+      "title": "Check Desert Treasure II's requirements and gather supplies",
       "source_path": "src/pages/intermediate/chapter-3-5.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -703,7 +703,7 @@
     },
     {
       "id": "i35-dt2",
-      "title": "Complete Desert Treasure II with deterministic melee, ranged and Magic setups",
+      "title": "Complete Desert Treasure II with your melee, Ranged and Magic gear",
       "source_path": "src/pages/intermediate/chapter-3-5.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -716,7 +716,7 @@
     },
     {
       "id": "i36-woodcutting",
-      "title": "Reach actual 74 Woodcutting, then stop",
+      "title": "Reach 74 Woodcutting for The Blood Moon Rises",
       "source_path": "src/pages/intermediate/chapter-3-6.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -727,7 +727,7 @@
     },
     {
       "id": "i36-smithing",
-      "title": "Reach actual 72 Smithing from the post-DS2 XP total",
+      "title": "Finish 72 Smithing after Dragon Slayer II's reward",
       "source_path": "src/pages/intermediate/chapter-3-6.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -738,7 +738,7 @@
     },
     {
       "id": "i36-cooking",
-      "title": "Reach actual 72 Cooking and leave useful food behind",
+      "title": "Reach 72 Cooking and bank food for bosses",
       "source_path": "src/pages/intermediate/chapter-3-6.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -749,7 +749,7 @@
     },
     {
       "id": "i36-fletching",
-      "title": "Reach actual 70 Fletching using the bank you actually have",
+      "title": "Reach 70 Fletching with your banked materials",
       "source_path": "src/pages/intermediate/chapter-3-6.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -760,7 +760,7 @@
     },
     {
       "id": "i36-preflight",
-      "title": "Verify every Blood Moon gate and prepare the first inventory",
+      "title": "Check The Blood Moon Rises' requirements and prepare your inventory",
       "source_path": "src/pages/intermediate/chapter-3-6.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
@@ -786,7 +786,7 @@
     },
     {
       "id": "i36-flail",
-      "title": "Make the deterministic Hallowed flail during Hallowed Preparations",
+      "title": "Make the Hallowed flail during Hallowed Preparations",
       "source_path": "src/pages/intermediate/chapter-3-6.astro",
       "route_step_attributes_preserved": true,
       "optional": false,
