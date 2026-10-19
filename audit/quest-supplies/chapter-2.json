@@ -34,8 +34,8 @@
     "distinct_helpers_in_route_steps": 64,
     "additional_optional_miniquests_outside_route_step": 1,
     "quest_helper_files_reviewed": 65,
-    "route_steps_changed": 75,
-    "route_steps_covered_without_change": 45,
+    "route_steps_changed": 76,
+    "route_steps_covered_without_change": 44,
     "route_steps_quest_local_without_change": 2,
     "closed_quest_preparation_notes": 67,
     "fixed_thorgel_items": 47,
@@ -53,7 +53,7 @@
       "page": "2.1",
       "route_steps": 10,
       "quest_or_activity_steps": 0,
-      "fixed_steps": 2,
+      "fixed_steps": 3,
       "nonquest_or_prep_steps": 10
     },
     {
@@ -324,6 +324,24 @@
     {
       "url": "https://runenation.org/news-and-updates/osrs-news-and-updates/11344-sailing-beta-available-now-on-desktop-or-mobile",
       "supports": "Oldbeta numeric recipe3/15/5, notusedascurrentauthority."
+    },
+    {
+      "url": "https://danielpgleason.com/osrs/reference/soft-clay-32956a66/",
+      "supports": "2026-10-19 follow-up: one clay plus one filled vial makes one soft clay and returns an empty vial; bank method has no spellbook gate.",
+      "source_revision": "15183475",
+      "mirror_saved": "2026-09-27"
+    },
+    {
+      "url": "https://danielpgleason.com/osrs/reference/vial-of-water-775b4ca9/",
+      "supports": "2026-10-19 follow-up: packs hold 100 filled vials; empty vials cannot be refilled directly at a well.",
+      "source_revision": "15301413",
+      "mirror_saved": "2026-09-27"
+    },
+    {
+      "url": "https://danielpgleason.com/osrs/reference/aemad-527db317/",
+      "supports": "2026-10-19 follow-up: Aemad provides repeatable water-filled vial pack supply in East Ardougne.",
+      "source_revision": "15208251",
+      "mirror_saved": "2026-09-27"
     }
   ],
   "page_blobs": {
@@ -342,13 +360,15 @@
       "title": "Set up the guild shop, runes and first cash cycle",
       "kind": "nonquest",
       "optional": false,
-      "review_status": "covered",
+      "review_status": "fixed",
       "quest": null,
       "phase": null,
       "required_items": [],
       "baseline_instruction": "Return to the standard spellbook if Desert Treasure left you on Ancient Magicks. High Level Alchemy requires the standard spellbook; switch at the Desert Pyramid altar (or another spellbook switch you have actually unlocked). Go to the Wizards' Guild in Yanille. Entry needs 66 Magic, but your 63 Magic plus a Wizard's mind bomb (+3) is enough. Drink immediately before entering; repeat for a later re-entry if the boost expires. The Guild rune-and-staff shop also requires The Hand in the Sand, finished immediately after Enlightened Journey in 1.4. Buy plain battlestaves from Wizard Akutha's rune-and-staff shop upstairs. It normally stocks five at about 7,000 coins each; hop worlds or return as stock replenishes. Zaff in Varrock is a small supplementary source. Buying five at a time is repetitive: do this in manageable batches, not one uninterrupted 1,590-staff shop-hop/craft/alch session. Audit the nature-rune bank after MTA. The 1,650 bought in 1.3 was MTA opening stock, and MTA consumed many of those runes; it cannot also pay for all 1,590 High Alchemy casts. Each finished staff needs one nature rune. Buy only the live shortfall from this Guild shop (normally 250 in stock) or another accessible nature-rune source, in batches as the staff cycle returns cash. Do not require the full 1,590 in hand before starting. Equip a fire staff or supply fire runes. If your coin pile is small, buy only a few staves, craft and alch them, then recycle the proceeds into the next batch. A finished Earth battlestaff alchs for 9,300 coins; against a roughly 7,000-coin base staff, that is around 2,300 coins returned above the staff cost before rune costs and shop-price variation. Across the full stock, roughly 3.6 million coins of gross spread is a planning estimate, not a guaranteed final cash balance.",
-      "consumer_recovery": "Return to the standard spellbook if Desert Treasure left you on Ancient Magicks. High Level Alchemy requires the standard spellbook; switch at the Desert Pyramid altar (or another spellbook switch you have actually unlocked). Go to the Wizards' Guild in Yanille. Entry needs 66 Magic, but your 63 Magic plus a Wizard's mind bomb (+3) is enough. Drink immediately before entering; repeat for a later re-entry if the boost expires. The Guild rune-and-staff shop also requires The Hand in the Sand, finished immediately after Enlightened Journey in 1.4. Buy plain battlestaves from Wizard Akutha's rune-and-staff shop upstairs. It normally stocks five at about 7,000 coins each; hop worlds or return as stock replenishes. Zaff in Varrock is a small supplementary source. Buying five at a time is repetitive: do this in manageable batches, not one uninterrupted 1,590-staff shop-hop/craft/alch session. Audit the nature-rune bank after MTA. The 1,650 bought in 1.3 was MTA opening stock, and MTA consumed many of those runes; it cannot also pay for all 1,590 High Alchemy casts. Each finished staff needs one nature rune. Buy only the live shortfall from this Guild shop (normally 250 in stock) or another accessible nature-rune source, in batches as the staff cycle returns cash. Do not require the full 1,590 in hand before starting. Equip a fire staff or supply fire runes. If your coin pile is small, buy only a few staves, craft and alch them, then recycle the proceeds into the next batch. A finished Earth battlestaff alchs for 9,300 coins; against a roughly 7,000-coin base staff, that is around 2,300 coins returned above the staff cost before rune costs and shop-price variation. Across the full stock, roughly 3.6 million coins of gross spread is a planning estimate, not a guaranteed final cash balance.",
-      "changes": [],
+      "consumer_recovery": "Return to the standard spellbook if Desert Treasure left you on Ancient Magicks. High Level Alchemy requires the standard spellbook; switch at the Desert Pyramid altar (or another spellbook switch you have actually unlocked). Go to the Wizards' Guild in Yanille. Entry needs 66 Magic, but your 63 Magic plus a Wizard's mind bomb (+3) is enough. Drink immediately before entering; repeat for a later re-entry if the boost expires. The Guild rune-and-staff shop also requires The Hand in the Sand, finished immediately after Enlightened Journey in 1.4. Buy plain battlestaves from Wizard Akutha's rune-and-staff shop upstairs. It normally stocks five at about 7,000 coins each; hop worlds or return as stock replenishes. Zaff in Varrock is a small supplementary source. Buying five at a time is repetitive: do this in manageable batches, not one uninterrupted 1,590-staff shop-hop/craft/alch session. Audit the nature-rune bank after MTA. The 1,650 bought in 1.3 was MTA opening stock, and MTA consumed many of those runes; it cannot also pay for all 1,590 High Alchemy casts. Each finished staff needs one nature rune. Buy only the live shortfall from this Guild shop (normally 250 in stock) or another accessible nature-rune source, in batches as the staff cycle returns cash. Do not require the full 1,590 in hand before starting. Equip a fire staff or supply fire runes. Recheck law runes during these Guild visits. After funding the next manageable staff-and-nature batch, top up toward roughly 500 laws total as the alchs free up cash; subtract what remains from 1.4 instead of buying 500 automatically. This is a convenience stock for Construction travel and later quests, including 100 laws for the house tablets below. Keep that tablet allocation separate and refill any travel shortfall; reaching 500 is not a condition for starting the staff cycle. If your coin pile is small, buy only a few staves, craft and alch them, then recycle the proceeds into the next batch. A finished Earth battlestaff alchs for 9,300 coins; against a roughly 7,000-coin base staff, that is around 2,300 coins returned above the staff cost before rune costs and shop-price variation. Across the full stock, roughly 3.6 million coins of gross spread is a planning estimate, not a guaranteed final cash balance.",
+      "changes": [
+        "2026-10-19: after funding the next staff/nature batch, refill laws toward roughly 500 total as alchs free cash, including 100 for later house tablets; this does not block the initial staff cycle."
+      ],
       "uncertainties": [],
       "source": {
         "guide_baseline": "https://github.com/esherkness14/runescape-adventure-guide/blob/6a0a409ee8bc4568b81cba2b2a350ee63dc28080/src/pages/intermediate/chapter-2-1.astro"
@@ -480,9 +500,10 @@
       "phase": null,
       "required_items": [],
       "baseline_instruction": "Set aside a hammer, crystal saw, two mahogany planks and one gold leaf for the lectern. Cut two mahogany logs from the trees north of the Farming Guild (or use two already banked), then make the planks at a sawmill for 1,500 coins each. Obtain the leaf from the Stonemason in south-west Keldagrim for about 130,000 coins. Add a study in POH build mode (requires actual 40 Construction; 50,000 coins) and leave its lectern hotspot open. Room requirements cannot use the saw's invisible boost, but your actual 62 already covers this. For the reliable +2 tea, add a kitchen to the same house if you lack one (5,000 coins). Build or confirm: wooden shelves 3 (three regular planks, six soft clay, three steel nails) or higher shelves that supply a porcelain cup; a wooden larder for tea leaves (eight regular planks and eight steel nails), or a better larder; a pump and drain (five steel bars), or better water source; and a firepit with hook (two steel bars, two soft clay), or a higher stove. A plain firepit is not enough to boil the kettle. If building the minimum setup from scratch, that is 11 regular planks, 11 steel nails, eight soft clay and seven steel bars, plus the room fee. Use a banked Chapter 1 bracelet of clay to mine any missing soft clay directly; the full tablet-and-kitchen budget is below. The porcelain cup determines the +2 boost.",
-      "consumer_recovery": "A bracelet of clay is optional convenience. If none remains, mine ordinary clay at Rimmington and use water on it to make soft clay ; a bucket filled at the town's well works. Repeat for the actual kitchen/tablet shortfall instead of requiring a new bracelet. For missing regular planks, cut ordinary logs and pay 100 coins per log at a sawmill ; buy the needed nails and a saw there. For steel bars, buy iron ore and coal from Ordan in the Blast Furnace and smelt one iron ore plus two coal per bar . A hammer is sold at Lumbridge's general store.",
+      "consumer_recovery": "A bracelet of clay is optional convenience. If none remains, mine ordinary clay at Rimmington and use water on it to make soft clay. Use banked vials of water at the bank if available: each clay uses one filled vial and returns an empty one; with a clear inventory, work in batches of 14 clay and 14 vials of water. Aemad in East Ardougne sells 100-vial water-filled packs if needed. Alternatively, refill a bucket at Rimmington's well after each clay; empty vials cannot be filled directly at a well. Repeat only for the actual kitchen/tablet shortfall. For missing regular planks, cut ordinary logs and pay 100 coins per log at a sawmill; buy the needed nails and a saw there. For steel bars, buy iron ore and coal from Ordan in the Blast Furnace and smelt one iron ore plus two coal per bar. A hammer is sold at Lumbridge's general store.",
       "changes": [
-        "Closed zero-bracelet clay and mundane construction supply recovery; no quest in 2.1."
+        "Closed zero-bracelet clay and mundane construction supply recovery; no quest in 2.1.",
+        "2026-10-19: use existing filled vials at the bank for ordinary clay, with 14+14 batches and empty-vial returns; add Aemad's 100-vial packs and retain bucket-only well recovery."
       ],
       "uncertainties": [],
       "source": {
@@ -520,10 +541,11 @@
       "phase": null,
       "required_items": [],
       "baseline_instruction": "Use a round first stock of 100 tablets. Bring 100 soft clay, 100 law runes, 100 air runes and 100 earth runes to the finished lectern, in inventory batches. Each Teleport to House tablet requires 40 Magic and one of each listed clay/rune. You can create it at the lectern regardless of your current spellbook; select it from the interface and repeat until the stack reaches 100. An elemental staff can replace the matching elemental runes if you prefer, but the listed rune budget works without one. Chapter 1 banked eight bracelets of clay. Each has 28 charges and makes mined clay arrive as soft clay. Check your banked soft clay and which kitchen fixtures are already built first: the maximum fresh need here is 100 soft clay for tablets plus eight for the minimum kitchen. Four fresh bracelets cover 112 clay, but use only as many as your remaining shortfall needs. Equip a bracelet, mine clay at a convenient clay-rock mine, bank the soft clay, and switch to the next bracelet only when the current one runs out. Buy any missing law/elemental runes from an accessible rune shop, including the Wizards' Guild shop while you have access. Why 100, not 106 or 112? This is an initial utility stock, not a quest gate with an exact tablet count. It covers many upcoming house visits and returns while leaving a simple refill rule: make more when the stack gets low. Bank the tablets with the remaining cash and construction materials for 2.2.",
-      "consumer_recovery": "Use a round first stock of 100 tablets. Bring 100 soft clay, 100 law runes, 100 air runes and 100 earth runes to the finished lectern, in inventory batches. Each Teleport to House tablet requires 40 Magic and one of each listed clay/rune. You can create it at the lectern regardless of your current spellbook; select it from the interface and repeat until the stack reaches 100. An elemental staff can replace the matching elemental runes if you prefer, but the listed rune budget works without one. If you chose to make bracelets of clay in Chapter 1, check how many charges remain. Each fresh bracelet has 28 charges and makes mined clay arrive as soft clay. Check your banked soft clay and which kitchen fixtures are already built first: the maximum fresh need here is 100 soft clay for tablets plus eight for the minimum kitchen. Four fresh bracelets cover 112 clay, but use only as many as your remaining shortfall needs. If a bracelet remains, equip it, mine clay and change bracelets only when its charges run out. If none remains, mine ordinary clay at Rimmington and soften it with water, as described in the preparation note above. Buy any missing law/elemental runes from an accessible rune shop, including the Wizards' Guild shop while you have access. Why 100, not 106 or 112? This is an initial utility stock, not a quest gate with an exact tablet count. It covers many upcoming house visits and returns while leaving a simple refill rule: make more when the stack gets low. Bank the tablets with the remaining cash and construction materials for 2.2.",
+      "consumer_recovery": "Use a round first stock of 100 tablets. Bring 100 soft clay, 100 law runes, 100 air runes and 100 earth runes to the finished lectern, in inventory batches. Each Teleport to House tablet requires 40 Magic and one of each listed clay/rune. You can create it at the lectern regardless of your current spellbook; select it from the interface and repeat until the stack reaches 100. An elemental staff can replace the matching elemental runes if you prefer, but the listed rune budget works without one. If you chose to make bracelets of clay in Chapter 1, check how many charges remain. Each fresh bracelet has 28 charges and makes mined clay arrive as soft clay. Check your banked soft clay and which kitchen fixtures are already built first: the maximum fresh need here is 100 soft clay for tablets plus eight for the minimum kitchen. Four fresh bracelets cover 112 clay, but use only as many as your remaining shortfall needs. If a bracelet remains, equip it, mine clay and change bracelets only when its charges run out. If none remains, mine ordinary clay at Rimmington and soften it with banked vials of water or a refillable bucket, as described in the preparation note above. Recheck laws after Construction teleports: the earlier Guild refill is not an untouched reserve. Buy the shortfall to 100 laws for these tablets plus your chosen travel buffer, and any missing elemental runes, from an accessible rune shop such as the Wizards' Guild. Why 100, not 106 or 112? This is an initial utility stock, not a quest gate with an exact tablet count. It covers many upcoming house visits and returns while leaving a simple refill rule: make more when the stack gets low. Bank the tablets with the remaining cash and construction materials for 2.2.",
       "changes": [
         "Mirrored zero-bracelet recovery at tablet consumer.",
-        "2026-10-19: treat Chapter 1 clay bracelets as an optional earlier choice; keep ordinary clay plus water as the zero-bracelet recovery."
+        "2026-10-19: treat Chapter 1 clay bracelets as an optional earlier choice; keep ordinary clay plus water as the zero-bracelet recovery.",
+        "2026-10-19: carry the vial-water choice to the tablet consumer and recheck laws after Construction travel, keeping 100 for tablets plus a chosen travel buffer."
       ],
       "uncertainties": [],
       "source": {
