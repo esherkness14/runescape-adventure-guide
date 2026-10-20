@@ -212,7 +212,8 @@
     "DT independent review: no pot mould; Ruantun makes the silver pot. Fareed's no-gloves default starts unarmed. Troll trip needs restores too; eighteen opening doses are split six for trolls and twelve for the Kamil reserve.",
     "Early magic-log target reduced from sixteen to thirteen: twelve DT plus one MEP1. WGS storeroom supplies the later three MM2 balloon logs, avoiding duplicated early acquisition.",
     "Independent supplier review corrected Khorvak's dwarven-stout spawn to the pub under White Wolf Mountain; the Keldagrim Drunken Dwarf is not that pickup.",
-    "Independent source check supplies Tale of the Righteous's ranged weapon/ammunition at Lowe and uses the current direct black-mushroom-on-Silverlight step for Shadow of the Storm."
+    "Independent source check supplies Tale of the Righteous's ranged weapon/ammunition at Lowe and uses the current direct black-mushroom-on-Silverlight step for Shadow of the Storm.",
+    "2026-10-20: distinguish the Eyes reward seed from the usable crystal saw; give the free Brimstail singing-bowl conversion. Gather two sap buckets total, spend one on Eyes magic glue and retain exactly one for Icthlarin in 2.6. Add recovery at the Chapter 1 checklist and later uses."
   ],
   "route_steps": [
     {
@@ -621,8 +622,8 @@
       "chapter": "1.4",
       "anchor": "i14-gnomes",
       "path": "src/pages/intermediate/chapter-1-4.astro",
-      "status": "covered",
-      "review": "Quest item requirements, recommendations and quest-local acquisitions checked; local suppliers and bank-shortfall recovery now explicit where needed.",
+      "status": "fixed",
+      "review": "2026-10-20: distinguish the Eyes reward seed from the usable crystal saw; give the free Brimstail singing-bowl conversion. Gather two sap buckets total, spend one on Eyes magic glue and retain exactly one for Icthlarin in 2.6. Add recovery at the Chapter 1 checklist and later uses.",
       "quest_names": [
         "The Grand Tree",
         "The Eyes of Glouphrie"
@@ -630,10 +631,10 @@
       "preparation": [
         {
           "title": "Grand Tree and Eyes of Glouphrie supplies",
-          "text": "The Grand Tree: carry 1,000 coins for the Stronghold entry if Femi's earlier help was skipped, plus combat gear, food and a teleport. The translation book, bark, keys and Daconia rock are quest-local; bank combat equipment only when a quest leg actually calls for it. The Eyes of Glouphrie: 1 bucket of sap, 1 mud rune, 1 maple log, 1 oak log, hammer, saw and pestle and mortar . Use the mud rune bought at MTA; if lost, return to the MTA rewards shop for a replacement, checking its point price before spending reward points. Cut the two logs at 45/15 Woodcutting if the banked ones were fletched. For sap, use a knife on an evergreen with an empty bucket. Make two buckets of sap total : this quest consumes one and Icthlarin needs the other. Buy a saw at the Varrock Sawmill if missing. The coloured discs and crystal-saw seed come from the quest."
+          "text": "The Grand Tree: carry 1,000 coins for the Stronghold entry if Femi's earlier help was skipped, plus combat gear, food and a teleport. The translation book, bark, keys and Daconia rock are quest-local; bank combat equipment only when a quest leg actually calls for it. The Eyes of Glouphrie: 1 bucket of sap, 1 mud rune, 1 maple log, 1 oak log, hammer, saw and pestle and mortar . Use the mud rune bought at MTA; if lost, return to the MTA rewards shop for a replacement, checking its point price before spending reward points. Cut the two logs at 45/15 Woodcutting if the banked ones were fletched. For sap, bring a knife and two empty buckets to the pointed tree just north of Brimstail's cave, between two oak trees. Use the knife on it to fill each bucket. Make two buckets of sap total : use one for this quest's magic glue and bank the other for Icthlarin in 2.6 . Buy a saw at the Varrock Sawmill if missing. The coloured discs and crystal saw seed come from the quest; use the reward seed on the singing bowl afterward, as described above."
         }
       ],
-      "visible_checkpoint": "Complete The Grand Tree from start to finish. Then complete The Eyes of Glouphrie . Both quests take you around the Gnome Stronghold, so finish them before moving on. After Eyes of Glouphrie, enchant the crystal saw seed . Keep the crystal saw; it becomes a useful Construction booster later. Before leaving this block, bring a knife + 1 empty bucket to an evergreen tree (the trees between Barbarian Village and Falador are convenient). Use the knife on the tree with the bucket in your inventory and bank 1 bucket of sap . Early Chapter 2 needs it for Icthlarin's Little Helper ; keep it banked for that quest. Before leaving the bank: check the quest-specific quantities and sources in the preparation note.",
+      "visible_checkpoint": "Complete The Grand Tree from start to finish. Then complete The Eyes of Glouphrie . Both quests take you around the Gnome Stronghold, so finish them before moving on. Turn the reward seed into a crystal saw before leaving the Stronghold. The Eyes of Glouphrie gives you a crystal saw seed . Take it back to Brimstail's cave in the south-west of the Tree Gnome Stronghold : from the Stronghold's spirit tree, walk south-west to the dungeon entrance beside the small lake. Enter the cave, go into its western chamber and use the seed on the singing bowl . The conversion is free and needs no spell or runes. Bank the finished saw for the lectern in 2.1 . Crystal saw details . Keep one unused bucket of sap for Icthlarin's Little Helper in 2.6. The bucket used during Eyes of Glouphrie became magic glue and has been spent. If you collected two buckets during preparation, bank the unused one. If you have no spare, bring a knife and one empty bucket to the pointed tree just north of Brimstail's cave, between two oak trees . Use the knife on that tree with the bucket in your inventory, then bank the fresh sap. You only need one spare after completing Eyes. Sap location . Before leaving the bank: check the quest-specific quantities and sources in the preparation note.",
       "progress": {
         "informational": false,
         "optional": false
@@ -2099,8 +2100,8 @@
       "chapter": "1.4",
       "anchor": "i14-gnomes",
       "path": "src/pages/intermediate/chapter-1-4.astro",
-      "status": "covered",
-      "requirement_review": "Reviewed required items, recommended items, actual acquisition steps and conditional alternatives; consumer recipe/source detail is recorded once in route_steps.preparation and in the linked guide disclosure.",
+      "status": "fixed",
+      "requirement_review": "Required quest materials remain covered in the preparation note. The quest rewards a seed: explicitly convert it at Brimstail's singing bowl after completion. One sap bucket becomes magic glue; bank one separate unused bucket for Icthlarin in 2.6.",
       "source": {
         "path": "src/main/java/com/questhelper/helpers/quests/theeyesofglouphrie/TheEyesOfGlouphrie.java",
         "url": "https://github.com/Zoinkwiz/quest-helper/blob/5f791937a99a676f23c02aa48c4e4d5b50e7edad/src/main/java/com/questhelper/helpers/quests/theeyesofglouphrie/TheEyesOfGlouphrie.java",
@@ -2115,7 +2116,12 @@
         "partial_or_conditional": false,
         "random_item_branch": false,
         "ownership": "A documented supplier is not a claim that the player still owns the item; bank after earlier consumption."
-      }
+      },
+      "followup_sources": [
+        "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie",
+        "https://oldschool.runescape.wiki/w/Crystal_saw",
+        "https://umkyzn.github.io/BRUHsailer/"
+      ]
     },
     {
       "name": "Garden of Tranquillity",

@@ -91,6 +91,31 @@
         "https://oldschool.runescape.wiki/w/Temporary_skill_boost"
       ],
       "verification": "The page_blobs and verified_page_commit fields above remain the historical full-audit snapshot. This wording pass is checked at its own PR head by the production build and Quest guide review. See the PR for the exact commit and CI run; no new exhaustive mechanics audit is claimed."
+    },
+    {
+      "date": "2026-10-20",
+      "topic": "Crystal saw conversion and sap reserve",
+      "baseline": "153eac4c4afe3c03f59fc01ee3fbba3794c13d11",
+      "branch": "codex/crystal-saw-sap-preparation",
+      "summary": "2026-10-20: distinguish the Eyes reward seed from the usable crystal saw; give the free Brimstail singing-bowl conversion. Gather two sap buckets total, spend one on Eyes magic glue and retain exactly one for Icthlarin in 2.6. Add recovery at the Chapter 1 checklist and later uses.",
+      "scope": [
+        "src/pages/intermediate/chapter-1-4.astro",
+        "src/pages/intermediate/chapter-2-1.astro",
+        "src/pages/intermediate/chapter-2-6.astro"
+      ],
+      "resource_ledger": "Add R108 (usable crystal saw) and R109 (two sap buckets across Eyes and Icthlarin); 109 resource rows, 508 coverage rows. Existing resource rows and progress IDs/order/flags remain unchanged.",
+      "sources": [
+        "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie",
+        "https://oldschool.runescape.wiki/w/Crystal_saw",
+        "https://umkyzn.github.io/BRUHsailer/"
+      ],
+      "bruhsailer_comparison": {
+        "guide_data_blob": "29f722ef26d695b70cabc51adfe61336a4c3858e",
+        "data_updated_on": "2026-10-19",
+        "step": "1.4.21",
+        "finding": "Explicit singing-bowl conversion and spare sap after Eyes; keep that preparation while retaining our later Icthlarin placement in 2.6."
+      },
+      "verification": "Historical baseline instructions, page_blobs and verified_page_commit remain historical. This focused change uses the existing Quest guide review checks at its own PR head; see the PR for the exact commit and run."
     }
   ]
 }
