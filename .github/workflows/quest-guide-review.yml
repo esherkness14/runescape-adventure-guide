@@ -2,7 +2,7 @@ name: Quest guide review
 
 on:
   push:
-    branches: [codex/quest-supply-preparation-audit, codex/early-ardougne-cloak]
+    branches: [codex/quest-supply-preparation-audit, codex/early-ardougne-cloak, codex/crystal-saw-sap-preparation]
   workflow_dispatch:
 
 permissions:
